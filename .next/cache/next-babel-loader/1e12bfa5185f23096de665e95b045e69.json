@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "var _jsxFileName = \"/Users/cesarmezacarrillo/Documents/Platzi Master/GiftU/pages/index.tsx\";\nvar __jsx = React.createElement;\nimport React from 'react';\n\nconst HomePage = () => {\n  __jsx(\"div\", {\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 5,\n      columnNumber: 3\n    }\n  }, __jsx(\"h1\", {\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 6,\n      columnNumber: 5\n    }\n  }, \"This is the Home PAge\"));\n};\n\nexport default HomePage;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/cesarmezacarrillo/Documents/Platzi Master/GiftU/pages/index.tsx"
+    ],
+    "names": ["React", "HomePage"],
+    "mappings": ";;AAAA,OAAOA,KAAP,MAAkB,OAAlB;;AAGA,MAAMC,QAAQ,GAAI,MAAM;AACtB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,6BADF;AAGD,CAJD;;AAMA,eAAeA,QAAf",
+    "sourcesContent": [
+      "import React from 'react'\n\n\nconst HomePage = (() => {\n  <div>\n    <h1>This is the Home PAge</h1>\n  </div>\n})\n\nexport default HomePage\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

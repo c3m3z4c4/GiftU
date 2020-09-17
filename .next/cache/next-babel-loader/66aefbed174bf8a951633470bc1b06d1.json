@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "var _jsxFileName = \"/Users/cesarmezacarrillo/Documents/Platzi Master/GiftU/pages/index.tsx\";\nvar __jsx = React.createElement;\nimport React from 'react';\n\n/* import Layout from '@components/Layout/Layout'\nimport KawaiiHeader from '@components/KawaiiHeader/KawaiiHeader'\nimport ProductList from '@components/ProductList/ProductList' */\n// export const getStaticProps: GetStaticProps = async () => {\n//   const response = await fetch('https://platzi-avo.vercel.app/api/avo')\n//   const { data: productList }: TAPIAvoResponse = await response.json()\n//   return {\n//     props: {\n//       productList,\n//     },\n//   }\n// }\n// const HomePage = ({ productList }: { productList: TProduct[] }) => {\n//   return (\n//     <Layout>\n//       <KawaiiHeader />\n//       <section>\n//         <Link href=\"/yes-or-no\">\n//           <a>¿Deberia comer un avo hoy?</a>\n//         </Link>\n//       </section>\n//       <ProductList products={productList} />\n//       <style jsx>{`\n//         section {\n//           text-align: center;\n//           margin-bottom: 2rem;\n//         }\n//       `}</style>\n//     </Layout>\n//   )\n// }\nconst HomePage = () => {\n  __jsx(\"div\", {\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 41,\n      columnNumber: 3\n    }\n  }, __jsx(\"h1\", {\n    __self: this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 42,\n      columnNumber: 5\n    }\n  }, \"This is the Home PAge\"));\n};\n\nexport default HomePage;",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/cesarmezacarrillo/Documents/Platzi Master/GiftU/pages/index.tsx"
+    ],
+    "names": ["React", "HomePage"],
+    "mappings": ";;AAAA,OAAOA,KAAP,MAAkB,OAAlB;;AAIA;;;AAIA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA;AACA;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AAEA,MAAMC,QAAQ,GAAI,MAAM;AACtB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACE;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,6BADF;AAGD,CAJD;;AAMA,eAAeA,QAAf",
+    "sourcesContent": [
+      "import React from 'react'\nimport Link from 'next/link'\nimport { GetStaticProps } from 'next'\nimport fetch from 'isomorphic-unfetch'\n/* import Layout from '@components/Layout/Layout'\nimport KawaiiHeader from '@components/KawaiiHeader/KawaiiHeader'\nimport ProductList from '@components/ProductList/ProductList' */\n\n// export const getStaticProps: GetStaticProps = async () => {\n//   const response = await fetch('https://platzi-avo.vercel.app/api/avo')\n//   const { data: productList }: TAPIAvoResponse = await response.json()\n\n//   return {\n//     props: {\n//       productList,\n//     },\n//   }\n// }\n\n// const HomePage = ({ productList }: { productList: TProduct[] }) => {\n//   return (\n//     <Layout>\n//       <KawaiiHeader />\n//       <section>\n//         <Link href=\"/yes-or-no\">\n//           <a>¿Deberia comer un avo hoy?</a>\n//         </Link>\n//       </section>\n//       <ProductList products={productList} />\n//       <style jsx>{`\n//         section {\n//           text-align: center;\n//           margin-bottom: 2rem;\n//         }\n//       `}</style>\n//     </Layout>\n//   )\n// }\n\nconst HomePage = (() => {\n  <div>\n    <h1>This is the Home PAge</h1>\n  </div>\n})\n\nexport default HomePage\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

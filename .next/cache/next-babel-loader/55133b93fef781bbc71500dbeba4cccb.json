@@ -1,0 +1,7 @@
+{
+  "ast": null,
+  "code": "import React from \"react\";\nvar __jsx = React.createElement;\nimport 'semantic-ui-css/semantic.min.css';\nimport '../global.css'; //import CartProvider from '@store/Cart'\n// const MyApp = ({ Component, pageProps }: AppProps) => {\n//   // Aditional props\n//   // Aditional layout\n//   // Manejar errores - componentDidCatch\n//   return (\n//     <CartProvider>\n//       <Component {...pageProps} />\n//     </CartProvider>\n//   )\n// }\n\nvar MyApp = function MyApp() {\n  __jsx(\"h2\", null, \"This is a app\");\n};\n\nexport default MyApp;",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}

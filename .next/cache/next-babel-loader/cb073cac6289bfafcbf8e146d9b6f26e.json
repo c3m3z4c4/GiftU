@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "var _this = this,\n    _jsxFileName = \"/Users/cesarmezacarrillo/Documents/Platzi Master/GiftU/pages/_app.tsx\";\n\nimport React from \"react\";\nvar __jsx = React.createElement;\nimport 'semantic-ui-css/semantic.min.css';\nimport '../global.css'; //import CartProvider from '@store/Cart'\n// const MyApp = ({ Component, pageProps }: AppProps) => {\n//   // Aditional props\n//   // Aditional layout\n//   // Manejar errores - componentDidCatch\n//   return (\n//     <CartProvider>\n//       <Component {...pageProps} />\n//     </CartProvider>\n//   )\n// }\n\nvar MyApp = function MyApp() {\n  __jsx(\"h2\", {\n    __self: _this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 19,\n      columnNumber: 3\n    }\n  }, \"This is a app\");\n};\n\n_c = MyApp;\nexport default MyApp;\n\nvar _c;\n\n$RefreshReg$(_c, \"MyApp\");",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/cesarmezacarrillo/Documents/Platzi Master/GiftU/pages/_app.tsx"
+    ],
+    "names": ["MyApp"],
+    "mappings": ";;;;;AAAA,OAAO,kCAAP;AACA,OAAO,eAAP,C,CAEA;AAEA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;;AAGA,IAAMA,KAAK,GAAI,SAATA,KAAS,GAAK;AAClB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AACD,CAFD;;KAAMA,K;AAGN,eAAeA,KAAf",
+    "sourcesContent": [
+      "import 'semantic-ui-css/semantic.min.css'\nimport '../global.css'\n\n//import CartProvider from '@store/Cart'\n\n// const MyApp = ({ Component, pageProps }: AppProps) => {\n//   // Aditional props\n//   // Aditional layout\n//   // Manejar errores - componentDidCatch\n//   return (\n//     <CartProvider>\n//       <Component {...pageProps} />\n//     </CartProvider>\n//   )\n// }\n\n\nconst MyApp = (()=> {\n  <h2>This is a app</h2>\n})\nexport default MyApp\n"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

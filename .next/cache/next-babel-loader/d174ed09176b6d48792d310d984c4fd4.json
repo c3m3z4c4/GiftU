@@ -1,0 +1,17 @@
+{
+  "ast": null,
+  "code": "var _this = this,\n    _jsxFileName = \"/Users/cesarmezacarrillo/Documents/Platzi Master/GiftU/components/Layout/Layout.tsx\";\n\nvar __jsx = React.createElement;\nimport React from 'react';\nimport { Container } from 'semantic-ui-react';\nimport Navbar from '@components/Navbar/Navbar';\nimport Footer from '@components/Footer/Footer';\n\nvar Layout = function Layout(_ref) {\n  var children = _ref.children;\n  return __jsx(React.Fragment, null, __jsx(Navbar, {\n    __self: _this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 13,\n      columnNumber: 5\n    }\n  }), __jsx(Container, {\n    as: \"main\",\n    text: true,\n    __self: _this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 14,\n      columnNumber: 5\n    }\n  }, children), __jsx(Footer, {\n    __self: _this,\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 17,\n      columnNumber: 5\n    }\n  }));\n};\n\n_c = Layout;\nexport default Layout;\n\nvar _c;\n\n$RefreshReg$(_c, \"Layout\");",
+  "map": {
+    "version": 3,
+    "sources": [
+      "/Users/cesarmezacarrillo/Documents/Platzi Master/GiftU/components/Layout/Layout.tsx"
+    ],
+    "names": ["React", "Container", "Navbar", "Footer", "Layout", "children"],
+    "mappings": ";;;;AAAA,OAAOA,KAAP,MAAyC,OAAzC;AACA,SAASC,SAAT,QAA0B,mBAA1B;AAEA,OAAOC,MAAP,MAAmB,2BAAnB;AACA,OAAOC,MAAP,MAAmB,2BAAnB;;AAMA,IAAMC,MAAM,GAAG,SAATA,MAAS;AAAA,MAAGC,QAAH,QAAGA,QAAH;AAAA,SACb,4BACE,MAAC,MAAD;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IADF,EAEE,MAAC,SAAD;AAAW,IAAA,EAAE,EAAC,MAAd;AAAqB,IAAA,IAAI,MAAzB;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,KACGA,QADH,CAFF,EAKE,MAAC,MAAD;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,IALF,CADa;AAAA,CAAf;;KAAMD,M;AAUN,eAAeA,MAAf",
+    "sourcesContent": [
+      "import React, { PropsWithChildren } from 'react'\nimport { Container } from 'semantic-ui-react'\n\nimport Navbar from '@components/Navbar/Navbar'\nimport Footer from '@components/Footer/Footer'\n\ntype LayoutProps = {\n  children?: React.ReactNode\n}\n\nconst Layout = ({ children }: LayoutProps) => (\n  <>\n    <Navbar />\n    <Container as=\"main\" text>\n      {children}\n    </Container>\n    <Footer />\n  </>\n)\n\nexport default Layout"
+    ]
+  },
+  "metadata": {},
+  "sourceType": "module"
+}

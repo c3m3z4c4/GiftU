@@ -1,0 +1,7 @@
+{
+  "ast": null,
+  "code": "var __jsx = React.createElement;\nimport React from 'react';\n\nconst index = () => {\n  return __jsx(\"div\", null, __jsx(\"h1\", null, \"Esta es mi pagina iniciar\"));\n};\n\nexport default index;",
+  "map": null,
+  "metadata": {},
+  "sourceType": "module"
+}
