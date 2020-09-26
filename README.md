@@ -21,7 +21,7 @@ GiftÜ usa los siguientes lenguajes para el desarrollo del front end:
 
 Este es el diseño inicial de GiftÜ en donde plasmamos los bocetos iniciales del sitio. Pueden observar este boceto por medio de [ Invision](http://https://giftu.invisionapp.com/freehand/GiftU-Wireframes-6d0yToDSj " Invision")
 
-![GiftÜ-Initial-drawing](https://cesarsalas.mx/giftu/capturas/GiftU lofi Wireframes.png)
+![GiftÜ Initial drawing](https://cesarsalas.mx/giftu/capturas/GiftU-lofi-Wireframes.png)
 
 ##GiftÜ LoFi Wireframe
 
