@@ -27,18 +27,18 @@ Este es el diseño inicial de GiftÜ en donde plasmamos los bocetos iniciales de
 
 A continuación, se muestra el flujo de la aplicación tanto para movil, como para equipos de escritorio.
 
-![GiftÜ-LoFi-Mobile-Wireframe](https://cesarsalas.mx/giftu/capturas/GiftU Mobile Workflow.png)
+![GiftÜ LoFi Mobile Wireframe](https://cesarsalas.mx/giftu/capturas/GiftU-Mobile-Workflow.png)
 
-![GiftÜ-LoFi-Desktop-Wireframe](https://cesarsalas.mx/giftu/capturas/GifU Desktop Workflow.png)
+![GiftÜ LoFi Desktop Wireframe](https://cesarsalas.mx/giftu/capturas/GifU-Desktop-Workflow.png)
 
-En esta liga, podrán observar el flujo en [Miro](http://https://miro.com/app/board/o9J_kl0i52A=/ "Miro")
+En esta liga, podrán observar el flujo en [Miro](http://https://miro.com/app/board/o9J_kl0i52A=/-"Miro")
 
 ##GiftÜ Propuesta de arte conceptual
 
 Ántes de iniciar con los diagramas en alta defición, realizamos propuestas de arte conceptual para poder aterrizar una idea.
-![Concept-proposal-A](https://cesarsalas.mx/giftu/capturas/Opc1-Concept-Design.png")
+![Concept proposal A](https://cesarsalas.mx/giftu/capturas/Opc1-Concept-Design.png")
 
-![Concept-proposal-B](https://cesarsalas.mx/giftu/capturas/Opt2 ConceptArt.png")
+![Concept proposal B](https://cesarsalas.mx/giftu/capturas/Opt2-ConceptArt.png")
 
 ##GiftÜ HiFi Wireframe
 
@@ -46,7 +46,7 @@ Se muesta a continuacion wireframes de alta definición para validar la eleccion
 
 ###GiftÜ Paleta de colores actual
 
-![Color-Pallete](https://cesarsalas.mx/giftu/capturas/GiftU Web Design ConceptConcept.png")
+![Color Pallete](https://cesarsalas.mx/giftu/capturas/GiftU-Web-Design-ConceptConcept.png")
 
 ###GiftÜ Propuestas de logotipo
 
@@ -54,13 +54,13 @@ Se muesta a continuacion wireframes de alta definición para validar la eleccion
 
 ###GiftÜ Inicio/Registro mockups previos para movil
 
-![Mobile-Signin](https://cesarsalas.mx/giftu/capturas/Mobile Sign In.png)
+![Mobile Signin](https://cesarsalas.mx/giftu/capturas/Mobile-Sign-In.png)
 
-![Mobile-Signup](https://cesarsalas.mx/giftu/capturas/Mobile Sign Up.png)
+![Mobile Signup](https://cesarsalas.mx/giftu/capturas/Mobile-Sign-Up.png)
 
 
 ###GiftÜ Inicio/Registro mockups previos para Escritorio
 
-![Desktop-Signin](https://cesarsalas.mx/giftu/capturas/Desktop Landscape Sign In.png)
+![Desktop Signin](https://cesarsalas.mx/giftu/capturas/Desktop-Landscape-Sign-In.png)
 
-![Desktop-Signup](https://cesarsalas.mx/giftu/capturas/Desktop Landscape.png)
+![Desktop Signup](https://cesarsalas.mx/giftu/capturas/Desktop-Landscape.png)
