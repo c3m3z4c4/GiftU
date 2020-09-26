@@ -1,0 +1,28 @@
+{
+  "name": "GiftU_frontend",
+  "version": "1.0.0",
+  "description": "Este repositorio contiene archivos relacionados al desaroolo FrontEnd de GiftÜ. Asi como las ideas conceptuales y el proceso de diseño realizaro para el mismo.",
+  "main": "index.js",
+  "dependencies": {
+    "next": "^9.5.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cohort6-platzimaster-rafa/GiftU_frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cohort6-platzimaster-rafa/GiftU_frontend/issues"
+  },
+  "homepage": "https://github.com/cohort6-platzimaster-rafa/GiftU_frontend#readme"
+}
