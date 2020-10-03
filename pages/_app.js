@@ -1,10 +1,14 @@
 import { AppProps } from 'next/app';
-import '../global.css';
+import { Fragment } from 'react';
+import { GlobalStyle } from '../styles/GlobalStyle'
 
 function MyApp({ Component, pageProps }) {
 
     return (
-      <Component {...pageProps} />
-    );
+      <Fragment>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </Fragment>
+    )
   }
   export default MyApp;
