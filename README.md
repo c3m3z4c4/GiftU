@@ -6,12 +6,9 @@ Este repositorio contiene archivos relacionados al desaroolo FrontEnd de GiftÜ.
 
 GiftÜ usa los siguientes lenguajes para el desarrollo del front end:
 
-* Html
-* CSS
 * JavaScript
 * React.js
 * Next.js como framework de React
-* jQuery
 * Miro  
 * Figma
 * Github
