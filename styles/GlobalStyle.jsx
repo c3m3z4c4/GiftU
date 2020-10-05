@@ -1,0 +1,21 @@
+import { createGlobalStyle } from 'styled-components';
+
+
+export const GlobalStyle = createGlobalStyle `
+  #__next {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+    #__next > main {
+      margin: 1rem auto 0;
+      max-width: 80ch;
+    }
+    .body-main {
+      background-color: #474747;
+      color: #87d3b8;
+      font-family: 'Balsamiq Sans', cursive;
+      font-size: 18px;
+    }
+`
+
