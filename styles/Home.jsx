@@ -20,7 +20,6 @@ export const Header = styled.div`
 export const MenuDerecho = styled.div`
 	display: flex;
 	align-items: center;
-
 	.menu {
 		color: #87d3b8;
 	}
@@ -38,6 +37,7 @@ export const Texto = styled.p`
 	text-align: center;
 	color: black;
 	font-size: 50px;
+	font-family: "Quicksand";
 `;
 
 export const Span = styled.span`
@@ -55,6 +55,7 @@ export const GiftType = styled.div`
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	font-family: "Quicksand";
 `;
 
 export const Barra = styled.button`

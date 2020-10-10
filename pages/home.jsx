@@ -19,7 +19,7 @@ const Home = () => {
 			<Header>
 				<img className="logo-name" src="/images/GiftÜ.png" />
 				<MenuDerecho>
-					<p className="menu">menu</p>
+					<p className="menu">MENU</p>
 					<img className="logo-image" src="/images/logo.png" />
 				</MenuDerecho>
 			</Header>
