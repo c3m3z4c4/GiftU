@@ -12,10 +12,12 @@ import {
 	Login,
 	MenuDerecho,
 } from "../styles/Home";
+import { GlobalStyle } from "../styles/GlobalStyle.jsx";
 
 const Home = () => {
 	return (
 		<Fragment>
+			<GlobalStyle />
 			<Header>
 				<img className="logo-name" src="/images/GiftÜ.png" />
 				<MenuDerecho>

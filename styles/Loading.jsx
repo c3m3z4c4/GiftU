@@ -30,7 +30,7 @@ export const ButLoading = styled.button`
 	background: linear-gradient(90deg, #ffab07 60%, white 60%);
 `;
 
-export const Texto = styled.p`
+export const Text = styled.p`
 	color: black;
 	font-size: 22px;
 `;

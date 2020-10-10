@@ -1,20 +1,22 @@
 import React, { Fragment } from "react";
 
-import { Logo, Container, Texto, ButLoading, Span } from "../styles/Loading";
+import { Logo, Container, Text, ButLoading, Span } from "../styles/Loading";
+import { GlobalStyle } from "../styles/GlobalStyle.jsx";
 
 const Loading = () => {
 	return (
 		<Fragment>
+			<GlobalStyle />
 			<Container>
 				<Logo>
 					<img className="logo-image" src="/images/logo.png" />
 				</Logo>
 				<ButLoading />
-				<Texto>
+				<Text>
 					Estamos <Span primary>buscando ...</Span>
 					<br />
 					espera un <Span>poco</Span> más <Span primary>Ü</Span>
-				</Texto>
+				</Text>
 			</Container>
 		</Fragment>
 	);
