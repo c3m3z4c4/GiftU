@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+/* import React, { Fragment } from 'react'
 import { Boton } from './style'
 
 export const Button = () => {
@@ -10,3 +10,4 @@ export const Button = () => {
 }
 
 
+ */
