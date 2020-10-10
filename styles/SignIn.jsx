@@ -21,7 +21,7 @@ export const MainContainer = styled.main`
 export const Logo = styled.div`
 	.logo-container {
 		display: flex;
-		flex-direction: column;
+		justify-content: center;
 		align-items: center;
 	}
 	.logo-image {
@@ -33,6 +33,7 @@ export const Logo = styled.div`
 		width: 100px;
 	}
 `;
+
 export const TitleText = styled.p`
 	line-height: 30px;
 	letter-spacing: 0.14em;
