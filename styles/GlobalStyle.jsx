@@ -1,7 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from "styled-components";
 
-
-export const GlobalStyle = createGlobalStyle `
+export const GlobalStyle = createGlobalStyle`
   #__next {
       min-height: 100vh;
       display: grid;
@@ -12,10 +11,7 @@ export const GlobalStyle = createGlobalStyle `
       max-width: 80ch;
     }
     .body-main {
-      background-color: #474747;
-      color: #87d3b8;
       font-family: 'Balsamiq Sans', cursive;
       font-size: 18px;
     }
-`
-
+`;
