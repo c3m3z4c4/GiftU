@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   #__next {
       min-height: 100vh;
       display: grid;
@@ -15,3 +15,5 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 18px;
     }
 `;
+
+export default GlobalStyle;
