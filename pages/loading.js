@@ -24,7 +24,7 @@ const LogoImage = styled.img`
 `;
 
 const ColorLine = styled.button`
-	wborder-radius: 50px;
+	border-radius: 50px;
 	border: 1px solid #87d3b8;
 	width: 230px;
 	height: 10px;
