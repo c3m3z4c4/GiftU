@@ -12,6 +12,7 @@ import {
 	Login,
 	MenuDerecho,
 } from "../styles/Home";
+
 import { GlobalStyle } from "../styles/GlobalStyle.jsx";
 
 const Home = () => {
