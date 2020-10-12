@@ -1,19 +1,17 @@
 import React, { Fragment } from "react";
+import GlobalStyle from "../Styles/GlobalStyle";
+
+import Header from "../components/header";
+import Main from "../components/main";
+import Footer from "../components/footer";
 
 const App = () => {
 	return (
 		<Fragment>
-			<header>
-				<img src="/images/GiftÜ.png" alt="" />
-			</header>
-			<main>
-				<section>
-					<h1>¿Que quieres regalar?</h1>
-				</section>
-				<section>
-					<a text="Un regalo Recomendado"></a>
-				</section>
-			</main>
+			<GlobalStyle />
+			<Header />
+			<Main />
+			<Footer />
 		</Fragment>
 	);
 };
