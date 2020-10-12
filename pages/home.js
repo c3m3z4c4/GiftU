@@ -20,7 +20,7 @@ const Home = () => {
 		<Fragment>
 			<GlobalStyle />
 			<Header>
-				<img className="logo-name" src="/images/GiftÜ.png" />
+				<LogoName src={/giftu.png} />
 				<MenuDerecho>
 					<p className="menu">MENU</p>
 					<img className="logo-image" src="/images/logo.png" />

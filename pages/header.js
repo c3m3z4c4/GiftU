@@ -1,6 +1,7 @@
 import React from "react";
+import Styled from "styled-components";
 
-const Header = () = {
+const Header = {
   return(
       <LogoName src = {/images/GiftÜ.png} />
       

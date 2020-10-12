@@ -4,17 +4,17 @@ export const Header = styled.div`
 	display: flex;
 	justify-content: space-between;
 
-	.logo-name {
-		padding: 10px;
-		height: 37px;
-		width: auto;
-	}
-
 	.logo-image {
 		padding: 10px 25px;
 		height: 70px;
 		width: auto;
 	}
+`;
+
+export const LogoName = styled.img`
+	padding: 10px;
+	height: 37px;
+	width: auto;
 `;
 
 export const MenuDerecho = styled.div`
