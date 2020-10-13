@@ -22,5 +22,8 @@ export declare const createRouter: (pathname: string, query: import("querystring
     wrapApp: (App: React.ComponentType<import("../next-server/lib/router/router").AppProps>) => any;
     err?: Error | undefined;
     isFallback: boolean;
+    locale?: string | undefined;
+    locales?: string[] | undefined;
+    defaultLocale?: string | undefined;
 }) => Router;
 export declare function makePublicRouterInstance(router: Router): NextRouter;

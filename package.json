@@ -4,7 +4,7 @@
   "description": "Este repositorio contiene archivos relacionados al desaroolo FrontEnd de GiftÜ. Asi como las ideas conceptuales y el proceso de diseño realizaro para el mismo.",
   "main": "index.js",
   "dependencies": {
-    "next": "^9.5.3",
+    "next": "^9.5.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.2.0"

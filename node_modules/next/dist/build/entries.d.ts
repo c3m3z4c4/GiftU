@@ -1,5 +1,5 @@
 import { __ApiPreviewProps } from '../next-server/server/api-utils';
-import { LoadedEnvFiles } from '../lib/load-env-config';
+import { LoadedEnvFiles } from '@next/env';
 declare type PagesMapping = {
     [page: string]: string;
 };

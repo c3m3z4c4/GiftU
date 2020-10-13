@@ -1,11 +1,11 @@
 "use strict";exports.__esModule=true;exports.css=void 0;var _lodash=_interopRequireDefault(require("next/dist/compiled/lodash.curry"));var _path=_interopRequireDefault(require("path"));var _miniCssExtractPlugin=_interopRequireDefault(require("../../../plugins/mini-css-extract-plugin"));var _helpers=require("../../helpers");var _utils=require("../../utils");var _loaders=require("./loaders");var _messages=require("./messages");var _plugins=require("./plugins");function _interopRequireDefault(obj){return obj&&obj.__esModule?obj:{default:obj};}// RegExps for all Style Sheet variants
 const regexLikeCss=/\.(css|scss|sass)$/;// RegExps for Style Sheets
 const regexCssGlobal=/(?<!\.module)\.css$/;const regexCssModules=/\.module\.css$/;// RegExps for Syntactically Awesome Style Sheets
-const regexSassGlobal=/(?<!\.module)\.(scss|sass)$/;const regexSassModules=/\.module\.(scss|sass)$/;const css=(0,_lodash.default)(async function css(ctx,config){const{prependData:sassPrependData,...sassOptions}=ctx.sassOptions;const sassPreprocessors=[// First, process files with `sass-loader`: this inlines content, and
+const regexSassGlobal=/(?<!\.module)\.(scss|sass)$/;const regexSassModules=/\.module\.(scss|sass)$/;const css=(0,_lodash.default)(async function css(ctx,config){const{prependData:sassPrependData,additionalData:sassAdditionalData,...sassOptions}=ctx.sassOptions;const sassPreprocessors=[// First, process files with `sass-loader`: this inlines content, and
 // compiles away the proprietary syntax.
 {loader:require.resolve('sass-loader'),options:{// Source maps are required so that `resolve-url-loader` can locate
 // files original to their source directory.
-sourceMap:true,sassOptions,prependData:sassPrependData}},// Then, `sass-loader` will have passed-through CSS imports as-is instead
+sourceMap:true,sassOptions,additionalData:sassPrependData||sassAdditionalData}},// Then, `sass-loader` will have passed-through CSS imports as-is instead
 // of inlining them. Because they were inlined, the paths are no longer
 // correct.
 // To fix this, we use `resolve-url-loader` to rewrite the CSS
@@ -38,7 +38,19 @@ sideEffects:false,// Sass Modules are activated via this specific extension.
 test:regexSassModules,// Sass Modules are only supported in the user's application. We're
 // not yet allowing Sass imports _within_ `node_modules`.
 issuer:{and:[ctx.rootDirectory],not:[/node_modules/]},use:(0,_loaders.getCssModuleLoader)(ctx,postCssPlugins,sassPreprocessors)}]}));// Throw an error for CSS Modules used outside their supported scope
-fns.push((0,_helpers.loader)({oneOf:[{test:[regexCssModules,regexSassModules].filter(Boolean),use:{loader:'error-loader',options:{reason:(0,_messages.getLocalModuleImportError)()}}}]}));if(ctx.isServer){fns.push((0,_helpers.loader)({oneOf:[{test:[regexCssGlobal,regexSassGlobal].filter(Boolean),use:require.resolve('next/dist/compiled/ignore-loader')}]}));}else if(ctx.customAppFile){fns.push((0,_helpers.loader)({oneOf:[{// A global CSS import always has side effects. Webpack will tree
+fns.push((0,_helpers.loader)({oneOf:[{test:[regexCssModules,regexSassModules],use:{loader:'error-loader',options:{reason:(0,_messages.getLocalModuleImportError)()}}}]}));if(ctx.isServer){fns.push((0,_helpers.loader)({oneOf:[{test:[regexCssGlobal,regexSassGlobal],use:require.resolve('next/dist/compiled/ignore-loader')}]}));}else{fns.push((0,_helpers.loader)({oneOf:[{// A global CSS import always has side effects. Webpack will tree
+// shake the CSS without this option if the issuer claims to have
+// no side-effects.
+// See https://github.com/webpack/webpack/issues/6571
+sideEffects:true,test:regexCssGlobal,// We only allow Global CSS to be imported anywhere in the
+// application if it comes from node_modules. This is a best-effort
+// heuristic that makes a safety trade-off for better
+// interoperability with npm packages that require CSS. Without
+// this ability, the component's CSS would have to be included for
+// the entire app instead of specific page where it's required.
+include:{and:[/node_modules/]},// Global CSS is only supported in the user's application, not in
+// node_modules.
+issuer:{and:[ctx.rootDirectory],not:[/node_modules/]},use:(0,_loaders.getGlobalCssLoader)(ctx,postCssPlugins)}]}));if(ctx.customAppFile){fns.push((0,_helpers.loader)({oneOf:[{// A global CSS import always has side effects. Webpack will tree
 // shake the CSS without this option if the issuer claims to have
 // no side-effects.
 // See https://github.com/webpack/webpack/issues/6571
@@ -46,9 +58,9 @@ sideEffects:true,test:regexCssGlobal,issuer:{and:[ctx.customAppFile]},use:(0,_lo
 // shake the Sass without this option if the issuer claims to have
 // no side-effects.
 // See https://github.com/webpack/webpack/issues/6571
-sideEffects:true,test:regexSassGlobal,issuer:{and:[ctx.customAppFile]},use:(0,_loaders.getGlobalCssLoader)(ctx,postCssPlugins,sassPreprocessors)}]}));}// Throw an error for Global CSS used inside of `node_modules`
-fns.push((0,_helpers.loader)({oneOf:[{test:[regexCssGlobal,regexSassGlobal].filter(Boolean),issuer:{and:[/node_modules/]},use:{loader:'error-loader',options:{reason:(0,_messages.getGlobalModuleImportError)()}}}]}));// Throw an error for Global CSS used outside of our custom <App> file
-fns.push((0,_helpers.loader)({oneOf:[{test:[regexCssGlobal,regexSassGlobal].filter(Boolean),use:{loader:'error-loader',options:{reason:(0,_messages.getGlobalImportError)(ctx.customAppFile&&_path.default.relative(ctx.rootDirectory,ctx.customAppFile))}}}]}));if(ctx.isClient){// Automatically transform references to files (i.e. url()) into URLs
+sideEffects:true,test:regexSassGlobal,issuer:{and:[ctx.customAppFile]},use:(0,_loaders.getGlobalCssLoader)(ctx,postCssPlugins,sassPreprocessors)}]}));}}// Throw an error for Global CSS used inside of `node_modules`
+fns.push((0,_helpers.loader)({oneOf:[{test:[regexCssGlobal,regexSassGlobal],issuer:{and:[/node_modules/]},use:{loader:'error-loader',options:{reason:(0,_messages.getGlobalModuleImportError)()}}}]}));// Throw an error for Global CSS used outside of our custom <App> file
+fns.push((0,_helpers.loader)({oneOf:[{test:[regexCssGlobal,regexSassGlobal],use:{loader:'error-loader',options:{reason:(0,_messages.getGlobalImportError)(ctx.customAppFile&&_path.default.relative(ctx.rootDirectory,ctx.customAppFile))}}}]}));if(ctx.isClient){// Automatically transform references to files (i.e. url()) into URLs
 // e.g. url(./logo.svg)
 fns.push((0,_helpers.loader)({oneOf:[{// This should only be applied to CSS files
 issuer:regexLikeCss,// Exclude extensions that webpack handles by default
@@ -67,6 +79,6 @@ new _miniCssExtractPlugin.default({filename:'static/css/[contenthash].css',chunk
 // selector), this assumption is required to code-split CSS.
 //
 // If this warning were to trigger, it'd be unactionable by the user,
-// but also not valid -- so we disable it.
+// but likely not valid -- so we disable it.
 ignoreOrder:true})));}const fn=(0,_utils.pipe)(...fns);return fn(config);});exports.css=css;
 //# sourceMappingURL=index.js.map

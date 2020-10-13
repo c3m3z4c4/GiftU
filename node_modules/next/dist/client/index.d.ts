@@ -1,3 +1,4 @@
+import '@next/polyfill-module';
 import React from 'react';
 import type Router from '../next-server/lib/router/router';
 import type { AppComponent, AppProps, PrivateRouteInfo } from '../next-server/lib/router/router';

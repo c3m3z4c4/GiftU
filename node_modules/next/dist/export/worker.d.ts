@@ -48,6 +48,8 @@ interface RenderOpts {
     optimizeFonts?: boolean;
     optimizeImages?: boolean;
     fontManifest?: FontManifest;
+    locales?: string[];
+    locale?: string;
 }
 export default function exportPage({ path, pathMap, distDir, outDir, pagesDataDir, renderOpts, buildExport, serverRuntimeConfig, subFolders, serverless, optimizeFonts, optimizeImages, }: ExportPageInput): Promise<ExportPageResults>;
 export {};

@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.section`
+	z-index: 5;
 	display: flex;
 	justify-content: space-between;
 `;
