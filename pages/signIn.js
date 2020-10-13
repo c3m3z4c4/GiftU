@@ -1,5 +1,6 @@
 import React from "react";
 import { UserForm } from '../components/UserForm'
+import { NavBar } from '../components/NavBar'
 
 import {
 	MainContainer,
@@ -11,13 +12,8 @@ import {
 const SignIn = () => {
 	return (
 		<MainContainer>
-			<div className="container">
-				<Logo>
-					<img className="logo-image" src="/images/logo.png" />
-					<img className="logo-name" src="/images/GiftÜ.png" />
-				</Logo>
+			<NavBar />
 			<UserForm />
-			</div>
 		</MainContainer>
 	);
 };
