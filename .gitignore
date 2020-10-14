@@ -1,8 +1,5 @@
 node_modules
 .next
 .vscode
-<<<<<<< HEAD
-=======
 package-lock.json
 package.json
->>>>>>> f2b662fc8a087328b7f5884ebecc9689b084c879

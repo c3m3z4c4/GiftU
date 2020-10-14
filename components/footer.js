@@ -41,7 +41,7 @@ const Footer = () => {
 			<Wrapper>
 				<WrapperLogin>
 					<Cuenta>¿Ya tienes cuenta?</Cuenta>
-					<LinkLogin>Log in</LinkLogin>
+					<LinkLogin href="/signIn">Log in</LinkLogin>
 				</WrapperLogin>
 				<ImageFooter src={image} alt="footer`s image" />
 			</Wrapper>

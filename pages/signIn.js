@@ -1,23 +1,14 @@
 import React, { Fragment } from 'react'
 import { UserForm } from '../components/UserForm/index'
-import { Header, Hero, FormPlace, StyledText, NormalText } from '../styles/SignIn'
-
-
+import { FormPlace } from '../styles/SignIn'
+import { Hero } from '../components/Hero'
 
 const Signin = () => {
     return (
         <Fragment>
-            <Header>
-                <img src="/images/GiftÜ.png"/>
-            </Header>
-            <Hero>
-               <div>
-                    <NormalText>Tu eliges</NormalText> <StyledText>a quien,</StyledText> <NormalText>nosotros encontramos</NormalText> <StyledText>el regalo perfecto</StyledText>
-                </div>
-                
-            </Hero>
+			<Hero />
             <FormPlace> 
-                <UserForm />
+                <UserForm/>
             </FormPlace>
         </Fragment>
 
