@@ -1,22 +1,28 @@
-import React from "react";
-import { UserForm } from '../components/UserForm'
-import { NavBar } from '../components/NavBar'
-
-import {
-	MainContainer,
-	Logo,
-} from "../styles/SignIn";
+import React, { Fragment } from 'react'
+import { UserForm } from '../components/UserForm/index'
+import { Header, Hero, FormPlace, StyledText, NormalText } from '../styles/SignIn'
 
 
 
-const SignIn = () => {
-	return (
-		<MainContainer>
-			<NavBar />
-			<UserForm />
-		</MainContainer>
-	);
-};
+const Signin = () => {
+    return (
+        <Fragment>
+            <Header>
+                <img src="/images/GiftÜ.png"/>
+            </Header>
+            <Hero>
+               <div>
+                    <NormalText>Tu eliges</NormalText> <StyledText>a quien,</StyledText> <NormalText>nosotros encontramos</NormalText> <StyledText>el regalo perfecto</StyledText>
+                </div>
+                
+            </Hero>
+            <FormPlace> 
+                <UserForm />
+            </FormPlace>
+        </Fragment>
 
+    )
+}
 
-export default SignIn;
+export default Signin
+
