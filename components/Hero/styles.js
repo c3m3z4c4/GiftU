@@ -14,12 +14,12 @@ grid-row: 1;
 
 export const MainHero = styled.div `
 grid-column: 1;
-grid-row: 2/span 3;
+grid-row: 3;
 display: flex;
-margin: 0 auto;
+justify-content: center;
+align-items: center;
 `
-export const StyledText = styled.span `
-color: ${(props) => (props.primary ? "#87d3b8" : "#ffab07")};
+export const NormalText = styled.span `
 line-height: 30px;
 letter-spacing: 0.14em;
 font-weight: bold;
@@ -28,7 +28,8 @@ font-family: 'Quicksand', sans-serif;
 margin: 30px 0;
 `
 
-export const NormalText = styled.span `
+export const StyledText = styled.span `
+color: ${(props) => (props.primary ? "#87d3b8" : "#ffab07")};
 line-height: 30px;
 letter-spacing: 0.14em;
 font-weight: bold;
