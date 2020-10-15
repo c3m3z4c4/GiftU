@@ -14,14 +14,16 @@ const WrapperImageMenu = styled.div`
 
 const LogoImage = styled.img`
 	margin-right: 8px;
-	width: 40px;
+	width: 60px;
 `;
 
 const image = "../images/logo.png";
 
 const Text = styled.p`
+	font-size: 25px;
 	color: #87d3b8;
-	margin-right: 15px;
+	margin-right: 25px;
+	font-family: Quicksand;
 `;
 
 const Span = styled.span`
@@ -42,12 +44,14 @@ const ListItems = styled.ul`
 	}
 `;
 
-const Item = styled.li``;
+const Item = styled.li`
+	margin: 10px;
+`;
 
 const Link = styled.a`
 	color: #ffab07;
 	text-decoration: none;
-	margin: 10px;
+	font-family: Quicksand;
 `;
 
 const Menu = () => {
@@ -55,7 +59,7 @@ const Menu = () => {
 		<Fragment>
 			<Wrapper>
 				<WrapperImageMenu>
-					<Text>MENU</Text>
+					<Text>MENÜ</Text>
 					<LogoImage src={image} />
 				</WrapperImageMenu>
 				<ListItems>

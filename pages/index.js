@@ -5,13 +5,20 @@ import Header from "../components/header";
 import Main from "../components/main";
 import Footer from "../components/footer";
 
+const image = "images/footer.png";
+
 const App = () => {
 	return (
 		<Fragment>
 
 			<Header />
 			<Main />
-			<Footer />
+			<Footer
+				text="¿Ya tienes üna cüenta?"
+				loginText="Inicia sesión"
+				footerImage={image}
+				altImage="Demo"
+			/>
 		</Fragment>
 	);
 };
