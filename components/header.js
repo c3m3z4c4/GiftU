@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
+import Menu from "../components/menu";
 
 const Wrapper = styled.section`
 	display: flex;

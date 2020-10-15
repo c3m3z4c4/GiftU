@@ -4,6 +4,7 @@ import GlobalStyle from "../Styles/GlobalStyle";
 import Header from "../components/header";
 import Main from "../components/main";
 import Footer from "../components/footer";
+
 const image = "images/footer.png";
 
 const App = () => {
@@ -20,5 +21,6 @@ const App = () => {
 			/>
 		</Fragment>
 	);
+};
 
 export default App;
