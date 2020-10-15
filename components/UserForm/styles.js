@@ -14,12 +14,13 @@ export const FormArea = styled.form `
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  .input-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-bottom: 30px;
-    }
+`
+
+export const inputContainer = styled.form `
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 30px;
 `
 
 export const LabelComp = styled.label `
