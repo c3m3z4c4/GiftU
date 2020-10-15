@@ -1,28 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
+import { Button, ImageBtn } from './styles'
 
-const Button = styled.button `
-    width: 186px;
-    height: 40px;
-    background: #4D62AF;
-    border: none;
-    box-sizing: border-box;
-    border-radius: 12px;
-    transform: matrix(1, 0, 0, 1, 0, 0);
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 14px;
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.11em;
-    font-family: 'Quicksand', sans-serif;
-    display: flex;
-    justify-content: center;
-    color: white;
-    margin-top: 50px;
-    box-shadow: 3px 8px 5px -2px rgba(0,0,0,0.47);
-`
-const ImageBtn = styled.img `
-    margin-left: 5px;
-`
 export const FbButton = props => <Button> { props.title } <ImageBtn src={props.src} />  </Button>
