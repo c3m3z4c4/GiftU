@@ -1,16 +1,15 @@
 import React, { Fragment } from "react";
-import GlobalStyle from "../Styles/GlobalStyle";
+// import GlobalStyle from "../Styles/GlobalStyle";
 
 import Header from "../components/header";
-import Main from "../components/main";
-import Footer from "../components/footer";
+import Main from "../components/Main";
+import Footer from "../components/Footer";
 
 const image = "images/footer.png";
 
 const App = () => {
 	return (
 		<Fragment>
-
 			<Header />
 			<Main />
 			<Footer

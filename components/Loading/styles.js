@@ -1,4 +1,3 @@
-import React, { Fragment } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.section`
@@ -41,23 +40,4 @@ const Span = styled.span`
 	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
 `;
 
-const image = "../images/logo.png";
-
-const Loading = () => {
-	return (
-		<Fragment>
-			<Wrapper>
-				<WrapperImageLine>
-					<LogoImage src={image} />
-					<ColorLine />
-				</WrapperImageLine>
-				<Text>
-					Estamos <Span primary>buscando ...</Span> <br />
-					espera un <Span>poco</Span>más<Span primary> Ü</Span>
-				</Text>
-			</Wrapper>
-		</Fragment>
-	);
-};
-
-export default Loading;
+export { Wrapper, WrapperImageLine, LogoImage, ColorLine, Text, Span };
