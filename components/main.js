@@ -68,7 +68,7 @@ const Main = () => {
 			<Wrapper>
 				<WrapperTitle>
 					<Title>
-						HOLA, <br />¿ <Span primary>Q</Span>UÉ <br />
+						HOLA, <br />¿ <Span primary>Q</Span>ÜÉ <br />
 						QUIERES <br />
 						REGALAR <Span>?</Span>
 					</Title>
@@ -77,7 +77,7 @@ const Main = () => {
 					<Wrappergift>
 						<GiftTitle>
 							REGALO <br />
-							RECOM <Span>É</Span>NDADO
+							RECOM<Span>É</Span>NDADO
 						</GiftTitle>
 						<ColorLine primary />
 					</Wrappergift>

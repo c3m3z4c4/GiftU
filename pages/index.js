@@ -14,7 +14,7 @@ const App = () => {
 			<Header />
 			<Main />
 			<Footer
-				text="¿Ya tienes una cuenta?"
+				text="¿Ya tienes üna cüenta?"
 				loginText="Inicia sesión"
 				footerImage={image}
 				altImage="Demo"

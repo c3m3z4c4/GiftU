@@ -59,7 +59,7 @@ const Menu = () => {
 		<Fragment>
 			<Wrapper>
 				<WrapperImageMenu>
-					<Text>MENU</Text>
+					<Text>MENÜ</Text>
 					<LogoImage src={image} />
 				</WrapperImageMenu>
 				<ListItems>
