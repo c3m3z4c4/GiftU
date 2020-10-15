@@ -1,4 +1,3 @@
-import React, { Fragment } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.section`
@@ -17,7 +16,7 @@ const LogoImage = styled.img`
 	width: 60px;
 `;
 
-const image = "../images/logo.png";
+const Image = "../images/logo.png";
 
 const Text = styled.p`
 	font-size: 25px;
@@ -54,34 +53,14 @@ const Link = styled.a`
 	font-family: Quicksand;
 `;
 
-const Menu = () => {
-	return (
-		<Fragment>
-			<Wrapper>
-				<WrapperImageMenu>
-					<Text>MENÜ</Text>
-					<LogoImage src={image} />
-				</WrapperImageMenu>
-				<ListItems>
-					<Item>
-						<Link href="/">
-							Sign <Span>In</Span>
-						</Link>
-					</Item>
-					<Item>
-						<Link href="/">
-							<Span>P</Span>rofile
-						</Link>
-					</Item>
-					<Item>
-						<Link href="/">
-							About <Span>Üs</Span>
-						</Link>
-					</Item>
-				</ListItems>
-			</Wrapper>
-		</Fragment>
-	);
+export {
+	Wrapper,
+	WrapperImageMenu,
+	LogoImage,
+	Image,
+	Text,
+	Span,
+	ListItems,
+	Item,
+	Link,
 };
-
-export default Menu;

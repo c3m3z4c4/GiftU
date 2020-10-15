@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
-import Menu from "../components/menu";
+import Menu from "../components/Menu";
 
 const Wrapper = styled.section`
 	z-index: 5;
