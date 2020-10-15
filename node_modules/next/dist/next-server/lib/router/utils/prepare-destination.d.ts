@@ -12,7 +12,7 @@ export default function prepareDestination(destination: string, params: Params, 
         port?: string | undefined;
     } & {
         pathname: string;
-        searchParams: URLSearchParams;
+        query: ParsedUrlQuery;
         search: string;
         hash: string;
         href: string;

@@ -1,0 +1,50 @@
+import React from 'react'
+
+import { TitleText, InputContainer, FormArea, LabelComp, InputField  } from './styles'
+import { BaseButton } from '../Button'
+import { GButton } from '../GButton'
+import { FbButton } from '../FbButton'
+
+
+export const SignUpForm = () => {
+
+    const FbLogo = '/images/facebook.png'
+    const GLogo = '/images/google.png'
+    return (
+    <div>
+        <TitleText>SignUp</TitleText>
+        <FormArea>
+            <InputContainer>
+                <LabelComp>
+                    <span >Name</span>
+                    <img  src="/images/user.png" />
+                </LabelComp>
+                <InputField />
+            </InputContainer>
+            <InputContainer>
+                <LabelComp>
+                    <span >Email</span>
+                    <img  src="/images/mail.png" />
+                </LabelComp>
+                <InputField />
+            </InputContainer>
+            <InputContainer>
+                <LabelComp>
+                    <span >Password</span>
+                    <img src="/images/key.png" />
+                </LabelComp>
+                <InputField />
+            </InputContainer>
+            <div>
+              <BaseButton title="Sign In"></BaseButton>
+            </div>
+            <div>
+              <FbButton title="Sign In With " src={FbLogo}></FbButton>
+              <GButton title="Sign In With " src={GLogo}></GButton>
+            </div>
+
+        </FormArea>
+    </div>
+    )
+}
+

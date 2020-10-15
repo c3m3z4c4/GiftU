@@ -38,6 +38,6 @@ export default class HotReloader {
     start(): Promise<void>;
     stop(): Promise<void>;
     getCompilationErrors(page: string): Promise<any[]>;
-    send(action?: string, ...args: any[]): void;
+    send(action?: string | any, ...args: any[]): void;
     ensurePage(page: string): Promise<any>;
 }

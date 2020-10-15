@@ -22,12 +22,6 @@ export declare function apiResolver(req: IncomingMessage, res: ServerResponse, q
  */
 export declare function parseBody(req: NextApiRequest, limit: string | number): Promise<any>;
 /**
- * Parsing query arguments from request `url` string
- * @param url of request
- * @returns Object with key name of query argument and its value
- */
-export declare function getQueryParser({ url }: IncomingMessage): () => NextApiRequestQuery;
-/**
  * Parse cookies from `req` header
  * @param req request object
  */

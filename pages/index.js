@@ -10,7 +10,7 @@ const image = "images/footer.png";
 const App = () => {
 	return (
 		<Fragment>
-			<GlobalStyle />
+
 			<Header />
 			<Main />
 			<Footer

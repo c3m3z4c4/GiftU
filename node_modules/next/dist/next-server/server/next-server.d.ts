@@ -56,6 +56,9 @@ export default class Server {
         optimizeFonts: boolean;
         fontManifest: FontManifest;
         optimizeImages: boolean;
+        locale?: string;
+        locales?: string[];
+        defaultLocale?: string;
     };
     private compression?;
     private onErrorMiddleware?;

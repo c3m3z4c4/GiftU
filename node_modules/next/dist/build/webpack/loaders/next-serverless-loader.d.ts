@@ -15,6 +15,7 @@ export declare type ServerlessLoaderQuery = {
     runtimeConfig: string;
     previewProps: string;
     loadedEnvFiles: string;
+    i18n: string;
 };
 declare const nextServerlessLoader: loader.Loader;
 export default nextServerlessLoader;
