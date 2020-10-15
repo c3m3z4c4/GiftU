@@ -16,8 +16,6 @@ const LogoImage = styled.img`
 	width: 60px;
 `;
 
-const Image = "../images/logo.png";
-
 const Text = styled.p`
 	font-size: 25px;
 	color: #87d3b8;

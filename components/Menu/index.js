@@ -12,6 +12,8 @@ import {
 	Link,
 } from "./styles";
 
+const Image = "../images/logo.png";
+
 const Menu = () => {
 	return (
 		<Fragment>
