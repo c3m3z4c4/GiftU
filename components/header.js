@@ -28,6 +28,7 @@ const LogoName = styled.img`
 	height: 37px;
 	width: auto;
 `;
+
 const image = "../images/logo.png";
 const name = "../images/giftu.png";
 

@@ -33,17 +33,15 @@ const ImageFooter = styled.img`
 	width: 100vw;
 `;
 
-const image = "images/footer.png";
-
-const Footer = () => {
+const Footer = (props) => {
 	return (
 		<Fragment>
 			<Wrapper>
 				<WrapperLogin>
-					<Cuenta>¿Ya tienes cuenta?</Cuenta>
-					<LinkLogin>Log in</LinkLogin>
+					<Cuenta>{props.text}</Cuenta>
+					<LinkLogin>{props.loginText}</LinkLogin>
 				</WrapperLogin>
-				<ImageFooter src={image} alt="footer`s image" />
+				<ImageFooter src={props.footerImage} alt={props.altImage} />
 			</Wrapper>
 		</Fragment>
 	);
