@@ -18,10 +18,8 @@ const WrapperSeccion = styled.section`
 const WrapperLeft = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	text-align: center;
-	width: 50vw;
 `;
 
 const MainText = styled.h1`
@@ -39,7 +37,6 @@ const BaseFooter = styled.img`
 const imgFooter = "../images/footer.png";
 
 const WrapperRight = styled.div`
-	width: 50vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -57,56 +54,37 @@ const imgLogo = "../images/logo.png";
 const WrapperSign = styled.div`
 	display: flex;
 	justify-content: space-between;
-	width: 30vw;
+	width: 20vw;
 `;
 
-const ButtonSignIn = styled.input`
-	line-height: 30px;
+const ButtonSignIn = styled.button`
+	width: 9vw;
+	height: 50px;
 	font-weight: bold;
-	font-size: 18px;
+	background: transparent;
+	border: none;
+	border-bottom: 2px solid rgba(135, 211, 184, 0.6);
+	font-family: "Quicksand", sans-serif;
+	font-size: 25px;
+`;
+
+const ButtonSignUp = styled.button`
+	width: 9vw;
+	font-weight: bold;
 	font-family: "Quicksand", sans-serif;
 	background: transparent;
 	border: none;
 	border-bottom: 2px solid rgba(135, 211, 184, 0.6);
 	font-family: "Quicksand", sans-serif;
-	font-size: 14px;
-	line-height: 15px;
-	color: #ffab07;
-
-	&:focus,
-	textarea:focus,
-	select:focus {
-		outline: none;
-	}
-`;
-
-const ButtonSignUp = styled.input`
-	line-height: 30px;
-	font-weight: bold;
-	font-size: 18px;
-	font-family: "Quicksand", sans-serif;
-	width: 10vw;
-	background: transparent;
-	border: none;
-	border-bottom: 2px solid rgba(135, 211, 184, 0.6);
-	font-family: "Quicksand", sans-serif;
-	font-size: 14px;
-	line-height: 15px;
-	color: #ffab07;
-
-	&:focus,
-	textarea:focus,
-	select:focus {
-		outline: none;
-	}
+	font-size: 25px;
 `;
 
 const WrapperInput = styled.div`
 	display: flex;
-	margin-top: 30px;
+	margin-top: 40px;
 `;
 
-const LabelText = styled.p`
+const LabelText = styled.label`
 	font-family: "Quicksand", sans-serif;
 	color: #87d3b8;
 `;
@@ -114,7 +92,7 @@ const LabelText = styled.p`
 const LabelImg = styled.img`
 	width: 20px;
 	height: 20px;
-	margin: 14px 0 0 10px;
+	margin-left: 10px;
 `;
 
 const email = "../images/mail.png";
@@ -137,7 +115,7 @@ const LabelInput = styled.input`
 	}
 `;
 
-const LabelTextPass = styled.p`
+const LabelTextPass = styled.label`
 	font-family: "Quicksand", sans-serif;
 	color: #87d3b8;
 `;
@@ -145,7 +123,7 @@ const LabelTextPass = styled.p`
 const LabelImgPass = styled.img`
 	width: 20px;
 	height: 20px;
-	margin: 12px 0 0 10px;
+	margin-left: 10px;
 `;
 
 const pass = "../images/key.png";
@@ -195,6 +173,8 @@ const WrapperSingRD = styled.div`
 	justify-content: space-between;
 	width: 30vw;
 `;
+
+const FbLogo = "../images/facebook.png";
 
 const FBButton = styled.button`
 	width: 186px;
@@ -261,8 +241,12 @@ const SignIn = () => {
 				<WrapperRight>
 					<LogoImage src={imgLogo} />
 					<WrapperSign>
-						<ButtonSignIn value="SingIn" />
-						<ButtonSignUp value="SingUp" />
+						<ButtonSignIn>
+							Sign <Span primary>In</Span>
+						</ButtonSignIn>
+						<ButtonSignUp>
+							Sign <Span primary>Up</Span>
+						</ButtonSignUp>
 					</WrapperSign>
 					<WrapperInput>
 						<LabelText>Email</LabelText>
@@ -274,10 +258,10 @@ const SignIn = () => {
 						<LabelImgPass src={pass} />
 					</WrapperInput>
 					<LabelInputPass></LabelInputPass>
-					<BaseButton value="SingIn" />
+					<BaseButton>Sing In</BaseButton>
 					<WrapperSingRD>
-						<FBButton value="SingIn" />
-						<GooButton />
+						<FBButton src={FbLogo}>Sing in with</FBButton>
+						<GooButton>Sing in with</GooButton>
 					</WrapperSingRD>
 				</WrapperRight>
 			</WrapperSeccion>
