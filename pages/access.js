@@ -10,12 +10,15 @@ const LogoName = styled.img`
 const nameLogo = "../images/giftu.png";
 
 const WrapperSeccion = styled.section`
-	width: 100vw;
+	// width: 100vw
 	display: flex;
-	justify-content: space-around;
 `;
 
 const WrapperLeft = styled.div`
+	width: 50vw;
+`;
+
+const WrapperTextFooter = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -29,7 +32,6 @@ const MainText = styled.h1`
 `;
 
 const BaseFooter = styled.img`
-	padding: 10px;
 	height: auto;
 	width: 33vw;
 `;
@@ -42,6 +44,10 @@ const WrapperRight = styled.div`
 	justify-content: center;
 	align-items: center;
 	text-align: center;
+	width: 50vw;
+	height: 100vh;
+	background-color: #f7fff4;
+	margin: -8px -19px;
 `;
 
 const LogoImage = styled.img`
@@ -174,7 +180,10 @@ const WrapperSingRD = styled.div`
 	width: 30vw;
 `;
 
-const FbLogo = "../images/facebook.png";
+const FBLogo = "../images/facebook.png";
+const FbLogo = styled.img`
+	margin-left: 5px;
+`;
 
 const FBButton = styled.button`
 	width: 186px;
@@ -198,6 +207,10 @@ const FBButton = styled.button`
 	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.47);
 `;
 
+const GoLogo = "../images/google.png";
+const GLogo = styled.img`
+	margin-left: 5px;
+`;
 const GooButton = styled.button`
 	width: 182px;
 	height: 40px;
@@ -227,16 +240,18 @@ const Span = styled.span`
 const SignIn = () => {
 	return (
 		<Fragment>
-			<LogoName src={nameLogo} />
 			<WrapperSeccion>
 				<WrapperLeft>
-					<MainText>
-						Tu eliges <Span primary>a quién,</Span>
-						<br />
-						nosotros encontramos <br />
-						<Span>el regalo perfecto.</Span>
-					</MainText>
-					<BaseFooter src={imgFooter} />
+					<LogoName src={nameLogo} />
+					<WrapperTextFooter>
+						<MainText>
+							Tu eliges <Span primary>a quién,</Span>
+							<br />
+							nosotros encontramos <br />
+							<Span>el regalo perfecto.</Span>
+						</MainText>
+						<BaseFooter src={imgFooter} />
+					</WrapperTextFooter>
 				</WrapperLeft>
 				<WrapperRight>
 					<LogoImage src={imgLogo} />
@@ -260,8 +275,14 @@ const SignIn = () => {
 					<LabelInputPass></LabelInputPass>
 					<BaseButton>Sing In</BaseButton>
 					<WrapperSingRD>
-						<FBButton src={FbLogo}>Sing in with</FBButton>
-						<GooButton>Sing in with</GooButton>
+						<FBButton>
+							Sing in with
+							<FbLogo src={FBLogo}></FbLogo>
+						</FBButton>
+						<GooButton>
+							Sing in with
+							<GLogo src={GoLogo}></GLogo>
+						</GooButton>
 					</WrapperSingRD>
 				</WrapperRight>
 			</WrapperSeccion>
