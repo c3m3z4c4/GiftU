@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-// import GlobalStyle from "../Styles/GlobalStyle";
 
 import Header from "../components/header";
 import Main from "../components/Main";
