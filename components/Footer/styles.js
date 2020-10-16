@@ -25,6 +25,7 @@ const Cuenta = styled.p`
 const LinkLogin = styled.a`
 	color: blue;
 	font-size: 16px;
+	cursor: pointer;
 `;
 
 const ImageFooter = styled.img`

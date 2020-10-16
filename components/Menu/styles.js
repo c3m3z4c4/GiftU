@@ -45,7 +45,7 @@ const Item = styled.li`
 	margin: 10px;
 `;
 
-const Link = styled.a`
+const Anchor = styled.a`
 	color: #ffab07;
 	text-decoration: none;
 	font-family: Quicksand;
@@ -59,5 +59,5 @@ export {
 	Span,
 	ListItems,
 	Item,
-	Link,
+	Anchor,
 };

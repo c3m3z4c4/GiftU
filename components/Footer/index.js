@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Link from "next/link";
 
 import {
 	Wrapper,
@@ -14,7 +15,9 @@ const Footer = (props) => {
 			<Wrapper>
 				<WrapperLogin>
 					<Cuenta>{props.text}</Cuenta>
-					<LinkLogin>{props.loginText}</LinkLogin>
+					<Link href="/">
+						<LinkLogin>{props.loginText}</LinkLogin>
+					</Link>
 				</WrapperLogin>
 				<ImageFooter src={props.footerImage} alt={props.altImage} />
 			</Wrapper>

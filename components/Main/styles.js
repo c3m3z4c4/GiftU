@@ -43,8 +43,9 @@ const Wrappergift = styled.div`
 const GiftTitle = styled.h2`
 	text-align: center;
 	color: black;
-	// font-size: 50px;
 	font-family: "Quicksand";
+	cursor: pointer;
+	margin: 0;
 `;
 
 const ColorLine = styled.button`
@@ -55,6 +56,7 @@ const ColorLine = styled.button`
 	background: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
 	border: ${(props) =>
 		props.primary ? "1px solid #ffab07" : "1px solid #87d3b8"};
+	cursor: pointer;
 `;
 
 const Span = styled.span`

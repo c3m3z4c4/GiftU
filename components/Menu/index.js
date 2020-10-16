@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Link from "next/link";
 
 import {
 	Wrapper,
@@ -8,7 +9,7 @@ import {
 	Span,
 	ListItems,
 	Item,
-	Link,
+	Anchor,
 } from "./styles";
 
 const Imagepng = "../images/logo.png";
@@ -24,17 +25,23 @@ const Menu = () => {
 				<ListItems>
 					<Item>
 						<Link href="/">
-							Sign <Span>In</Span>
+							<Anchor>
+								Sign <Span>In</Span>
+							</Anchor>
 						</Link>
 					</Item>
 					<Item>
 						<Link href="/">
-							<Span>P</Span>rofile
+							<Anchor>
+								<Span>P</Span>rofile
+							</Anchor>
 						</Link>
 					</Item>
 					<Item>
 						<Link href="/">
-							About <Span>Üs</Span>
+							<Anchor>
+								About <Span>Üs</Span>
+							</Anchor>
 						</Link>
 					</Item>
 				</ListItems>
