@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
-import Menu from "../components/Menu";
+
+import Menu from "../Menu";
 import { Wrapper, LogoName } from "./styles";
 
 const name = "../images/giftu.png";

@@ -55,7 +55,6 @@ export {
 	Wrapper,
 	WrapperImageMenu,
 	LogoImage,
-	Image,
 	Text,
 	Span,
 	ListItems,

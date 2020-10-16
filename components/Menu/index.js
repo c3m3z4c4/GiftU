@@ -4,7 +4,6 @@ import {
 	Wrapper,
 	WrapperImageMenu,
 	LogoImage,
-	Image,
 	Text,
 	Span,
 	ListItems,
@@ -12,7 +11,7 @@ import {
 	Link,
 } from "./styles";
 
-const Image = "../images/logo.png";
+const Imagepng = "../images/logo.png";
 
 const Menu = () => {
 	return (
@@ -20,7 +19,7 @@ const Menu = () => {
 			<Wrapper>
 				<WrapperImageMenu>
 					<Text>MENÜ</Text>
-					<LogoImage src={Image} />
+					<LogoImage src={Imagepng} />
 				</WrapperImageMenu>
 				<ListItems>
 					<Item>

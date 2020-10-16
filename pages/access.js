@@ -1,18 +1,15 @@
-import React, { Fragment } from 'react'
-/* import { SignInForm } from '../components/SignInForm/index' */
-import { SignUpForm } from '../components/SignUpForm/index'
+import React, { Fragment } from "react";
+import { SignInForm } from "../components/SignInForm/index";
 
-import { Hero } from '../components/Hero'
+import { Hero } from "../components/Hero";
 
 const Signin = () => {
-    return (
-        <Fragment>
+	return (
+		<Fragment>
 			<Hero />
-			<SignUpForm/>
-        </Fragment>
+			<SignInForm />
+		</Fragment>
+	);
+};
 
-    )
-}
-
-export default Signin
-
+export default Signin;
