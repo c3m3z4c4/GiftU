@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-
+import Link from "next/link"
 import {
 	Wrapper,
 	WrapperTitle,
@@ -24,10 +24,12 @@ const Main = () => {
 				</WrapperTitle>
 				<WrapperGifts>
 					<Wrappergift>
-						<GiftTitle>
-							REGALO <br />
-							RECOM<Span>É</Span>NDADO
-						</GiftTitle>
+						<Link href="/search">
+							<GiftTitle>
+								REGALO <br />
+								RECOM<Span>É</Span>NDADO
+							</GiftTitle>
+						</Link>
 						<ColorLine primary />
 					</Wrappergift>
 					<Wrappergift>

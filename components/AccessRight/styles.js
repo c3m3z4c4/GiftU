@@ -50,6 +50,9 @@ const ButtonSignUp = styled.button`
 const WrapperInput = styled.div`
 	display: flex;
 	margin-top: 40px;
+	flex-direction: row;
+	align-items: center;
+	justify-content: left;
 `;
 
 const LabelText = styled.label`
