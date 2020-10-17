@@ -24,7 +24,7 @@ const Menu = () => {
 				</WrapperImageMenu>
 				<ListItems>
 					<Item>
-						<Link href="/">
+						<Link href="/access">
 							<Anchor>
 								Sign <Span>In</Span>
 							</Anchor>

@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-
+import Link from "next/link"
 import {
 	WrapperLeft,
 	name,
@@ -9,13 +9,17 @@ import {
 	imgFooter,
 	ImgSearch,
 	Span,
+	AncorImg,
 } from "./styles";
 
 const SearchLeft = () => {
 	return (
 		<Fragment>
 			<WrapperLeft>
-				<LogoName src={name} />
+				<Link href="/">
+					<AncorImg><LogoName src={name} /> </AncorImg>
+				</Link>
+				
 				<WrapperMainText>
 					<MainText>
 						CUEN<Span primary>T</Span>AME UN POCO M<Span>Á</Span>S:

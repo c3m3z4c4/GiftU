@@ -10,7 +10,9 @@ const LogoName = styled.img`
 	height: 37px;
 	width: auto;
 `;
-
+const AncorImg = styled.a`
+	cursor:pointer;
+`
 const WrapperMainText = styled.div`
 	display: flex;
 	justify-content: center;
@@ -44,4 +46,5 @@ export {
 	imgFooter,
 	ImgSearch,
 	Span,
+	AncorImg,
 };

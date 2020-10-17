@@ -49,6 +49,7 @@ const Anchor = styled.a`
 	color: #ffab07;
 	text-decoration: none;
 	font-family: Quicksand;
+	cursor:pointer;
 `;
 
 export {

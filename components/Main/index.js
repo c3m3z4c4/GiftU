@@ -33,10 +33,12 @@ const Main = () => {
 						<ColorLine primary />
 					</Wrappergift>
 					<Wrappergift>
-						<GiftTitle>
-							REGALO <br />
-							ID<Span primary>E</Span>AL
-						</GiftTitle>
+						<Link href="/access"> 
+							<GiftTitle>
+								REGALO <br />
+								ID<Span primary>E</Span>AL
+							</GiftTitle>
+						</Link>
 						<ColorLine />
 					</Wrappergift>
 				</WrapperGifts>
