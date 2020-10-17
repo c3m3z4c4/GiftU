@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import { OptButton } from "../components/OptButton";
 import Menu from "../components/Menu";
+import Link from "next/link";
 
 const Wrapper = styled.div`
 	width: 100vw;
@@ -12,6 +13,8 @@ const Wrapper = styled.div`
 const WrapperLeft = styled.div`
 	width: 50vw;
 `;
+
+
 
 const name = "../images/giftu.png";
 const LogoName = styled.img`
@@ -189,13 +192,18 @@ const BaseButton = styled.button`
 const Span = styled.span`
 	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
 `;
+const AncorImg = styled.a`
+	cursor:pointer;
+`
 
 const Search = () => {
 	return (
 		<Fragment>
 			<Wrapper>
 				<WrapperLeft>
-					<LogoName src={name} />
+					<Link href="/">
+						<AncorImg> <LogoName src={name} /> </AncorImg>
+					</Link>
 					<WrapperMainText>
 						<MainText>
 							CUEN<Span primary>T</Span>AME UN POCO M<Span>Á</Span>S:

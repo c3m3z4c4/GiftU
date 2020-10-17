@@ -10,6 +10,7 @@ import {
 	BaseFooter,
 	imgFooter,
 	Span,
+	AncorImage,
 } from "./styles";
 
 const AccessLeft = () => {
@@ -17,7 +18,7 @@ const AccessLeft = () => {
 		<Fragment>
 			<WrapperLeft>
 				<Link href="/">
-				 	<a> <LogoName src={nameLogo} /></a>
+				 	<AncorImage> <LogoName src={nameLogo} /></AncorImage>
 				</Link>
 				<WrapperTextFooter>
 					<MainText>

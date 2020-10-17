@@ -6,9 +6,11 @@ const WrapperLeft = styled.div`
 
 const LogoName = styled.img`
 	padding: 10px;
-	height: 5vh;
+	height: 37px;
 	width: auto;
 `;
+
+
 
 const nameLogo = "../images/giftu.png";
 
@@ -49,4 +51,5 @@ export {
 	BaseFooter,
 	imgFooter,
 	Span,
+	AncorImage,
 };

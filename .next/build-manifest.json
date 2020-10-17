@@ -29,10 +29,9 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/search": [
+    "/access": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-<<<<<<< HEAD
       "static/chunks/pages/access.js"
     ],
     "/next/dist/pages/_error": [
@@ -43,8 +42,6 @@
     "/search": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-=======
->>>>>>> b27bc3aa98476d40223e26dd88b96c5407504607
       "static/chunks/pages/search.js"
     ]
   },
