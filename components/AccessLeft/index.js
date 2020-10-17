@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Link from "next/link"
 
 import {
 	WrapperLeft,
@@ -15,7 +16,9 @@ const AccessLeft = () => {
 	return (
 		<Fragment>
 			<WrapperLeft>
-				<LogoName src={nameLogo} />
+				<Link href="/">
+				 	<a> <LogoName src={nameLogo} /></a>
+				</Link>
 				<WrapperTextFooter>
 					<MainText>
 						Tu eliges <Span primary>a quién,</Span>

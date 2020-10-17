@@ -12,6 +12,10 @@ const LogoName = styled.img`
 
 const nameLogo = "../images/giftu.png";
 
+const AncorImage = styled.a`
+	cursor: pointer;
+`
+
 const WrapperTextFooter = styled.div`
 	display: flex;
 	flex-direction: column;
