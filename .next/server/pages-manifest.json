@@ -3,7 +3,7 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
-  "/access": "pages/access.js",
   "/": "pages/index.js",
-  "/search": "pages/search.js"
+  "/search": "pages/search.js",
+  "/access": "pages/access.js"
 }
