@@ -30,7 +30,7 @@ const BaseFooter = styled.img`
 	width: 33vw;
 `;
 
-const imgFooter = "../images/footer.png";
+const imgFooter = "../images/footerSign.png";
 
 const Span = styled.span`
 	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};

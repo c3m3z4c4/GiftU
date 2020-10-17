@@ -31,6 +31,7 @@ const LinkLogin = styled.a`
 const ImageFooter = styled.img`
 	height: auto;
 	width: 100vw;
+	margin-top: 3em;
 `;
 
 export { Wrapper, WrapperLogin, Cuenta, LinkLogin, ImageFooter };

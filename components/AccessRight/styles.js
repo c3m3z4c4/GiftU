@@ -42,22 +42,25 @@ const ButtonSignUp = styled.button`
 	font-family: "Quicksand", sans-serif;
 	background: transparent;
 	border: none;
-	border-bottom: 2px solid rgba(135, 211, 184, 0.6);
+	border-bottom: 2px solid rgba(114, 102, 102, 0.45);
 	font-family: "Quicksand", sans-serif;
 	font-size: 25px;
+	color: #726666;
 `;
 
 const WrapperInput = styled.div`
 	display: flex;
-	margin-top: 40px;
-	flex-direction: row;
-	align-items: center;
-	justify-content: left;
+	margin-top: 80px;
+	flex-direction: column;
+	align-items: flex-start
 `;
 
 const LabelText = styled.label`
 	font-family: "Quicksand", sans-serif;
 	color: #87d3b8;
+	margin-bottom: 1em;
+	margin-left: 1em;
+
 `;
 
 const LabelImg = styled.img`
@@ -89,6 +92,8 @@ const LabelInput = styled.input`
 const LabelTextPass = styled.label`
 	font-family: "Quicksand", sans-serif;
 	color: #87d3b8;
+	margin-bottom: 1em;
+	margin-left: 1em;
 `;
 
 const LabelImgPass = styled.img`
@@ -142,7 +147,7 @@ const BaseButton = styled.button`
 const WrapperSingRD = styled.div`
 	display: flex;
 	justify-content: space-between;
-	width: 30vw;
+	width: 20vw;
 `;
 
 const FBLogo = "../images/facebook.png";
@@ -200,6 +205,7 @@ const GooButton = styled.button`
 
 const Span = styled.span`
 	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
+	color: ${(props) => (props.disabled ? "#726666": "")};
 `;
 
 export {
