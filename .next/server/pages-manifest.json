@@ -3,5 +3,9 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/": "pages/index.js",
+<<<<<<< HEAD
   "/search": "pages/search.js"
+=======
+  "/access": "pages/access.js"
+>>>>>>> d7bd853a147dcaa72e6ba776c3adc77612b1b563
 }

@@ -28,28 +28,39 @@ import {
 } from "./styles";
 
 const AccessRight = () => {
+  function signinClick(e) {
+    e.preventDefault();
+    console.log('Enablink signIn.');
+	}
+	
+	function signupClick(e) {
+    e.preventDefault();
+    console.log('Enablink signUp.');
+  }
+
+
+
 	return (
 		<Fragment>
 			<WrapperRight>
 				<LogoImage src={imgLogo} />
 				<WrapperSign>
-					<ButtonSignIn>
+					<ButtonSignIn onClick={signinClick}>
 						Sign <Span primary>In</Span>
 					</ButtonSignIn>
-					<ButtonSignUp>
-						Sign <Span primary>Up</Span>
+					<ButtonSignUp onClick={signupClick}>
+					<Span disabled>Sign Up</Span>
 					</ButtonSignUp>
 				</WrapperSign>
 				<WrapperInput>
-					<LabelText>Email</LabelText>
-					<LabelImg src={email} />
+					<LabelText>Email <LabelImg src={email} /></LabelText>
+					<LabelInput></LabelInput>
 				</WrapperInput>
-				<LabelInput></LabelInput>
 				<WrapperInput>
-					<LabelTextPass>Password</LabelTextPass>
-					<LabelImgPass src={pass} />
+					<LabelTextPass>Password <LabelImgPass src={pass} /></LabelTextPass>
+					<LabelInputPass></LabelInputPass>
 				</WrapperInput>
-				<LabelInputPass></LabelInputPass>
+				
 				<BaseButton>Sing In</BaseButton>
 				<WrapperSingRD>
 					<FBButton>

@@ -40,7 +40,7 @@ const Wrappergift = styled.div`
 	font-family: "Quicksand";
 `;
 
-const GiftTitle = styled.h2`
+const GiftTitle = styled.a`
 	text-align: center;
 	color: black;
 	font-family: "Quicksand";

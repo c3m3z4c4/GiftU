@@ -15,7 +15,7 @@ const Footer = (props) => {
 			<Wrapper>
 				<WrapperLogin>
 					<Cuenta>{props.text}</Cuenta>
-					<Link href="/">
+					<Link href="/access">
 						<LinkLogin>{props.loginText}</LinkLogin>
 					</Link>
 				</WrapperLogin>
