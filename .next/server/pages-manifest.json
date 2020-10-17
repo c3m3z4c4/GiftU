@@ -5,5 +5,9 @@
   "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
   "/search": "pages/search.js",
   "/": "pages/index.js",
+<<<<<<< HEAD
   "/access": "pages/access.js"
+=======
+  "/search": "pages/search.js"
+>>>>>>> 4aa4deeac24a466d5b48b975f9612cfeccf218fd
 }

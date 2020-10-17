@@ -1,6 +1,9 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 
+import SearchLeft from "../components/SearchLeft";
+import SearchRight from "../components/SearchRight";
+
 import { OptButton } from "../components/OptButton";
 import Menu from "../components/Menu";
 import Link from "next/link";
@@ -10,6 +13,7 @@ const Wrapper = styled.div`
 	display: flex;
 `;
 
+<<<<<<< HEAD
 const WrapperLeft = styled.div`
 	width: 50vw;
 `;
@@ -196,10 +200,13 @@ const AncorImg = styled.a`
 	cursor:pointer;
 `
 
+=======
+>>>>>>> 4aa4deeac24a466d5b48b975f9612cfeccf218fd
 const Search = () => {
 	return (
 		<Fragment>
 			<Wrapper>
+<<<<<<< HEAD
 				<WrapperLeft>
 					<Link href="/">
 						<AncorImg> <LogoName src={name} /> </AncorImg>
@@ -260,6 +267,10 @@ const Search = () => {
 						</WrapperButtom>
 					</WrapperForm>
 				</WrapperRight>
+=======
+				<SearchLeft />
+				<SearchRight />
+>>>>>>> 4aa4deeac24a466d5b48b975f9612cfeccf218fd
 			</Wrapper>
 		</Fragment>
 	);
