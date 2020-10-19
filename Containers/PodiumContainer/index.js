@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link";
 import {
     PodiumWrapper,
     PodiumContainer,
@@ -31,7 +32,9 @@ const PodiumComponent = () => {
                   <ImagePodium src={giftImages.earings} />
                     <NameComponent>
                         Bisuteria Dorada
-                        <PlusIcon />
+                        <Link href="/details">
+                            <PlusIcon />
+                        </Link>
                     </NameComponent>
                     <ThirdPlace>3</ThirdPlace>
                 </CompleteColumn>
@@ -39,7 +42,9 @@ const PodiumComponent = () => {
                     <ImagePodium src={giftImages.iwatch} />
                     <NameComponent>
                         Reloj inteligente
-                        <PlusIcon />
+                        <Link href="/details">
+                            <PlusIcon />
+                        </Link>
                     </NameComponent>
                     <FirstPlace>
                         <FirstPlaceIcon />
@@ -49,7 +54,9 @@ const PodiumComponent = () => {
                     <ImagePodium src={giftImages.tennis} />
                     <NameComponent>
                         Calzado deportivo
-                        <PlusIcon />
+                        <Link href="/details">
+                            <PlusIcon />
+                        </Link>
                     </NameComponent>
                     <SecondPlace>2</SecondPlace>
                 </CompleteColumn>
