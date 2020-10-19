@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Link from "next/link"
+// import Link from "next/link"
 
 import {
 	WrapperLeft,
@@ -10,16 +10,16 @@ import {
 	BaseFooter,
 	imgFooter,
 	Span,
-	AncorImage,
+	// AncorImage,
 } from "./styles";
 
 const AccessLeft = () => {
 	return (
 		<Fragment>
 			<WrapperLeft>
-				<Link href="/">
+				{/* <Link href="/">
 				 	<AncorImage> <LogoName src={nameLogo} /></AncorImage>
-				</Link>
+				</Link> */}
 				<WrapperTextFooter>
 					<MainText>
 						Tu eliges <Span primary>a quién,</Span>

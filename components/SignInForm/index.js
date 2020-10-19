@@ -1,43 +1,50 @@
 import React from 'react'
+import {
+	WrapperInput,
+	LabelText,
+	LabelImg,
+	email,
+	LabelInput,
+	LabelTextPass,
+	LabelImgPass,
+	LabelInputPass,
+	pass,
+	BaseButton,
+	WrapperSingRD,
+	FBLogo,
+	FbLogo,
+	FBButton,
+	GoLogo,
+	GLogo,
+	GooButton,
+} from "../AccessRight/styles";
+import FormComponent from '../FormComponent/index';
 
-import { TitleText, InputContainer, FormArea, LabelComp, InputField  } from './styles'
-import { BaseButton } from '../Button'
-import { GButton } from '../GButton'
-import { FbButton } from '../FbButton'
 
-
-export const SignInForm = () => {
-
-    const FbLogo = '/images/facebook.png'
-    const GLogo = '/images/google.png'
+const SignInForm = () => {
     return (
-    <div>
-        <TitleText>Inicio de Sesión</TitleText>
-        <FormArea>
-            <InputContainer>
-                <LabelComp>
-                    <span >Email</span>
-                    <img  src="/images/mail.png" />
-                </LabelComp>
-                <InputField />
-            </InputContainer>
-            <InputContainer>
-                <LabelComp>
-                    <span >Contraseña</span>
-                    <img src="/images/key.png" />
-                </LabelComp>
-                <InputField />
-            </InputContainer>
-            <div>
-              <BaseButton title="Entrar"></BaseButton>
-            </div>
-            <div>
-              <FbButton title="Entrar con " src={FbLogo}></FbButton>
-              <GButton title="Entrar con " src={GLogo}></GButton>
-            </div>
-
-        </FormArea>
-    </div>
+        <FormComponent>
+            <WrapperInput>
+                <LabelText>Email <LabelImg src={email} /></LabelText>
+                <LabelInput></LabelInput>
+            </WrapperInput>
+            <WrapperInput>
+                <LabelTextPass>Contraseña <LabelImgPass src={pass} /></LabelTextPass>
+                <LabelInputPass></LabelInputPass>
+            </WrapperInput>
+            <BaseButton>Entrar</BaseButton>
+            
+            <WrapperSingRD>
+                <FBButton>
+                    Entrar con 
+                    <FbLogo src={FBLogo}></FbLogo>
+                </FBButton>
+                <GooButton>
+                    Entrar con 
+                    <GLogo src={GoLogo}></GLogo>
+                </GooButton>
+            </WrapperSingRD>
+        </FormComponent>       
     )
 }
-
+export default SignInForm;

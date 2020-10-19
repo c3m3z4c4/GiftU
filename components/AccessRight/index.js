@@ -1,77 +1,45 @@
-import React, { Fragment } from "react";
-
+import React, { Fragment, useState } from "react";
 import {
 	WrapperRight,
 	LogoImage,
 	imgLogo,
 	WrapperSign,
-	ButtonSignIn,
-	ButtonSignUp,
-	WrapperInput,
-	LabelText,
-	LabelImg,
-	email,
-	LabelInput,
-	LabelTextPass,
-	LabelImgPass,
-	LabelInputPass,
-	pass,
-	BaseButton,
-	WrapperSingRD,
-	FBLogo,
-	FbLogo,
-	FBButton,
-	GoLogo,
-	GLogo,
-	GooButton,
-	Span,
+	TabButton,
 } from "./styles";
+ import SignInForm from '../SignInForm';
+import SignUpForm from '../SignUpForm';
 
 const AccessRight = () => {
-  function signinClick(e) {
-    e.preventDefault();
-    console.log('Enablink signIn.');
+
+  const [ tabDisabled, useTabState ] = useState(false);
+  const [ formState, useForm ] = useState(false);
+  
+  function activeTab(e) {
+	e.preventDefault();
+	 useTabState(!tabDisabled)
+	 useForm(!formState)
 	}
 	
-	function signupClick(e) {
-    e.preventDefault();
-    console.log('Enablink signUp.');
-  }
-
-
-
 	return (
 		<Fragment>
 			<WrapperRight>
 				<LogoImage src={imgLogo} />
+				{/* tabs */}
 				<WrapperSign>
-					<ButtonSignIn onClick={signinClick}>
-						Iniciar <Span primary>Sesión</Span>
-					</ButtonSignIn>
-					<ButtonSignUp onClick={signupClick}>
-					<Span disabled>Registrarse</Span>
-					</ButtonSignUp>
+					<TabButton onClick={activeTab} tabDisabled={tabDisabled}>
+					  Iniciar Sesión
+					</TabButton>
+					<TabButton onClick={activeTab} tabDisabled={!tabDisabled}>
+					   Registrarse
+					</TabButton>
 				</WrapperSign>
-				<WrapperInput>
-					<LabelText>Email <LabelImg src={email} /></LabelText>
-					<LabelInput></LabelInput>
-				</WrapperInput>
-				<WrapperInput>
-					<LabelTextPass>Contraseña <LabelImgPass src={pass} /></LabelTextPass>
-					<LabelInputPass></LabelInputPass>
-				</WrapperInput>
-				
-				<BaseButton>Entrar</BaseButton>
-				<WrapperSingRD>
-					<FBButton>
-						Entrar con 
-						<FbLogo src={FBLogo}></FbLogo>
-					</FBButton>
-					<GooButton>
-						Entrar con 
-						<GLogo src={GoLogo}></GLogo>
-					</GooButton>
-				</WrapperSingRD>
+				{
+					formState ? (
+						<SignUpForm />
+					) : (
+					<SignInForm />
+					) 
+				}
 			</WrapperRight>
 		</Fragment>
 	);

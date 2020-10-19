@@ -13,7 +13,7 @@ const WrapperRight = styled.div`
 `;
 
 const LogoImage = styled.img`
-	width: 120px;
+	width: 100px;
 	margin: -60px 0 30px 0;
 `;
 
@@ -25,27 +25,21 @@ const WrapperSign = styled.div`
 	width: 20vw;
 `;
 
-const ButtonSignIn = styled.button`
+const TabButton = styled.button`
 	width: 9vw;
 	height: 50px;
-	font-weight: bold;
+	font-weight: bolder;
 	background: transparent;
 	border: none;
-	border-bottom: 2px solid rgba(135, 211, 184, 0.6);
 	font-family: "Quicksand", sans-serif;
-	font-size: 25px;
-`;
-
-const ButtonSignUp = styled.button`
-	width: 9vw;
-	font-weight: bold;
-	font-family: "Quicksand", sans-serif;
-	background: transparent;
-	border: none;
-	border-bottom: 2px solid rgba(114, 102, 102, 0.45);
-	font-family: "Quicksand", sans-serif;
-	font-size: 25px;
-	color: #726666;
+	font-size: 16px;
+	border-bottom: ${(props) => (props.tabDisabled 
+		// ? "2px solid rgba(114, 102, 102, 0.15)" 
+		? "none" 
+		: "2px solid rgba(135, 211, 184, 0.6)"
+	)};
+	color: ${(props) => (props.tabDisabled ? "rgba(114, 102, 102, 0.15)" : "#FFAB07" )};
+	outline: 0;
 `;
 
 const WrapperInput = styled.div`
@@ -54,7 +48,30 @@ const WrapperInput = styled.div`
 	flex-direction: column;
 	align-items: flex-start
 `;
-
+const WrappersmallerInput = styled.div`
+	display: flex;
+	margin-top: 10px;
+	flex-direction: column;
+	align-items: center;
+	input {
+		width: 22vw;
+	}
+	div {
+	width: 100%;
+    display: flex;
+	justify-content: space-around;
+	background: pink;
+	}
+`;
+const FlexInputWrapper = styled.div`
+	margin-top: 16px;
+	display: flex;
+    width: 60%;
+    justify-content: space-between;
+	input {
+		width: 11vw;
+	}
+`;
 const LabelText = styled.label`
 	font-family: "Quicksand", sans-serif;
 	color: #87d3b8;
@@ -131,7 +148,7 @@ const BaseButton = styled.button`
 	border-radius: 12px;
 	transform: matrix(1, 0, 0, 1, 0, 0);
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 14px;
 	line-height: 14px;
 	display: flex;
 	align-items: center;
@@ -141,13 +158,15 @@ const BaseButton = styled.button`
 	justify-content: center;
 	color: white;
 	margin-top: 50px;
-	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.47);
+	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.20);
 `;
 
 const WrapperSingRD = styled.div`
 	display: flex;
+	align-items: center;
 	justify-content: space-between;
-	width: 20vw;
+	width: 65%;
+	height: 100px;
 `;
 
 const FBLogo = "../images/facebook.png";
@@ -156,7 +175,7 @@ const FbLogo = styled.img`
 `;
 
 const FBButton = styled.button`
-	width: 186px;
+	width: 170px;
 	height: 40px;
 	background: #4d62af;
 	border: none;
@@ -164,7 +183,7 @@ const FBButton = styled.button`
 	border-radius: 12px;
 	transform: matrix(1, 0, 0, 1, 0, 0);
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 12px;
 	line-height: 14px;
 	display: flex;
 	align-items: center;
@@ -173,8 +192,7 @@ const FBButton = styled.button`
 	display: flex;
 	justify-content: center;
 	color: white;
-	margin-top: 30px;
-	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.47);
+	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.20);
 `;
 
 const GoLogo = "../images/google.png";
@@ -182,7 +200,7 @@ const GLogo = styled.img`
 	margin-left: 5px;
 `;
 const GooButton = styled.button`
-	width: 182px;
+	width: 170px;
 	height: 40px;
 	background: #f6f6f6;
 	border: none;
@@ -190,7 +208,7 @@ const GooButton = styled.button`
 	border-radius: 12px;
 	transform: matrix(1, 0, 0, 1, 0, 0);
 	font-weight: bold;
-	font-size: 18px;
+	font-size: 12px;
 	line-height: 14px;
 	display: flex;
 	align-items: center;
@@ -199,13 +217,7 @@ const GooButton = styled.button`
 	display: flex;
 	justify-content: center;
 	color: #726666;
-	margin-top: 30px;
 	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.47);
-`;
-
-const Span = styled.span`
-	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
-	color: ${(props) => (props.disabled ? "#726666": "")};
 `;
 
 export {
@@ -213,8 +225,7 @@ export {
 	LogoImage,
 	imgLogo,
 	WrapperSign,
-	ButtonSignIn,
-	ButtonSignUp,
+	TabButton,
 	WrapperInput,
 	LabelText,
 	LabelImg,
@@ -223,6 +234,7 @@ export {
 	LabelTextPass,
 	LabelImgPass,
 	LabelInputPass,
+	WrappersmallerInput,
 	pass,
 	BaseButton,
 	WrapperSingRD,
@@ -232,5 +244,5 @@ export {
 	GoLogo,
 	GLogo,
 	GooButton,
-	Span,
+	FlexInputWrapper,
 };

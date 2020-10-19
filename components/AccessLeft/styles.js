@@ -10,8 +10,6 @@ const LogoName = styled.img`
 	width: auto;
 `;
 
-
-
 const nameLogo = "../images/giftu.png";
 
 const AncorImage = styled.a`
@@ -23,17 +21,21 @@ const WrapperTextFooter = styled.div`
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	height: 100%;
+	justify-content: center;
+    position: relative;
 `;
 
 const MainText = styled.h1`
 	font-family: "Quicksand", sans-serif;
 	font-size: 40px;
-	margin: 29vh 0px;
 `;
 
 const BaseFooter = styled.img`
 	height: auto;
 	width: 33vw;
+	position: absolute;
+    bottom: 0;
 `;
 
 const imgFooter = "../images/footerSign.png";
