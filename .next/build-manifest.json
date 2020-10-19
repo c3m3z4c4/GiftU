@@ -24,15 +24,10 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/access": [
+    "/podium": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/access.js"
-    ],
-    "/search": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/search.js"
+      "static/chunks/pages/podium.js"
     ]
   },
   "ampFirstPages": []
