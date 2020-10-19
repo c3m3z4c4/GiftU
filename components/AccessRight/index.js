@@ -46,10 +46,10 @@ const AccessRight = () => {
 				<LogoImage src={imgLogo} />
 				<WrapperSign>
 					<ButtonSignIn onClick={signinClick}>
-						Sign <Span primary>In</Span>
+						Iniciar <Span primary>Sesión</Span>
 					</ButtonSignIn>
 					<ButtonSignUp onClick={signupClick}>
-					<Span disabled>Sign Up</Span>
+					<Span disabled>Registrarse</Span>
 					</ButtonSignUp>
 				</WrapperSign>
 				<WrapperInput>
@@ -57,18 +57,18 @@ const AccessRight = () => {
 					<LabelInput></LabelInput>
 				</WrapperInput>
 				<WrapperInput>
-					<LabelTextPass>Password <LabelImgPass src={pass} /></LabelTextPass>
+					<LabelTextPass>Contraseña <LabelImgPass src={pass} /></LabelTextPass>
 					<LabelInputPass></LabelInputPass>
 				</WrapperInput>
 				
-				<BaseButton>Sing In</BaseButton>
+				<BaseButton>Entrar</BaseButton>
 				<WrapperSingRD>
 					<FBButton>
-						Sing in with
+						Entrar con 
 						<FbLogo src={FBLogo}></FbLogo>
 					</FBButton>
 					<GooButton>
-						Sing in with
+						Entrar con 
 						<GLogo src={GoLogo}></GLogo>
 					</GooButton>
 				</WrapperSingRD>

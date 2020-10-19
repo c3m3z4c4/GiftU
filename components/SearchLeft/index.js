@@ -22,7 +22,7 @@ const SearchLeft = () => {
 				
 				<WrapperMainText>
 					<MainText>
-						CUEN<Span primary>T</Span>AME UN POCO M<Span>Á</Span>S:
+						CUÉN<Span primary>T</Span>AME UN POCO M<Span>Á</Span>S:
 					</MainText>
 				</WrapperMainText>
 				<ImgSearch src={imgFooter} />

@@ -26,21 +26,21 @@ const Menu = () => {
 					<Item>
 						<Link href="/access">
 							<Anchor>
-								Sign <Span>In</Span>
+								Iniciar <Span>Sesión</Span>
 							</Anchor>
 						</Link>
 					</Item>
 					<Item>
 						<Link href="/">
 							<Anchor>
-								<Span>P</Span>rofile
+								<Span>P</Span>erfil
 							</Anchor>
 						</Link>
 					</Item>
 					<Item>
 						<Link href="/">
 							<Anchor>
-								About <Span>Üs</Span>
+								Nosot <Span>ros</Span>
 							</Anchor>
 						</Link>
 					</Item>

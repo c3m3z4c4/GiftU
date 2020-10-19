@@ -12,7 +12,7 @@ export const SignInForm = () => {
     const GLogo = '/images/google.png'
     return (
     <div>
-        <TitleText>SignIn</TitleText>
+        <TitleText>Inicio de Sesión</TitleText>
         <FormArea>
             <InputContainer>
                 <LabelComp>
@@ -23,17 +23,17 @@ export const SignInForm = () => {
             </InputContainer>
             <InputContainer>
                 <LabelComp>
-                    <span >Password</span>
+                    <span >Contraseña</span>
                     <img src="/images/key.png" />
                 </LabelComp>
                 <InputField />
             </InputContainer>
             <div>
-              <BaseButton title="Sign In"></BaseButton>
+              <BaseButton title="Entrar"></BaseButton>
             </div>
             <div>
-              <FbButton title="Sign In With " src={FbLogo}></FbButton>
-              <GButton title="Sign In With " src={GLogo}></GButton>
+              <FbButton title="Entrar con " src={FbLogo}></FbButton>
+              <GButton title="Entrar con " src={GLogo}></GButton>
             </div>
 
         </FormArea>

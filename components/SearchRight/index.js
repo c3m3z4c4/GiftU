@@ -44,7 +44,7 @@ const SearchRight = () => {
 					</WrapperGender>
 					<WrapperOccacion>
 						<TextOccacion>
-							O<Span>c</Span>ación:
+							O<Span>c</Span>asión:
 						</TextOccacion>
 						<SelectOccacion>
 							<option value="Bautizo">Bautizo</option>

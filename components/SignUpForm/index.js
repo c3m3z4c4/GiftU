@@ -12,11 +12,11 @@ export const SignUpForm = () => {
     const GLogo = '/images/google.png'
     return (
     <div>
-        <TitleText>SignUp</TitleText>
+        <TitleText>Registrarse</TitleText>
         <FormArea>
             <InputContainer>
                 <LabelComp>
-                    <span >Name</span>
+                    <span >Nombre</span>
                     <img  src="/images/user.png" />
                 </LabelComp>
                 <InputField />
@@ -30,17 +30,17 @@ export const SignUpForm = () => {
             </InputContainer>
             <InputContainer>
                 <LabelComp>
-                    <span >Password</span>
+                    <span >Contrasena</span>
                     <img src="/images/key.png" />
                 </LabelComp>
                 <InputField />
             </InputContainer>
             <div>
-              <BaseButton title="Sign In"></BaseButton>
+              <BaseButton title="Registrarse"></BaseButton>
             </div>
             <div>
-              <FbButton title="Sign In With " src={FbLogo}></FbButton>
-              <GButton title="Sign In With " src={GLogo}></GButton>
+              <FbButton title="Registrarse con " src={FbLogo}></FbButton>
+              <GButton title="Registrarse con " src={GLogo}></GButton>
             </div>
 
         </FormArea>
