@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-self.__BUILD_MANIFEST = {__rewrites:[],"/_error":["static\u002Fchunks\u002Fpages\u002F_error.js"],sortedPages:["\u002F_app","\u002F_error"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
-=======
-self.__BUILD_MANIFEST = {__rewrites:[],"/_error":["static\u002Fchunks\u002Fpages\u002F_error.js"],"/access":["static\u002Fchunks\u002Fpages\u002Faccess.js"],"/details":["static\u002Fchunks\u002Fpages\u002Fdetails.js"],sortedPages:["\u002F_app","\u002F_error","\u002Faccess","\u002Fdetails"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
->>>>>>> 7d948b2325d370b68a236865add9d0a53de364d2
+self.__BUILD_MANIFEST = {__rewrites:[],"/":["static\u002Fchunks\u002Fpages\u002Findex.js"],"/_error":["static\u002Fchunks\u002Fpages\u002F_error.js"],"/details":["static\u002Fchunks\u002Fpages\u002Fdetails.js"],"/next/dist/pages/_error":["static\u002Fchunks\u002Fpages\u002Fnext\u002Fdist\u002Fpages\u002F_error.js"],sortedPages:["\u002F","\u002F_app","\u002F_error","\u002Fdetails","\u002Fnext\u002Fdist\u002Fpages\u002F_error"]};self.__BUILD_MANIFEST_CB && self.__BUILD_MANIFEST_CB()
