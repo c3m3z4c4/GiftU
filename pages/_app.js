@@ -1,18 +1,6 @@
-// import { AppProps } from "next/app";
-// import { Fragment } from "react";
-// /* import GlobalStyle from "../styles/GlobalStyle.js"; */
-
-// function MyApp({ Component, pageProps }) {
-// 	return (
-// 		<Fragment>
-			
-// 			<Component {...pageProps} />
-// 		</Fragment>
-// 	);
-// }
-// export default MyApp;
-
+import { ApolloProvider } from '@apollo/client';
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import { useApollo } from '../Apollo/apollo.client';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -29,11 +17,14 @@ const theme = {
 }
 
 export default function App({ Component, pageProps }) {
+	const client = useApollo(pageProps.initialApolloState);
   return (
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+		<ApolloProvider client={client}>
+			<Component {...pageProps} />
+		</ApolloProvider>
       </ThemeProvider>
     </>
   )

@@ -1,29 +1,51 @@
-// /*eslint-disable */
-// import { ApolloClient, InMemoryCache, createHttpLink, ApolloLink } from '@apollo/client';
-// import { setContext } from '@apollo/client/link/context';
+import { 
+    ApolloClient,
+    HttpLink,
+    InMemoryCache,
+} from '@apollo/client';
+import { useMemo } from 'react';
 
-// const httpLink = createHttpLink({
-//   uri,
-//   credentials: 'same-origin',
-// });
+let apolloClient;
 
-// const authLink = setContext((_, { headers = {} }) => {
-//   return {
-//     headers: {
-//       headers,
-//       Authorization: token ? `Bearer ${accessToken}:${token}` : `Bearer ${accessToken}`,
-//     },
-//   };
-// });
+function createIsomorphicLink(){
+    //checamos si estamos en server o client
+    if(window === "undefined") {
+        // here we are in server 
+        const { SchemaLink } = require('@apollo/client/link/schema');
+        // aqui requwerimos nuestro schema:
+        const { schema } = require('./schema');
+        return new SchemaLink({ schema })
 
-// const link = ApolloLink.from([authLink,errorLink,httpLink]);
-// const cache = new InMemoryCache({
-//   addTypename: false,
-// });
+    } else {
+        // here we are in client
+        const { HttpLink } = require('@apollo/client/link/http')
+       return new HttpLink({
+            // uri: 'aqui va la url de api. ejemplo '
+            uri: '/api/graphql',
+    });
+    }
+};
+function cretApolloClient(){
+    return new ApolloClient({
+        //where is rendering in server side mode 
+        ssrMode: window === 'undefined',
+        link:createIsomorphicLink(),
+        // where store resolts of queries 
+        cache: new InMemoryCache()
+    });
+};
 
+export function initializeApollo(initialState = null) {
+    const _apolloClient = apolloClient ?? cretApolloClient();
+    if (initialState) {
+        _apolloClient.cache.restore(initialState)   
+    }
+    if(window === 'undefined') return _apolloClient;
+        apolloClient = apolloClient ?? _apolloClient;
+        return apolloClient;
+};
 
-// const client = new ApolloClient({
-//   link,
-// });
-
-// export default client;
+export function useApollo(initialState){
+  const store = useMemo(() => initializeApollo(initialState), [initialState]);
+  return store;
+};
