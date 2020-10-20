@@ -45,8 +45,8 @@ const DecorativeImage = styled.img`
 `;
 
 const InformationContainer = styled.div`
-	width: 480px;
-	height: 460px;
+	width: 30vw;
+	height: 50vh;
 	background: rgba(255, 171, 7, 0.1);
 	display: flex;
 	flex-direction: column;
