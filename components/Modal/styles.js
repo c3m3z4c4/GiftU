@@ -54,7 +54,6 @@ const TextWrite = styled.input`
 	border-bottom: 2px solid #ffab07;
 	font-family: "Quicksand", sans-serif;
 	font-size: 18px;
-	color: #ffab07;
 	padding: 10px 0;
 
 	&:focus,
