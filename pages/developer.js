@@ -2,15 +2,18 @@ import React, { Fragment } from "react";
 import styled from "styled-components";
 
 const WrapperView = styled.div`
+	display: flex;
 	width: 100vw;
-	heihgt: 100vh;
+	background: rgba(196, 196, 196, 0.6);
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
 `;
 
 const WrapperModal = styled.div`
 	width: 40vw;
-	heihgt: 30vh;
-	margin: 25vh auto;
-	box-shadow: 2px 10px 15px 0px rgba(0, 0, 0, 0.47);
+	box-shadow: 2px 10px 15px 0px rgba(0,0,0,0.47);
+    background: white;
 `;
 
 const WrapperBtnClose = styled.div`
