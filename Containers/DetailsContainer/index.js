@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-
+import React, { Fragment, useState } from "react";
+import Link from "next/link";
 import Slider from "../../components/Slider";
 
 import {
@@ -24,34 +24,51 @@ import {
 	BtnClose,
 	WrapperInfo,
 	TextQuestion,
-	starts,
 	TextComent,
 	TextWrite,
-	BtnCompra,
+	CloseIcon,
 } from "./styles";
 
-const Modal = () => {
+const Modal = ({ show, closeModal }) => {
 	return (
-		<Fragment>
+		show ? (
+			<Fragment>
 			<WrapperView>
 				<WrapperModal>
 					<WrapperBtnClose>
-						<BtnClose>X</BtnClose>
+						<BtnClose onClick={closeModal}>
+							<CloseIcon src="/images/close.png"/>
+						</BtnClose>
 					</WrapperBtnClose>
 					<WrapperInfo>
 						<TextQuestion>¿Qué opinas de la recomendación?</TextQuestion>
-						{/* <Starts src='/images/decorative.png' /> */}
 						<TextComent>Deja tu comentario:</TextComent>
 						<TextWrite></TextWrite>
-						<BtnCompra>Compralo</BtnCompra>
+						<Link href="/">
+							<DetailButton> donde comprarlo</DetailButton>
+						</Link>	
 					</WrapperInfo>
 				</WrapperModal>
 			</WrapperView>
 		</Fragment>
+		) : null
 	);
 };
 
-const DetailsContainer = () => (
+const DetailsContainer = () => {
+	const [ modal, useModal] = useState(true);
+
+	const openModal = (e) => {
+		e.preventDefault();
+		 useModal(false)
+	};
+	
+	const closenModal = (e) => {
+		e.preventDefault();
+		 useModal(true)
+	};
+
+	return (
 	<Fragment>
 		<DetailsWrapper>
 			<LeftDetails>
@@ -87,14 +104,14 @@ const DetailsContainer = () => (
 							<DetailItemContent>Lorem ipsum sit amet</DetailItemContent>
 						</DetailItem>
 					</DetailsInformation>
-					<DetailButton>Compralo Fácil y rápido</DetailButton>
+					<DetailButton onClick={openModal}>Compralo Fácil y rápido</DetailButton>
 				</InformationContainer>
 				<Slider />
 			</RightDetails>
 		</DetailsWrapper>
-		<Modal />
+		<Modal show={!modal}  closeModal={closenModal}/>
 	</Fragment>
-);
+)};
 
 
 export default DetailsContainer;

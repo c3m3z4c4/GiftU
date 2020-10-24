@@ -6,26 +6,34 @@ const WrapperView = styled.div`
 	height: 100vh;
 	justify-content: center;
 	align-items: center;
+	position: absolute;
+    top: 0;
 `;
 
 const WrapperModal = styled.div`
-	width: 40vw;
-	box-shadow: 2px 10px 15px 0px rgba(0,0,0,0.47);
+	min-width: 40vw;
+	min-height: 320px;
+	box-shadow: 2px 10px 15px 0px rgba(0,0,0,0.17);
 	background: white;
+	border-radius: 30px;
 `;
 
 const WrapperBtnClose = styled.div`
 	display: flex;
 	justify-content: flex-end;
-	color: #87d3b8;
+	min-height: 50px;
+	align-items: center;
+    padding: 5px 20px;
+
 `;
 
 const BtnClose = styled.button`
-	color: #87d3b8;
-	font-family: "Quicksand", sans-serif;
-	font-size: 20px;
 	background-color: transparent;
 	border: none;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+    padding: 8px;
 `;
 
 const WrapperInfo = styled.div`
@@ -39,10 +47,10 @@ const TextQuestion = styled.p`
 	font-size: 18px;
 `;
 
-const starts = "../images/decorative.png";
-const Starts = styled.img`
-	width: 4vw;
-	heihgt: 4h;
+const CloseIcon = styled.img`
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 `;
 
 const TextComent = styled.p`
@@ -58,41 +66,20 @@ const TextWrite = styled.input`
 	font-size: 18px;
 	color: #ffab07;
 	padding: 10px 0;
-
+	margin-bottom: 25px;
 	&:focus,
 	textarea:focus,
 	select:focus {
 		outline: none;
 	}
 `;
-const BtnCompra = styled.button`
-	width: 124.16px;
-	height: 34.58px;
-	background: #87d3b8;
-	border: none;
-	box-sizing: border-box;
-	border-radius: 12px;
-	transform: matrix(1, 0, 0, 1, 0, 0);
-	font-weight: bold;
-	font-size: 18px;
-	line-height: 14px;
-	display: flex;
-	align-items: center;
-	letter-spacing: 0.11em;
-	font-family: "Quicksand", sans-serif;
-	display: flex;
-	justify-content: center;
-	color: white;
-	margin: 50px;
-	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.47);
-`;
-
 const DetailsWrapper = styled.div`
 	font-family: "Quicksand", sans-serif;
 	width: 100%;
 	display: flex;
 	width: 100%;
 	height: 100%;
+	position: relative;
 `;
 const LeftDetails = styled.div`
 	width: 50vw;
@@ -186,8 +173,8 @@ const DetailItemContent = styled.p`
 const DetailButton = styled.button`
 	font-family: Quicksand;
 	font-style: normal;
-	width: 253px;
-	height: 45px;
+	max-width: 253px;
+	max-height: 45px;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 19px;
@@ -228,8 +215,8 @@ export {
 	BtnClose,
 	WrapperInfo,
 	TextQuestion,
-	starts,
+	// starts,
 	TextComent,
 	TextWrite,
-	BtnCompra,
+	CloseIcon,
 };
