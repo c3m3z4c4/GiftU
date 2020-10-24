@@ -1,6 +1,14 @@
 import { ApolloProvider } from '@apollo/client';
+// import withData from '../util/apollo-client';
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import { useApollo } from '../Apollo/apollo.client';
+import client from '../Apollo/apollo.client';
+
+// import { useApollo } from '../Apollo/apollo.client';
+// import { 
+//   ApolloClient,
+//   HttpLink,
+//   InMemoryCache,
+// } from '@apollo/client';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -17,7 +25,14 @@ const theme = {
 }
 
 export default function App({ Component, pageProps }) {
-	const client = useApollo(pageProps.initialApolloState);
+  
+  // const client = useApollo(pageProps.initialApolloState);
+
+  // const client = new ApolloClient({
+  //   cache: new InMemoryCache(),
+  //   uri: 'https://us1.prisma.sh/john-a-agudelo-e911b8/johnaagudelodb/dev',
+  // });
+
   return (
     <>
       <GlobalStyle />
