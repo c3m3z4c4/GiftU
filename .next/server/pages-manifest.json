@@ -4,5 +4,6 @@
   "/_error": "pages/_error.js",
   "/search": "pages/search.js",
   "/details": "pages/details.js",
-  "/": "pages/index.js"
+  "/": "pages/index.js",
+  "/access": "pages/access.js"
 }
