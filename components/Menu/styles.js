@@ -2,6 +2,9 @@ import styled from "styled-components";
 
 const Wrapper = styled.section`
 	margin-right: 30px;
+	@media (max-width: 425px) {
+		display: none;
+	   }
 `;
 
 const WrapperImageMenu = styled.div`

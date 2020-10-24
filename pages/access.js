@@ -7,6 +7,9 @@ import AccessRight from "../components/AccessRight";
 const WrapperSeccion = styled.section`
 	width: 100%;
 	display: flex;
+	@media (max-width: 768px) {
+	flex-wrap: wrap;
+	}
 `;
 
 const Access = () => {

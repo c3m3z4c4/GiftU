@@ -7,6 +7,10 @@ const Wrapper = styled.section`
 	display: flex;
 	align-items: center;
 	margin-top: 14vh;
+	@media (max-width: 425px) {
+		margin-top: 0;
+		flex-direction: column;
+	}
 `;
 
 const Text = styled.p`
@@ -22,6 +26,9 @@ const WrapperCarousel = styled.div`
 	margin: 2vh 0px;
 	padding-bottom: 10px;
 	overflow: scroll;
+	@media (max-width: 425px) {
+		width: 100%
+	}
 `;
 
 const CarouselItem = styled.div`
@@ -33,6 +40,9 @@ const CarouselItem = styled.div`
 	display: inline-block;
 	cursor: pointer;
 	box-shadow: 3px 5px 5px 1px rgba(0, 0, 0, 0.17);
+	@media (max-width: 425px) {
+		width: 50%
+	}
 `;
 
 const imgItem3 = "../images/tennis_1.jpg";

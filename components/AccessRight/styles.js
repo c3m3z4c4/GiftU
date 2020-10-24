@@ -9,11 +9,18 @@ const WrapperRight = styled.div`
 	width: 50%;
 	height: 100vh;
 	background: rgba(160, 221, 199, 0.25);
+	@media (max-width: 768px) {
+		width: 100%;
+		height: 100vh;
+	}
 `;
 
 const LogoImage = styled.img`
 	width: 70px;
 	margin: -60px 0 30px 0;
+	@media (max-width: 768px) {
+		margin: 0;
+	}
 `;
 
 const imgLogo = "../images/logo.png";
@@ -22,12 +29,18 @@ const WrapperSign = styled.div`
 	display: flex;
 	justify-content: space-between;
 	width: 20vw;
+	@media (max-width: 768px) {
+		width: 90%;
+	}
 `;
 
 const WrapperLabel = styled.div`
 	display: flex;
 	justify-content: space-between;
 	height: 20px;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 const TabButton = styled.button`
@@ -45,6 +58,9 @@ const TabButton = styled.button`
 	)};
 	color: ${(props) => (props.tabDisabled ? "rgba(114, 102, 102, 0.15)" : "#FFAB07" )};
 	outline: 0;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 const WrapperInput = styled.div`
@@ -52,14 +68,23 @@ const WrapperInput = styled.div`
 	margin-top: 80px;
 	flex-direction: column;
 	align-items: flex-start
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 const WrappersmallerInput = styled.div`
 	display: flex;
 	margin-top: 40px;
 	flex-direction: column;
 	align-items: center;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 	input {
 		width: 22vw;
+		@media (max-width: 768px) {
+			width: 100%;
+		}
 	}
 	div {
 	width: 100%;
@@ -74,6 +99,12 @@ const FlexInputWrapper = styled.div`
     justify-content: space-between;
 	input {
 		width: 11vw;
+		@media (max-width: 768px) {
+			width: 90%;
+		}
+	}
+	@media (max-width: 768px) {
+		width: 100%;
 	}
 `;
 const LabelText = styled.label`
@@ -81,6 +112,9 @@ const LabelText = styled.label`
 	color: #87d3b8;
 	margin-bottom: 1em;
 	margin-left: 1em;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 
 `;
 
@@ -102,11 +136,13 @@ const LabelInput = styled.input`
 	font-size: 14px;
 	line-height: 15px;
 	color: #ffab07;
-
 	&:focus,
 	textarea:focus,
 	select:focus {
 		outline: none;
+	}
+	@media (max-width: 768px) {
+		width: 100%;
 	}
 `;
 
@@ -115,6 +151,9 @@ const LabelTextPass = styled.label`
 	color: #87d3b8;
 	margin-bottom: 1em;
 	margin-left: 1em;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 const LabelImgPass = styled.img`
@@ -135,11 +174,13 @@ const LabelInputPass = styled.input`
 	font-size: 14px;
 	line-height: 15px;
 	color: #ffab07;
-
 	&:focus,
 	textarea:focus,
 	select:focus {
 		outline: none;
+	}
+	@media (max-width: 768px) {
+		width: 100%;
 	}
 `;
 
@@ -221,7 +262,7 @@ const GooButton = styled.button`
 	display: flex;
 	justify-content: center;
 	color: #726666;
-	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.47);
+	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.17);
 `;
 
 export {

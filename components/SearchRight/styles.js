@@ -4,12 +4,18 @@ const WrapperRight = styled.div`
 	width: 50%;
 	background: rgba(160, 221, 199, 0.25);
 	height: 100vh;
+	@media (max-width: 425px) {
+		width: 100%;
+	}
 `;
 
 const WrappperMenu = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	height: 15vh;
+	@media (max-width: 425px) {
+		height: 0;
+	}
 `;
 
 const WrapperForm = styled.div`
@@ -34,7 +40,7 @@ const TextGender = styled.p`
 const WrapperImg = styled.div`
 	display: flex;
 	justify-content: space-around;
-	width: 60%;
+	width: 50%;
     justify-content: space-around;
     align-items: center;
 `;
@@ -83,6 +89,7 @@ const TextPerfiles = styled.p`
 	text-align: center;
 	font-size: 23px;
 	font-family: "Quicksand";
+	margin-right: 61px;
 `;
 
 const WrapperLabels = styled.div`
@@ -92,6 +99,7 @@ const WrapperLabels = styled.div`
 
 const WrapperLabel = styled.div`
 	display: flex;
+	margin-bottom: 40px;
 `;
 
 const imgInt = "../images/instagram-search.png";

@@ -23,12 +23,19 @@ const Title = styled.h1`
 	color: black;
 	font-size: 50px;
 	font-family: "Quicksand";
+	@media (max-width: 425px) {
+		font-size:35px;
+		font-weight: 400;
+	}
 `;
 
 const WrapperGifts = styled.div`
 	display: flex;
 	justify-content: space-around;
 	width: 100vw;
+	@media (max-width: 425px) {
+		flex-direction: column;
+	   }
 `;
 
 const Wrappergift = styled.div`
@@ -46,6 +53,10 @@ const GiftTitle = styled.a`
 	font-family: "Quicksand";
 	cursor: pointer;
 	margin: 0;
+	margin-bottom: 15px;
+	@media (max-width: 425px) {
+		margin-top: 20px;
+	}
 `;
 
 const ColorLine = styled.button`

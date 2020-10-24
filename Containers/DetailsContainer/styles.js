@@ -7,7 +7,7 @@ const WrapperView = styled.div`
 	justify-content: center;
 	align-items: center;
 	position: absolute;
-    top: 0;
+	top: 0;
 `;
 
 const WrapperModal = styled.div`
@@ -16,6 +16,9 @@ const WrapperModal = styled.div`
 	box-shadow: 2px 10px 15px 0px rgba(0,0,0,0.17);
 	background: white;
 	border-radius: 30px;
+	@media (max-width: 768px) {
+		min-width: 90%;
+	}
 `;
 
 const WrapperBtnClose = styled.div`
@@ -45,6 +48,9 @@ const WrapperInfo = styled.div`
 const TextQuestion = styled.p`
 	font-family: "Quicksand", sans-serif;
 	font-size: 18px;
+	@media (max-width: 768px) {
+		font-size: 14px;
+	}
 `;
 
 const CloseIcon = styled.img`
@@ -56,6 +62,9 @@ const CloseIcon = styled.img`
 const TextComent = styled.p`
 	font-family: "Quicksand", sans-serif;
 	font-size: 18px;
+	@media (max-width: 768px) {
+		font-size: 14px;
+	}
 `;
 
 const TextWrite = styled.input`
@@ -80,22 +89,32 @@ const DetailsWrapper = styled.div`
 	width: 100%;
 	height: 100%;
 	position: relative;
+	@media (max-width: 768px) {
+		flex-wrap: wrap;
+	}
 `;
 const LeftDetails = styled.div`
-	width: 50vw;
+    width: 50%;
 	display: flex;
 	height: 100vh;
 	justify-content: center;
 	align-items: center;
 	background: rgba(160, 221, 199, 0.25);
+	@media (max-width: 768px) {
+		width: 100%;
+		height: 20%;
+	}
 `;
 const RightDetails = styled(LeftDetails)`
 	background: #ffffff;
-	width: 50vw;
+	width: 50%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 const MainImageContainer = styled.div`
@@ -126,6 +145,10 @@ const InformationContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	@media (max-width: 768px) {
+		width: 100%;
+		height: 70vh;
+	}
 `;
 const TitleDetails = styled.p`
 	font-family: Quicksand;

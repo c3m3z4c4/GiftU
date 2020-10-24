@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Link from "next/link";
 import {
     WrappersmallerInput,
 	LabelText,
@@ -59,7 +60,9 @@ const SignUpForm = () => {
             {/* contraseñas */}
             {/* terminan inputs */}
             {/* Botones */}
-            <BaseButton>Registrarse</BaseButton>
+            <Link href="/">
+                <BaseButton>Registrarse</BaseButton>
+            </Link>
             <WrapperSingRD>
                 <FBButton>
                 Registrarse con 

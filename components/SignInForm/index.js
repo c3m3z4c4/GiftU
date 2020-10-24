@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Link from "next/link";
 import {
 	WrapperInput,
 	LabelText,
@@ -32,8 +33,9 @@ const SignInForm = () => {
                 <LabelTextPass>Contraseña <LabelImgPass src={pass} /></LabelTextPass>
                 <LabelInputPass></LabelInputPass>
             </WrapperInput>
-            <BaseButton>Entrar</BaseButton>
-            
+            <Link href="/">
+                <BaseButton>Entrar</BaseButton>
+            </Link>            
             <WrapperSingRD>
                 <FBButton>
                     Entrar con 
