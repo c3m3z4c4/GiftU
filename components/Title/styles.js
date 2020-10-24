@@ -11,6 +11,15 @@ text-align: center;
 letter-spacing: 0.15em;
 color: #726666;
 text-transform: uppercase;
+@media (max-width: 1024px) {
+    font-size: 24px;
+  }
+@media (max-width: 768px) {
+    font-size: 18px;
+}
+@media (max-width: 425px) {
+    font-size: 16px;
+}
 `;
 
 const Name = styled(Title) `

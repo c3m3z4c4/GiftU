@@ -13,6 +13,9 @@ width: 80%;
 display: flex;
 align-items: flex-end;
 justify-content: space-bewteen;
+@media (max-width: 768px) {
+  width: 100%;
+}
 `
 
 const CompleteColumn = styled.div`
@@ -22,6 +25,10 @@ const CompleteColumn = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media (max-width: 768px) {
+    width: calc(100%/3 - 5px);
+    margin: 0 5px;
+  }
 `;
 
 const Maincolumn = styled.div`
@@ -37,6 +44,15 @@ const Maincolumn = styled.div`
   line-height: 0%;
   letter-spacing: 0.2em;
   color: rgba(255, 171, 7, 0.75);
+  @media (max-width: 1024px) {
+    font-size: 56px;
+  }
+  @media (max-width: 768px) {
+    font-size: 46px;
+  }
+  @media (max-width: 425px) {
+      font-size: 20px;
+  }
 `
 const NameComponent = styled.div`
   width: 100%;
@@ -52,6 +68,21 @@ const NameComponent = styled.div`
   margin-bottom: 10px;
   img {
       padding-left: 40px;
+      @media (max-width: 768px) {
+        padding-left: 5px;
+      }
+  }
+  text-transform: uppercase;
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+    line-height: 0;
+  }
+  @media (max-width: 425px) {
+      font-size: 6px;
+      line-height: 0;
   }
 `;
 
@@ -73,6 +104,14 @@ const ImagePodium = styled.img`
   object-fit: contain;
   background: white;
   box-shadow: 3px 5px 5px 1px rgba(0,0,0,0.17);
+  @media (max-width: 768px) {
+		width: 150px;
+    height: 150px;
+  }
+  @media (max-width: 425px) {
+		width: 60px;
+   height: 60px;
+	}
   `;
   
   const FirstPlaceIcon = styled.img.attrs(props => ({
@@ -80,6 +119,18 @@ const ImagePodium = styled.img`
     }))`
     width: 100px;
     height: 100px;
+    @media (max-width: 1024px) {
+      width: 60px;
+      height: 60px;
+    }
+    @media (max-width: 768px) {
+      width: 40px;
+      height: 40px;
+    }
+    @media (max-width: 425px) {
+      width: 30px;
+     height: 30px;
+    }
   `;
   
   const PlusIcon = styled.img.attrs(props => ({
@@ -88,6 +139,10 @@ const ImagePodium = styled.img`
     }))`
     width: 15px;
     height: 15px;
+    @media (max-width: 425px) {
+      width:10px;
+      height: 10px;
+  }
   `;
   
   const DecorativeContainer = styled.div`
@@ -96,8 +151,10 @@ const ImagePodium = styled.img`
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
-
   const LittleDecorative = styled.img.attrs(props => ({
       src: '/images/little.png',
       href:'little decorastive',
