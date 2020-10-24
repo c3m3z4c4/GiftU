@@ -135,6 +135,10 @@ const DecorativeImage = styled.img`
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	@media (max-width: 768px) {
+		width: 106.85px;
+		height: 102.24px;
+	}
 `;
 
 const InformationContainer = styled.div`

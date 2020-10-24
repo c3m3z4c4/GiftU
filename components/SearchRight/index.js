@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Link from "next/link";
 
 import Menu from "../Menu";
 import { OptButton } from "../OptButton";
@@ -71,9 +72,11 @@ const SearchRight = () => {
 						</WrapperLabels>
 					</WrapperPerfiles>
 					<WrapperButtom>
-						<BaseButton>
-							EN<Span primary>V</Span>IAR
-						</BaseButton>
+						<Link href="/podium">
+							<BaseButton>
+								EN<Span primary>V</Span>IAR
+							</BaseButton>
+                        </Link>
 					</WrapperButtom>
 				</WrapperForm>
 			</WrapperRight>

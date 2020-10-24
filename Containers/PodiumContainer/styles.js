@@ -38,7 +38,7 @@ const Maincolumn = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 96px;
+  font-size: 76px;
   font-style: normal;
   font-weight: bold;
   line-height: 0%;
@@ -58,7 +58,7 @@ const NameComponent = styled.div`
   width: 100%;
   height: 45px;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 18px;
   line-height: 0%;
   color: #726666;
   background: rgba(135, 211, 184, 0.32);
@@ -117,8 +117,8 @@ const ImagePodium = styled.img`
   const FirstPlaceIcon = styled.img.attrs(props => ({
       src: '/images/iconFirst.png',
     }))`
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     @media (max-width: 1024px) {
       width: 60px;
       height: 60px;
