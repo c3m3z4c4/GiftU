@@ -14,7 +14,7 @@ const Text = styled.p`
 	font-size: 18px;
 	font-family: "Quicksand";
 	align-items: center;
-	margin-right: 3vw;
+	margin-right: 30px;
 `;
 
 const WrapperCarousel = styled.div`
@@ -25,7 +25,6 @@ const WrapperCarousel = styled.div`
 `;
 
 const CarouselItem = styled.div`
-	background-color: green;
 	width: 8vw;
 	height: 14vh;
 	border-radius: 20px;
@@ -42,7 +41,8 @@ const imgItem1 = "../images/iwatch_1.jpg";
 const Item = styled.img`
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
+    background: white;
 `;
 
 const Span = styled.span`
