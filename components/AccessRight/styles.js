@@ -6,14 +6,13 @@ const WrapperRight = styled.div`
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	width: 50vw;
+	width: 50%;
 	height: 100vh;
-	background-color: #f7fff4;
-	margin: -8px -19px;
+	background: rgba(160, 221, 199, 0.25);
 `;
 
 const LogoImage = styled.img`
-	width: 100px;
+	width: 70px;
 	margin: -60px 0 30px 0;
 `;
 
@@ -23,6 +22,12 @@ const WrapperSign = styled.div`
 	display: flex;
 	justify-content: space-between;
 	width: 20vw;
+`;
+
+const WrapperLabel = styled.div`
+	display: flex;
+	justify-content: space-between;
+	height: 20px;
 `;
 
 const TabButton = styled.button`
@@ -50,7 +55,7 @@ const WrapperInput = styled.div`
 `;
 const WrappersmallerInput = styled.div`
 	display: flex;
-	margin-top: 10px;
+	margin-top: 40px;
 	flex-direction: column;
 	align-items: center;
 	input {
@@ -60,7 +65,6 @@ const WrappersmallerInput = styled.div`
 	width: 100%;
     display: flex;
 	justify-content: space-around;
-	background: pink;
 	}
 `;
 const FlexInputWrapper = styled.div`
@@ -82,7 +86,7 @@ const LabelText = styled.label`
 
 const LabelImg = styled.img`
 	width: 20px;
-	height: 20px;
+	height: auto;
 	margin-left: 10px;
 `;
 
@@ -147,7 +151,7 @@ const BaseButton = styled.button`
 	box-sizing: border-box;
 	border-radius: 12px;
 	transform: matrix(1, 0, 0, 1, 0, 0);
-	font-weight: bold;
+	font-weight: 400;
 	font-size: 14px;
 	line-height: 14px;
 	display: flex;
@@ -182,7 +186,7 @@ const FBButton = styled.button`
 	box-sizing: border-box;
 	border-radius: 12px;
 	transform: matrix(1, 0, 0, 1, 0, 0);
-	font-weight: bold;
+	font-weight:400;
 	font-size: 12px;
 	line-height: 14px;
 	display: flex;
@@ -207,7 +211,7 @@ const GooButton = styled.button`
 	box-sizing: border-box;
 	border-radius: 12px;
 	transform: matrix(1, 0, 0, 1, 0, 0);
-	font-weight: bold;
+	font-weight: 400;
 	font-size: 12px;
 	line-height: 14px;
 	display: flex;
@@ -245,4 +249,5 @@ export {
 	GLogo,
 	GooButton,
 	FlexInputWrapper,
+	WrapperLabel,
 };

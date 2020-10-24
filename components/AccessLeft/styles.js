@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const WrapperLeft = styled.div`
-	width: 50vw;
+	width: 50%;
 `;
 
 const LogoName = styled.img`

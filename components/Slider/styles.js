@@ -32,7 +32,7 @@ const CarouselItem = styled.div`
 	margin-right: 10px;
 	display: inline-block;
 	cursor: pointer;
-	box-shadow: 3px 5px 5px 1px rgba(0, 0, 0, 0.47);
+	box-shadow: 3px 5px 5px 1px rgba(0, 0, 0, 0.17);
 `;
 
 const imgItem3 = "../images/tennis_1.jpg";

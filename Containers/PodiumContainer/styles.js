@@ -72,7 +72,7 @@ const ImagePodium = styled.img`
   margin-bottom: 20px;
   object-fit: contain;
   background: white;
-  box-shadow: 3px 5px 5px 1px rgba(0,0,0,0.47);
+  box-shadow: 3px 5px 5px 1px rgba(0,0,0,0.17);
   `;
   
   const FirstPlaceIcon = styled.img.attrs(props => ({

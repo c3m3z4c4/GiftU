@@ -9,7 +9,7 @@ const WrapperModal = styled.div`
 	width: 40vw;
 	heihgt: 30vh;
 	margin: 25vh auto;
-	box-shadow: 2px 10px 15px 0px rgba(0, 0, 0, 0.47);
+	box-shadow: 2px 10px 15px 0px rgba(0, 0, 0, 0.17);
 `;
 
 const WrapperBtnClose = styled.div`
@@ -71,7 +71,7 @@ const BtnCompra = styled.button`
 	box-sizing: border-box;
 	border-radius: 12px;
 	transform: matrix(1, 0, 0, 1, 0, 0);
-	font-weight: bold;
+	font-weight: 400;
 	font-size: 18px;
 	line-height: 14px;
 	display: flex;

@@ -5,10 +5,10 @@ import styled from "styled-components";
 const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 80%;
-    min-height: 500px;
+    height: 500px;
 `;
 
 const FormComponent = ({ children }) => 

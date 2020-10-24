@@ -12,7 +12,7 @@ const WrapperView = styled.div`
 
 const WrapperModal = styled.div`
 	width: 40vw;
-	box-shadow: 2px 10px 15px 0px rgba(0,0,0,0.47);
+	box-shadow: 2px 10px 15px 0px rgba(0,0,0,0.17);
     background: white;
 `;
 
@@ -87,7 +87,7 @@ const BtnCompra = styled.button`
 	justify-content: center;
 	color: white;
 	margin: 50px;
-	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.47);
+	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.17);
 `;
 
 const Modal = () => {

@@ -87,7 +87,7 @@ const LeftDetails = styled.div`
 	height: 100vh;
 	justify-content: center;
 	align-items: center;
-	background: rgba(160, 221, 199, 0.1);
+	background: rgba(160, 221, 199, 0.25);
 `;
 const RightDetails = styled(LeftDetails)`
 	background: #ffffff;

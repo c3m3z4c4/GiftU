@@ -2,18 +2,22 @@ import React from 'react'
 import {
     WrappersmallerInput,
 	LabelText,
-	LabelInput,
+    LabelInput,
+    LabelImg,
 	LabelTextPass,
 	LabelInputPass,
     FlexInputWrapper,
 	BaseButton,
 	WrapperSingRD,
-	FBLogo,
+    FBLogo,
+    pass,
+    email,
 	FbLogo,
 	FBButton,
 	GoLogo,
 	GLogo,
-	GooButton,
+    GooButton,
+    WrapperLabel,
 } from "../AccessRight/styles";
 import FormComponent from '../FormComponent/index';
 
@@ -23,21 +27,32 @@ const SignUpForm = () => {
         <FormComponent>
             {/* inputs */}
             <WrappersmallerInput>
-                <LabelText>Nombre</LabelText>
-                <LabelInput></LabelInput>
+                <LabelText>
+                    Nombre
+                </LabelText>
+                <LabelInput />
             </WrappersmallerInput>
             <WrappersmallerInput>
-                <LabelText>Email</LabelText>
-                <LabelInput></LabelInput>
+                <LabelText>
+                    Email
+                    <LabelImg src={email} />
+                </LabelText>
+                <LabelInput />
             </WrappersmallerInput>
             {/* contraseñas */}
             <FlexInputWrapper>
                 <WrappersmallerInput>
-                    <LabelTextPass>Contraseña</LabelTextPass>
-                    <LabelInputPass></LabelInputPass>
+                    <WrapperLabel>
+                        <LabelTextPass>Contraseña</LabelTextPass>
+                        <LabelImg src={pass} />
+                    </WrapperLabel>
+                     <LabelInputPass></LabelInputPass>
                 </WrappersmallerInput>
                 <WrappersmallerInput>
-                    <LabelTextPass> Repite Contraseña</LabelTextPass>
+                    <WrapperLabel>
+                        <LabelTextPass> Repite Contraseña</LabelTextPass>
+                        <LabelImg src={pass} />
+                    </WrapperLabel>
                     <LabelInputPass></LabelInputPass>
                 </WrappersmallerInput>
             </FlexInputWrapper>

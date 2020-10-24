@@ -1,7 +1,14 @@
 import styled from "styled-components";
 
 const WrapperLeft = styled.div`
-	width: 50vw;
+	width: 50%;
+`;
+
+const WrapperMainImage = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	height: 60px;
 `;
 
 const name = "../images/giftu.png";
@@ -47,4 +54,5 @@ export {
 	ImgSearch,
 	Span,
 	AncorImg,
+	WrapperMainImage,
 };

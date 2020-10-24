@@ -33,16 +33,6 @@
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/access.js"
-    ],
-    "/details": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/details.js"
-    ],
-    "/search": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/search.js"
     ]
   },
   "ampFirstPages": []

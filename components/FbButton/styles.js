@@ -8,7 +8,7 @@ export const Button = styled.button `
     box-sizing: border-box;
     border-radius: 12px;
     transform: matrix(1, 0, 0, 1, 0, 0);
-    font-weight: bold;
+    font-weight:400;
     font-size: 18px;
     line-height: 14px;
     display: flex;
@@ -19,7 +19,7 @@ export const Button = styled.button `
     justify-content: center;
     color: white;
     margin-top: 50px;
-    box-shadow: 3px 8px 5px -2px rgba(0,0,0,0.47);
+    box-shadow: 3px 8px 5px -2px rgba(0,0,0,0.17);
 `
 
 export const ImageBtn = styled.img `

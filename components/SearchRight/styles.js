@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 const WrapperRight = styled.div`
-	width: 50vw;
-	background-color: #f7fff4;
+	width: 50%;
+	background: rgba(160, 221, 199, 0.25);
 	height: 100vh;
 `;
 
@@ -32,9 +32,11 @@ const TextGender = styled.p`
 `;
 
 const WrapperImg = styled.div`
-	width: 30vh;
 	display: flex;
 	justify-content: space-around;
+	width: 60%;
+    justify-content: space-around;
+    align-items: center;
 `;
 
 const WrapperOccacion = styled.div`
@@ -52,7 +54,7 @@ const TextOccacion = styled.p`
 `;
 
 const SelectOccacion = styled.select`
-	width: 18vw;
+	width: 50%;
 	background: transparent;
 	border: none;
 	border-bottom: 2px solid rgba(135, 211, 184, 0.6);
@@ -81,7 +83,6 @@ const TextPerfiles = styled.p`
 	text-align: center;
 	font-size: 23px;
 	font-family: "Quicksand";
-	// margin-right: -70px;
 `;
 
 const WrapperLabels = styled.div`
@@ -132,7 +133,6 @@ const BaseButton = styled.button`
 	box-sizing: border-box;
 	border-radius: 12px;
 	transform: matrix(1, 0, 0, 1, 0, 0);
-	font-weight: bold;
 	font-size: 18px;
 	line-height: 14px;
 	display: flex;
@@ -143,7 +143,7 @@ const BaseButton = styled.button`
 	justify-content: center;
 	color: white;
 	margin-top: 50px;
-	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.47);
+	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.07);
 `;
 
 const Span = styled.span`

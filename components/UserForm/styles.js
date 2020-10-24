@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const TitleText = styled.span `
   line-height: 30px;
   letter-spacing: 0.14em;
-  font-weight: bold;
+  font-weight:400;
   font-size: 24px;
   font-family: 'Quicksand', sans-serif;
   margin: 30px 0;
@@ -39,7 +39,7 @@ export const StyledText = styled.span `
 color: ${(props) => (props.primary ? "#87d3b8" : "#ffab07")};
 line-height: 30px;
 letter-spacing: 0.14em;
-font-weight: bold;
+font-weight: 400;
 font-size: 24px;
 font-family: 'Quicksand', sans-serif;
 margin: 30px 0;
@@ -49,7 +49,7 @@ export const NormalText = styled.span `
 color: ${(props) => (props.primary ? "#87d3b8" : "#ffab07")};
 line-height: 30px;
 letter-spacing: 0.14em;
-font-weight: bold;
+font-weight: 400;
 font-size: 24px;
 font-family: 'Quicksand', sans-serif;
 margin: 30px 0;
