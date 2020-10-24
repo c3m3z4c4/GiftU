@@ -34,6 +34,8 @@ export default function App({ Component, pageProps }) {
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
+          <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet"></link>
+          <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet"></link>
       </ThemeProvider>
     </>
   )
