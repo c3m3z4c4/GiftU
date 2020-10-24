@@ -40,7 +40,7 @@ const Menu = () => {
 					<Item>
 						<Link href="/">
 							<Anchor>
-								Nosot <Span>ros</Span>
+								Nosot<Span>ros</Span>
 							</Anchor>
 						</Link>
 					</Item>

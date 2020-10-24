@@ -17,7 +17,7 @@ const Main = () => {
 			<Wrapper>
 				<WrapperTitle>
 					<Title>
-						HOLA, <br />¿ <Span primary>Q</Span>ÜÉ <br />
+						HOLA,<br />¿<Span primary>Q</Span>UÉ <br />
 						QUIERES <br />
 						REGALAR <Span>?</Span>
 					</Title>

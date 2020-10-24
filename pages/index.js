@@ -12,7 +12,7 @@ const App = () => {
 			<Header />
 			<Main />
 			<Footer
-				text="¿Ya tienes üna cüenta?"
+				text="¿Ya tienes una cüenta?"
 				loginText="Inicia sesión"
 				footerImage={image}
 				altImage="Demo"

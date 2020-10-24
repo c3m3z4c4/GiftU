@@ -36,6 +36,7 @@ const ListItems = styled.ul`
 	text-align: right;
 	margin: 0px 0px 0px -50px;
 	background-color: #9e9595;
+	min-width: 130px;
 	${Wrapper}:hover & {
 		display: block;
 	}
@@ -50,6 +51,9 @@ const Anchor = styled.a`
 	text-decoration: none;
 	font-family: Quicksand;
 	cursor:pointer;
+	${Item}:hover & {
+		color: white;
+	}
 `;
 
 export {
