@@ -1,8 +1,10 @@
 import { ApolloProvider } from '@apollo/client';
-// import withData from '../util/apollo-client';
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import client from '../Apollo/apollo.client';
 
+// import client from '../Apollo/apollo.client';
+
+//  desconentar esto para caso c 
+// import withData from '../util/apollo-client';
 // import { useApollo } from '../Apollo/apollo.client';
 // import { 
 //   ApolloClient,
@@ -26,7 +28,11 @@ const theme = {
 
 export default function App({ Component, pageProps }) {
   
+  // este ccon el caso c
   // const client = useApollo(pageProps.initialApolloState);
+
+
+  // este que se quede comentado, es la configuracion sin considerar nada de next, esto es l oque aroja la data unefinded:
 
   // const client = new ApolloClient({
   //   cache: new InMemoryCache(),
