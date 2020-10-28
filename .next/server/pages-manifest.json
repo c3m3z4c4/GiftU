@@ -2,9 +2,6 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-  "/access": "pages/access.js",
-  "/": "pages/index.js",
   "/search": "pages/search.js",
-  "/podium": "pages/podium.js",
-  "/details": "pages/details.js"
+  "/": "pages/index.js"
 }
