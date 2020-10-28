@@ -1,9 +1,8 @@
 import React from "react";
-import PodiumComponent from '../Containers/PodiumContainer/index';
+import { PodiumComponent ,TEST_QUERY, variablesTest } from '../Containers/PodiumContainer/index';
 import TitleComponent from '../components/Title/index';
 import styled from 'styled-components'
-import { gql, useQuery } from '@apollo/client';
-// import { useQuery } from '@apollo/react-hooks';
+import { initializeApollo } from '../lib/apolloClient'
 
 const Wrapper = styled.div`
 width:100%;
@@ -15,22 +14,6 @@ align-items: center;
 `
 
 const PodiumPage = () =>  {
-
-     const TEST_QUERY = gql`
-      query {
-        items {
-          id
-          title
-          image 
-        }
-      }
-     `;
-
-     const { loading, error, data } = useQuery(TEST_QUERY);
-     if (loading) {console.log('loading....')};
-     if (error) { console.log('erorrrrrrrr 3312 tenemos un 3312')};
-     console.log('dataaaaaaa:' + data);
-
     return (
     <Wrapper>
         <TitleComponent name="CESAR" /> 
@@ -38,5 +21,21 @@ const PodiumPage = () =>  {
     </Wrapper>
     )
 };
+
+export async function getStaticProps() {
+  const apolloClient = initializeApollo()
+
+  await apolloClient.query({
+    query: TEST_QUERY,
+    variables: variablesTest,
+  })
+
+  return {
+    props: {
+      initialApolloState: apolloClient.cache.extract(),
+    },
+    revalidate: 1,
+  }
+}
 
 export default PodiumPage;
