@@ -19,7 +19,7 @@ export const Button = styled.button `
     justify-content: center;
     color: #726666;
     margin-top: 50px;
-    box-shadow: 3px 8px 5px -2px rgba(0,0,0,0.47);
+    box-shadow: 3px 8px 5px -2px rgba(0,0,0,0.17);
 `
 
 export const ImageBtn = styled.img `

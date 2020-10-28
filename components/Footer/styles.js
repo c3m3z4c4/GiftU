@@ -23,9 +23,12 @@ const Cuenta = styled.p`
 `;
 
 const LinkLogin = styled.a`
-	color: blue;
-	font-size: 16px;
-	cursor: pointer;
+    color: darkcyan;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: underline;
+    letter-spacing: 1px;
+
 `;
 
 const ImageFooter = styled.img`

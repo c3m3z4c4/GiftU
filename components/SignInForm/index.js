@@ -1,4 +1,10 @@
-import React from 'react'
+import React from "react";
+import Link from "next/link";
+import Auth from "../../lib/Auth";
+const auth = new Auth();
+
+import FormComponent from "../FormComponent/index";
+
 import {
 	WrapperInput,
 	LabelText,
@@ -18,33 +24,41 @@ import {
 	GLogo,
 	GooButton,
 } from "../AccessRight/styles";
-import FormComponent from '../FormComponent/index';
 
+export default class Nav extends React.Component {
+	handleLogin() {
+		auth.login();
+	}
 
-const SignInForm = () => {
-    return (
-        <FormComponent>
-            <WrapperInput>
-                <LabelText>Email <LabelImg src={email} /></LabelText>
-                <LabelInput></LabelInput>
-            </WrapperInput>
-            <WrapperInput>
-                <LabelTextPass>Contraseña <LabelImgPass src={pass} /></LabelTextPass>
-                <LabelInputPass></LabelInputPass>
-            </WrapperInput>
-            <BaseButton>Entrar</BaseButton>
-            
-            <WrapperSingRD>
-                <FBButton>
-                    Entrar con 
-                    <FbLogo src={FBLogo}></FbLogo>
-                </FBButton>
-                <GooButton>
-                    Entrar con 
-                    <GLogo src={GoLogo}></GLogo>
-                </GooButton>
-            </WrapperSingRD>
-        </FormComponent>       
-    )
+	render() {
+		return (
+			<FormComponent>
+				<WrapperInput>
+					<LabelText>
+						Email <LabelImg src={email} />
+					</LabelText>
+					<LabelInput></LabelInput>
+				</WrapperInput>
+				<WrapperInput>
+					<LabelTextPass>
+						Contraseña <LabelImgPass src={pass} />
+					</LabelTextPass>
+					<LabelInputPass></LabelInputPass>
+				</WrapperInput>
+				<Link href="/">
+					<BaseButton>Registrarse</BaseButton>
+				</Link>
+				<WrapperSingRD>
+					<FBButton onClick={() => this.handleLogin()}>
+						Registrarse con
+						<FbLogo src={FBLogo}></FbLogo>
+					</FBButton>
+					<GooButton onClick={() => this.handleLogin()}>
+						Registrarse con
+						<GLogo src={GoLogo}></GLogo>
+					</GooButton>
+				</WrapperSingRD>
+			</FormComponent>
+		);
+	}
 }
-export default SignInForm;

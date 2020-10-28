@@ -1,7 +1,20 @@
 import styled from "styled-components";
 
 const WrapperLeft = styled.div`
-	width: 50vw;
+	width: 50%;
+	@media (max-width: 425px) {
+		display: none;
+	}
+`;
+
+const WrapperMainImage = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	height: 60px;
+	@media (max-width: 425px) {
+		display: none;
+	}
 `;
 
 const name = "../images/giftu.png";
@@ -25,6 +38,9 @@ const MainText = styled.h1`
 	color: black;
 	font-size: 40px;
 	font-family: "Quicksand";
+	@media (max-width: 425px) {
+		font-size: 20px;
+	}
 `;
 
 const imgFooter = "../images/footer.png";
@@ -47,4 +63,5 @@ export {
 	ImgSearch,
 	Span,
 	AncorImg,
+	WrapperMainImage,
 };

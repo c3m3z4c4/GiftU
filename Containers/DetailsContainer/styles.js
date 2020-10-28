@@ -1,27 +1,120 @@
 import styled from "styled-components";
+const WrapperView = styled.div`
+	display: flex;
+	width: 100vw;
+	background: rgba(196, 196, 196, 0.6);
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+`;
 
+const WrapperModal = styled.div`
+	min-width: 40vw;
+	min-height: 320px;
+	box-shadow: 2px 10px 15px 0px rgba(0,0,0,0.17);
+	background: white;
+	border-radius: 30px;
+	@media (max-width: 768px) {
+		min-width: 90%;
+	}
+`;
+
+const WrapperBtnClose = styled.div`
+	display: flex;
+	justify-content: flex-end;
+	min-height: 50px;
+	align-items: center;
+    padding: 5px 20px;
+
+`;
+
+const BtnClose = styled.button`
+	background-color: transparent;
+	border: none;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+    padding: 8px;
+`;
+
+const WrapperInfo = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+`;
+
+const TextQuestion = styled.p`
+	font-family: "Quicksand", sans-serif;
+	font-size: 18px;
+	@media (max-width: 768px) {
+		font-size: 14px;
+	}
+`;
+
+const CloseIcon = styled.img`
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+`;
+
+const TextComent = styled.p`
+	font-family: "Quicksand", sans-serif;
+	font-size: 18px;
+	@media (max-width: 768px) {
+		font-size: 14px;
+	}
+`;
+
+const TextWrite = styled.input`
+	width: 25vw;
+	border: none;
+	border-bottom: 2px solid #ffab07;
+	font-family: "Quicksand", sans-serif;
+	font-size: 18px;
+	color: #ffab07;
+	padding: 10px 0;
+	margin-bottom: 25px;
+	&:focus,
+	textarea:focus,
+	select:focus {
+		outline: none;
+	}
+`;
 const DetailsWrapper = styled.div`
 	font-family: "Quicksand", sans-serif;
 	width: 100%;
 	display: flex;
 	width: 100%;
 	height: 100%;
+	position: relative;
+	@media (max-width: 768px) {
+		flex-wrap: wrap;
+	}
 `;
 const LeftDetails = styled.div`
-	width: 50vw;
+    width: 50%;
 	display: flex;
 	height: 100vh;
 	justify-content: center;
 	align-items: center;
-	background: rgba(160, 221, 199, 0.1);
+	background: rgba(160, 221, 199, 0.25);
+	@media (max-width: 768px) {
+		width: 100%;
+		height: 20%;
+	}
 `;
 const RightDetails = styled(LeftDetails)`
 	background: #ffffff;
-	width: 50vw;
+	width: 50%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	@media (max-width: 768px) {
+		width: 100%;
+	}
 `;
 
 const MainImageContainer = styled.div`
@@ -42,6 +135,10 @@ const DecorativeImage = styled.img`
 	position: absolute;
 	bottom: 0;
 	right: 0;
+	@media (max-width: 768px) {
+		width: 106.85px;
+		height: 102.24px;
+	}
 `;
 
 const InformationContainer = styled.div`
@@ -52,6 +149,10 @@ const InformationContainer = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	@media (max-width: 768px) {
+		width: 100%;
+		height: 70vh;
+	}
 `;
 const TitleDetails = styled.p`
 	font-family: Quicksand;
@@ -99,8 +200,8 @@ const DetailItemContent = styled.p`
 const DetailButton = styled.button`
 	font-family: Quicksand;
 	font-style: normal;
-	width: 253px;
-	height: 45px;
+	max-width: 253px;
+	max-height: 45px;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 19px;
@@ -135,4 +236,14 @@ export {
 	DetailItemTitle,
 	DetailItemContent,
 	DetailButton,
+	WrapperView,
+	WrapperModal,
+	WrapperBtnClose,
+	BtnClose,
+	WrapperInfo,
+	TextQuestion,
+	// starts,
+	TextComent,
+	TextWrite,
+	CloseIcon,
 };

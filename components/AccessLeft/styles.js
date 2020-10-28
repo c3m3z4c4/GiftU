@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 const WrapperLeft = styled.div`
-	width: 50vw;
+	width: 50%;
+	@media (max-width: 768px) {
+		width: 100%;
+		height: 30vh;
+	}
 `;
 
 const LogoName = styled.img`
@@ -29,6 +33,9 @@ const WrapperTextFooter = styled.div`
 const MainText = styled.h1`
 	font-family: "Quicksand", sans-serif;
 	font-size: 40px;
+	@media (max-width: 768px) {
+		font-size: 20px;
+	}
 `;
 
 const BaseFooter = styled.img`

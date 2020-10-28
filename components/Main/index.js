@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Link from "next/link"
+import Link from "next/link";
 import {
 	Wrapper,
 	WrapperTitle,
@@ -17,7 +17,7 @@ const Main = () => {
 			<Wrapper>
 				<WrapperTitle>
 					<Title>
-						HOLA, <br />¿ <Span primary>Q</Span>ÜÉ <br />
+						HOLA,<br />¿<Span primary>Q</Span>UÉ <br />
 						QUIERES <br />
 						REGALAR <Span>?</Span>
 					</Title>

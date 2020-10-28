@@ -7,6 +7,10 @@ const Wrapper = styled.section`
 	display: flex;
 	align-items: center;
 	margin-top: 14vh;
+	@media (max-width: 425px) {
+		margin-top: 0;
+		flex-direction: column;
+	}
 `;
 
 const Text = styled.p`
@@ -14,7 +18,7 @@ const Text = styled.p`
 	font-size: 18px;
 	font-family: "Quicksand";
 	align-items: center;
-	margin-right: 3vw;
+	margin-right: 30px;
 `;
 
 const WrapperCarousel = styled.div`
@@ -22,10 +26,12 @@ const WrapperCarousel = styled.div`
 	margin: 2vh 0px;
 	padding-bottom: 10px;
 	overflow: scroll;
+	@media (max-width: 425px) {
+		width: 100%
+	}
 `;
 
 const CarouselItem = styled.div`
-	background-color: green;
 	width: 8vw;
 	height: 14vh;
 	border-radius: 20px;
@@ -33,7 +39,10 @@ const CarouselItem = styled.div`
 	margin-right: 10px;
 	display: inline-block;
 	cursor: pointer;
-	box-shadow: 3px 5px 5px 1px rgba(0, 0, 0, 0.47);
+	box-shadow: 3px 5px 5px 1px rgba(0, 0, 0, 0.17);
+	@media (max-width: 425px) {
+		width: 50%
+	}
 `;
 
 const imgItem3 = "../images/tennis_1.jpg";
@@ -42,7 +51,8 @@ const imgItem1 = "../images/iwatch_1.jpg";
 const Item = styled.img`
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
+    background: white;
 `;
 
 const Span = styled.span`

@@ -6,20 +6,19 @@ import {
 	WrapperSign,
 	TabButton,
 } from "./styles";
- import SignInForm from '../SignInForm';
-import SignUpForm from '../SignUpForm';
+import SignInForm from "../SignInForm";
+import SignUpForm from "../SignUpForm";
 
 const AccessRight = () => {
+	const [tabDisabled, useTabState] = useState(false);
+	const [formState, useForm] = useState(false);
 
-  const [ tabDisabled, useTabState ] = useState(false);
-  const [ formState, useForm ] = useState(false);
-  
-  function activeTab(e) {
-	e.preventDefault();
-	 useTabState(!tabDisabled)
-	 useForm(!formState)
+	function activeTab(e) {
+		e.preventDefault();
+		useTabState(!tabDisabled);
+		useForm(!formState);
 	}
-	
+
 	return (
 		<Fragment>
 			<WrapperRight>
@@ -27,19 +26,13 @@ const AccessRight = () => {
 				{/* tabs */}
 				<WrapperSign>
 					<TabButton onClick={activeTab} tabDisabled={tabDisabled}>
-					  Iniciar Sesión
+						Iniciar Sesión
 					</TabButton>
 					<TabButton onClick={activeTab} tabDisabled={!tabDisabled}>
-					   Registrarse
+						Registrarse
 					</TabButton>
 				</WrapperSign>
-				{
-					formState ? (
-						<SignUpForm />
-					) : (
-					<SignInForm />
-					) 
-				}
+				{formState ? <SignUpForm /> : <SignInForm />}
 			</WrapperRight>
 		</Fragment>
 	);
