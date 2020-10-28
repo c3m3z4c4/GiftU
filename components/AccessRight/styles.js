@@ -51,12 +51,13 @@ const TabButton = styled.button`
 	border: none;
 	font-family: "Quicksand", sans-serif;
 	font-size: 16px;
-	border-bottom: ${(props) => (props.tabDisabled 
-		// ? "2px solid rgba(114, 102, 102, 0.15)" 
-		? "none" 
-		: "2px solid rgba(135, 211, 184, 0.6)"
-	)};
-	color: ${(props) => (props.tabDisabled ? "rgba(114, 102, 102, 0.15)" : "#FFAB07" )};
+	border-bottom: ${(props) =>
+		props.tabDisabled
+			? // ? "2px solid rgba(114, 102, 102, 0.15)"
+			  "none"
+			: "2px solid rgba(135, 211, 184, 0.6)"};
+	color: ${(props) =>
+		props.tabDisabled ? "rgba(114, 102, 102, 0.15)" : "#FFAB07"};
 	outline: 0;
 	@media (max-width: 768px) {
 		width: 100%;
@@ -67,8 +68,7 @@ const WrapperInput = styled.div`
 	display: flex;
 	margin-top: 80px;
 	flex-direction: column;
-	align-items: flex-start
-	@media (max-width: 768px) {
+	align-items: flex-start @media (max-width: 768px) {
 		width: 100%;
 	}
 `;
@@ -87,16 +87,16 @@ const WrappersmallerInput = styled.div`
 		}
 	}
 	div {
-	width: 100%;
-    display: flex;
-	justify-content: space-around;
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
 	}
 `;
 const FlexInputWrapper = styled.div`
 	margin-top: 16px;
 	display: flex;
-    width: 60%;
-    justify-content: space-between;
+	width: 60%;
+	justify-content: space-between;
 	input {
 		width: 11vw;
 		@media (max-width: 768px) {
@@ -115,7 +115,6 @@ const LabelText = styled.label`
 	@media (max-width: 768px) {
 		width: 100%;
 	}
-
 `;
 
 const LabelImg = styled.img`
@@ -203,7 +202,7 @@ const BaseButton = styled.button`
 	justify-content: center;
 	color: white;
 	margin-top: 50px;
-	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.20);
+	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.2);
 `;
 
 const WrapperSingRD = styled.div`
@@ -219,7 +218,7 @@ const FbLogo = styled.img`
 	margin-left: 5px;
 `;
 
-const FBButton = styled.button`
+const FBButton = styled.a`
 	width: 170px;
 	height: 40px;
 	background: #4d62af;
@@ -227,7 +226,7 @@ const FBButton = styled.button`
 	box-sizing: border-box;
 	border-radius: 12px;
 	transform: matrix(1, 0, 0, 1, 0, 0);
-	font-weight:400;
+	font-weight: 400;
 	font-size: 12px;
 	line-height: 14px;
 	display: flex;
@@ -237,14 +236,14 @@ const FBButton = styled.button`
 	display: flex;
 	justify-content: center;
 	color: white;
-	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.20);
+	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.2);
 `;
 
 const GoLogo = "../images/google.png";
 const GLogo = styled.img`
 	margin-left: 5px;
 `;
-const GooButton = styled.button`
+const GooButton = styled.a`
 	width: 170px;
 	height: 40px;
 	background: #f6f6f6;
