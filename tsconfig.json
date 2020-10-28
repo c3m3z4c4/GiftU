@@ -21,7 +21,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx", "pages/api/me.js", "pages/api/logout.js", "pages/api/login.js", "pages/api/callback.js"
   ],
   "exclude": [
     "node_modules"
