@@ -24,7 +24,7 @@ export default class Nav extends React.Component {
 			<Fragment>
 				<Wrapper>
 					<WrapperImageMenu>
-						<Text>MENÜ</Text>
+						<Text>MENU</Text>
 						<LogoImage src={Imagepng} />
 					</WrapperImageMenu>
 					<ListItems>

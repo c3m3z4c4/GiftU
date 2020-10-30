@@ -41,8 +41,8 @@ const WrapperImg = styled.div`
 	display: flex;
 	justify-content: space-around;
 	width: 50%;
-    justify-content: space-around;
-    align-items: center;
+	justify-content: space-around;
+	align-items: center;
 `;
 
 const WrapperOccacion = styled.div`

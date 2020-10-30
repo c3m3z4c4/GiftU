@@ -1,44 +1,44 @@
 {
-    "polyfillFiles": [
-        "static/chunks/polyfills.js"
+  "polyfillFiles": [
+    "static/chunks/polyfills.js"
+  ],
+  "devFiles": [
+    "static/chunks/react-refresh.js"
+  ],
+  "ampDevFiles": [
+    "static/chunks/webpack.js",
+    "static/chunks/amp.js"
+  ],
+  "lowPriorityFiles": [
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js"
+  ],
+  "pages": {
+    "/": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/index.js"
     ],
-    "devFiles": [
-        "static/chunks/react-refresh.js"
+    "/_app": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/_app.js"
     ],
-    "ampDevFiles": [
-        "static/chunks/webpack.js",
-        "static/chunks/amp.js"
+    "/_error": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/_error.js"
     ],
-    "lowPriorityFiles": [
-        "static/development/_buildManifest.js",
-        "static/development/_ssgManifest.js"
+    "/access": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/access.js"
     ],
-    "pages": {
-        "/_app": [
-            "static/chunks/main.js",
-            "static/chunks/webpack.js",
-            "static/chunks/pages/_app.js"
-        ],
-        "/_error": [
-            "static/chunks/main.js",
-            "static/chunks/webpack.js",
-            "static/chunks/pages/_error.js"
-        ],
-        "/access": [
-            "static/chunks/main.js",
-            "static/chunks/webpack.js",
-            "static/chunks/pages/access.js"
-        ],
-        "/search": [
-            "static/chunks/main.js",
-            "static/chunks/webpack.js",
-            "static/chunks/pages/search.js"
-        ],
-        "/podium": [
-            "static/chunks/main.js",
-            "static/chunks/webpack.js",
-            "static/chunks/pages/podium.js"
-        ]
-    },
-    "ampFirstPages": []
+    "/search": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/search.js"
+    ]
+  },
+  "ampFirstPages": []
 }
