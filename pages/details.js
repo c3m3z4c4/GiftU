@@ -1,8 +1,8 @@
 import React from "react";
-import DetailsContainer from '../Containers/DetailsContainer/index';
+import DetailsContainer from "../Containers/DetailsContainer/index";
 
-const DetailsPage = () => (
-    <DetailsContainer />
-	);
+const DetailsPage = () => {
+	return <DetailsContainer />;
+};
 
 export default DetailsPage;

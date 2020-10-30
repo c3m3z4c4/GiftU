@@ -43,7 +43,7 @@ export default class Nav extends React.Component {
 							</Link>
 						</Item>
 						<Item>
-							<Link href="/">
+							<Link href="/about">
 								<Anchor>
 									Nosot<Span>ros</Span>
 								</Anchor>
