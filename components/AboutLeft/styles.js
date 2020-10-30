@@ -65,6 +65,8 @@ const TitleRole = styled.h2`
 `;
 
 const GitHub = styled.a`
+	font-size: 20px;
+	color: black;
 	text-decoration: none;
 	font-family: Quicksand;
 	cursor: pointer;
@@ -72,6 +74,8 @@ const GitHub = styled.a`
 `;
 
 const LinkedIn = styled.a`
+	font-size: 20px;
+	color: black;
 	text-decoration: none;
 	font-family: Quicksand;
 	cursor: pointer;

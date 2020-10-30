@@ -1,4 +1,6 @@
 import React, { Fragment } from "react";
+import styled from "styled-components";
+
 import {
 	Wrapper,
 	WrapperLeft,
@@ -14,6 +16,10 @@ const fotoS = "../images/fotoSue.jpg";
 const fotoF = "../images/fotoFrancisco.jpg";
 const fotoCS = "../images/fotoCesarS.jpg";
 
+const Span = styled.span`
+	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
+`;
+
 const AboutLeft = () => {
 	return (
 		<Fragment>
@@ -21,7 +27,9 @@ const AboutLeft = () => {
 				<Wrapper>
 					<ImageAbout src={fotoS} alt="Foto de Sue" />
 					<WrapperDetails>
-						<TitleDetails>Sue Herrera</TitleDetails>
+						<TitleDetails>
+							Sue H<Span primary>e</Span>rrera
+						</TitleDetails>
 						<TitleRole>Front-end Developer</TitleRole>
 						<GitHub href="https://github.com/sueherrera30">
 							Mis repositorios
@@ -34,7 +42,9 @@ const AboutLeft = () => {
 				<Wrapper>
 					<ImageAbout src={fotoF} alt="Foto de Francisco" />
 					<WrapperDetails>
-						<TitleDetails>Francisco Garcia</TitleDetails>
+						<TitleDetails>
+							Francisco Garc<Span>i</Span>a
+						</TitleDetails>
 						<TitleRole>Data Scientist</TitleRole>
 						<GitHub href="https://github.com/pmsorion">Mis repositorios</GitHub>
 						<LinkedIn href="http://linkedin.com/in/francisco-garcia-983304122">
@@ -45,7 +55,9 @@ const AboutLeft = () => {
 				<Wrapper>
 					<ImageAbout src={fotoCS} alt="Foto de César Salas" />
 					<WrapperDetails>
-						<TitleDetails>César Salas</TitleDetails>
+						<TitleDetails>
+							César S<Span primary>a</Span>las
+						</TitleDetails>
 						<TitleRole>Back-end Developer</TitleRole>
 						<GitHub href="https://github.com/cesarsalasmx">
 							Mis repositorios
