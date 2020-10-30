@@ -20,9 +20,9 @@ const WrappperMenu = styled.div`
 
 const WrapperForm = styled.form`
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	flex-direction: column;
-	height:60%;
+	height:80%;
 	align-items: center;
 `;
 const Textform = styled.p`
@@ -118,7 +118,7 @@ const LabelRS = styled.img`
 `;
 
 const InputRS = styled.input`
-	width: 18vw;
+	width: 24vw;
 	background: transparent;
 	border: none;
 	border-bottom: 2px solid rgba(135, 211, 184, 0.6);
