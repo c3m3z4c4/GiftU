@@ -73,10 +73,8 @@ const SearchRight = () => {
 					</WrapperPerfiles>
 					<WrapperButtom>
 						<Link href="/podium">
-							<BaseButton>
-								EN<Span primary>V</Span>IAR
-							</BaseButton>
-                        </Link>
+							<BaseButton>ENVIAR</BaseButton>
+						</Link>
 					</WrapperButtom>
 				</WrapperForm>
 			</WrapperRight>

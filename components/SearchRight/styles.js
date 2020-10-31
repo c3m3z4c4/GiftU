@@ -152,6 +152,11 @@ const BaseButton = styled.button`
 	color: white;
 	margin-top: 50px;
 	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.07);
+	&:hover {
+		background-color: #ffab07;
+		transform: scale(1.2);
+		opacity: 1;
+	}
 `;
 
 const Span = styled.span`
