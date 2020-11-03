@@ -23,12 +23,15 @@ const Cuenta = styled.p`
 `;
 
 const LinkLogin = styled.a`
-    color: darkcyan;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: underline;
-    letter-spacing: 1px;
-
+	color: darkcyan;
+	font-size: 16px;
+	cursor: pointer;
+	text-decoration: underline;
+	letter-spacing: 1px;
+	&:hover {
+		transform: scale(1.5);
+		opacity: 1;
+	}
 `;
 
 const ImageFooter = styled.img`
