@@ -18,12 +18,20 @@ const WrappperMenu = styled.div`
 	}
 `;
 
-const WrapperForm = styled.div`
+const WrapperForm = styled.form`
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	flex-direction: column;
+	height:80%;
+	align-items: center;
 `;
+const Textform = styled.p`
+	font-family: "Quicksand", sans-serif;
+	font-size: 18px;
+	font-family: "Quicksand";
+	text-align: center;
 
+`;
 const WrapperGender = styled.div`
 	height: 20vh;
 	display: flex;
@@ -99,7 +107,7 @@ const WrapperLabels = styled.div`
 
 const WrapperLabel = styled.div`
 	display: flex;
-	margin-bottom: 40px;
+	margin-bottom:20px;
 `;
 
 const imgInt = "../images/instagram-search.png";
@@ -107,20 +115,17 @@ const imgFB = "../images/fb-search.png";
 const LabelRS = styled.img`
 	width: 35px;
 	height: 35px;
-	margin-right: 30px;
-	margin-left: -70px;
 `;
 
 const InputRS = styled.input`
-	width: 18vw;
+	width: 24vw;
 	background: transparent;
 	border: none;
 	border-bottom: 2px solid rgba(135, 211, 184, 0.6);
 	font-family: "Quicksand", sans-serif;
 	font-size: 20px;
 	color: #ffab07;
-	margin: 10px 0;
-
+	margin: 10px 20px;
 	&:focus,
 	textarea:focus,
 	select:focus {
@@ -150,7 +155,6 @@ const BaseButton = styled.button`
 	display: flex;
 	justify-content: center;
 	color: white;
-	margin-top: 50px;
 	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.07);
 	&:hover {
 		background-color: #ffab07;
@@ -184,4 +188,5 @@ export {
 	WrapperButtom,
 	BaseButton,
 	Span,
+	Textform,
 };
