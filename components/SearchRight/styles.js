@@ -49,8 +49,8 @@ const WrapperImg = styled.div`
 	display: flex;
 	justify-content: space-around;
 	width: 50%;
-    justify-content: space-around;
-    align-items: center;
+	justify-content: space-around;
+	align-items: center;
 `;
 
 const WrapperOccacion = styled.div`
@@ -156,6 +156,11 @@ const BaseButton = styled.button`
 	justify-content: center;
 	color: white;
 	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.07);
+	&:hover {
+		background-color: #ffab07;
+		transform: scale(1.2);
+		opacity: 1;
+	}
 `;
 
 const Span = styled.span`
