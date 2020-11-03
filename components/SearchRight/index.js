@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from "react";
-// import Link from "next/link";
+import Link from "next/link";
 import { gql, useMutation } from '@apollo/client'
 import Menu from "../Menu";
 import {
@@ -29,21 +29,21 @@ const SEND_INFORMATION = gql`
 }
 `;
 
-const SearchRight = () => {
-	const [sendInrmation, { loading }] = useMutation(SEND_INFORMATION);
+const GET_SOCIAL_NETWORK = gql`
+	query GetSocialNetwork($id:ID!){
+		social_network(id:$id){
+		receiver_name
+		social_network_name
+		url_social_network
+		search_result
+   }
+}
+`;
+let variables;
 
-	// const sendData = () => {
-	// 	sendInrmation({
-	// 	  variables,
-	// 	  optimisticResponse: {
-	// 		__typename: 'Mutation',
-	// 		// AddSocialNetwork: {
-	// 		//   __typename: 'Post',
-	// 		// },
-	// 	  },
-	// 	})
-	// 	console.log('que paso??');
-	//   }
+const SearchRight = () => {
+	const [sendInrmation, { data }] = useMutation(SEND_INFORMATION);
+
 	const handleSubmit = (event) => {
 		event.preventDefault()
 		const form = event.target
@@ -51,32 +51,52 @@ const SearchRight = () => {
 		const name = formData.get('name')
 		const link = formData.get('link')
 		form.reset()
+
+		variables = { 
+			receiver_name: name,
+			id_social_network: 3,
+			url_social_network: link, 
+		};
 	
 		sendInrmation({
-		  variables: { 
-			receiver_name: name,
-		    id_social_network: 3,
-			url_social_network: link, 
-		},
-		//   update: (cache, { data: { sendInrmation } }) => {
-		// 	cache.modify({
-		// 	  fields: {
-		// 		allPosts(existingPosts = []) {
-		// 		  const newPostRef = cache.writeFragment({
-		// 			data: sendInrmation,
-		// 			fragment: gql`
-		// 			  fragment NewPost on allPosts {
-		// 				id
-		// 				type
-		// 			  }
-		// 			`,
-		// 		  })
-		// 		  return [newPostRef, ...existingPosts]
-		// 		},
-		// 	  },
-		// 	})
-		//   },
-		})
+		  variables,		  
+		  update: (cache, { data: { sendInrmation } }) => {
+			cache.modify({
+			  fields: {
+				GetSocialNetwork(existingPosts = []) {
+				  const inforef = cache.writeFragment({
+					data: sendInrmation,
+					// fragment: gql`
+					//   fragment NewPost on GetSocialNetwork {
+					// 	receiver_name
+					// 	url_social_network
+					//   }
+					// `,
+					
+				  })
+				  return [inforef, ...existingPosts]
+				},
+			  },
+			})
+		  },
+
+		  	// optimisticResponse: true,
+		// update: (cache) => {
+			// const informationSended = cache.readQuery({ query: GET_SOCIAL_NETWORK });
+			// cache.readQuery({ query: GET_SOCIAL_NETWORK });
+			// const newTodos = informationSended.todos.map(t => {
+			//   if (t.id === todo.id) {
+			// 	return {...t, is_completed: !t.is_completed};
+			//   } else {
+			// 	return t;
+			//   }
+			// });
+		// 	cache.writeQuery({
+		// 	  query: GET_SOCIAL_NETWORK,
+		// 	  data
+		// 	});
+		//   }
+		});
 		console.log('name:', name, 'link:', link);
 	  }
 	return (
@@ -100,11 +120,11 @@ const SearchRight = () => {
 						<InputRS placeholder="link" name="link" type="text" />
 					</WrapperLabel>
 					<WrapperButtom>
-						{/* <Link href="/podium"> */}
+						<Link href="/podium">
 						<BaseButton type="submit">
 							EN<Span primary>V</Span>IAR
 						</BaseButton>
-						{/* </Link> */}
+						</Link>
 					</WrapperButtom>
 				</WrapperForm>
 			</WrapperRight>
@@ -114,5 +134,6 @@ const SearchRight = () => {
 
 export {
     SEND_INFORMATION,
-    SearchRight,
+	SearchRight,
+	variables,
 };

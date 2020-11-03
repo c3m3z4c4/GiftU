@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+
 // import { initializeApollo } from '../lib/apolloClient'
 import styled from "styled-components";
 import SearchLeft from "../components/SearchLeft";
