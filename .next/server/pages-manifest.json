@@ -2,10 +2,6 @@
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
-<<<<<<< HEAD
-  "/access": "pages/access.js",
-  "/search": "pages/search.js"
-=======
+  "/details": "pages/details.js",
   "/podium": "pages/podium.js"
->>>>>>> 3e97eb1acb437d40e277b5902010a05470cc3de0
 }
