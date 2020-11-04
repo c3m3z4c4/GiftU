@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Wrapper = styled.section`
+const Wrapper = styled.section `
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -9,7 +9,7 @@ const Wrapper = styled.section`
 	font-family: "Quicksand";
 `;
 
-const WrapperLogin = styled.div`
+const WrapperLogin = styled.div `
 	margin-top: 60px;
 	display: flex;
 	flex-direction: column;
@@ -18,11 +18,11 @@ const WrapperLogin = styled.div`
 	text-align: center;
 `;
 
-const Cuenta = styled.p`
+const Cuenta = styled.p `
 	font-size: 15px;
 `;
 
-const LinkLogin = styled.a`
+const LinkLogin = styled.a `
 	color: darkcyan;
 	font-size: 16px;
 	cursor: pointer;
@@ -34,10 +34,12 @@ const LinkLogin = styled.a`
 	}
 `;
 
-const ImageFooter = styled.img`
+const ImageFooter = styled.img `
 	height: auto;
 	width: 100vw;
 	margin-top: 3em;
+	position: absolute;
+    bottom: 0;
 `;
 
 export { Wrapper, WrapperLogin, Cuenta, LinkLogin, ImageFooter };
