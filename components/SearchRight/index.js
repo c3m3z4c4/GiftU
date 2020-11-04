@@ -1,82 +1,130 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Link from "next/link";
-
+import { gql, useMutation } from '@apollo/client'
 import Menu from "../Menu";
-import { OptButton } from "../OptButton";
 import {
 	WrapperRight,
 	WrappperMenu,
 	WrapperForm,
-	WrapperGender,
-	TextGender,
-	WrapperImg,
-	WrapperOccacion,
-	TextOccacion,
-	SelectOccacion,
 	WrapperPerfiles,
 	TextPerfiles,
 	WrapperLabels,
 	WrapperLabel,
-	imgInt,
 	imgFB,
 	LabelRS,
 	InputRS,
 	WrapperButtom,
 	BaseButton,
 	Span,
+	Textform,
 } from "./styles";
 
+const SEND_INFORMATION = gql`
+	mutation AddSocialNetwork($receiver_name: Int!, $id_social_network: Int!, $url_social_network: String!) {
+  social_network(receiver_name: $receiver_name, id_social_network: $id_social_network, url_social_network: $url_social_network) {
+		receiver_name
+		id_social_network
+		url_social_network
+  }
+}
+`;
+
+const GET_SOCIAL_NETWORK = gql`
+	query GetSocialNetwork($id:ID!){
+		social_network(id:$id){
+		receiver_name
+		social_network_name
+		url_social_network
+		search_result
+   }
+}
+`;
+let variables;
+
 const SearchRight = () => {
+	const [sendInrmation, { data }] = useMutation(SEND_INFORMATION);
+
+	const handleSubmit = (event) => {
+		event.preventDefault()
+		const form = event.target
+		const formData = new window.FormData(form)
+		const name = formData.get('name')
+		const link = formData.get('link')
+		form.reset()
+
+		variables = { 
+			receiver_name: name,
+			id_social_network: 3,
+			url_social_network: link, 
+		};
+	
+		sendInrmation({
+		  variables,		  
+		  update: (cache, { data: { sendInrmation } }) => {
+			cache.modify({
+			  fields: {
+				GetSocialNetwork(existingPosts = []) {
+				  const inforef = cache.writeFragment({
+					data: sendInrmation,
+					// fragment: gql`
+					//   fragment NewPost on GetSocialNetwork {
+					// 	receiver_name
+					// 	url_social_network
+					//   }
+					// `,
+					
+				  })
+				  return [inforef, ...existingPosts]
+				},
+			  },
+			})
+		  },
+
+		  	// optimisticResponse: true,
+		// update: (cache) => {
+			// const informationSended = cache.readQuery({ query: GET_SOCIAL_NETWORK });
+			// cache.readQuery({ query: GET_SOCIAL_NETWORK });
+			// const newTodos = informationSended.todos.map(t => {
+			//   if (t.id === todo.id) {
+			// 	return {...t, is_completed: !t.is_completed};
+			//   } else {
+			// 	return t;
+			//   }
+			// });
+		// 	cache.writeQuery({
+		// 	  query: GET_SOCIAL_NETWORK,
+		// 	  data
+		// 	});
+		//   }
+		});
+		console.log('name:', name, 'link:', link);
+	  }
 	return (
 		<Fragment>
 			<WrapperRight>
 				<WrappperMenu>
 					<Menu />
 				</WrappperMenu>
-				<WrapperForm>
-					<WrapperGender>
-						<TextGender>
-							<Span primary>G</Span>énero:
-						</TextGender>
-						<WrapperImg>
-							<OptButton src="/images/she-opt.png" />
-							<OptButton src="/images/he-opt.png" />
-						</WrapperImg>
-					</WrapperGender>
-					<WrapperOccacion>
-						<TextOccacion>
-							O<Span>c</Span>asión:
-						</TextOccacion>
-						<SelectOccacion>
-							<option value="Bautizo">Bautizo</option>
-							<option value="Boda">Boda</option>
-							<option value="Navidad">Navidad</option>
-							<option value="Aniversario" selected>
-								Aniversario
-							</option>
-						</SelectOccacion>
-					</WrapperOccacion>
-					<WrapperPerfiles>
-						<TextPerfiles>
-							Pe<Span primary>r</Span>files:
-						</TextPerfiles>
-						<WrapperLabels>
-							<WrapperLabel>
-								<LabelRS src={imgFB} />
-								<InputRS></InputRS>
-							</WrapperLabel>
-							<WrapperLabel>
-								<LabelRS src={imgInt} />
-								<InputRS></InputRS>
-							</WrapperLabel>
-						</WrapperLabels>
-					</WrapperPerfiles>
+				<WrapperForm
+					onSubmit={handleSubmit}
+				>
+					<Textform>
+						¿Cómo se <Span primary>llama </Span>esa persona <Span>especial</Span> ?
+					</Textform>
+					<InputRS placeholder="nombre" name="name" type="text" />
+					<Textform>
+						Pasanos su <Span>Facebook:</Span>
+					</Textform>
+					<WrapperLabel>
+						<LabelRS src={imgFB} />
+						<InputRS placeholder="link" name="link" type="text" />
+					</WrapperLabel>
 					<WrapperButtom>
 						<Link href="/podium">
-							<BaseButton>
-								EN<Span primary>V</Span>IAR
-							</BaseButton>
-                        </Link>
+						<BaseButton type="submit">
+							EN<Span primary>V</Span>IAR
+						</BaseButton>
+						</Link>
 					</WrapperButtom>
 				</WrapperForm>
 			</WrapperRight>
@@ -84,4 +132,8 @@ const SearchRight = () => {
 	);
 };
 
-export default SearchRight;
+export {
+    SEND_INFORMATION,
+	SearchRight,
+	variables,
+};

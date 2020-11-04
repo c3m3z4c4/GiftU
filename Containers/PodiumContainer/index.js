@@ -16,6 +16,7 @@ import {
     LittleDecorative,
     DecorativeContainer,
 } from './styles';
+
  const TEST_QUERY = gql`
 {
     social_network(id:22){
