@@ -62,6 +62,10 @@ const TabButton = styled.button`
 	@media (max-width: 768px) {
 		width: 100%;
 	}
+	&:hover {
+		transform: scale(1.3);
+		opacity: 1;
+	}
 `;
 
 const WrapperInput = styled.div`
@@ -203,6 +207,11 @@ const BaseButton = styled.button`
 	color: white;
 	margin-top: 50px;
 	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.2);
+	&:hover {
+		background-color: #ffab07;
+		transform: scale(1.3);
+		opacity: 1;
+	}
 `;
 
 const WrapperSingRD = styled.div`
@@ -237,6 +246,10 @@ const FBButton = styled.a`
 	justify-content: center;
 	color: white;
 	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.2);
+	&:hover {
+		transform: scale(1.2);
+		opacity: 1;
+	}
 `;
 
 const GoLogo = "../images/google.png";
@@ -262,6 +275,10 @@ const GooButton = styled.a`
 	justify-content: center;
 	color: #726666;
 	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.17);
+	&:hover {
+		transform: scale(1.2);
+		opacity: 1;
+	}
 `;
 
 export {

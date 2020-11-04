@@ -24,7 +24,7 @@ const Title = styled.h1`
 	font-size: 50px;
 	font-family: "Quicksand";
 	@media (max-width: 425px) {
-		font-size:35px;
+		font-size: 35px;
 		font-weight: 400;
 	}
 `;
@@ -35,7 +35,7 @@ const WrapperGifts = styled.div`
 	width: 100vw;
 	@media (max-width: 425px) {
 		flex-direction: column;
-	   }
+	}
 `;
 
 const Wrappergift = styled.div`
@@ -56,6 +56,10 @@ const GiftTitle = styled.a`
 	margin-bottom: 15px;
 	@media (max-width: 425px) {
 		margin-top: 20px;
+	}
+	&:hover {
+		transform: scale(1.3);
+		opacity: 1;
 	}
 `;
 
