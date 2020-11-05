@@ -39,7 +39,7 @@ const ImageFooter = styled.img `
 	width: 100vw;
 	margin-top: 3em;
 	position: absolute;
-    bottom: 0;
+        bottom: 0;
 `;
 
 export { Wrapper, WrapperLogin, Cuenta, LinkLogin, ImageFooter };

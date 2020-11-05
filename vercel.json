@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "version": 2,
     "name": "GiftÜ",
     "builds": [
@@ -22,3 +23,25 @@
         }
     ]
 }
+=======
+  "version": 2,
+  "name": "giftu",
+  "builds": [
+    { "use": "@vercel/static-build", "src": "package.json"}
+  ],
+  "routes": [
+    {
+      "src": "(.*).js", "dest": "/$1.js"
+    },
+    {
+      "src": "(.*).json", "dest": "/$1.json"
+    },
+    {
+      "src": "(.*).png", "dest": "/$1.png"
+    },
+    {
+      "src": "/.*", "dest": "/index.html"
+    }
+  ]
+}
+>>>>>>> 3734a8a20a58fdea31f14299223936e029abbc21
