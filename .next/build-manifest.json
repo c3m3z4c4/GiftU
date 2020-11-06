@@ -29,10 +29,10 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/podium": [
+    "/gifts/[giftId]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/podium.js"
+      "static/chunks/pages/gifts/[giftId].js"
     ]
   },
   "ampFirstPages": []
