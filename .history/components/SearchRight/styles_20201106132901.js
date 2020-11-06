@@ -176,7 +176,7 @@ const BaseButton = styled.button `
 		opacity: 1;
 	}
 	@media Screen and (max-width: 600px) {
-		width: 60vw;
+		width: 80vw;
 		height: 8vh;
 		font-size: 40px;
 		transition: transform 0.5s ease;

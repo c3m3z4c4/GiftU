@@ -176,7 +176,7 @@ const BaseButton = styled.button `
 		opacity: 1;
 	}
 	@media Screen and (max-width: 600px) {
-		width: 60vw;
+		width: 80vw;
 		height: 8vh;
 		font-size: 40px;
 		transition: transform 0.5s ease;
@@ -190,7 +190,7 @@ const BaseButton = styled.button `
 const Span = styled.span `
 	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
 	&:hover {
-		color: ${(props) => (props.primary ? "#A0DDC7" : "#A0DDC7")};
+		color: ${(props) => (props.primary ? "#A0DDC7" : "#87d3b8")};
 		}
 `;
 
