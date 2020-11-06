@@ -29,11 +29,10 @@ export default class Callback extends Component {
             right: 0,
             backgroundColor: "white",
         };
-        return ( <
-            div style = { style } >
-            <
-            h1 > Your Awesome Callback Page < /h1> <
-            /div>
+        return ( 
+			<div style = { style } >
+            	<h1> Your Awesome Callback Page </h1> 
+			</div>
         );
     }
 }
