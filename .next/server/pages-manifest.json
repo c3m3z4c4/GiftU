@@ -1,19 +1,7 @@
 {
-  "/404 2": "pages/404 2.html",
-  "/404": "pages/404.html",
   "/_app": "pages/_app.js",
   "/_document": "pages/_document.js",
-  "/about": "pages/about.html",
-  "/access": "pages/access.html",
-  "/api/callback": "pages/api/callback.js",
-  "/api/login": "pages/api/login.js",
-  "/api/logout": "pages/api/logout.js",
-  "/api/me": "pages/api/me.js",
-  "/auth/callback": "pages/auth/callback.html",
-  "/details": "pages/details.html",
-  "/": "pages/index.html",
-  "/podium": "pages/podium.js",
-  "/search": "pages/search.html",
-  "/secure_page": "pages/secure_page.html",
-  "/_error": "pages/_error.js"
+  "/_error": "pages/_error.js",
+  "/search": "pages/search.js",
+  "/access": "pages/access.js"
 }
