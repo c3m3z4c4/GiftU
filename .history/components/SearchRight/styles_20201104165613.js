@@ -30,9 +30,6 @@ const Textform = styled.p `
 	font-size: 18px;
 	font-family: "Quicksand";
 	text-align: center;
-	@media Screen and (max-width: 600px) {
-		font-size: 24px;
-	}
 
 `;
 const WrapperGender = styled.div `
@@ -46,9 +43,6 @@ const TextGender = styled.p `
 	text-align: center;
 	font-size: 23px;
 	font-family: "Quicksand";
-	@media Screen and (max-width: 600px) {
-		font-size: 60px;
-	}
 `;
 
 const WrapperImg = styled.div `
@@ -104,9 +98,6 @@ const TextPerfiles = styled.p `
 	font-size: 23px;
 	font-family: "Quicksand";
 	margin-right: 61px;
-	@media Screen and (max-width: 600px) {
-		font-size: 40px;
-	}
 `;
 
 const WrapperLabels = styled.div `

@@ -31,7 +31,7 @@ const Textform = styled.p `
 	font-family: "Quicksand";
 	text-align: center;
 	@media Screen and (max-width: 600px) {
-		font-size: 24px;
+		font-size: 40px;
 	}
 
 `;

@@ -13,4 +13,3 @@ yarn-error.log*
 dist/
 ./package-lock.json
 .vercel
-.DS_Store

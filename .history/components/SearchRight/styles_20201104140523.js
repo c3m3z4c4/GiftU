@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const WrapperRight = styled.div `
+const WrapperRight = styled.div`
 	width: 50%;
 	background: rgba(160, 221, 199, 0.25);
 	height: 100vh;
@@ -9,7 +9,7 @@ const WrapperRight = styled.div `
 	}
 `;
 
-const WrappperMenu = styled.div `
+const WrappperMenu = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	height: 15vh;
@@ -18,40 +18,34 @@ const WrappperMenu = styled.div `
 	}
 `;
 
-const WrapperForm = styled.form `
+const WrapperForm = styled.form`
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
 	height:80%;
 	align-items: center;
 `;
-const Textform = styled.p `
+const Textform = styled.p`
 	font-family: "Quicksand", sans-serif;
 	font-size: 18px;
 	font-family: "Quicksand";
 	text-align: center;
-	@media Screen and (max-width: 600px) {
-		font-size: 24px;
-	}
 
 `;
-const WrapperGender = styled.div `
+const WrapperGender = styled.div`
 	height: 20vh;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 `;
 
-const TextGender = styled.p `
+const TextGender = styled.p`
 	text-align: center;
 	font-size: 23px;
 	font-family: "Quicksand";
-	@media Screen and (max-width: 600px) {
-		font-size: 60px;
-	}
 `;
 
-const WrapperImg = styled.div `
+const WrapperImg = styled.div`
 	display: flex;
 	justify-content: space-around;
 	width: 50%;
@@ -59,21 +53,21 @@ const WrapperImg = styled.div `
 	align-items: center;
 `;
 
-const WrapperOccacion = styled.div `
+const WrapperOccacion = styled.div`
 	height: 20vh;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 `;
 
-const TextOccacion = styled.p `
+const TextOccacion = styled.p`
 	text-align: center;
 	font-size: 23px;
 	font-family: "Quicksand";
 	align-items: center;
 `;
 
-const SelectOccacion = styled.select `
+const SelectOccacion = styled.select`
 	width: 50%;
 	background: transparent;
 	border: none;
@@ -91,42 +85,39 @@ const SelectOccacion = styled.select `
 	}
 `;
 
-const WrapperPerfiles = styled.div `
+const WrapperPerfiles = styled.div`
 	height: 18vh;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 `;
 
-const TextPerfiles = styled.p `
+const TextPerfiles = styled.p`
 	justify-content: center;
 	text-align: center;
 	font-size: 23px;
 	font-family: "Quicksand";
 	margin-right: 61px;
-	@media Screen and (max-width: 600px) {
-		font-size: 40px;
-	}
 `;
 
-const WrapperLabels = styled.div `
+const WrapperLabels = styled.div`
 	display: flex;
 	flex-direction: column;
 `;
 
-const WrapperLabel = styled.div `
+const WrapperLabel = styled.div`
 	display: flex;
 	margin-bottom:20px;
 `;
 
 const imgInt = "../images/instagram-search.png";
 const imgFB = "../images/fb-search.png";
-const LabelRS = styled.img `
+const LabelRS = styled.img`
 	width: 35px;
 	height: 35px;
 `;
 
-const InputRS = styled.input `
+const InputRS = styled.input`
 	width: 24vw;
 	background: transparent;
 	border: none;
@@ -140,17 +131,14 @@ const InputRS = styled.input `
 	select:focus {
 		outline: none;
 	}
-	@media Screen and (max-width: 600px) {
-		width: 60vw;
-	}
 `;
 
-const WrapperButtom = styled.div `
+const WrapperButtom = styled.div`
 	display: flex;
 	justify-content: center;
 `;
 
-const BaseButton = styled.button `
+const BaseButton = styled.button`
 	width: 124.16px;
 	height: 34.58px;
 	background: #87d3b8;
@@ -175,30 +163,30 @@ const BaseButton = styled.button `
 	}
 `;
 
-const Span = styled.span `
+const Span = styled.span`
 	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
 `;
 
 export {
-    WrapperRight,
-    WrappperMenu,
-    WrapperForm,
-    WrapperGender,
-    TextGender,
-    WrapperImg,
-    WrapperOccacion,
-    TextOccacion,
-    SelectOccacion,
-    WrapperPerfiles,
-    TextPerfiles,
-    WrapperLabels,
-    WrapperLabel,
-    imgInt,
-    imgFB,
-    LabelRS,
-    InputRS,
-    WrapperButtom,
-    BaseButton,
-    Span,
-    Textform,
+	WrapperRight,
+	WrappperMenu,
+	WrapperForm,
+	WrapperGender,
+	TextGender,
+	WrapperImg,
+	WrapperOccacion,
+	TextOccacion,
+	SelectOccacion,
+	WrapperPerfiles,
+	TextPerfiles,
+	WrapperLabels,
+	WrapperLabel,
+	imgInt,
+	imgFB,
+	LabelRS,
+	InputRS,
+	WrapperButtom,
+	BaseButton,
+	Span,
+	Textform,
 };

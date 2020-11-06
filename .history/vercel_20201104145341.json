@@ -1,6 +1,6 @@
 {
     "version": 2,
-    "name": "giftu",
+    "name": "GiftÜ",
     "builds": [
         { "use": "@vercel/static-build", "src": "package.json" }
     ],

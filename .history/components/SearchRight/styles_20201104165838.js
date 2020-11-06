@@ -30,9 +30,6 @@ const Textform = styled.p `
 	font-size: 18px;
 	font-family: "Quicksand";
 	text-align: center;
-	@media Screen and (max-width: 600px) {
-		font-size: 24px;
-	}
 
 `;
 const WrapperGender = styled.div `
