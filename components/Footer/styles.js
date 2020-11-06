@@ -10,7 +10,6 @@ const Wrapper = styled.section `
 `;
 
 const WrapperLogin = styled.div `
-	margin-top: 60px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -19,7 +18,9 @@ const WrapperLogin = styled.div `
 `;
 
 const Cuenta = styled.p `
-	font-size: 15px;
+	font-size: 20px;
+	font-weigh. bold;
+	color: #fbcf39;
 `;
 
 const LinkLogin = styled.a `
@@ -37,9 +38,6 @@ const LinkLogin = styled.a `
 const ImageFooter = styled.img `
 	height: auto;
 	width: 100vw;
-	margin-top: 3em;
-	position: absolute;
-        bottom: 0;
 `;
 
 export { Wrapper, WrapperLogin, Cuenta, LinkLogin, ImageFooter };

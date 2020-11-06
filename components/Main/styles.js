@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+const HomeWrapper = styled.div`
+	min-height: 100vh;
+`;
 const Wrapper = styled.section`
 	display: flex;
 	flex-direction: column;
@@ -87,4 +90,5 @@ export {
 	GiftTitle,
 	ColorLine,
 	Span,
+	HomeWrapper,
 };
