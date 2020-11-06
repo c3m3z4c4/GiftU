@@ -1,6 +1,7 @@
 import React from "react";
 import { useRouter } from 'next/router';
-import DetailsContainer from "../../Containers/DetailsContainer/index";
+import { DetailsContainer, PODIUM_QUERY, variables } from "../../Containers/DetailsContainer/index";
+import { initializeApollo } from '../../lib/apolloClient';
 
 const Gift = () => {
     const { query: { giftId }} = useRouter();
@@ -10,15 +11,5 @@ const Gift = () => {
     );
 };
 
+
 export default Gift;
-
-
-
-// import React from "react";
-// import DetailsContainer from "../Containers/DetailsContainer/index";
-
-// const DetailsPage = () => {
-// 	return <DetailsContainer />;
-// };
-
-// export default DetailsPage;

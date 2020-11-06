@@ -33,6 +33,16 @@
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/gifts/[giftId].js"
+    ],
+    "/next/dist/pages/_error": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/next/dist/pages/_error.js"
+    ],
+    "/podium": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/podium.js"
     ]
   },
   "ampFirstPages": []
