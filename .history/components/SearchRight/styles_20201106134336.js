@@ -175,26 +175,27 @@ const BaseButton = styled.button `
 		transform: scale(1.2);
 		opacity: 1;
 		&:hover {
-		color: ${(props) => (props.primary ? "#A0DDC7" : "white")};
+		color: ${(props) => (props.primary ? "#A0DDC7" : "#A0DDC7")};
 		}
 	}
 	@media Screen and (max-width: 600px) {
 		width: 60vw;
 		height: 8vh;
 		font-size: 40px;
-		transition: transform 0.2s ease;
+		transition: transform 0.5s ease;
 		&:hover {
 			background-color: #ffab07;
 			opacity: 1;
+			color: ${(props) => (props.primary ? "#A0DDC7" : "#A0DDC7")};
 		}
-		Span:hover {
-			color: ${(props) => ("#87d3b8")};
-		}}
 	}
 `;
 
 const Span = styled.span `
 	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
+	&:hover {
+		color: ${(props) => (props.primary ? "#A0DDC7" : "#A0DDC7")};
+		}
 `;
 
 export {

@@ -182,13 +182,13 @@ const BaseButton = styled.button `
 		width: 60vw;
 		height: 8vh;
 		font-size: 40px;
-		transition: transform 0.2s ease;
+		transition: transform 0.5s ease;
 		&:hover {
 			background-color: #ffab07;
 			opacity: 1;
 		}
 		Span:hover {
-			color: ${(props) => ("#87d3b8")};
+			color: ${(props) => (props.primary ? "#A0DDC7" : "#FFF")};
 		}}
 	}
 `;

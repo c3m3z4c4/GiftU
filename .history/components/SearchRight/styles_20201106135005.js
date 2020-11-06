@@ -188,7 +188,7 @@ const BaseButton = styled.button `
 			opacity: 1;
 		}
 		Span:hover {
-			color: ${(props) => ("#87d3b8")};
+			color: ${(props) => (props.primary ? "#A0DDC7" : "#FFF")};
 		}}
 	}
 `;
