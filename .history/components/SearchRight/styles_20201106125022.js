@@ -141,7 +141,7 @@ const InputRS = styled.input `
 		outline: none;
 	}
 	@media Screen and (max-width: 600px) {
-		width: 70vw;
+		width: 60vw;
 	}
 `;
 
@@ -169,7 +169,6 @@ const BaseButton = styled.button `
 	justify-content: center;
 	color: white;
 	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.07);
-	transition: transform 0.2s ease;
 	&:hover {
 		background-color: #ffab07;
 		transform: scale(1.2);
@@ -177,13 +176,7 @@ const BaseButton = styled.button `
 	}
 	@media Screen and (max-width: 600px) {
 		width: 80vw;
-		height: 8vh;
-		font-size: 40px;
-		transition: transform 0.5s ease;
-		&:hover {
-			background-color: #ffab07;
-			opacity: 1;
-		}
+		height: 10vh;
 	}
 `;
 
