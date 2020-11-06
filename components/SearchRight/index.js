@@ -1,14 +1,10 @@
 import React, { Fragment, useState } from "react";
-import Link from "next/link";
 import { gql, useMutation } from '@apollo/client'
 import Menu from "../Menu";
 import {
 	WrapperRight,
 	WrappperMenu,
 	WrapperForm,
-	WrapperPerfiles,
-	TextPerfiles,
-	WrapperLabels,
 	WrapperLabel,
 	imgFB,
 	LabelRS,
@@ -20,7 +16,7 @@ import {
 } from "./styles";
 
 const SEND_INFORMATION = gql`
-	mutation AddSocialNetwork($receiver_name: Int!, $id_social_network: Int!, $url_social_network: String!) {
+	mutation AddSocialNetwork($receiver_name: String!, $id_social_network: Int!, $url_social_network: String!) {
   social_network(receiver_name: $receiver_name, id_social_network: $id_social_network, url_social_network: $url_social_network) {
 		receiver_name
 		id_social_network
@@ -54,10 +50,9 @@ const SearchRight = () => {
 
 		variables = { 
 			receiver_name: name,
-			id_social_network: 3,
+			id_social_network: 1,
 			url_social_network: link, 
-		};
-	
+		};	
 		sendInrmation({
 		  variables,		  
 		  update: (cache, { data: { sendInrmation } }) => {
@@ -66,38 +61,13 @@ const SearchRight = () => {
 				GetSocialNetwork(existingPosts = []) {
 				  const inforef = cache.writeFragment({
 					data: sendInrmation,
-					// fragment: gql`
-					//   fragment NewPost on GetSocialNetwork {
-					// 	receiver_name
-					// 	url_social_network
-					//   }
-					// `,
-					
 				  })
 				  return [inforef, ...existingPosts]
 				},
 			  },
 			})
 		  },
-
-		  	// optimisticResponse: true,
-		// update: (cache) => {
-			// const informationSended = cache.readQuery({ query: GET_SOCIAL_NETWORK });
-			// cache.readQuery({ query: GET_SOCIAL_NETWORK });
-			// const newTodos = informationSended.todos.map(t => {
-			//   if (t.id === todo.id) {
-			// 	return {...t, is_completed: !t.is_completed};
-			//   } else {
-			// 	return t;
-			//   }
-			// });
-		// 	cache.writeQuery({
-		// 	  query: GET_SOCIAL_NETWORK,
-		// 	  data
-		// 	});
-		//   }
 		});
-		console.log('name:', name, 'link:', link);
 	  }
 	return (
 		<Fragment>
@@ -120,11 +90,9 @@ const SearchRight = () => {
 						<InputRS placeholder="link" name="link" type="text" />
 					</WrapperLabel>
 					<WrapperButtom>
-						<Link href="/podium">
 						<BaseButton type="submit">
 							EN<Span primary>V</Span>IAR
 						</BaseButton>
-						</Link>
 					</WrapperButtom>
 				</WrapperForm>
 			</WrapperRight>

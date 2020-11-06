@@ -1,5 +1,5 @@
 import React from "react";
-import { PodiumComponent ,TEST_QUERY, variablesTest } from '../Containers/PodiumContainer/index';
+import { PodiumComponent, PODIUM_QUERY, variables } from '../Containers/PodiumContainer/index';
 import TitleComponent from '../components/Title/index';
 import styled from 'styled-components'
 import { initializeApollo } from '../lib/apolloClient'
@@ -26,8 +26,8 @@ export async function getStaticProps() {
   const apolloClient = initializeApollo()
 
   await apolloClient.query({
-    query: TEST_QUERY,
-    variables: variablesTest,
+    query:PODIUM_QUERY,
+    variables: variables,
   })
 
   return {
