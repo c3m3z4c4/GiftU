@@ -56,18 +56,18 @@ const Maincolumn = styled.div`
 `
 const NameComponent = styled.div`
   width: 100%;
-  height: 45px;
+  min-height: 55px;
+  height: auto;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 0%;
+  font-size: 12px;
   color: #726666;
   background: rgba(135, 211, 184, 0.32);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 10px;
+  padding: 10px;
   img {
-      padding-left: 40px;
       @media (max-width: 768px) {
         padding-left: 5px;
       }
@@ -77,12 +77,10 @@ const NameComponent = styled.div`
     font-size: 16px;
   }
   @media (max-width: 768px) {
-    font-size: 14px;
-    line-height: 0;
+    font-size: 9px;
   }
   @media (max-width: 425px) {
       font-size: 6px;
-      line-height: 0;
   }
 `;
 

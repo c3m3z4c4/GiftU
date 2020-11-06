@@ -52,10 +52,7 @@ const SearchRight = () => {
 			receiver_name: name,
 			id_social_network: 1,
 			url_social_network: link, 
-		};
-
-		console.log(variables)
-	
+		};	
 		sendInrmation({
 		  variables,		  
 		  update: (cache, { data: { sendInrmation } }) => {

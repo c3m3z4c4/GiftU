@@ -17,8 +17,9 @@ const Main = () => {
 			<Wrapper>
 				<WrapperTitle>
 					<Title>
-						HOLA,<br />¿<Span primary>Q</Span>UÉ <br />
-						QUIERES <br />
+					<Span>H</Span>OLA,<br />¿<Span primary>N</Span>O <br />
+						SABES <br />
+						Q<Span primary>U</Span>E <br />
 						REGALAR <Span>?</Span>
 					</Title>
 				</WrapperTitle>
