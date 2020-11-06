@@ -1,5 +1,5 @@
 import React from 'react';
-import { gql, useQuery, NetworkStatus } from '@apollo/client'
+import { gql, useQuery } from '@apollo/client'
 import Link from "next/link";
 import {
     PodiumWrapper,
@@ -38,7 +38,6 @@ const PodiumComponent = () => {
       if (loading) return <div>Loading</div>
       const { products } = data.podium.podium
       const podiumProducts = JSON.parse(products);
-
     return (
         <PodiumWrapper>
         <DecorativeContainer>
@@ -52,12 +51,12 @@ const PodiumComponent = () => {
                 <>
                 <CompleteColumn>
                         {
-                        podiumProducts[0].map(product => (
+                        podiumProducts[2].map(product => (
                             <>
                                 <ImagePodium src={product.img} />
                                     <NameComponent>
                                         {product.name}
-                                    <Link href="/details">
+                                    <Link href="/gifts/3">
                                             <PlusIcon />
                                         </Link>
                                     </NameComponent>
@@ -68,12 +67,12 @@ const PodiumComponent = () => {
                     </CompleteColumn>
                     <CompleteColumn>
                     {
-                        podiumProducts[1].map(product => (
+                        podiumProducts[0].map(product => (
                             <>
                             <ImagePodium src={product.img} />
                                 <NameComponent>
                                     {product.name}
-                                    <Link href="/details">
+                                    <Link href="/gifts/1">
                                         <PlusIcon />
                                     </Link>
                                 </NameComponent>
@@ -86,12 +85,12 @@ const PodiumComponent = () => {
                     </CompleteColumn>
                     <CompleteColumn>
                         {
-                            podiumProducts[2].map(product => (
+                            podiumProducts[1].map(product => (
                             <>
                                     <ImagePodium src={product.img} />
                                     <NameComponent>
                                         {product.name}
-                                        <Link href="/details">
+                                        <Link href="/gifts/2">
                                             <PlusIcon />
                                         </Link>
                                     </NameComponent>

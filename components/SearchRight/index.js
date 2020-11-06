@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from "react";
+import Link from "next/link";
 import { gql, useMutation } from '@apollo/client'
 import Menu from "../Menu";
 import {
@@ -90,9 +91,11 @@ const SearchRight = () => {
 						<InputRS placeholder="link" name="link" type="text" />
 					</WrapperLabel>
 					<WrapperButtom>
-						<BaseButton type="submit">
-							EN<Span primary>V</Span>IAR
-						</BaseButton>
+						<Link href="/podium">
+							<BaseButton type="submit">
+								EN<Span primary>V</Span>IAR
+							</BaseButton>
+						</Link>
 					</WrapperButtom>
 				</WrapperForm>
 			</WrapperRight>

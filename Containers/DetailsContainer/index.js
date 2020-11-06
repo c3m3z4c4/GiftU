@@ -1,6 +1,8 @@
 import React, { Fragment, useState } from "react";
+import { gql, useQuery } from '@apollo/client'
+import { useRouter } from 'next/router';
 import Link from "next/link";
-import Slider from "../../components/Slider";
+// import Slider from "../../components/Slider";
 
 import {
 	DetailsWrapper,
@@ -28,6 +30,15 @@ import {
 	TextWrite,
 	CloseIcon,
 } from "./styles";
+
+const PODIUM_QUERY = gql`
+query GetPodium($id:ID!){
+podium(id:$id){
+	podium
+ }
+}
+`;
+const variables = { id: 124 };
 
 const Modal = ({ show, closeModal }) => {
 	return (
@@ -57,6 +68,17 @@ const Modal = ({ show, closeModal }) => {
 
 const DetailsContainer = () => {
 	const [ modal, useModal] = useState(true);
+	const { loading, error, data, fetchMore, networkStatus } = useQuery(
+        PODIUM_QUERY,
+        {
+          variables: variables,
+          notifyOnNetworkStatusChange: true,
+        }
+      )
+      if (error){console.log("3312 3312 tenemos un 3312")};
+      if (loading) return <div>Loading</div>
+      const { products } = data.podium.podium
+	  const podiumProducts = JSON.parse(products);
 
 	const openModal = (e) => {
 		e.preventDefault();
@@ -68,50 +90,54 @@ const DetailsContainer = () => {
 		 useModal(true)
 	};
 
+	const { query: { giftId }} = useRouter();
+	const giftIndex = giftId - 1;
 	return (
 	<Fragment>
 		<DetailsWrapper>
-			<LeftDetails>
-				<MainImageContainer>
-					<MainImage src="/images/tennis_1.jpg" />
-					<DecorativeImage src="/images/decataveDetails.png" />
-				</MainImageContainer>
-			</LeftDetails>
-			<RightDetails>
-				<InformationContainer>
-					<TitleDetails>calzado deportivo</TitleDetails>
-					<LineImage src="/images/lines.png" />
-					<DetailsInformation>
-						<DetailItem>
-							<DetailItemTitle>
-								DESCR<ColorLetter blue>I</ColorLetter>PCIÓN
-							</DetailItemTitle>
-							<DetailItemContent>
-								Tenis deportivos colores oscuros, Simillares a marca Nike, Adidas
-								o puma.
-							</DetailItemContent>
-						</DetailItem>
-						<DetailItem>
-							<DetailItemTitle>
-								RAT<ColorLetter orange>I</ColorLetter>NG
-							</DetailItemTitle>
-							<DetailItemContent>esstrellas</DetailItemContent>
-						</DetailItem>
-						<DetailItem>
-							<DetailItemTitle>
-								POPUL<ColorLetter blue>A</ColorLetter>RIDAD
-							</DetailItemTitle>
-							<DetailItemContent>Lorem ipsum sit amet</DetailItemContent>
-						</DetailItem>
-					</DetailsInformation>
-					<DetailButton onClick={openModal}>Compralo Fácil y rápido</DetailButton>
-				</InformationContainer>
-				<Slider />
-			</RightDetails>
+			{
+				products === undefined
+				? (<p>NO HAY DETALLES POR EL MOMENTO </p>)
+				: (
+					podiumProducts[giftIndex].map(gift => (
+					<>	
+						<LeftDetails>
+							<MainImageContainer>
+								<MainImage src={gift.img} />
+								<DecorativeImage src="/images/decataveDetails.png" />
+							</MainImageContainer>
+						</LeftDetails>
+						<RightDetails>
+							<InformationContainer>
+							<TitleDetails>{gift.name}</TitleDetails>
+								<LineImage src="/images/lines.png" />
+								
+								<DetailsInformation>
+
+									<DetailItem>
+										<DetailItemTitle>
+											PRE<ColorLetter blue>C</ColorLetter>IO
+										</DetailItemTitle>
+										<DetailItemContent>
+											{gift.price}
+										</DetailItemContent>
+									</DetailItem>
+								</DetailsInformation>
+
+								<DetailButton onClick={openModal}>Compralo Fácil y rápido</DetailButton>
+							</InformationContainer>
+							{/* <Slider /> */}
+						</RightDetails>
+					</>
+
+					))
+				)
+			}
 		</DetailsWrapper>
 		<Modal show={!modal}  closeModal={closenModal}/>
 	</Fragment>
 )};
 
+export { DetailsContainer, PODIUM_QUERY, variables };
 
-export default DetailsContainer;
+
