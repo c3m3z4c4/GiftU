@@ -23,7 +23,6 @@ export default class Callback extends Component {
         const style = {
             position: "absolute",
             display: "flex",
-            alignItems: "center",
             justifyContent: "center",
             height: "100vh",
             width: "100vw",
@@ -35,11 +34,12 @@ export default class Callback extends Component {
         };
         return ( 
 			<div style = { style } >
-            	<Loader
+            	<h1> Your Awesome Callback Page </h1> 
+                <Loader
                     type="Puff"
                     color="#A0DDC7"
-                    height={500}
-                    width={500}
+                    height={100}
+                    width={100}
                     timeout={3000} //3 secs
                 />
 			</div>

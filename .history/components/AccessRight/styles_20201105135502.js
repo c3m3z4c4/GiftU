@@ -72,8 +72,7 @@ const WrapperInput = styled.div `
 	display: flex;
 	margin-top: 80px;
 	flex-direction: column;
-	align-items: flex-start;
-	@media (max-width: 768px) {
+	align-items: flex-start @media (max-width: 768px) {
 		width: 100%;
 	}
 `;
@@ -147,7 +146,6 @@ const LabelInput = styled.input `
 	}
 	@media (max-width: 768px) {
 		width: 80vw;
-		text-align: center;
 	}
 `;
 

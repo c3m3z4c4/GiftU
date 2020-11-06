@@ -23,7 +23,6 @@ export default class Callback extends Component {
         const style = {
             position: "absolute",
             display: "flex",
-            alignItems: "center",
             justifyContent: "center",
             height: "100vh",
             width: "100vw",

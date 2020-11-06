@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import Auth from "../../lib/Auth";
 import Router from "next/router";
-import Loader from 'react-loader-spinner';
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 const auth = new Auth();
 
 export default class Callback extends Component {
     componentDidMount() {
         var user_details = auth.extractInfoFromHash();
-        console.log(user_details);
         auth.handleAuthentication().then((res) => {
             if (!res) {
                 window.location.replace("/");
@@ -23,7 +20,6 @@ export default class Callback extends Component {
         const style = {
             position: "absolute",
             display: "flex",
-            alignItems: "center",
             justifyContent: "center",
             height: "100vh",
             width: "100vw",
@@ -33,16 +29,11 @@ export default class Callback extends Component {
             right: 0,
             backgroundColor: "white",
         };
-        return ( 
-			<div style = { style } >
-            	<Loader
-                    type="Puff"
-                    color="#A0DDC7"
-                    height={500}
-                    width={500}
-                    timeout={3000} //3 secs
-                />
-			</div>
+        return ( <
+            div style = { style } >
+            <
+            h1 > Your Awesome Callback Page < /h1>  <
+            /div>
         );
     }
 }

@@ -174,30 +174,24 @@ const BaseButton = styled.button `
 		background-color: #ffab07;
 		transform: scale(1.2);
 		opacity: 1;
-		span {
-			color: #87d3b8;
-		}
-		&:hover {
-		color: ${(props) => (props.primary ? "#A0DDC7" : "white")};
-		}
 	}
 	@media Screen and (max-width: 600px) {
-		width: 60vw;
+		width: 80vw;
 		height: 8vh;
 		font-size: 40px;
-		transition: transform 0.2s ease;
+		transition: transform 0.5s ease;
 		&:hover {
 			background-color: #ffab07;
 			opacity: 1;
-		}
-		Span:hover {
-			color: ${(props) => ("#87d3b8")};
 		}
 	}
 `;
 
 const Span = styled.span `
 	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
+	&:hover {
+		color: ${(props) => (props.primary ? "#A0DDC7" : "#A0DDC7")};
+		}
 `;
 
 export {

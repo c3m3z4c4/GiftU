@@ -174,9 +174,6 @@ const BaseButton = styled.button `
 		background-color: #ffab07;
 		transform: scale(1.2);
 		opacity: 1;
-		span {
-			color: #87d3b8;
-		}
 		&:hover {
 		color: ${(props) => (props.primary ? "#A0DDC7" : "white")};
 		}
@@ -192,7 +189,7 @@ const BaseButton = styled.button `
 		}
 		Span:hover {
 			color: ${(props) => ("#87d3b8")};
-		}
+		}}
 	}
 `;
 

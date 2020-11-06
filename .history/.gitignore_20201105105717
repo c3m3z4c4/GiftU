@@ -11,6 +11,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 dist/
-package-lock.json
+./package-lock.json
 .vercel
 .DS_Store

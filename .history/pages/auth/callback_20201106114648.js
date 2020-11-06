@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import Auth from "../../lib/Auth";
 import Router from "next/router";
-import Loader from 'react-loader-spinner';
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 
 const auth = new Auth();
 
@@ -23,7 +21,6 @@ export default class Callback extends Component {
         const style = {
             position: "absolute",
             display: "flex",
-            alignItems: "center",
             justifyContent: "center",
             height: "100vh",
             width: "100vw",
@@ -35,13 +32,9 @@ export default class Callback extends Component {
         };
         return ( 
 			<div style = { style } >
-            	<Loader
-                    type="Puff"
-                    color="#A0DDC7"
-                    height={500}
-                    width={500}
-                    timeout={3000} //3 secs
-                />
+            	<h1> Your Awesome Callback Page </h1> 
+            	<h3> Here should be a loading page i think </h3> 
+
 			</div>
         );
     }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const WrapperRight = styled.div `
+const WrapperRight = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -15,7 +15,7 @@ const WrapperRight = styled.div `
 	}
 `;
 
-const LogoImage = styled.img `
+const LogoImage = styled.img`
 	width: 70px;
 	margin: -60px 0 30px 0;
 	@media (max-width: 768px) {
@@ -25,7 +25,7 @@ const LogoImage = styled.img `
 
 const imgLogo = "../images/logo.png";
 
-const WrapperSign = styled.div `
+const WrapperSign = styled.div`
 	display: flex;
 	justify-content: space-between;
 	width: 20vw;
@@ -34,7 +34,7 @@ const WrapperSign = styled.div `
 	}
 `;
 
-const WrapperLabel = styled.div `
+const WrapperLabel = styled.div`
 	display: flex;
 	justify-content: space-between;
 	height: 20px;
@@ -43,7 +43,7 @@ const WrapperLabel = styled.div `
 	}
 `;
 
-const TabButton = styled.button `
+const TabButton = styled.button`
 	width: 9vw;
 	height: 50px;
 	font-weight: bolder;
@@ -68,16 +68,15 @@ const TabButton = styled.button `
 	}
 `;
 
-const WrapperInput = styled.div `
+const WrapperInput = styled.div`
 	display: flex;
 	margin-top: 80px;
 	flex-direction: column;
-	align-items: flex-start;
-	@media (max-width: 768px) {
+	align-items: flex-start @media (max-width: 768px) {
 		width: 100%;
 	}
 `;
-const WrappersmallerInput = styled.div `
+const WrappersmallerInput = styled.div`
 	display: flex;
 	margin-top: 40px;
 	flex-direction: column;
@@ -97,7 +96,7 @@ const WrappersmallerInput = styled.div `
 		justify-content: space-around;
 	}
 `;
-const FlexInputWrapper = styled.div `
+const FlexInputWrapper = styled.div`
 	margin-top: 16px;
 	display: flex;
 	width: 60%;
@@ -112,7 +111,7 @@ const FlexInputWrapper = styled.div `
 		width: 100%;
 	}
 `;
-const LabelText = styled.label `
+const LabelText = styled.label`
 	font-family: "Quicksand", sans-serif;
 	color: #87d3b8;
 	margin-bottom: 1em;
@@ -122,7 +121,7 @@ const LabelText = styled.label `
 	}
 `;
 
-const LabelImg = styled.img `
+const LabelImg = styled.img`
 	width: 20px;
 	height: auto;
 	margin-left: 10px;
@@ -130,7 +129,7 @@ const LabelImg = styled.img `
 
 const email = "../images/mail.png";
 
-const LabelInput = styled.input `
+const LabelInput = styled.input`
 	width: 20vw;
 	height: 3vh;
 	background: transparent;
@@ -146,12 +145,11 @@ const LabelInput = styled.input `
 		outline: none;
 	}
 	@media (max-width: 768px) {
-		width: 80vw;
-		text-align: center;
+		width: 100%;
 	}
 `;
 
-const LabelTextPass = styled.label `
+const LabelTextPass = styled.label`
 	font-family: "Quicksand", sans-serif;
 	color: #87d3b8;
 	margin-bottom: 1em;
@@ -161,7 +159,7 @@ const LabelTextPass = styled.label `
 	}
 `;
 
-const LabelImgPass = styled.img `
+const LabelImgPass = styled.img`
 	width: 20px;
 	height: 20px;
 	margin-left: 10px;
@@ -169,7 +167,7 @@ const LabelImgPass = styled.img `
 
 const pass = "../images/key.png";
 
-const LabelInputPass = styled.input `
+const LabelInputPass = styled.input`
 	width: 20vw;
 	height: 3vh;
 	background: transparent;
@@ -185,12 +183,11 @@ const LabelInputPass = styled.input `
 		outline: none;
 	}
 	@media (max-width: 768px) {
-		width: 80vw;
-		text-align: center;
+		width: 100%;
 	}
 `;
 
-const BaseButton = styled.button `
+const BaseButton = styled.button`
 	width: 124.16px;
 	height: 34.58px;
 	background: #87d3b8;
@@ -217,7 +214,7 @@ const BaseButton = styled.button `
 	}
 `;
 
-const WrapperSingRD = styled.div `
+const WrapperSingRD = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -226,11 +223,11 @@ const WrapperSingRD = styled.div `
 `;
 
 const FBLogo = "../images/facebook.png";
-const FbLogo = styled.img `
+const FbLogo = styled.img`
 	margin-left: 5px;
 `;
 
-const FBButton = styled.a `
+const FBButton = styled.a`
 	width: 170px;
 	height: 40px;
 	background: #4d62af;
@@ -256,10 +253,10 @@ const FBButton = styled.a `
 `;
 
 const GoLogo = "../images/google.png";
-const GLogo = styled.img `
+const GLogo = styled.img`
 	margin-left: 5px;
 `;
-const GooButton = styled.a `
+const GooButton = styled.a`
 	width: 170px;
 	height: 40px;
 	background: #f6f6f6;
@@ -285,29 +282,29 @@ const GooButton = styled.a `
 `;
 
 export {
-    WrapperRight,
-    LogoImage,
-    imgLogo,
-    WrapperSign,
-    TabButton,
-    WrapperInput,
-    LabelText,
-    LabelImg,
-    email,
-    LabelInput,
-    LabelTextPass,
-    LabelImgPass,
-    LabelInputPass,
-    WrappersmallerInput,
-    pass,
-    BaseButton,
-    WrapperSingRD,
-    FBLogo,
-    FbLogo,
-    FBButton,
-    GoLogo,
-    GLogo,
-    GooButton,
-    FlexInputWrapper,
-    WrapperLabel,
+	WrapperRight,
+	LogoImage,
+	imgLogo,
+	WrapperSign,
+	TabButton,
+	WrapperInput,
+	LabelText,
+	LabelImg,
+	email,
+	LabelInput,
+	LabelTextPass,
+	LabelImgPass,
+	LabelInputPass,
+	WrappersmallerInput,
+	pass,
+	BaseButton,
+	WrapperSingRD,
+	FBLogo,
+	FbLogo,
+	FBButton,
+	GoLogo,
+	GLogo,
+	GooButton,
+	FlexInputWrapper,
+	WrapperLabel,
 };
