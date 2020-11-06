@@ -34,12 +34,14 @@ export default class Callback extends Component {
         return ( 
 			<div style = { style } >
             	<h1> Your Awesome Callback Page </h1> 
+            	<h3> Here should be a loading page i think </h3> 
                 <Loader
                     type="Puff"
-                    color="#A0DDC7"
+                    color="#00BFFF"
                     height={100}
                     width={100}
                     timeout={3000} //3 secs
+            
                 />
 			</div>
         );

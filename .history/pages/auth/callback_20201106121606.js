@@ -36,10 +36,11 @@ export default class Callback extends Component {
             	<h1> Your Awesome Callback Page </h1> 
                 <Loader
                     type="Puff"
-                    color="#A0DDC7"
+                    color="#00BFFF"
                     height={100}
                     width={100}
                     timeout={3000} //3 secs
+            
                 />
 			</div>
         );
