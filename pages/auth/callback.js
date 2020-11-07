@@ -12,7 +12,7 @@ export default class Callback extends Component {
             if (!res) {
                 window.location.replace("/");
             } else {
-                Router.push("/secure_page");
+                Router.push("/secure_search");
             }
         });
     }
