@@ -42,13 +42,6 @@ export default class Nav extends React.Component {
 							</MenuButton>
 						</Item>
 						<Item>
-							<Link href="/">
-								<Anchor>
-									<Span>P</Span>erfil
-								</Anchor>
-							</Link>
-						</Item>
-						<Item>
 							<Link href="/about">
 								<Anchor>
 									Nosot<Span>ros</Span>
