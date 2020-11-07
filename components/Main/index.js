@@ -9,9 +9,17 @@ import {
 	GiftTitle,
 	ColorLine,
 	Span,
+	LinkButton
 } from "./styles";
 
+import Auth from '../../lib/Auth';
+const auth = new Auth();
+
 const Main = () => {
+ const handleLogin = () => {
+    auth.login()
+  }
+
 	return (
 		<Fragment>
 			<Wrapper>
@@ -34,12 +42,12 @@ const Main = () => {
 						<ColorLine primary />
 					</Wrappergift>
 					<Wrappergift>
-						<Link href="/access"> 
+						<LinkButton onClick={()=>handleLogin()} > 
 							<GiftTitle>
 								REGALO <br />
 								ID<Span primary>E</Span>AL
 							</GiftTitle>
-						</Link>
+						</LinkButton>
 						<ColorLine />
 					</Wrappergift>
 				</WrapperGifts>
