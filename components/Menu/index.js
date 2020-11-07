@@ -17,13 +17,7 @@ const auth = new Auth();
 const Imagepng = "../images/logo.png";
 
 export default class Nav extends React.Component {
-		componentDidMount() {
-		var user_data = localStorage.getItem("user_details");
-		var isLoggedIn = localStorage.getItem("isLoggedIn");
-		if (!isLoggedIn || !user_data) {
-			window.location.replace("/");
-		}
-	}
+		
 
 	handleLogin() {
 		auth.login();
