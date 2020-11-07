@@ -17,15 +17,19 @@ const auth = new Auth();
 const Imagepng = "../images/logo.png";
 
 export default class Nav extends React.Component {
-	componentDidMount() {
+		componentDidMount() {
 		var user_data = localStorage.getItem("user_details");
 		var isLoggedIn = localStorage.getItem("isLoggedIn");
+		if (!isLoggedIn || !user_data) {
+			window.location.replace("/");
+		}
 	}
+
 	handleLogin() {
 		auth.login();
 	}
 
-	logout() {
+	handlelogout() {
 		auth.logout();
 	}
 
@@ -58,7 +62,7 @@ export default class Nav extends React.Component {
 							</Link>
 						</Item>
 						<Item>
-							<MenuButton onClick={()=>this.logout()}>
+							<MenuButton onClick={()=>this.handleLogout()}>
 										Cerrar <Span>Sesión</Span>
 							</MenuButton>
 						</Item>
