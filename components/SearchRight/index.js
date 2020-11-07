@@ -1,7 +1,8 @@
 import React, { Fragment, useState } from "react";
 import Link from "next/link";
-import { gql, useMutation } from '@apollo/client'
+import { gql, useMutation, useQuery } from '@apollo/client'
 import Menu from "../Menu";
+import { SelectOccasionComponent } from './selectOccasion';
 import {
 	WrapperRight,
 	WrappperMenu,
@@ -13,47 +14,68 @@ import {
 	WrapperButtom,
 	BaseButton,
 	Span,
+	SelectOccasion,
 	Textform,
 } from "./styles";
 
 const SEND_INFORMATION = gql`
-	mutation AddSocialNetwork($receiver_name: String!, $id_social_network: Int!, $url_social_network: String!) {
-  social_network(receiver_name: $receiver_name, id_social_network: $id_social_network, url_social_network: $url_social_network) {
-		receiver_name
-		id_social_network
-		url_social_network
+# 	mutation AddSocialNetwork($receiver_name: String!, $id_social_network: Int!, $url_social_network: String!) {
+#   social_network(receiver_name: $receiver_name, id_social_network: $id_social_network, url_social_network: $url_social_network) {
+# 		receiver_name
+# 		id_social_network
+# 		url_social_network
+#   }
+# }
+mutation AddSocialNetwork(
+  $receiver_name:String!,
+  $id_social_network:Int!,
+  $url_social_network:String!,
+  $id_occasion:Int!,
+){
+  social_network(
+    receiver_name:$receiver_name,
+  	id_social_network:$id_social_network,
+    url_social_network:$url_social_network,
+    id_occasion:$id_occasion,
+  ){
+    receiver_name,
+    id_social_network,
+    url_social_network,
+    id_occasion,
   }
 }
 `;
 
-const GET_SOCIAL_NETWORK = gql`
-	query GetSocialNetwork($id:ID!){
-		social_network(id:$id){
-		receiver_name
-		social_network_name
-		url_social_network
-		search_result
-   }
-}
-`;
+
 let variables;
 
 const SearchRight = () => {
-	const [sendInrmation, { data }] = useMutation(SEND_INFORMATION);
+	const [sendInrmation] = useMutation(SEND_INFORMATION);
+	const [formData, setFormData] = useState({});
 
 	const handleSubmit = (event) => {
 		event.preventDefault()
-		const form = event.target
-		const formData = new window.FormData(form)
-		const name = formData.get('name')
-		const link = formData.get('link')
-		form.reset()
 
-		variables = { 
-			receiver_name: name,
+		// const { value, name } = event.target;
+		// setForm({
+		// 	form: {
+		// 	  [name]: value,
+		// 	},
+		// });
+		// const form = event.target
+		// const formData = new window.FormData(form)
+		// const name = formData.get('name')
+		// const link = formData.get('link')
+		// const occasion = formData.get('occasion')
+		// form.reset()
+
+		variables = {
+			receiver_name: searchform.form.name,
 			id_social_network: 1,
-			url_social_network: link, 
+			url_social_network: searchform.form.link,
+			id_occasion: searchform.form.occasion,
 		};	
+		console.log('FORMMMM', variables);
 		sendInrmation({
 		  variables,		  
 		  update: (cache, { data: { sendInrmation } }) => {
@@ -68,8 +90,9 @@ const SearchRight = () => {
 			  },
 			})
 		  },
-		});
+		})
 	  }
+
 	return (
 		<Fragment>
 			<WrapperRight>
@@ -90,12 +113,17 @@ const SearchRight = () => {
 						<LabelRS src={imgFB} />
 						<InputRS placeholder="link" name="link" type="text" />
 					</WrapperLabel>
+
+					<Textform>
+						¿Cuál es<Span>la</Span> ocasión?
+					</Textform>
+					<SelectOccasionComponent />
 					<WrapperButtom>
-						<Link href="/podium">
+						{/* <Link href="/podium"> */}
 							<BaseButton type="submit">
 								EN<Span primary>V</Span>IAR
 							</BaseButton>
-						</Link>
+						{/* </Link> */}
 					</WrapperButtom>
 				</WrapperForm>
 			</WrapperRight>
@@ -104,7 +132,5 @@ const SearchRight = () => {
 };
 
 export {
-    SEND_INFORMATION,
 	SearchRight,
-	variables,
 };
