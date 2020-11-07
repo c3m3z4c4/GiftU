@@ -36,7 +36,6 @@ export default class SearchSecure extends Component{
 			<Wrapper>
 				<SearchLeft />
 			 	<SearchRight />
-				<button onClick={() => this.logout()}>Logout</button>
 			</Wrapper>
 		</Fragment>
 		);
