@@ -10,8 +10,10 @@ import {
 	ListItems,
 	Item,
 	Anchor,
+	MenuButton
 } from "./styles";
-
+import Auth from '../../lib/Auth';
+const auth = new Auth();
 const Imagepng = "../images/logo.png";
 
 export default class Nav extends React.Component {
@@ -29,11 +31,9 @@ export default class Nav extends React.Component {
 					</WrapperImageMenu>
 					<ListItems>
 						<Item>
-							<Link href="/access">
-								<Anchor>
+						<MenuButton onClick={()=>this.handleLogin()}>
 									Iniciar <Span>Sesión</Span>
-								</Anchor>
-							</Link>
+						</MenuButton>
 						</Item>
 						<Item>
 							<Link href="/">
