@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Auth from "../../lib/Auth";
 import Router from "next/router";
 import Loader from 'react-loader-spinner';
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 
 const auth = new Auth();
 
@@ -12,7 +12,8 @@ export default class Callback extends Component {
         console.log(user_details);
         auth.handleAuthentication().then((res) => {
             if (!res) {
-                window.location.replace("/");
+                // window.location.replace("/");
+                Router.push("/");
             } else {
                 Router.push("/search");
             }
@@ -38,9 +39,9 @@ export default class Callback extends Component {
             	<Loader
                     type="Puff"
                     color="#A0DDC7"
-                    height={500}
-                    width={500}
-                    timeout={3000} //3 secs
+                    height={100}
+                    width={100}
+                    timeout={1000} //3 secs
                 />
 			</div>
         );
