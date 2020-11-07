@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Auth from "../../lib/Auth";
 import Router from "next/router";
+import Loading from "../../components/Loading"
+
 
 const auth = new Auth();
 
@@ -33,7 +35,7 @@ export default class Callback extends Component {
         };
         return ( 
 			<div style = { style } >
-                <h1>Pagina Autorizada</h1>
+                <Loading />
 			</div>
         );
     }

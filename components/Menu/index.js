@@ -17,8 +17,16 @@ const auth = new Auth();
 const Imagepng = "../images/logo.png";
 
 export default class Nav extends React.Component {
+	componentDidMount() {
+		var user_data = localStorage.getItem("user_details");
+		var isLoggedIn = localStorage.getItem("isLoggedIn");
+	}
 	handleLogin() {
 		auth.login();
+	}
+
+	logout() {
+		auth.logout();
 	}
 
 	render() {
@@ -31,9 +39,9 @@ export default class Nav extends React.Component {
 					</WrapperImageMenu>
 					<ListItems>
 						<Item>
-						<MenuButton onClick={()=>this.handleLogin()}>
-									Iniciar <Span>Sesión</Span>
-						</MenuButton>
+							<MenuButton onClick={()=>this.handleLogin()}>
+										Iniciar <Span>Sesión</Span>
+							</MenuButton>
 						</Item>
 						<Item>
 							<Link href="/">
@@ -48,6 +56,11 @@ export default class Nav extends React.Component {
 									Nosot<Span>ros</Span>
 								</Anchor>
 							</Link>
+						</Item>
+						<Item>
+							<MenuButton onClick={()=>this.logout()}>
+										Cerrar <Span>Sesión</Span>
+							</MenuButton>
 						</Item>
 					</ListItems>
 				</Wrapper>
