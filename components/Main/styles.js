@@ -63,6 +63,7 @@ const GiftTitle = styled.a`
 	cursor: pointer;
 	margin: 0;
 	margin-bottom: 15px;
+	transition: transform 0.2s ease;
 	@media (max-width: 425px) {
 		margin-top: 20px;
 	}
@@ -99,6 +100,7 @@ const LinkButton = styled.button`
 	cursor: pointer;
 	margin: 0;
 	margin-bottom: 15px;
+	transition: transform 0.2s ease;
 	@media (max-width: 425px) {
 		margin-top: 20px;
 	}

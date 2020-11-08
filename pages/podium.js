@@ -1,8 +1,9 @@
 import React from "react";
 import { PodiumComponent, PODIUM_QUERY, variables } from '../Containers/PodiumContainer/index';
+import Header from "../components/Header";
 import TitleComponent from '../components/Title/index';
-import styled from 'styled-components'
-import { initializeApollo } from '../lib/apolloClient'
+import styled from 'styled-components';
+import { initializeApollo } from '../lib/apolloClient';
 
 const Wrapper = styled.div`
 width:100%;
