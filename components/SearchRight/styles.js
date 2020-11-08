@@ -156,6 +156,7 @@ const WrapperButtom = styled.div `
 const BaseButton = styled.button `
 	width: 100px;
 	height: 50px;
+	outline:none;
 	background: #87d3b8;
 	border: none;
 	display: flex;
@@ -186,7 +187,7 @@ const BaseButton = styled.button `
 		width: 50vw;
 		height: 8vh;
 		font-size: 40px;
-		transition: transform 0.2s ease;
+		transition: transform 0.15s ease;
 		Span:hover {
 			color: ${(props) => ("#87d3b8")};
 		}

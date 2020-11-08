@@ -205,6 +205,7 @@ const DetailItemContent = styled.p`
 const DetailButton = styled.button`
 	font-family: Quicksand;
 	font-style: normal;
+	outline:none;
 	max-width: 280px;
 	max-height: 80px;
 	font-weight: 500;
@@ -220,10 +221,9 @@ const DetailButton = styled.button`
 	border-radius: 10px;
 	border: none;
 	cursor: pointer;
-	transition: transform 0.2s ease;
+	transition: background 0.2s ease;
 	&:hover {
 		background-color: #ffab07;
-		transform: scale(1.2);
 		opacity: 1;
 		span {
 			color: #87d3b8;
