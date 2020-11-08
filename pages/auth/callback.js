@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Auth from "../../lib/Auth";
 import Router from "next/router";
-import Loader from 'react-loader-spinner';
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loading from "../../components/Loading"
+
 
 const auth = new Auth();
 
@@ -12,10 +12,9 @@ export default class Callback extends Component {
         console.log(user_details);
         auth.handleAuthentication().then((res) => {
             if (!res) {
-                // window.location.replace("/");
-                Router.push("/");
+                window.location.replace("/");
             } else {
-                Router.push("/search");
+                Router.push("/secure_search");
             }
         });
     }
@@ -36,13 +35,7 @@ export default class Callback extends Component {
         };
         return ( 
 			<div style = { style } >
-            	<Loader
-                    type="Puff"
-                    color="#A0DDC7"
-                    height={100}
-                    width={100}
-                    timeout={1000} //3 secs
-                />
+                <Loading />
 			</div>
         );
     }
