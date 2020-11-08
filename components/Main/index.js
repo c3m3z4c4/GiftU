@@ -9,18 +9,16 @@ import {
 	GiftTitle,
 	ColorLine,
 	Span,
-	LinkButton
+	LinkButton,
 } from "./styles";
 
-import Auth from '../../lib/Auth';
+import Auth from "../../lib/Auth";
 const auth = new Auth();
 
-
 export default class Main extends React.Component {
-
 	handleLogin = () => {
-		auth.login()
-	}
+		auth.login();
+	};
 
 	render() {
 		return (
@@ -28,9 +26,9 @@ export default class Main extends React.Component {
 				<Wrapper>
 					<WrapperTitle>
 						<Title>
-							<Span>H</Span>OLA,<br />¿<Span primary>N</Span>O <br />
-							SABES <br />
-							Q<Span primary>U</Span>E <br />
+							<Span>H</Span>OLA,
+							<br />¿<Span primary>N</Span>O <br />
+							SABES <br />Q<Span primary>U</Span>E <br />
 							REGALAR <Span>?</Span>
 						</Title>
 					</WrapperTitle>
@@ -39,13 +37,13 @@ export default class Main extends React.Component {
 							<Link href="/search">
 								<GiftTitle>
 									REGALO <br />
-									RECOM<Span>É</Span>NDADO
+									RECOM<Span>E</Span>NDADO
 								</GiftTitle>
 							</Link>
 							<ColorLine primary />
 						</Wrappergift>
 						<Wrappergift>
-							<LinkButton onClick={() => this.handleLogin()} >
+							<LinkButton onClick={() => this.handleLogin()}>
 								<GiftTitle>
 									REGALO <br />
 									ID<Span primary>E</Span>AL
@@ -57,6 +55,5 @@ export default class Main extends React.Component {
 				</Wrapper>
 			</Fragment>
 		);
-	};
+	}
 }
-
