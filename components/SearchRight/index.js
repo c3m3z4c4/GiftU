@@ -84,7 +84,7 @@ const SearchRight = () => {
 					</Textform>
 					<InputRS placeholder="nombre" name="name" type="text" />
 					<Textform>
-						P&aacute;sanos su <Span>Facebook:</Span>
+						P&aacute;sanos tu <Span>Facebook:</Span>
 					</Textform>
 					<WrapperLabel>
 						<LabelRS src={imgFB} />
