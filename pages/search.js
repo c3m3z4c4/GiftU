@@ -2,10 +2,8 @@ import React, { Fragment } from "react";
 import { initializeApollo } from '../lib/apolloClient'
 import styled from "styled-components";
 import SearchLeft from "../components/SearchLeft";
-import {
-	OCCASION,
-	SearchRight,
-} from "../components/SearchRight";
+import { OCCASION } from "../components/SearchRight/selectOccasion";
+import { SearchRight } from "../components/SearchRight/index";
 
 const Wrapper = styled.div`
 	width: 100%;

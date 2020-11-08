@@ -11,8 +11,8 @@ const OCCASION = gql`
 	}
 `;
 
-const SelectOccasionComponent = () => {
-	const { data, loading, error, fetchMore, networkStatus } = useQuery(
+const SelectOccasionComponent = ({ onChange }) => {
+	const { data, loading, error, fetchMore } = useQuery(
         OCCASION,
         {
           notifyOnNetworkStatusChange: true,
@@ -21,15 +21,19 @@ const SelectOccasionComponent = () => {
       if (error) return <p>sorry, here is an error </p>;
       if (loading) return <div>Loading</div>;
 	  const { allOccasions } = data;
-	  console.log(allOccasions)
 	return (
 		<>
-			<SelectOccasion>
+			<SelectOccasion name="occasion" onChange={onChange}>
 				{
 					allOccasions !== undefined 
 					? <>
 						{
-							allOccasions.map(occasion => <option value={occasion.id_occasion} name="occasion">{occasion.occasion_name}</option>)
+							allOccasions.map(occasion => 
+							<option
+							 value={occasion.id_occasion}
+							 >
+								 {occasion.occasion_name}
+							</option>)
 						}
 					</>
 					: null
