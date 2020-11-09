@@ -31,7 +31,10 @@ const Textform = styled.p `
 	font-family: "Quicksand";
 	text-align: center;
 	@media Screen and (max-width: 600px) {
-		font-size: 24px;
+		font-size: 26px;
+		max-width: 60vw;
+		width: 100%;
+
 	}
 
 `;
@@ -54,9 +57,8 @@ const TextGender = styled.p `
 const WrapperImg = styled.div `
 	display: flex;
 	justify-content: space-around;
-	width: 50%;
-	justify-content: space-around;
 	align-items: center;
+	width: 50%;
 `;
 
 const WrapperOccacion = styled.div `
@@ -141,7 +143,7 @@ const InputRS = styled.input `
 		outline: none;
 	}
 	@media Screen and (max-width: 600px) {
-		width: 70vw;
+		width: 60vw;
 	}
 `;
 
@@ -155,19 +157,19 @@ const BaseButton = styled.button `
 	width: 124.16px;
 	outline:0;
 	height: 50px;
+	outline:none;
 	background: #87d3b8;
 	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	box-sizing: border-box;
 	border-radius: 12px;
 	transform: matrix(1, 0, 0, 1, 0, 0);
 	font-size: 20px;
 	line-height: 14px;
-	display: flex;
-	align-items: center;
 	letter-spacing: 0.11em;
 	font-family: "Quicksand", sans-serif;
-	display: flex;
-	justify-content: center;
 	color: white;
 	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.07);
 	transition: transform 0.2s ease;
@@ -183,14 +185,10 @@ const BaseButton = styled.button `
 		}
 	}
 	@media Screen and (max-width: 600px) {
-		width: 60vw;
+		width: 50vw;
 		height: 8vh;
 		font-size: 40px;
-		transition: transform 0.2s ease;
-		&:hover {
-			background-color: #ffab07;
-			opacity: 1;
-		}
+		transition: transform 0.15s ease;
 		Span:hover {
 			color: ${(props) => ("#87d3b8")};
 		}

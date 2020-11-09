@@ -116,7 +116,7 @@ const SearchRight = () => {
 					</Textform>
 					<InputRS value={form.name} placeholder="nombre" name="name" type="text" onChange={updateField} />
 					<Textform>
-						P&aacute;sanos su <Span>Facebook:</Span>
+						P&aacute;sanos tu <Span>Facebook:</Span>
 					</Textform>
 					<WrapperLabel>
 						<LabelRS src={imgFB} />

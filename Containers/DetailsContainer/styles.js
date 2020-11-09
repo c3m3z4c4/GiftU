@@ -151,10 +151,12 @@ const InformationContainer = styled.div`
 	align-items: center;
 	@media (max-width: 768px) {
 		width: 100%;
-		height: 70vh;
+		height: 40vh;
 	}
 `;
 const TitleDetails = styled.p`
+	max-width:80vw;
+	width: 100%;
 	font-family: Quicksand;
 	font-style: normal;
 	font-weight: bold;
@@ -173,7 +175,7 @@ const DetailsInformation = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	width: 100%;
+	width: 80%;
 `;
 const DetailItem = styled.div`
 	display: flex;
@@ -203,10 +205,11 @@ const DetailItemContent = styled.p`
 const DetailButton = styled.button`
 	font-family: Quicksand;
 	font-style: normal;
-	max-width: 253px;
-	max-height: 45px;
+	outline:none;
+	max-width: 280px;
+	max-height: 80px;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 20px;
 	line-height: 19px;
 	display: flex;
 	align-items: center;
@@ -218,6 +221,14 @@ const DetailButton = styled.button`
 	border-radius: 10px;
 	border: none;
 	cursor: pointer;
+	transition: background 0.2s ease;
+	&:hover {
+		background-color: #ffab07;
+		opacity: 1;
+		span {
+			color: #87d3b8;
+		}
+	}
 `;
 const ColorLetter = styled.span`
 	color: ${(props) => (props.blue ? "#87D3B8" : "#FFAB07")};

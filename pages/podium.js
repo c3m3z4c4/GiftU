@@ -5,8 +5,8 @@ import {
   variables 
 } from '../Containers/PodiumContainer/index';
 import TitleComponent from '../components/Title/index';
-import styled from 'styled-components'
-import { initializeApollo } from '../lib/apolloClient'
+import styled from 'styled-components';
+import { initializeApollo } from '../lib/apolloClient';
 
 const Wrapper = styled.div`
 width:100%;
