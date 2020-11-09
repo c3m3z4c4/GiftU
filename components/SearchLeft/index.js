@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import Link from "next/link"
+import Link from "next/link";
 import {
 	WrapperLeft,
 	name,
@@ -18,16 +18,18 @@ const SearchLeft = () => {
 		<Fragment>
 			<WrapperLeft>
 				<Link href="/">
-					<AncorImg><LogoName src={name} /> </AncorImg>
+					<AncorImg>
+						<LogoName src={name} />
+					</AncorImg>
 				</Link>
 				<WrapperMainText>
 					<MainText>
-						CUÉN<Span primary>T</Span>AME UN POCO M<Span>Á</Span>S:
+						CUÉN<Span primary>T</Span>AME UN POCO <Span>MÁS</Span>:
 					</MainText>
 				</WrapperMainText>
 				<WrapperMainImage>
-				 <ImgSearch src={imgFooter} />
-				</WrapperMainImage>	
+					<ImgSearch src={imgFooter} />
+				</WrapperMainImage>
 			</WrapperLeft>
 		</Fragment>
 	);

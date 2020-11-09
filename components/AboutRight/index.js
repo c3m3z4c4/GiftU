@@ -58,7 +58,7 @@ const AboutRight = () => {
 						<TitleDetails>
 							Rafael Lagun<Span>a</Span>s
 						</TitleDetails>
-						<TitleRole>Back-end Developer</TitleRole>
+						<TitleRole>Master Coach</TitleRole>
 						<GitHub href="https://github.com/rafastaria">
 							Mis repositorios
 						</GitHub>

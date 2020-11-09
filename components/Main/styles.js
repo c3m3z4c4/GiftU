@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+const HomeWrapper = styled.div`
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+`;
 const Wrapper = styled.section`
 	display: flex;
 	flex-direction: column;
@@ -49,6 +57,7 @@ const Wrappergift = styled.div`
 
 const GiftTitle = styled.a`
 	text-align: center;
+	font-size: 15px;
 	color: black;
 	font-family: "Quicksand";
 	cursor: pointer;
@@ -78,6 +87,27 @@ const Span = styled.span`
 	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
 `;
 
+const LinkButton = styled.button`
+	background: transparent;
+	box-shadow: none;
+	font-size: 15px;
+	border: 0;
+	outline:none;
+	text-align: center;
+	color: black;
+	font-family: "Quicksand";
+	cursor: pointer;
+	margin: 0;
+	margin-bottom: 15px;
+	@media (max-width: 425px) {
+		margin-top: 20px;
+	}
+	&:hover {
+		transform: scale(1.3);
+		opacity: 1;
+	}
+`
+
 export {
 	Wrapper,
 	WrapperTitle,
@@ -87,4 +117,6 @@ export {
 	GiftTitle,
 	ColorLine,
 	Span,
+	HomeWrapper,
+	LinkButton
 };

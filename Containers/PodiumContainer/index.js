@@ -1,5 +1,6 @@
-import React from 'react';
-import { gql, useQuery, NetworkStatus } from '@apollo/client'
+import React, { useContext } from 'react';
+import { gql, useQuery } from '@apollo/client';
+import { Context } from '../../context/index';
 import Link from "next/link";
 import {
     PodiumWrapper,
@@ -16,17 +17,24 @@ import {
     LittleDecorative,
     DecorativeContainer,
 } from './styles';
-
+// import { variables } from '../DetailsContainer';
  const PODIUM_QUERY = gql`
-    query GetPodium($id:ID!){
-    podium(id:$id){
-        podium
-     }
-    }
+    query GetHistory($id:ID!){
+  history(id:$id){
+    podium,
+    receiver_name
+  }
+}
 `;
- const variables = { id: 124 };
+
+let variables = { id: 220 };
 
 const PodiumComponent = () => {
+    const { state: { record } } = useContext(Context);
+    console.log('C O N T  E X T podium', record);
+    // const { } = record
+    // console.log('C O N T  E X T podium', record);
+
     const { loading, error, data, fetchMore, networkStatus } = useQuery(
         PODIUM_QUERY,
         {
@@ -36,8 +44,9 @@ const PodiumComponent = () => {
       )
       if (error){console.log("3312 3312 tenemos un 3312")};
       if (loading) return <div>Loading</div>
-      const { products } = data.podium.podium
+      const { products } = data.history.podium
       const podiumProducts = JSON.parse(products);
+      const { receiver_name } = data.history;
 
     return (
         <PodiumWrapper>
@@ -52,12 +61,12 @@ const PodiumComponent = () => {
                 <>
                 <CompleteColumn>
                         {
-                        podiumProducts[0].map(product => (
+                        podiumProducts[2].map(product => (
                             <>
                                 <ImagePodium src={product.img} />
                                     <NameComponent>
                                         {product.name}
-                                    <Link href="/details">
+                                    <Link href="/gifts/3">
                                             <PlusIcon />
                                         </Link>
                                     </NameComponent>
@@ -68,12 +77,12 @@ const PodiumComponent = () => {
                     </CompleteColumn>
                     <CompleteColumn>
                     {
-                        podiumProducts[1].map(product => (
+                        podiumProducts[0].map(product => (
                             <>
                             <ImagePodium src={product.img} />
                                 <NameComponent>
                                     {product.name}
-                                    <Link href="/details">
+                                    <Link href="/gifts/1">
                                         <PlusIcon />
                                     </Link>
                                 </NameComponent>
@@ -86,12 +95,12 @@ const PodiumComponent = () => {
                     </CompleteColumn>
                     <CompleteColumn>
                         {
-                            podiumProducts[2].map(product => (
+                            podiumProducts[1].map(product => (
                             <>
                                     <ImagePodium src={product.img} />
                                     <NameComponent>
                                         {product.name}
-                                        <Link href="/details">
+                                        <Link href="/gifts/2">
                                             <PlusIcon />
                                         </Link>
                                     </NameComponent>
@@ -113,6 +122,6 @@ const PodiumComponent = () => {
 
 export {
     PODIUM_QUERY,
-    variables,
+     variables,
     PodiumComponent,
 };

@@ -158,21 +158,22 @@ const TitleDetails = styled.p`
 	font-family: Quicksand;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 24px;
-	line-height: 0%;
+	font-size: 20px;
 	text-transform: uppercase;
 	color: #87d3b8;
+	text-align: center;
 `;
 
 const LineImage = styled.img`
 	width: 69.02px;
 	height: 17.59px;
 `;
-const DetailsInformation = styled.p`
+const DetailsInformation = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
+	width: 100%;
 `;
 const DetailItem = styled.div`
 	display: flex;
@@ -188,6 +189,7 @@ const DetailItemTitle = styled.p`
 	color: #726666;
 	width: calc(100% / 2);
 	font-weight: 900;
+	text-align: center;
 `;
 const DetailItemContent = styled.p`
 	font-family: Quicksand;
@@ -196,6 +198,7 @@ const DetailItemContent = styled.p`
 	font-size: 14px;
 	color: #726666;
 	width: calc(100% / 2);
+	text-align: center;
 `;
 const DetailButton = styled.button`
 	font-family: Quicksand;
