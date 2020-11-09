@@ -27,26 +27,40 @@ import {
 }
 `;
 
-let variables = { id: 220 };
+let variables;
+
 
 const PodiumComponent = () => {
     const { state: { record } } = useContext(Context);
-    console.log('C O N T  E X T podium', record);
-    // const { } = record
-    // console.log('C O N T  E X T podium', record);
+    console.log('C O N T  E X T podium', record.data.social_network.id_gift_history);
+ 
 
+    let iddata = record.data.social_network.id_gift_history;
+    variables = {id:220}
+    console.log('REGISTRO DEL ID DESDE RECORD: ', iddata); 
+    
+
+    variables = { id: Number(iddata) };
+    console.log(variables);
     const { loading, error, data, fetchMore, networkStatus } = useQuery(
-        PODIUM_QUERY,
-        {
-          variables: variables,
-          notifyOnNetworkStatusChange: true,
-        }
-      )
-      if (error){console.log("3312 3312 tenemos un 3312")};
-      if (loading) return <div>Loading</div>
-      const { products } = data.history.podium
-      const podiumProducts = JSON.parse(products);
-      const { receiver_name } = data.history;
+    PODIUM_QUERY,
+    {
+        variables: variables,
+        notifyOnNetworkStatusChange: true,
+    }
+    )
+    
+    if (error){console.log("3312 3312 tenemos un 3312")};
+    if (loading) return <div>Loading</div>
+    const { products } = data.history.podium
+    const podiumProducts = JSON.parse(products);
+    const { receiver_name } = data.history;
+  
+
+    
+
+
+
 
     return (
         <PodiumWrapper>

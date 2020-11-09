@@ -1,6 +1,7 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useContext } from "react";
 import { gql, useQuery } from '@apollo/client'
 import { useRouter } from 'next/router';
+import { Context } from '../../context/index';
 import Link from "next/link";
 // import Slider from "../../components/Slider";
 
@@ -41,6 +42,8 @@ podium(id:$id){
 const variables = { id: 124 };
 
 const Modal = ({ show, closeModal }) => {
+	const { state: { record } } = useContext(Context);
+	console.log('C O N T  E X T details', record);
 	return (
 		show ? (
 			<Fragment>

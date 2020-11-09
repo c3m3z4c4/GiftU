@@ -87,7 +87,7 @@ const SearchRight = ({ action = '/podium' }) => {
 				})
 			},
 			})
-			dispatch({
+			await dispatch({
 				type: "RECORD_CASE",
 				payload: mutationId,
 				})
