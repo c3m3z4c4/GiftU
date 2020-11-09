@@ -15,7 +15,6 @@ align-items: flex-end;
 justify-content: space-bewteen;
 @media (max-width: 768px) {
   width: 100%;
-  flex-direction: column-reverse;
 }
 `
 
@@ -27,9 +26,8 @@ const CompleteColumn = styled.div`
   align-items: center;
   justify-content: center;
   @media (max-width: 768px) {
-    width: 100%;
-    margin: 20 5px;
-    
+    width: calc(100%/3 - 5px);
+    margin: 0 5px;
   }
 `;
 
