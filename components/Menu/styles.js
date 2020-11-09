@@ -59,6 +59,22 @@ const Anchor = styled.a`
 	}
 `;
 
+const MenuButton = styled.button`
+	background: transparent;
+	box-shadow: none;
+	font-size: 15px;
+	border: 0;
+	outline:none;
+	color: #ffab07;
+	text-decoration: none;
+	font-family: Quicksand;
+	cursor:pointer;
+	${Item}:hover & {
+		color: white;
+	}
+`
+
+
 export {
 	Wrapper,
 	WrapperImageMenu,
@@ -68,4 +84,5 @@ export {
 	ListItems,
 	Item,
 	Anchor,
+	MenuButton
 };

@@ -10,13 +10,21 @@ import {
 	ListItems,
 	Item,
 	Anchor,
+	MenuButton
 } from "./styles";
-
+import Auth from '../../lib/Auth';
+const auth = new Auth();
 const Imagepng = "../images/logo.png";
 
 export default class Nav extends React.Component {
+		
+
 	handleLogin() {
 		auth.login();
+	}
+
+	handlelogout() {
+		auth.logout();
 	}
 
 	render() {
@@ -29,18 +37,9 @@ export default class Nav extends React.Component {
 					</WrapperImageMenu>
 					<ListItems>
 						<Item>
-							<Link href="/access">
-								<Anchor>
-									Iniciar <Span>Sesión</Span>
-								</Anchor>
-							</Link>
-						</Item>
-						<Item>
-							<Link href="/">
-								<Anchor>
-									<Span>P</Span>erfil
-								</Anchor>
-							</Link>
+							<MenuButton onClick={()=>this.handleLogin()}>
+										Iniciar <Span>Sesión</Span>
+							</MenuButton>
 						</Item>
 						<Item>
 							<Link href="/about">
@@ -48,6 +47,11 @@ export default class Nav extends React.Component {
 									Nosot<Span>ros</Span>
 								</Anchor>
 							</Link>
+						</Item>
+						<Item>
+							<MenuButton onClick={()=>this.handleLogout()}>
+										Cerrar <Span>Sesión</Span>
+							</MenuButton>
 						</Item>
 					</ListItems>
 				</Wrapper>
