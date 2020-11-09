@@ -75,7 +75,7 @@ const TextOccacion = styled.p `
 	align-items: center;
 `;
 
-const SelectOccacion = styled.select `
+const SelectOccasion = styled.select `
 	width: 50%;
 	background: transparent;
 	border: none;
@@ -154,7 +154,12 @@ const WrapperButtom = styled.div `
 `;
 
 const BaseButton = styled.button `
+<<<<<<< HEAD
 	width: 100px;
+=======
+	width: 124.16px;
+	outline:0;
+>>>>>>> 93286322147897a7abfc6db5c368f95121d9c00c
 	height: 50px;
 	outline:none;
 	background: #87d3b8;
@@ -207,7 +212,7 @@ export {
     WrapperImg,
     WrapperOccacion,
     TextOccacion,
-    SelectOccacion,
+    SelectOccasion,
     WrapperPerfiles,
     TextPerfiles,
     WrapperLabels,

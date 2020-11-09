@@ -1,6 +1,7 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { useApollo } from '../lib/apolloClient';
 import { ApolloProvider } from '@apollo/client';
+import { Provider  } from '../context/index';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -23,7 +24,9 @@ export default function App({ Component, pageProps }) {
       <GlobalStyle />
       <ThemeProvider theme={theme}>
 	    	<ApolloProvider client={apolloClient}>
-			    <Component {...pageProps} />
+          <Provider>
+            <Component {...pageProps} />
+          </Provider>
 		    </ApolloProvider>
           <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet"></link>
           <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet"></link>

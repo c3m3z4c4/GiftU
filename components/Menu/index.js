@@ -1,4 +1,7 @@
 import React, { Fragment } from "react";
+import Auth from '../../lib/Auth';
+const auth = new Auth();
+const Imagepng = "../images/logo.png";
 import Link from "next/link";
 
 import {
@@ -10,11 +13,9 @@ import {
 	ListItems,
 	Item,
 	Anchor,
-	MenuButton
+	MenuButton,
 } from "./styles";
-import Auth from '../../lib/Auth';
-const auth = new Auth();
-const Imagepng = "../images/logo.png";
+
 
 export default class Nav extends React.Component {
 		

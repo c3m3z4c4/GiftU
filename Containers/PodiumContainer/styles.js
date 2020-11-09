@@ -15,6 +15,11 @@ align-items: flex-end;
 justify-content: space-bewteen;
 @media (max-width: 768px) {
   width: 100%;
+
+}
+@media (max-width: 425px) {
+  width: 100%;
+  flex-direction: column;
 }
 `
 
@@ -26,8 +31,16 @@ const CompleteColumn = styled.div`
   align-items: center;
   justify-content: center;
   @media (max-width: 768px) {
-    width: calc(100%/3 - 5px);
+    width: calc(100%/3 - 20px);
+    margin: 0 20px;
+  }
+  @media (max-width: 425px) {
+    width: calc(100%*0.85 - 5px);
     margin: 0 5px;
+      flex-direction: column;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
   }
 `;
 
@@ -77,15 +90,24 @@ const NameComponent = styled.div`
     font-size: 16px;
   }
   @media (max-width: 768px) {
-    font-size: 9px;
+    font-size: 9px;   
   }
   @media (max-width: 425px) {
-      font-size: 6px;
+      flex-direction: row;
+      font-size: 15px;
+      min-height: 100px;
+      min-width: 50vw;
+      background: none;
   }
 `;
 
 const FirstPlace = styled(Maincolumn)`
   min-height: 350px;
+  @media (max-width: 425px) {
+    height: 200px;
+    min-width: 100px;
+    justify-self: flex-start;
+  }
 `
 const SecondPlace = styled(Maincolumn)`
   min-height: 220px;
@@ -122,12 +144,12 @@ const ImagePodium = styled.img`
       height: 60px;
     }
     @media (max-width: 768px) {
-      width: 40px;
-      height: 40px;
+      width: 80px;
+      height: 80px;
     }
     @media (max-width: 425px) {
-      width: 30px;
-     height: 30px;
+      width: 80px;
+     height: 80px;
     }
   `;
   
@@ -138,8 +160,8 @@ const ImagePodium = styled.img`
     width: 15px;
     height: 15px;
     @media (max-width: 425px) {
-      width:10px;
-      height: 10px;
+      width: 20px;
+      height: 20px;
   }
   `;
   
