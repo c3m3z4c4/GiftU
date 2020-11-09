@@ -1,13 +1,10 @@
 import React, { Fragment } from "react";
-
-// import { initializeApollo } from '../lib/apolloClient'
+import { initializeApollo } from '../lib/apolloClient'
 import styled from "styled-components";
 import SearchLeft from "../components/SearchLeft";
-import {
-	SearchRight,
-	// SEND_INFORMATION,
-    // variables,
-} from "../components/SearchRight";
+import { OCCASION } from "../components/SearchRight/selectOccasion";
+import { SearchRight } from "../components/SearchRight/index";
+
 
 const Wrapper = styled.div`
 	width: 100%;
@@ -27,20 +24,19 @@ const Search = () => {
 		</Fragment>
 	);
 };
-// export async function getStaticProps() {
-// 	const apolloClient = initializeApollo()
+export async function getStaticProps() {
+	const apolloClient = initializeApollo()
   
-// 	await apolloClient.mutate({
-// 	   mutation: SEND_INFORMATION,
-// 	  variables,
-// 	})
+	await apolloClient.query({
+	   query: OCCASION,
+	})
   
-// 	return {
-// 	  props: {
-// 		initialApolloState: apolloClient.cache.extract(),
-// 	  },
-// 	revalidate: 1,
-// 	}
-//   }
+	return {
+	  props: {
+		initialApolloState: apolloClient.cache.extract(),
+	  },
+	revalidate: 1,
+	}
+  }
 
 export default Search;

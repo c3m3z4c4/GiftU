@@ -38,7 +38,7 @@ podium(id:$id){
  }
 }
 `;
-const variables = { id: 124 };
+const variables = { id: 223 };
 
 const Modal = ({ show, closeModal }) => {
 	return (
