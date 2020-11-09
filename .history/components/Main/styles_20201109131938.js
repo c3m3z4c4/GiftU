@@ -63,17 +63,12 @@ const GiftTitle = styled.a `
 	cursor: pointer;
 	margin: 0;
 	margin-bottom: 15px;
-	transition: transform 0.2s ease;
-	&:hover {
-
-		transform: scale(1.3);
-		opacity: 1;
-	}
-	&:active{
-		transform: scale(0.8);
-		}
 	@media (max-width: 425px) {
 		margin-top: 20px;
+	}
+	&:hover {
+		transform: scale(1.3);
+		opacity: 1;
 	}
 `;
 
@@ -86,8 +81,8 @@ const ColorLine = styled.button `
 	border: ${(props) =>
 		props.primary ? "1px solid #ffab07" : "1px solid #87d3b8"};
 	cursor: pointer;
-	transition: transform 0.2s ease;
 	&:hover {
+		background-color: #ffab07;
 		transform: scale(1.2);
 		opacity: 1;
 	}
@@ -112,18 +107,13 @@ const LinkButton = styled.button `
 	cursor: pointer;
 	margin: 0;
 	margin-bottom: 15px;
-	transition: transform 0.2s ease;
+	@media (max-width: 425px) {
+		margin-top: 20px;
+	}
 	&:hover {
 		transform: scale(1.3);
 		opacity: 1;
 	}
-	&:active{
-		transform: scale(0.8);
-		}
-	@media (max-width: 425px) {
-		margin-top: 20px;
-	}
-
 `
 
 export {

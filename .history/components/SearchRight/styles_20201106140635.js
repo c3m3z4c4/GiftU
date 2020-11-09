@@ -73,7 +73,7 @@ const TextOccacion = styled.p `
 	align-items: center;
 `;
 
-const SelectOccasion = styled.select `
+const SelectOccacion = styled.select `
 	width: 50%;
 	background: transparent;
 	border: none;
@@ -153,7 +153,6 @@ const WrapperButtom = styled.div `
 
 const BaseButton = styled.button `
 	width: 124.16px;
-	outline:0;
 	height: 50px;
 	background: #87d3b8;
 	border: none;
@@ -175,16 +174,10 @@ const BaseButton = styled.button `
 		background-color: #ffab07;
 		transform: scale(1.2);
 		opacity: 1;
-		span {
-			color: #87d3b8;
-		}
 		&:hover {
 		color: ${(props) => (props.primary ? "#A0DDC7" : "white")};
 		}
 	}
-	&:active{
-		transform: scale(0.8);
-		}
 	@media Screen and (max-width: 600px) {
 		width: 60vw;
 		height: 8vh;
@@ -195,7 +188,7 @@ const BaseButton = styled.button `
 			opacity: 1;
 		}
 		Span:hover {
-			color: ${(props) => ("#87d3b8")};
+			color: ${(props) => (props ? "#FFF" : "#87d3b8")};
 		}
 	}
 `;
@@ -213,7 +206,7 @@ export {
     WrapperImg,
     WrapperOccacion,
     TextOccacion,
-    SelectOccasion,
+    SelectOccacion,
     WrapperPerfiles,
     TextPerfiles,
     WrapperLabels,

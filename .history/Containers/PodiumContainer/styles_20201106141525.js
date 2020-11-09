@@ -1,25 +1,24 @@
-
 import styled from 'styled-components'
 
-const PodiumWrapper = styled.div`
+const PodiumWrapper = styled.div `
 font-family: 'Quicksand', sans-serif;
 width:100%;
 display: flex;
 justify-content: flex-end;
 align-items: space-between;
 `
-const PodiumContainer = styled.div`
+const PodiumContainer = styled.div `
 width: 80%;
 display: flex;
 align-items: flex-end;
 justify-content: space-bewteen;
 @media (max-width: 768px) {
   width: 100%;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 `
 
-const CompleteColumn = styled.div`
+const CompleteColumn = styled.div `
   width: calc(100%/3 - 20px);
   margin: 0 20px;
   display: flex;
@@ -27,13 +26,12 @@ const CompleteColumn = styled.div`
   align-items: center;
   justify-content: center;
   @media (max-width: 768px) {
-    width: 100%;
-    margin: 20 5px;
-    
+    width: calc(100%/3 - 5px);
+    margin: 0 5px;
   }
 `;
 
-const Maincolumn = styled.div`
+const Maincolumn = styled.div `
   background: rgba(252, 255, 90, 0.4);
   height: 100%;
   width: 100%;
@@ -56,7 +54,7 @@ const Maincolumn = styled.div`
       font-size: 20px;
   }
 `
-const NameComponent = styled.div`
+const NameComponent = styled.div `
   width: 100%;
   min-height: 55px;
   height: auto;
@@ -86,17 +84,23 @@ const NameComponent = styled.div`
   }
 `;
 
-const FirstPlace = styled(Maincolumn)`
-  min-height: 350px;
+const FirstPlace = styled(Maincolumn)
 `
-const SecondPlace = styled(Maincolumn)`
+  min-height: 350px;
+  @media (max-width: 425px) {
+    flex-direction: row-reverse;
+}
+`
+const SecondPlace = styled(Maincolumn)
+`
   min-height: 220px;
 `
-const ThirdPlace = styled(Maincolumn)`
+const ThirdPlace = styled(Maincolumn)
+`
   min-height: 165px;
 `
 
-const ImagePodium = styled.img`
+const ImagePodium = styled.img `
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -113,10 +117,11 @@ const ImagePodium = styled.img`
    height: 60px;
 	}
   `;
-  
-  const FirstPlaceIcon = styled.img.attrs(props => ({
-      src: '/images/iconFirst.png',
-    }))`
+
+const FirstPlaceIcon = styled.img.attrs(props => ({
+    src: '/images/iconFirst.png',
+}))
+`
     width: 80px;
     height: 80px;
     @media (max-width: 1024px) {
@@ -132,11 +137,12 @@ const ImagePodium = styled.img`
      height: 30px;
     }
   `;
-  
-  const PlusIcon = styled.img.attrs(props => ({
+
+const PlusIcon = styled.img.attrs(props => ({
     src: '/images/plus.png',
-      href:'plus icon',
-    }))`
+    href: 'plus icon',
+}))
+`
     width: 15px;
     height: 15px;
     @media (max-width: 425px) {
@@ -144,8 +150,8 @@ const ImagePodium = styled.img`
       height: 10px;
   }
   `;
-  
-  const DecorativeContainer = styled.div`
+
+const DecorativeContainer = styled.div `
   width: 10%;
   height: 100%;
   display: flex;
@@ -155,23 +161,25 @@ const ImagePodium = styled.img`
     display: none;
   }
 `
-  const LittleDecorative = styled.img.attrs(props => ({
-      src: '/images/little.png',
-      href:'little decorastive',
-    }))`
+const LittleDecorative = styled.img.attrs(props => ({
+    src: '/images/little.png',
+    href: 'little decorastive',
+}))
+`
     margin-bottom: 100%;
      width: 30px;
     height: 30px;
   `;
-  
-  const Decorative = styled.img.attrs(props => ({
-      src: '/images/decorative.png',
-      href:'decorstive',
-    }))`
+
+const Decorative = styled.img.attrs(props => ({
+    src: '/images/decorative.png',
+    href: 'decorstive',
+}))
+`
     width: 100px;
     height: 100px;
   `;
- 
+
 export {
     PodiumWrapper,
     PodiumContainer,
@@ -188,4 +196,3 @@ export {
     ImagePodium,
     DecorativeContainer,
 };
-

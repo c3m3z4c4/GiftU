@@ -20,9 +20,6 @@ const LogoName = styled.img `
 		transform: scale(1.2);
 		opacity: 1;
 	}
-	&:active{
-		transform: scale(0.8);
-		}
 `;
 
 export { Wrapper, LogoName };

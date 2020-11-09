@@ -22,15 +22,13 @@ const LogoName = styled.img `
 	padding: 10px;
 	height: 37px;
 	width: auto;
-	transition: transform 0.2s ease-in-out;
+	transition: transform 0.25s ease-in-out;
 	&:hover{
 		transform: scale(1.4);
     	opacity: 1;
-		//box-shadow: 2px 2px 5px #ffab07;
+		background-color: #ffab07;
 	}
-	&:active {
-		transform: scale(0.8);
-		}
+
 `;
 const AncorImg = styled.a `
 	cursor:pointer;

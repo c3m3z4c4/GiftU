@@ -28,9 +28,7 @@ const LogoName = styled.img `
     	opacity: 1;
 		//box-shadow: 2px 2px 5px #ffab07;
 	}
-	&:active {
-		transform: scale(0.8);
-		}
+
 `;
 const AncorImg = styled.a `
 	cursor:pointer;
