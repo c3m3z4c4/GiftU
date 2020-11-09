@@ -38,9 +38,9 @@ const SEND_INFORMATION = gql`
 `;
 
 
-let variables;
+let variables= { id: 223 }
 
-const SearchRight = ({ action = '/podium' }) => {
+const SearchRight = () => {
 	const { state, dispatch } = useContext(Context);
 	const [sendInrmation, { data }] = useMutation(SEND_INFORMATION);
 	// const { id_gift_history } = data.social_network;
@@ -70,7 +70,8 @@ const SearchRight = ({ action = '/podium' }) => {
     const handleParam = setValue => e => setValue(e.target.value)
 
 	const handleSubmit = async (event) => {
-		event.preventDefault()
+		event.preventDefault();
+		console.log('hello');
 		try {
 			const mutationId = await sendInrmation({
 			variables,	  
