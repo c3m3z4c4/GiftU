@@ -183,7 +183,7 @@ const BaseButton = styled.button `
 		}
 	}
 	&:active{
-		transform: scale(0.8);
+		transform: scale(8.8);
 		}
 	@media Screen and (max-width: 600px) {
 		width: 60vw;

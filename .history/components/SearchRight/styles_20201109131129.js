@@ -182,8 +182,8 @@ const BaseButton = styled.button `
 		color: ${(props) => (props.primary ? "#A0DDC7" : "white")};
 		}
 	}
-	&:active{
-		transform: scale(0.8);
+	&:active {
+		transform: scale(1.1);
 		}
 	@media Screen and (max-width: 600px) {
 		width: 60vw;
