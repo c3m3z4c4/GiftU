@@ -69,7 +69,6 @@ const SearchRight = ({ action = '/podium' }) => {
 
     const handleParam = setValue => e => setValue(e.target.value)
 
-
 	const handleSubmit = async (event) => {
 		event.preventDefault()
 		try {
@@ -88,10 +87,11 @@ const SearchRight = ({ action = '/podium' }) => {
 				})
 			},
 			})
-			await dispatch({
+			dispatch({
 				type: "RECORD_CASE",
 				payload: mutationId,
 				})
+			
 			console.log('DENTRO DE TRY:', mutationId);
 			router.push({
 				pathname: action,
