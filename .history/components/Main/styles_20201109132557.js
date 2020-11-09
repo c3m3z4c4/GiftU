@@ -88,6 +88,7 @@ const ColorLine = styled.button `
 	cursor: pointer;
 	transition: transform 0.2s ease;
 	&:hover {
+		background-color: #ffab07;
 		transform: scale(1.2);
 		opacity: 1;
 	}

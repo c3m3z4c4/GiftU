@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const HomeWrapper = styled.div `
+const HomeWrapper = styled.div`
 	min-height: 100vh;
 	width: 100%;
 	display: flex;
@@ -8,7 +8,7 @@ const HomeWrapper = styled.div `
 	align-items: center;
 	justify-content: space-between;
 `;
-const Wrapper = styled.section `
+const Wrapper = styled.section`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -17,7 +17,7 @@ const Wrapper = styled.section `
 	font-family: "Quicksand";
 `;
 
-const WrapperTitle = styled.div `
+const WrapperTitle = styled.div`
 	margin-top: 25px;
 	display: flex;
 	flex-direction: column;
@@ -26,7 +26,7 @@ const WrapperTitle = styled.div `
 	text-align: center;
 `;
 
-const Title = styled.h1 `
+const Title = styled.h1`
 	text-align: center;
 	color: black;
 	font-size: 50px;
@@ -37,7 +37,7 @@ const Title = styled.h1 `
 	}
 `;
 
-const WrapperGifts = styled.div `
+const WrapperGifts = styled.div`
 	display: flex;
 	justify-content: space-around;
 	width: 100vw;
@@ -46,7 +46,7 @@ const WrapperGifts = styled.div `
 	}
 `;
 
-const Wrappergift = styled.div `
+const Wrappergift = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -55,7 +55,7 @@ const Wrappergift = styled.div `
 	font-family: "Quicksand";
 `;
 
-const GiftTitle = styled.a `
+const GiftTitle = styled.a`
 	text-align: center;
 	font-size: 15px;
 	color: black;
@@ -63,21 +63,16 @@ const GiftTitle = styled.a `
 	cursor: pointer;
 	margin: 0;
 	margin-bottom: 15px;
-	transition: transform 0.2s ease;
-	&:hover {
-
-		transform: scale(1.3);
-		opacity: 1;
-	}
-	&:active{
-		transform: scale(0.8);
-		}
 	@media (max-width: 425px) {
 		margin-top: 20px;
 	}
+	&:hover {
+		transform: scale(1.3);
+		opacity: 1;
+	}
 `;
 
-const ColorLine = styled.button `
+const ColorLine = styled.button`
 	width: 230px;
 	height: 6px;
 	background: white;
@@ -86,21 +81,13 @@ const ColorLine = styled.button `
 	border: ${(props) =>
 		props.primary ? "1px solid #ffab07" : "1px solid #87d3b8"};
 	cursor: pointer;
-	transition: transform 0.2s ease;
-	&:hover {
-		transform: scale(1.2);
-		opacity: 1;
-	}
-	&:active{
-		transform: scale(0.8);
-		}
 `;
 
-const Span = styled.span `
+const Span = styled.span`
 	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
 `;
 
-const LinkButton = styled.button `
+const LinkButton = styled.button`
 	background: transparent;
 	box-shadow: none;
 	font-size: 15px;
@@ -112,29 +99,24 @@ const LinkButton = styled.button `
 	cursor: pointer;
 	margin: 0;
 	margin-bottom: 15px;
-	transition: transform 0.2s ease;
+	@media (max-width: 425px) {
+		margin-top: 20px;
+	}
 	&:hover {
 		transform: scale(1.3);
 		opacity: 1;
 	}
-	&:active{
-		transform: scale(0.8);
-		}
-	@media (max-width: 425px) {
-		margin-top: 20px;
-	}
-
 `
 
 export {
-    Wrapper,
-    WrapperTitle,
-    Title,
-    WrapperGifts,
-    Wrappergift,
-    GiftTitle,
-    ColorLine,
-    Span,
-    HomeWrapper,
-    LinkButton
+	Wrapper,
+	WrapperTitle,
+	Title,
+	WrapperGifts,
+	Wrappergift,
+	GiftTitle,
+	ColorLine,
+	Span,
+	HomeWrapper,
+	LinkButton
 };
