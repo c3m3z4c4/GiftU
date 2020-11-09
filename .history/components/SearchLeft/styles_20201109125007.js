@@ -22,7 +22,7 @@ const LogoName = styled.img `
 	padding: 10px;
 	height: 37px;
 	width: auto;
-	transition: transform 0.2s ease-in-out;
+	transition: transform 0.25s ease-in-out;
 	&:hover{
 		transform: scale(1.4);
     	opacity: 1;

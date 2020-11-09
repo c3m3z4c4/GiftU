@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
-const WrapperLeft = styled.div `
+const WrapperLeft = styled.div`
 	width: 50%;
 	@media (max-width: 425px) {
 		display: none;
 	}
 `;
 
-const WrapperMainImage = styled.div `
+const WrapperMainImage = styled.div`
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -17,30 +17,23 @@ const WrapperMainImage = styled.div `
 	}
 `;
 
-const name = "../images/iconBack.png";
-const LogoName = styled.img `
+const name = "../images/giftu.png";
+const LogoName = styled.img`
 	padding: 10px;
 	height: 37px;
 	width: auto;
-	transition: transform 0.2s ease-in-out;
-	&:hover{
-		transform: scale(1.4);
-    	opacity: 1;
-		//box-shadow: 2px 2px 5px #ffab07;
-	}
-
 `;
-const AncorImg = styled.a `
+const AncorImg = styled.a`
 	cursor:pointer;
 `
-const WrapperMainText = styled.div `
+const WrapperMainText = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	height: 85vh;
 `;
 
-const MainText = styled.h1 `
+const MainText = styled.h1`
 	text-align: center;
 	color: black;
 	font-size: 40px;
@@ -51,24 +44,24 @@ const MainText = styled.h1 `
 `;
 
 const imgFooter = "../images/footer.png";
-const ImgSearch = styled.img `
+const ImgSearch = styled.img`
 	height: auto;
 	width: 33vw;
 `;
 
-const Span = styled.span `
+const Span = styled.span`
 	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
 `;
 
 export {
-    WrapperLeft,
-    name,
-    LogoName,
-    WrapperMainText,
-    MainText,
-    imgFooter,
-    ImgSearch,
-    Span,
-    AncorImg,
-    WrapperMainImage,
+	WrapperLeft,
+	name,
+	LogoName,
+	WrapperMainText,
+	MainText,
+	imgFooter,
+	ImgSearch,
+	Span,
+	AncorImg,
+	WrapperMainImage,
 };
