@@ -1,7 +1,8 @@
-import React, { Fragment, useState } from "react";
-import Link from "next/link";
-import { gql, useMutation, useQuery } from '@apollo/client'
+import React, { Fragment, useState, useContext } from "react";
+import { useRouter } from 'next/router';
+import { gql, useMutation } from '@apollo/client'
 import Menu from "../Menu";
+import { Context } from "../../context/index";
 import { SelectOccasionComponent } from './selectOccasion';
 import {
 	WrapperRight,
@@ -39,10 +40,10 @@ const SEND_INFORMATION = gql`
 
 let variables;
 
-const SearchRight = () => {
+const SearchRight = ({ action = '/podium' }) => {
+	const { state, dispatch } = useContext(Context);
 	const [sendInrmation, { data }] = useMutation(SEND_INFORMATION);
 	// const { id_gift_history } = data.social_network;
-	console.log('DATAAAAA ARRIBA', data);
 
 	const [form, useForm] = useState({
 		name: '',
@@ -62,7 +63,12 @@ const SearchRight = () => {
 		id_social_network: 1,
 		url_social_network: form.link,
 		id_occasion: Number(form.occasion),
-	};	
+	};
+	const router = useRouter()
+    const [query, setQuery] = useState('')
+
+    const handleParam = setValue => e => setValue(e.target.value)
+
 
 	const handleSubmit = async (event) => {
 		event.preventDefault()
@@ -82,11 +88,18 @@ const SearchRight = () => {
 				})
 			},
 			})
+			await dispatch({
+				type: "RECORD_CASE",
+				payload: mutationId,
+				})
 			console.log('DENTRO DE TRY:', mutationId);
+			router.push({
+				pathname: action,
+				query: {q: query},
+			  })
 		} catch (error) {
 			console.log('SUPER ERROR :(');
 		}
-		console.log('PORFI DATAAAAA', data);
 	  }
 	return (
 		<Fragment>
@@ -114,11 +127,9 @@ const SearchRight = () => {
 					</Textform>
 					<SelectOccasionComponent onChange={updateField} />
 					<WrapperButtom>
-						{/* <Link href="/podium"> */}
-							<BaseButton type="submit">
-								EN<Span primary>V</Span>IAR
-							</BaseButton>
-						{/* </Link> */}
+						<BaseButton type="submit">
+						EN<Span primary>V</Span>IAR
+						</BaseButton>
 					</WrapperButtom>
 				</WrapperForm>
 			</WrapperRight>

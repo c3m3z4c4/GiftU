@@ -5,6 +5,7 @@ import SearchLeft from "../components/SearchLeft";
 import { OCCASION } from "../components/SearchRight/selectOccasion";
 import { SearchRight } from "../components/SearchRight/index";
 
+
 const Wrapper = styled.div`
 	width: 100%;
 	display: flex;
