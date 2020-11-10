@@ -126,6 +126,32 @@ const LinkButton = styled.button `
 
 `
 
+const LinkLineButton = styled.button `
+	background: transparent;
+	box-shadow: none;
+	font-size: 15px;
+	border: 0;
+	outline:none;
+	text-align: center;
+	color: black;
+	font-family: "Quicksand";
+	cursor: pointer;
+	margin: 0;
+	margin-bottom: 15px;
+	transition: transform 0.2s ease;
+	&:hover {
+		transform: scale(1);
+		opacity: 1;
+	}
+	&:active{
+		transform: scale(0.95);
+		}
+	@media (max-width: 425px) {
+		margin-top: 20px;
+	}
+
+`
+
 export {
     Wrapper,
     WrapperTitle,
@@ -136,5 +162,6 @@ export {
     ColorLine,
     Span,
     HomeWrapper,
-    LinkButton
+		LinkButton,
+		LinkLineButton
 };

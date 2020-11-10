@@ -10,6 +10,7 @@ import {
 	ColorLine,
 	Span,
 	LinkButton,
+	LinkLineButton
 } from "./styles";
 
 import Auth from "../../lib/Auth";
@@ -40,7 +41,9 @@ export default class Main extends React.Component {
 									RECOM<Span>E</Span>NDADO
 								</GiftTitle>
 							</Link>
-							<ColorLine primary />
+							<Link href="/search">
+								<ColorLine primary />
+							</Link>
 						</Wrappergift>
 						<Wrappergift>
 							<LinkButton onClick={() => this.handleLogin()}>
@@ -49,7 +52,10 @@ export default class Main extends React.Component {
 									ID<Span primary>E</Span>AL
 								</GiftTitle>
 							</LinkButton>
-							<ColorLine />
+							<LinkLineButton onClick={() => this.handleLogin()}>
+								<ColorLine />
+							</LinkLineButton>
+							
 						</Wrappergift>
 					</WrapperGifts>
 				</Wrapper>
