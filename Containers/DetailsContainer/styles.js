@@ -13,7 +13,7 @@ const WrapperView = styled.div`
 const WrapperModal = styled.div`
 	min-width: 40vw;
 	min-height: 320px;
-	box-shadow: 2px 10px 15px 0px rgba(0,0,0,0.17);
+	box-shadow: 2px 10px 15px 0px rgba(0, 0, 0, 0.17);
 	background: white;
 	border-radius: 30px;
 	@media (max-width: 768px) {
@@ -26,8 +26,7 @@ const WrapperBtnClose = styled.div`
 	justify-content: flex-end;
 	min-height: 50px;
 	align-items: center;
-    padding: 5px 20px;
-
+	padding: 5px 20px;
 `;
 
 const BtnClose = styled.button`
@@ -36,7 +35,7 @@ const BtnClose = styled.button`
 	height: 30px;
 	width: 30px;
 	border-radius: 50%;
-    padding: 8px;
+	padding: 8px;
 `;
 
 const WrapperInfo = styled.div`
@@ -94,7 +93,7 @@ const DetailsWrapper = styled.div`
 	}
 `;
 const LeftDetails = styled.div`
-    width: 50%;
+	width: 50%;
 	display: flex;
 	height: 100vh;
 	justify-content: center;
@@ -155,7 +154,7 @@ const InformationContainer = styled.div`
 	}
 `;
 const TitleDetails = styled.p`
-	max-width:80vw;
+	max-width: 80vw;
 	width: 100%;
 	font-family: Quicksand;
 	font-style: normal;
@@ -205,7 +204,7 @@ const DetailItemContent = styled.p`
 const DetailButton = styled.button`
 	font-family: Quicksand;
 	font-style: normal;
-	outline:none;
+	outline: none;
 	max-width: 280px;
 	max-height: 80px;
 	font-weight: 500;

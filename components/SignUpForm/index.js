@@ -34,7 +34,6 @@ export default class NavSignUp extends React.Component {
 	render() {
 		return (
 			<FormComponent>
-				{/* inputs */}
 				<WrappersmallerInput>
 					<LabelText>Nombre</LabelText>
 					<LabelInput />
@@ -46,7 +45,6 @@ export default class NavSignUp extends React.Component {
 					</LabelText>
 					<LabelInput />
 				</WrappersmallerInput>
-				{/* contraseñas */}
 				<FlexInputWrapper>
 					<WrappersmallerInput>
 						<WrapperLabel>
@@ -63,9 +61,6 @@ export default class NavSignUp extends React.Component {
 						<LabelInputPass></LabelInputPass>
 					</WrappersmallerInput>
 				</FlexInputWrapper>
-				{/* contraseñas */}
-				{/* terminan inputs */}
-				{/* Botones */}
 				<Link href="/">
 					<BaseButton>Registrarse</BaseButton>
 				</Link>
@@ -79,7 +74,6 @@ export default class NavSignUp extends React.Component {
 						<GLogo src={GoLogo}></GLogo>
 					</GooButton>
 				</WrapperSingRD>
-				{/* terminan botones */}
 			</FormComponent>
 		);
 	}

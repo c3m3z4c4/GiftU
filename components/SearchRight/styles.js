@@ -34,7 +34,6 @@ const Textform = styled.p`
 		font-size: 26px;
 		max-width: 60vw;
 		width: 100%;
-
 	}
 `;
 const WrapperGender = styled.div`
@@ -155,7 +154,7 @@ const BaseButton = styled.button`
 	width: 124.16px;
 	outline: 0;
 	height: 50px;
-	outline:none;
+	outline: none;
 	background: #87d3b8;
 	border: none;
 	display: flex;
@@ -183,9 +182,9 @@ const BaseButton = styled.button`
 			color: ${(props) => (props.primary ? "#A0DDC7" : "white")};
 		}
 	}
-		&:active {
+	&:active {
 		transform: scale(0.8);
-		}
+	}
 	@media Screen and (max-width: 600px) {
 		width: 50vw;
 		height: 8vh;

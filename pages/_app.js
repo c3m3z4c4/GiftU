@@ -1,7 +1,7 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { useApollo } from '../lib/apolloClient';
-import { ApolloProvider } from '@apollo/client';
-import { Provider  } from '../context/index';
+import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { useApollo } from "../lib/apolloClient";
+import { ApolloProvider } from "@apollo/client";
+import { Provider } from "../context/index";
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -12,25 +12,31 @@ const GlobalStyle = createGlobalStyle`
   `;
 
 const theme = {
-  colors: {
-    primary: '#E5E5E5',
-  },
-}
+	colors: {
+		primary: "#E5E5E5",
+	},
+};
 
 export default function App({ Component, pageProps }) {
-  const apolloClient = useApollo(pageProps.initialApolloState)
-  return (
-    <>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-	    	<ApolloProvider client={apolloClient}>
-          <Provider>
-            <Component {...pageProps} />
-          </Provider>
-		    </ApolloProvider>
-          <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet"></link>
-          <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet"></link>
-      </ThemeProvider>
-    </>
-  )
+	const apolloClient = useApollo(pageProps.initialApolloState);
+	return (
+		<>
+			<GlobalStyle />
+			<ThemeProvider theme={theme}>
+				<ApolloProvider client={apolloClient}>
+					<Provider>
+						<Component {...pageProps} />
+					</Provider>
+				</ApolloProvider>
+				<link
+					href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
+					rel="stylesheet"
+				></link>
+				<link
+					href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap"
+					rel="stylesheet"
+				></link>
+			</ThemeProvider>
+		</>
+	);
 }
