@@ -2,7 +2,6 @@ import React, { Fragment, useState, useContext } from "react";
 import { gql, useMutation } from '@apollo/client';
 import {useRouter} from 'next/router';
 import Menu from "../Menu";
-import Loading from '../Loading/index';
 import { Context } from "../../context/index";
 import { SelectOccasionComponent } from './selectOccasion';
 import {
@@ -85,17 +84,13 @@ const SearchRight = () => {
 				})
 			},
 			})
-			console.log('mutacion',mutationId);
 
 			const { id_gift_history } = mutationId.data.social_network;
-			console.log('ididididididid :(', id_gift_history);
 
 			await dispatch({
 				type: "RECORD_CASE",
 				payload: id_gift_history,
 				})
-			debugger;
-			console.log('DENTRO DE TRY:', mutationId);
 			
 			router.push({
 				pathname: '/podium',

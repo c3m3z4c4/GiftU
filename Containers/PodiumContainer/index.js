@@ -1,6 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { gql, useQuery } from '@apollo/client';
 import { Context } from '../../context/index';
+import TitleComponent from "../../components/Title/index";
+import Loading from '../../components/Loading';
 import Link from "next/link";
 import {
     PodiumWrapper,
@@ -26,98 +28,117 @@ import {
 }
 `;
 
-let variables = { id: 220 };
 
 const PodiumComponent = () => {
     const { state: { record } } = useContext(Context);
+    console.log('record', record);
 
-    const { loading, error, data, fetchMore, networkStatus } = useQuery(
-        PODIUM_QUERY,
-        {
-          variables: variables,
-          notifyOnNetworkStatusChange: true,
-        }
-      )
+    const { loading, error, data} = useQuery(
+            PODIUM_QUERY,
+            {
+                // variables: { id: record },
+                variables: { id: 223 },
+                notifyOnNetworkStatusChange: true,
+            }
+     )
+
+    // useEffect(()=>{
+    //     const { loading, error, data } = useQuery(
+    //         PODIUM_QUERY,
+    //         {
+    //           variables: { id: record },
+    //           notifyOnNetworkStatusChange: true,
+    //         }
+    //       )
+    //       if (error){console.log("3312 3312 tenemos un 3312")};
+    //       if (loading) return <Loading />
+    //       const { products } = data.history.podium
+    //       const podiumProducts = JSON.parse(products);
+    //       const { receiver_name } = data.history;   
+    // }, [record]);
+
+      debugger;
       if (error){console.log("3312 3312 tenemos un 3312")};
-      if (loading) return <div>Loading</div>
+      if (loading) return <Loading />
       const { products } = data.history.podium
       const podiumProducts = JSON.parse(products);
-      const { receiver_name } = data.history;
+      const { receiver_name } = data.history;     
 
     return (
-        <PodiumWrapper>
-        <DecorativeContainer>
-            <LittleDecorative />
-        </DecorativeContainer>
-        <PodiumContainer>
-            {
-             products === undefined 
-             ? (<p>que tranza parce no encontramos nada, dale dinero mejor </p>) 
-             :(
-                <>
-                <CompleteColumn>
+        <>
+            <TitleComponent name={receiver_name} />
+            <PodiumWrapper>
+            <DecorativeContainer>
+                <LittleDecorative />
+            </DecorativeContainer>
+            <PodiumContainer>
+                {
+                products === undefined 
+                ? (<p>que tranza parce no encontramos nada, dale dinero mejor </p>) 
+                :(
+                    <>
+                    <CompleteColumn>
+                            {
+                            podiumProducts[2].map(product => (
+                                <>
+                                    <ImagePodium src={product.img} />
+                                        <NameComponent>
+                                            {product.name}
+                                        <Link href="/gifts/3">
+                                                <PlusIcon />
+                                            </Link>
+                                        </NameComponent>
+                                </>
+                            ))
+                            }
+                            <ThirdPlace>3</ThirdPlace>
+                        </CompleteColumn>
+                        <CompleteColumn>
                         {
-                        podiumProducts[2].map(product => (
-                            <>
+                            podiumProducts[0].map(product => (
+                                <>
                                 <ImagePodium src={product.img} />
                                     <NameComponent>
                                         {product.name}
-                                    <Link href="/gifts/3">
+                                        <Link href="/gifts/1">
                                             <PlusIcon />
                                         </Link>
                                     </NameComponent>
-                            </>
-                        ))
-                        }
-                        <ThirdPlace>3</ThirdPlace>
-                    </CompleteColumn>
-                    <CompleteColumn>
-                    {
-                        podiumProducts[0].map(product => (
-                            <>
-                            <ImagePodium src={product.img} />
-                                <NameComponent>
-                                    {product.name}
-                                    <Link href="/gifts/1">
-                                        <PlusIcon />
-                                    </Link>
-                                </NameComponent>
-                                </>
-                        ))
-                    }
-                        <FirstPlace>
-                            <FirstPlaceIcon />
-                        </FirstPlace>
-                    </CompleteColumn>
-                    <CompleteColumn>
-                        {
-                            podiumProducts[1].map(product => (
-                            <>
-                                    <ImagePodium src={product.img} />
-                                    <NameComponent>
-                                        {product.name}
-                                        <Link href="/gifts/2">
-                                            <PlusIcon />
-                                        </Link>
-                                    </NameComponent>
-                            </>
+                                    </>
                             ))
                         }
-                        <SecondPlace>2</SecondPlace>
-            </CompleteColumn>
-            </>
-             )      
-            }
-        </PodiumContainer>
-        <DecorativeContainer>
-        <Decorative />
-    </DecorativeContainer>
-</PodiumWrapper>
+                            <FirstPlace>
+                                <FirstPlaceIcon />
+                            </FirstPlace>
+                        </CompleteColumn>
+                        <CompleteColumn>
+                            {
+                                podiumProducts[1].map(product => (
+                                <>
+                                        <ImagePodium src={product.img} />
+                                        <NameComponent>
+                                            {product.name}
+                                            <Link href="/gifts/2">
+                                                <PlusIcon />
+                                            </Link>
+                                        </NameComponent>
+                                </>
+                                ))
+                            }
+                            <SecondPlace>2</SecondPlace>
+                </CompleteColumn>
+                </>
+                )      
+                }
+            </PodiumContainer>
+            <DecorativeContainer>
+            <Decorative />
+        </DecorativeContainer>
+    </PodiumWrapper>
+</>
     );
 };
 
 export {
-    PODIUM_QUERY,
-     variables,
     PodiumComponent,
 };

@@ -1,6 +1,8 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useContext } from "react";
+import { Context } from '../../context/index';
 import { gql, useQuery } from "@apollo/client";
 import { useRouter } from "next/router";
+import Loading from '../../components/Loading';
 import Link from "next/link";
 // import Slider from "../../components/Slider";
 
@@ -38,7 +40,6 @@ const PODIUM_QUERY = gql`
 		}
 	}
 `;
-const variables = { id: 223 };
 
 const Modal = ({ show, closeModal }) => {
 	return show ? (
@@ -65,18 +66,20 @@ const Modal = ({ show, closeModal }) => {
 };
 
 const DetailsContainer = () => {
+	const { state: { record } } = useContext(Context);
+	console.log('record in DETAILS', record);
+	
 	const [modal, useModal] = useState(true);
-	const { loading, error, data, fetchMore, networkStatus } = useQuery(
+	const { loading, error, data } = useQuery(
 		PODIUM_QUERY,
 		{
-			variables: variables,
+			variables: { id: record },
+			// variables: { id: 223 },
 			notifyOnNetworkStatusChange: true,
 		}
 	);
-	if (error) {
-		console.log("3312 3312 tenemos un 3312");
-	}
-	if (loading) return <div>Loading</div>;
+	if (error) return <p>NO HAY DETALLES POR EL MOMENTO </p>;
+      if (loading) return <Loading />
 	const { products } = data.podium.podium;
 	const podiumProducts = JSON.parse(products);
 
@@ -94,6 +97,7 @@ const DetailsContainer = () => {
 		query: { giftId },
 	} = useRouter();
 	const giftIndex = giftId - 1;
+	debugger;
 	return (
 		<Fragment>
 			<DetailsWrapper>
@@ -137,4 +141,4 @@ const DetailsContainer = () => {
 	);
 };
 
-export { DetailsContainer, PODIUM_QUERY, variables };
+export { DetailsContainer };

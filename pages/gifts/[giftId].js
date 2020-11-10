@@ -1,7 +1,6 @@
 import React from "react";
 import { useRouter } from 'next/router';
-import { DetailsContainer, PODIUM_QUERY, variables } from "../../Containers/DetailsContainer/index";
-import { initializeApollo } from '../../lib/apolloClient';
+import { DetailsContainer } from "../../Containers/DetailsContainer/index";
 
 const Gift = () => {
     const { query: { giftId }} = useRouter();
