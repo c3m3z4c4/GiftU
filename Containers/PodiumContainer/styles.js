@@ -1,6 +1,14 @@
 
 import styled from 'styled-components'
 
+const Wrapper = styled.div`
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+`;
+
 const PodiumWrapper = styled.div`
 font-family: 'Quicksand', sans-serif;
 width:100%;
@@ -173,6 +181,7 @@ const ImagePodium = styled.img`
   `;
  
 export {
+    Wrapper,
     PodiumWrapper,
     PodiumContainer,
     NameComponent,

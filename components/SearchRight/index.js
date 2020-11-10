@@ -100,7 +100,7 @@ const SearchRight = () => {
 		}
 	  }
 	return (
-		<Fragment>
+		<>
 			<WrapperRight>
 				<WrappperMenu>
 					<Menu />
@@ -131,7 +131,7 @@ const SearchRight = () => {
 					</WrapperButtom>
 				</WrapperForm>
 			</WrapperRight>
-		</Fragment>
+		</>
 	);
 };
 

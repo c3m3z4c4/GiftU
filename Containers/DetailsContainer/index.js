@@ -4,6 +4,7 @@ import { gql, useQuery } from "@apollo/client";
 import { useRouter } from "next/router";
 import Loading from '../../components/Loading';
 import Link from "next/link";
+import ErrorWrapper from '../../components/Errorcomponent/index';
 // import Slider from "../../components/Slider";
 
 import {
@@ -74,14 +75,19 @@ const DetailsContainer = () => {
 		PODIUM_QUERY,
 		{
 			variables: { id: record },
-			// variables: { id: 223 },
 			notifyOnNetworkStatusChange: true,
 		}
 	);
-	if (error) return <p>NO HAY DETALLES POR EL MOMENTO </p>;
+	if (error) return <ErrorWrapper>NO HAY DETALLES POR EL MOMENTO </ErrorWrapper>;
       if (loading) return <Loading />
 	const { products } = data.podium.podium;
-	const podiumProducts = JSON.parse(products);
+
+	let podiumProducts = [];
+	try {
+	  podiumProducts = JSON.parse(products);
+	} catch(error) {
+	  console.log('se murio por que no hay productos')
+	}
 
 	const openModal = (e) => {
 		e.preventDefault();
@@ -97,12 +103,12 @@ const DetailsContainer = () => {
 		query: { giftId },
 	} = useRouter();
 	const giftIndex = giftId - 1;
-	debugger;
+
 	return (
 		<Fragment>
 			<DetailsWrapper>
 				{products === undefined ? (
-					<p>NO HAY DETALLES POR EL MOMENTO </p>
+					<ErrorWrapper>NO HAY DETALLES POR EL MOMENTO </ErrorWrapper>
 				) : (
 					podiumProducts[giftIndex].map((gift) => (
 						<>
