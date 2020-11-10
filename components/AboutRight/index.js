@@ -31,7 +31,7 @@ const AboutRight = () => {
 							César M<Span>e</Span>za
 						</TitleDetails>
 						<TitleRole>Fullstack Developer</TitleRole>
-						<GitHub href="https://github.com/cemeza" target="_blank">Mis repositorios</GitHub>
+						<GitHub href="https://github.com/c3m3z4" target="_blank">Mis repositorios</GitHub>
 						<LinkedIn href="https://www.linkedin.com/in/cesarmeza80/" target="_blank">
 							Más sobre mi
 						</LinkedIn>
