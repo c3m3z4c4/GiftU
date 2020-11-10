@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const WrapperRight = styled.div `
+const WrapperRight = styled.div`
 	width: 50%;
 	background: rgba(160, 221, 199, 0.25);
 	height: 100vh;
@@ -9,7 +9,7 @@ const WrapperRight = styled.div `
 	}
 `;
 
-const WrappperMenu = styled.div `
+const WrappperMenu = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	height: 15vh;
@@ -18,14 +18,14 @@ const WrappperMenu = styled.div `
 	}
 `;
 
-const WrapperForm = styled.form `
+const WrapperForm = styled.form`
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: column;
-	height:80%;
+	height: 80%;
 	align-items: center;
 `;
-const Textform = styled.p `
+const Textform = styled.p`
 	font-family: "Quicksand", sans-serif;
 	font-size: 18px;
 	font-family: "Quicksand";
@@ -36,16 +36,15 @@ const Textform = styled.p `
 		width: 100%;
 
 	}
-
 `;
-const WrapperGender = styled.div `
+const WrapperGender = styled.div`
 	height: 20vh;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 `;
 
-const TextGender = styled.p `
+const TextGender = styled.p`
 	text-align: center;
 	font-size: 23px;
 	font-family: "Quicksand";
@@ -54,28 +53,28 @@ const TextGender = styled.p `
 	}
 `;
 
-const WrapperImg = styled.div `
+const WrapperImg = styled.div`
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	width: 50%;
 `;
 
-const WrapperOccacion = styled.div `
+const WrapperOccacion = styled.div`
 	height: 20vh;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 `;
 
-const TextOccacion = styled.p `
+const TextOccacion = styled.p`
 	text-align: center;
 	font-size: 23px;
 	font-family: "Quicksand";
 	align-items: center;
 `;
 
-const SelectOccacion = styled.select `
+const SelectOccasion = styled.select`
 	width: 50%;
 	background: transparent;
 	border: none;
@@ -93,14 +92,14 @@ const SelectOccacion = styled.select `
 	}
 `;
 
-const WrapperPerfiles = styled.div `
+const WrapperPerfiles = styled.div`
 	height: 18vh;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 `;
 
-const TextPerfiles = styled.p `
+const TextPerfiles = styled.p`
 	justify-content: center;
 	text-align: center;
 	font-size: 23px;
@@ -111,24 +110,24 @@ const TextPerfiles = styled.p `
 	}
 `;
 
-const WrapperLabels = styled.div `
+const WrapperLabels = styled.div`
 	display: flex;
 	flex-direction: column;
 `;
 
-const WrapperLabel = styled.div `
+const WrapperLabel = styled.div`
 	display: flex;
-	margin-bottom:20px;
+	margin-bottom: 20px;
 `;
 
 const imgInt = "../images/instagram-search.png";
 const imgFB = "../images/fb-search.png";
-const LabelRS = styled.img `
+const LabelRS = styled.img`
 	width: 35px;
 	height: 35px;
 `;
 
-const InputRS = styled.input `
+const InputRS = styled.input`
 	width: 24vw;
 	background: transparent;
 	border: none;
@@ -147,14 +146,14 @@ const InputRS = styled.input `
 	}
 `;
 
-const WrapperButtom = styled.div `
+const WrapperButtom = styled.div`
 	display: flex;
 	justify-content: center;
-
 `;
 
-const BaseButton = styled.button `
-	width: 100px;
+const BaseButton = styled.button`
+	width: 124.16px;
+	outline: 0;
 	height: 50px;
 	outline:none;
 	background: #87d3b8;
@@ -172,6 +171,7 @@ const BaseButton = styled.button `
 	color: white;
 	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.07);
 	transition: transform 0.2s ease;
+	outline: none;
 	&:hover {
 		background-color: #ffab07;
 		transform: scale(1.2);
@@ -180,7 +180,7 @@ const BaseButton = styled.button `
 			color: #87d3b8;
 		}
 		&:hover {
-		color: ${(props) => (props.primary ? "#A0DDC7" : "white")};
+			color: ${(props) => (props.primary ? "#A0DDC7" : "white")};
 		}
 	}
 	@media Screen and (max-width: 600px) {
@@ -189,35 +189,35 @@ const BaseButton = styled.button `
 		font-size: 40px;
 		transition: transform 0.15s ease;
 		Span:hover {
-			color: ${(props) => ("#87d3b8")};
+			color: ${(props) => "#87d3b8"};
 		}
 	}
 `;
 
-const Span = styled.span `
+const Span = styled.span`
 	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
 `;
 
 export {
-    WrapperRight,
-    WrappperMenu,
-    WrapperForm,
-    WrapperGender,
-    TextGender,
-    WrapperImg,
-    WrapperOccacion,
-    TextOccacion,
-    SelectOccacion,
-    WrapperPerfiles,
-    TextPerfiles,
-    WrapperLabels,
-    WrapperLabel,
-    imgInt,
-    imgFB,
-    LabelRS,
-    InputRS,
-    WrapperButtom,
-    BaseButton,
-    Span,
-    Textform,
+	WrapperRight,
+	WrappperMenu,
+	WrapperForm,
+	WrapperGender,
+	TextGender,
+	WrapperImg,
+	WrapperOccacion,
+	TextOccacion,
+	SelectOccasion,
+	WrapperPerfiles,
+	TextPerfiles,
+	WrapperLabels,
+	WrapperLabel,
+	imgInt,
+	imgFB,
+	LabelRS,
+	InputRS,
+	WrapperButtom,
+	BaseButton,
+	Span,
+	Textform,
 };

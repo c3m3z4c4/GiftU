@@ -9,7 +9,21 @@ const Wrapper = styled.section`
 	width: 100%;
 `;
 
-const WrapperImageLine = styled.div`
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const WrapperRotate = styled.div`
+	display: inline-block;
+	animation: ${rotate} 2s linear infinite;
+	padding: 2rem 1rem;
+	font-size: 1.2rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -19,15 +33,6 @@ const LogoImage = styled.img`
 	height: 150px;
 	width: auto;
 	margin: 50px;
-`;
-
-const ColorLine = styled.button`
-	border-radius: 50px;
-	border: 1px solid #87d3b8;
-	width: 230px;
-	height: 10px;
-	background: white;
-	background: linear-gradient(90deg, #ffab07 60%, white 60%);
 `;
 
 const Text = styled.p`
@@ -40,4 +45,4 @@ const Span = styled.span`
 	color: ${(props) => (props.primary ? "#ffab07" : "#87d3b8")};
 `;
 
-export { Wrapper, WrapperImageLine, LogoImage, ColorLine, Text, Span };
+export { Wrapper, WrapperRotate, LogoImage, Text, Span };
