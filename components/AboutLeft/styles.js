@@ -71,6 +71,12 @@ const GitHub = styled.a`
 	font-family: Quicksand;
 	cursor: pointer;
 	margin: 10px;
+	transition: transform 0.2s ease-in-out;
+	&:hover {
+		color: #ffab07;
+		transform: scale(1.2);
+		opacity: 1;
+	}
 `;
 
 const LinkedIn = styled.a`
@@ -79,6 +85,13 @@ const LinkedIn = styled.a`
 	text-decoration: none;
 	font-family: Quicksand;
 	cursor: pointer;
+	transition: transform 0.2s ease-in-out;
+		&:hover {
+		color: #87D3B8;
+		transform: scale(1.2);
+		opacity: 1;
+
+		}
 `;
 
 export {

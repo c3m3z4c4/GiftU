@@ -31,10 +31,10 @@ const AboutLeft = () => {
 							Sue H<Span primary>e</Span>rrera
 						</TitleDetails>
 						<TitleRole>Front-end Developer</TitleRole>
-						<GitHub href="https://github.com/sueherrera30">
+						<GitHub href="https://github.com/sueherrera30" target="_blank">
 							Mis repositorios
 						</GitHub>
-						<LinkedIn href="https://www.linkedin.com/in/sue-herrera-443441146/">
+						<LinkedIn href="https://www.linkedin.com/in/sue-herrera-443441146/" target="_blank">
 							Más sobre mi
 						</LinkedIn>
 					</WrapperDetails>
@@ -46,8 +46,8 @@ const AboutLeft = () => {
 							Francisco Garc<Span>i</Span>a
 						</TitleDetails>
 						<TitleRole>Data Scientist</TitleRole>
-						<GitHub href="https://github.com/pmsorion">Mis repositorios</GitHub>
-						<LinkedIn href="http://linkedin.com/in/francisco-garcia-983304122">
+						<GitHub href="https://github.com/pmsorion" target="_blank">Mis repositorios</GitHub>
+						<LinkedIn href="http://linkedin.com/in/francisco-garcia-983304122" target="_blank">
 							Más sobre mi
 						</LinkedIn>
 					</WrapperDetails>
@@ -59,10 +59,10 @@ const AboutLeft = () => {
 							César S<Span primary>a</Span>las
 						</TitleDetails>
 						<TitleRole>Back-end Developer</TitleRole>
-						<GitHub href="https://github.com/cesarsalasmx">
+						<GitHub href="https://github.com/cesarsalasmx" target="_blank">
 							Mis repositorios
 						</GitHub>
-						<LinkedIn href="https://www.linkedin.com/in/cesarsalasmx/">
+						<LinkedIn href="https://www.linkedin.com/in/cesarsalasmx/" target="_blank">
 							Más sobre mi
 						</LinkedIn>
 					</WrapperDetails>
