@@ -21,8 +21,9 @@ import {
     DecorativeContainer,
     Wrapper,
 } from './styles';
- const PODIUM_QUERY = gql`
-    query GetHistory($id:ID!){
+
+const PODIUM_QUERY = gql`
+query GetHistory($id:ID!){
   history(id:$id){
     podium,
     receiver_name
@@ -33,14 +34,11 @@ import {
 
 const PodiumComponent = () => {
     const { state: { record } } = useContext(Context);
-    console.log('record', record);
-
 
     const { loading, error, data} = useQuery(
             PODIUM_QUERY,
             {
                 variables: { id: record },
-                // variables: { id: 223 },
                 notifyOnNetworkStatusChange: true,
             }
      )

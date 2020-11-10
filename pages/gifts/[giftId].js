@@ -4,7 +4,6 @@ import { DetailsContainer } from "../../Containers/DetailsContainer/index";
 
 const Gift = () => {
     const { query: { giftId }} = useRouter();
-    console.log(giftId);
     return (
         <DetailsContainer />
     );

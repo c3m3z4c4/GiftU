@@ -35,11 +35,12 @@ import {
 } from "./styles";
 
 const PODIUM_QUERY = gql`
-	query GetPodium($id: ID!) {
-		podium(id: $id) {
-			podium
-		}
-	}
+query GetHistory($id:ID!){
+  history(id:$id){
+    podium,
+    receiver_name
+  }
+}
 `;
 
 const Modal = ({ show, closeModal }) => {
@@ -68,7 +69,6 @@ const Modal = ({ show, closeModal }) => {
 
 const DetailsContainer = () => {
 	const { state: { record } } = useContext(Context);
-	console.log('record in DETAILS', record);
 	
 	const [modal, useModal] = useState(true);
 	const { loading, error, data } = useQuery(
@@ -80,8 +80,7 @@ const DetailsContainer = () => {
 	);
 	if (error) return <ErrorWrapper>NO HAY DETALLES POR EL MOMENTO </ErrorWrapper>;
       if (loading) return <Loading />
-	const { products } = data.podium.podium;
-
+	const { products } = data.history.podium;
 	let podiumProducts = [];
 	try {
 	  podiumProducts = JSON.parse(products);
