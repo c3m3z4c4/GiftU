@@ -31,8 +31,8 @@ const AboutRight = () => {
 							César M<Span>e</Span>za
 						</TitleDetails>
 						<TitleRole>Fullstack Developer</TitleRole>
-						<GitHub href="https://github.com/cemeza">Mis repositorios</GitHub>
-						<LinkedIn href="https://www.linkedin.com/in/cesarmeza80/">
+						<GitHub href="https://github.com/c3m3z4" target="_blank">Mis repositorios</GitHub>
+						<LinkedIn href="https://www.linkedin.com/in/cesarmeza80/" target="_blank">
 							Más sobre mi
 						</LinkedIn>
 					</WrapperDetails>
@@ -44,10 +44,10 @@ const AboutRight = () => {
 							Jorge Arg<Span primary>ü</Span>elles
 						</TitleDetails>
 						<TitleRole>Fullstack Developer</TitleRole>
-						<GitHub href="https://github.com/jorgearguellles">
+						<GitHub href="https://github.com/jorgearguellles" target="_blank">
 							Mis repositorios
 						</GitHub>
-						<LinkedIn href="https://www.linkedin.com/in/jorge-argüelles-a8303056/">
+						<LinkedIn href="https://www.linkedin.com/in/jorge-argüelles-a8303056/" target="_blank">
 							Más sobre mi
 						</LinkedIn>
 					</WrapperDetails>
@@ -59,13 +59,10 @@ const AboutRight = () => {
 							Rafael Lagun<Span>a</Span>s
 						</TitleDetails>
 						<TitleRole>Master Coach</TitleRole>
-						<GitHub href="https://github.com/rafastaria">
+						<GitHub href="https://github.com/rafastaria" target="_blank">
 							Mis repositorios
 						</GitHub>
-						<LinkedIn
-							href="
-						https://www.linkedin.com/in/rafaellagunas/"
-						>
+						<LinkedIn href="https://www.linkedin.com/in/rafaellagunas/" target="_blank">
 							Más sobre mi
 						</LinkedIn>
 					</WrapperDetails>

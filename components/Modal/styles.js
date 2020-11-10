@@ -68,6 +68,7 @@ const BtnCompra = styled.button`
 	height: 34.58px;
 	background: #87d3b8;
 	border: none;
+	outline:none;
 	box-sizing: border-box;
 	border-radius: 12px;
 	transform: matrix(1, 0, 0, 1, 0, 0);
@@ -83,6 +84,14 @@ const BtnCompra = styled.button`
 	color: white;
 	margin: 50px;
 	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.47);
+	transition: background 0.2s ease;
+	&:hover {
+		background-color: #ffab07;
+		opacity: 1;
+		span {
+			color: #87d3b8;
+		}
+	}
 `;
 
 export {

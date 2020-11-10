@@ -7,6 +7,17 @@ const Wrapper = styled.div`
 	margin: 20px;
 `;
 
+
+
+const WrapperLink = styled.div`
+	width: 0;
+	z-index: 30;
+	@media (max-width: 768px) {
+		width: 100%;
+		height: 30vh;
+	}
+`;
+
 const WrapperLeft = styled.div`
 	width: 50%;
 	@media (max-width: 768px) {
@@ -71,6 +82,12 @@ const GitHub = styled.a`
 	font-family: Quicksand;
 	cursor: pointer;
 	margin: 10px;
+	transition: transform 0.2s ease-in-out;
+	&:hover {
+		color: #ffab07;
+		transform: scale(1.2);
+		opacity: 1;
+	}
 `;
 
 const LinkedIn = styled.a`
@@ -79,10 +96,18 @@ const LinkedIn = styled.a`
 	text-decoration: none;
 	font-family: Quicksand;
 	cursor: pointer;
+	transition: transform 0.2s ease-in-out;
+		&:hover {
+		color: #87D3B8;
+		transform: scale(1.2);
+		opacity: 1;
+
+		}
 `;
 
 export {
 	Wrapper,
+	WrapperLink,
 	WrapperLeft,
 	ImageAbout,
 	WrapperDetails,

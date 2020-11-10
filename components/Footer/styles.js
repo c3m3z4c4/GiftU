@@ -19,7 +19,7 @@ const WrapperLogin = styled.div `
 
 const Cuenta = styled.p `
 	font-size: 20px;
-	font-weigh. bold;
+	font-weight: bold;
 	color: #fbcf39;
 `;
 
