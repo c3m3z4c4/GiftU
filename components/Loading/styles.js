@@ -9,7 +9,7 @@ const Wrapper = styled.section`
 	width: 100%;
 `;
 
-const rotate = keyframes`
+const rotate = styled.keyframes`
   from {
     transform: rotate(0deg);
   }
