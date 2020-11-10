@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
+
 
 const Wrapper = styled.section`
 	display: flex;
@@ -9,7 +11,7 @@ const Wrapper = styled.section`
 	width: 100%;
 `;
 
-const rotate = styled.keyframes`
+const rotate = keyframes`
   from {
     transform: rotate(0deg);
   }
