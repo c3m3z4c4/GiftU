@@ -7,6 +7,17 @@ const Wrapper = styled.div`
 	margin: 20px;
 `;
 
+
+
+const WrapperLink = styled.div`
+	width: 0;
+	z-index: 30;
+	@media (max-width: 768px) {
+		width: 100%;
+		height: 30vh;
+	}
+`;
+
 const WrapperLeft = styled.div`
 	width: 50%;
 	@media (max-width: 768px) {
@@ -96,6 +107,7 @@ const LinkedIn = styled.a`
 
 export {
 	Wrapper,
+	WrapperLink,
 	WrapperLeft,
 	ImageAbout,
 	WrapperDetails,

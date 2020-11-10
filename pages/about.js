@@ -8,6 +8,7 @@ const image = "images/footer.png";
 const FooterImg = styled.img`
 	height: auto;
 	width: 100vw;
+	z-index: -2;
 `;
 
 const Wrapper = styled.div`

@@ -1,8 +1,15 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
+import Link from "next/link";
+import {
+	LogoName,
+	AncorImg,
+} from "../SearchLeft/styles";
+
 
 import {
 	Wrapper,
+	WrapperLink,
 	WrapperLeft,
 	ImageAbout,
 	WrapperDetails,
@@ -11,6 +18,8 @@ import {
 	GitHub,
 	LinkedIn,
 } from "./styles";
+
+const name = "../images/iconBack.png";
 
 const fotoS = "../images/fotoSue.jpg";
 const fotoF = "../images/fotoFrancisco.jpg";
@@ -23,6 +32,13 @@ const Span = styled.span`
 const AboutLeft = () => {
 	return (
 		<Fragment>
+			<WrapperLink>
+					<Link href="/">
+							<AncorImg>
+								<LogoName src={name} />
+							</AncorImg>
+					</Link>
+			</WrapperLink>
 			<WrapperLeft>
 				<Wrapper>
 					<ImageAbout src={fotoS} alt="Foto de Sue" />
