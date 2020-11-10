@@ -104,6 +104,11 @@ const LeftDetails = styled.div`
 		width: 100%;
 		height: 20%;
 	}
+	@media (max-width: 425px) {
+		align-items: center;
+    justify-content: center;
+	}
+	    
 `;
 const RightDetails = styled(LeftDetails)`
 	background: #ffffff;
@@ -112,8 +117,12 @@ const RightDetails = styled(LeftDetails)`
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	@media (max-width: 768px) {
+	@media screen and (max-width: 768px) {
 		width: 100%;
+	}
+
+	@media screen and (max-with: 425px){
+		height: 70vh;
 	}
 `;
 
@@ -122,28 +131,61 @@ const MainImageContainer = styled.div`
 	height: 460px;
 	position: relative;
 	border-radius: 10px;
+	@media (max-width: 425px) {
+		width: 200px;
+		height: 30vh;
+		padding: 10px 0;
+	}
+
+	
 `;
 const MainImage = styled.img`
 	width: 100%;
-	height: 100%;
-	object-fit: contain;
+	height: auto;
+	object-fit: fill;
 `;
 
 const DecorativeImage = styled.img`
 	width: 156.85px;
 	height: 152.24px;
 	position: absolute;
-	bottom: 0;
+	bottom: 20%;
 	right: 0;
 	@media (max-width: 768px) {
 		width: 106.85px;
 		height: 102.24px;
 	}
+	@media (max-width: 425px) {
+		bottom: 0;
+    right: -14px;
+		width: 72.85px;
+    height: 64.24px;
+	}
+	
 `;
 
 const InformationContainer = styled.div`
-	width: 30vw;
-	height: 50vh;
+	width: 44%;
+	height: 40%;
+	background: blue;
+	//background: rgba(255, 171, 7, 0);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	@media (max-width: 768px) {
+		width: 100%;
+		height: 30%;
+	}
+	@media (max-width: 425px) {
+		width: 100%;
+		height: 20%;
+	}
+`;
+
+const CommentContainer = styled.div`
+	width: 44%;
+	height: 40%;
 	background: rgba(255, 171, 7, 0.1);
 	display: flex;
 	flex-direction: column;
@@ -155,15 +197,22 @@ const InformationContainer = styled.div`
 	}
 `;
 const TitleDetails = styled.p`
-	max-width:80vw;
-	width: 100%;
+	display:flex;
+	height: 16vh;
+	max-width:33vw;
+	width:100%;
 	font-family: Quicksand;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 30px;
 	text-transform: uppercase;
 	color: #87d3b8;
 	text-align: center;
+	@media Screen and (max-width: 425px) {
+		height: 20%;
+    max-width: 425px;
+    width: 100%;
+	}
 `;
 
 const LineImage = styled.img`
@@ -176,31 +225,47 @@ const DetailsInformation = styled.div`
 	flex-direction: column;
 	align-items: center;
 	width: 80%;
+	height:20%;
 `;
 const DetailItem = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	width: calc(100% - 100px);
+	@media Screen and (max-width: 425px) {
+		justify-content: center;
+		width: calc(100% - 30px);
+    font-size: 1em;
+		justify-content: space-evenly;
+		}
 `;
 const DetailItemTitle = styled.p`
 	font-family: Quicksand;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 1.5em;
 	color: #726666;
 	width: calc(100% / 2);
 	font-weight: 900;
 	text-align: center;
+	@media Screen and (max-width: 425px) {
+    font-size: 1.6em;
+		font-weight: 300;
+		margin:0;
+		}
 `;
 const DetailItemContent = styled.p`
 	font-family: Quicksand;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 14px;
+	font-size: 1.5em;
 	color: #726666;
 	width: calc(100% / 2);
 	text-align: center;
+	@media Screen and (max-width: 425px) {
+    font-size: 1.8em;
+		margin:0;
+		}
 `;
 const DetailButton = styled.button`
 	font-family: Quicksand;
@@ -221,18 +286,63 @@ const DetailButton = styled.button`
 	border-radius: 10px;
 	border: none;
 	cursor: pointer;
-	transition: background 0.2s ease;
+	transition: transform 0.2s ease;
+	outline: none;
 	&:hover {
 		background-color: #ffab07;
+		transform: scale(1.1);
 		opacity: 1;
-		span {
-			color: #87d3b8;
+		&:active {
+		transform: scale(0.9);
 		}
 	}
+	@media Screen and (max-width: 425px) {
+    width: 70%;
+    height: 25%;
+    font-size: 1.4em;
+		margin:0;
+		}
 `;
+
 const ColorLetter = styled.span`
 	color: ${(props) => (props.blue ? "#87D3B8" : "#FFAB07")};
 `;
+
+const Star = styled.div`
+  background: #ffab07;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+	transition: transform 0.2s ease-in-out;
+  &:hover{
+		background: gold;
+		transform: scale(1.1);
+		opacity: 1;
+		&:active {
+		transform: scale(0.9);
+		}
+	}
+		@media Screen and (max-width: 600px) {
+
+		}
+`
+
+const Stars = styled.div`
+  display: flex;
+	width: calc(100% - 100px);
+	margin: 0px 50px;
+	flex-direction:row;
+	justify-content: space-around;
+  align-items: center;
+  background: red;
+	@media Screen and (max-width: 425px){
+		width: calc(100% - 50px);
+    margin: 10px 50px;
+	}
+
+`
+
 
 export {
 	DetailsWrapper,
@@ -256,8 +366,10 @@ export {
 	BtnClose,
 	WrapperInfo,
 	TextQuestion,
-	// starts,
+	Stars,
+	Star,
 	TextComent,
 	TextWrite,
 	CloseIcon,
+	CommentContainer,
 };
