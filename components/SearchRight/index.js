@@ -116,7 +116,7 @@ const SearchRight = () => {
 					</Textform>
 					<InputRS value={form.name} placeholder="nombre" name="name" type="text" onChange={updateField} />
 					<Textform>
-						P&aacute;sanos tu <Span>Facebook:</Span>
+						P&aacute;sanos su <Span>Facebook:</Span>
 					</Textform>
 					<WrapperLabel>
 						<LabelRS src={imgFB} />
@@ -124,7 +124,7 @@ const SearchRight = () => {
 					</WrapperLabel>
 
 					<Textform>
-						¿Cuál es<Span>la</Span> ocasión?
+						¿Cuál es <Span>la</Span> ocasión?
 					</Textform>
 					<SelectOccasionComponent onChange={updateField} />
 					<WrapperButtom>
