@@ -39,7 +39,7 @@ podium(id:$id){
  }
 }
 `;
-const variables = { id: 124 };
+let variables = { id: 223 };
 
 const Modal = ({ show, closeModal }) => {
 	const { state: { record } } = useContext(Context);

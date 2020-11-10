@@ -3,5 +3,6 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/podium": "pages/podium.js",
-  "/search": "pages/search.js"
+  "/search": "pages/search.js",
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
 }

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { gql, useQuery } from '@apollo/client';
 import { Context } from '../../context/index';
+import { useRouter } from 'next/router';
 import Link from "next/link";
 import {
     PodiumWrapper,
@@ -27,25 +28,22 @@ import {
 }
 `;
 
-let variables;
-
+let variables = { id : 223 }
 
 const PodiumComponent = () => {
     const { state: { record } } = useContext(Context);
-    console.log('C O N T  E X T podium', record.data.social_network.id_gift_history);
+  //  const router = useRouter();
  
 
     let iddata = record.data.social_network.id_gift_history;
-    variables = {id:220}
-    console.log('REGISTRO DEL ID DESDE RECORD: ', iddata); 
+
     
 
-    variables = { id: Number(iddata) };
-    console.log(variables);
+
     const { loading, error, data, fetchMore, networkStatus } = useQuery(
     PODIUM_QUERY,
     {
-        variables: variables,
+        variables,
         notifyOnNetworkStatusChange: true,
     }
     )
@@ -136,6 +134,6 @@ const PodiumComponent = () => {
 
 export {
     PODIUM_QUERY,
-     variables,
+    variables,
     PodiumComponent,
 };
