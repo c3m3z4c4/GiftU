@@ -29,7 +29,7 @@ export default class Main extends React.Component {
 						<Title>
 							<Span>H</Span>OLA,
 							<br />¿<Span primary>N</Span>O <br />
-							SABES <br />Q<Span primary>U</Span>E <br />
+							SABES <br />Q<Span primary>U</Span>&Eacute; <br />
 							REGALAR <Span>?</Span>
 						</Title>
 					</WrapperTitle>

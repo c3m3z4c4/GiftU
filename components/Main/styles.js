@@ -111,7 +111,6 @@ const LinkButton = styled.button `
 	font-family: "Quicksand";
 	cursor: pointer;
 	margin: 0;
-	margin-bottom: 15px;
 	transition: transform 0.2s ease;
 	&:hover {
 		transform: scale(1.3);
@@ -137,7 +136,6 @@ const LinkLineButton = styled.button `
 	font-family: "Quicksand";
 	cursor: pointer;
 	margin: 0;
-	margin-bottom: 15px;
 	transition: transform 0.2s ease;
 	&:hover {
 		transform: scale(1);
@@ -146,9 +144,6 @@ const LinkLineButton = styled.button `
 	&:active{
 		transform: scale(0.95);
 		}
-	@media (max-width: 425px) {
-		margin-top: 20px;
-	}
 
 `
 
