@@ -3,4 +3,6 @@
   "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
   "/gifts/[giftId]": "pages/gifts/[giftId].js"
+  "/podium": "pages/podium.js",
+  "/search": "pages/search.js"
 }
