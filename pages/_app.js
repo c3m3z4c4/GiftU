@@ -12,31 +12,27 @@ const GlobalStyle = createGlobalStyle`
   `;
 
 const theme = {
-	colors: {
-		primary: "#E5E5E5",
-	},
-};
+  colors: {
+    primary: '#726666',
+  },
+}
 
 export default function App({ Component, pageProps }) {
-	const apolloClient = useApollo(pageProps.initialApolloState);
-	return (
-		<>
-			<GlobalStyle />
-			<ThemeProvider theme={theme}>
-				<ApolloProvider client={apolloClient}>
-					<Provider>
-						<Component {...pageProps} />
-					</Provider>
-				</ApolloProvider>
-				<link
-					href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap"
-					rel="stylesheet"
-				></link>
-				<link
-					href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap"
-					rel="stylesheet"
-				></link>
-			</ThemeProvider>
-		</>
-	);
+  const apolloClient = useApollo(pageProps.initialApolloState)
+  return (
+    <>
+      
+      <GlobalStyle />
+      <ThemeProvider theme={theme}>
+	    	<ApolloProvider client={apolloClient}>
+          <Provider>
+            <Component {...pageProps} />
+          </Provider>
+        </ApolloProvider>
+          <link rel="shortcut icon" href="/static/favicon.ico" />
+          <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet"></link>
+          <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet"></link>
+      </ThemeProvider>
+    </>
+  )
 }

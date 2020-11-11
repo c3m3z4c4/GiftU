@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+const Wrapper = styled.div`
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+`;
+
 const PodiumWrapper = styled.div`
 	font-family: "Quicksand", sans-serif;
 	width: 100%;
@@ -55,38 +63,47 @@ const Maincolumn = styled.div`
 	}
 `;
 const NameComponent = styled.div`
-	width: 100%;
-	min-height: 55px;
-	height: auto;
-	font-weight: bold;
-	font-size: 12px;
-	color: #726666;
-	background: rgba(135, 211, 184, 0.32);
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	margin-bottom: 10px;
-	padding: 10px;
-	img {
-		@media (max-width: 768px) {
-			padding-left: 5px;
-		}
-	}
-	text-transform: uppercase;
-	@media (max-width: 1024px) {
-		font-size: 16px;
-	}
-	@media (max-width: 768px) {
-		font-size: 9px;
-	}
-	@media (max-width: 425px) {
-		font-size: 6px;
-	}
+  width: 100%;
+  min-height: 55px;
+  height: auto;
+  font-weight: bold;
+  font-size: 12px;
+  color: #726666;
+  background: rgba(135, 211, 184, 0.32);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  img {
+      @media (max-width: 768px) {
+        padding-left: 5px;
+      }
+  }
+  text-transform: uppercase;
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+  @media (max-width: 768px) {
+    font-size: 9px;   
+  }
+  @media (max-width: 425px) {
+      flex-direction: row;
+      font-size: 15px;
+      min-height: 100px;
+      min-width: 50vw;
+      background: none;
+  }
 `;
 
 const FirstPlace = styled(Maincolumn)`
-	min-height: 350px;
-`;
+  min-height: 350px;
+  @media (max-width: 425px) {
+    height: 200px;
+    min-width: 100px;
+    justify-self: flex-start;
+  }
+`
 const SecondPlace = styled(Maincolumn)`
 	min-height: 220px;
 `;
@@ -112,77 +129,79 @@ const ImagePodium = styled.img`
 	}
 `;
 
-const FirstPlaceIcon = styled.img.attrs((props) => ({
-	src: "/images/iconFirst.png",
-}))`
-	width: 80px;
-	height: 80px;
-	@media (max-width: 1024px) {
-		width: 60px;
-		height: 60px;
-	}
-	@media (max-width: 768px) {
-		width: 40px;
-		height: 40px;
-	}
-	@media (max-width: 425px) {
-		width: 30px;
-		height: 30px;
-	}
-`;
-
-const PlusIcon = styled.img.attrs((props) => ({
-	src: "/images/plus.png",
-	href: "plus icon",
-}))`
-	width: 15px;
-	height: 15px;
-	@media (max-width: 425px) {
-		width: 10px;
-		height: 10px;
-	}
-`;
-
-const DecorativeContainer = styled.div`
-	width: 10%;
-	height: 100%;
-	display: flex;
-	justify-content: flex-end;
-	align-items: flex-end;
-	@media (max-width: 768px) {
-		display: none;
-	}
-`;
-const LittleDecorative = styled.img.attrs((props) => ({
-	src: "/images/little.png",
-	href: "little decorastive",
-}))`
-	margin-bottom: 100%;
-	width: 30px;
-	height: 30px;
-`;
-
-const Decorative = styled.img.attrs((props) => ({
-	src: "/images/decorative.png",
-	href: "decorstive",
-}))`
-	width: 100px;
-	height: 100px;
-`;
-
+  
+  const FirstPlaceIcon = styled.img.attrs(props => ({
+      src: '/images/iconFirst.png',
+    }))`
+    width: 80px;
+    height: 80px;
+    @media (max-width: 1024px) {
+      width: 60px;
+      height: 60px;
+    }
+    @media (max-width: 768px) {
+      width: 80px;
+      height: 80px;
+    }
+    @media (max-width: 425px) {
+      width: 80px;
+     height: 80px;
+    }
+  `;
+  
+  const PlusIcon = styled.img.attrs(props => ({
+    src: '/images/plus.png',
+      href:'plus icon',
+    }))`
+    width: 15px;
+    height: 15px;
+    @media (max-width: 425px) {
+      width: 20px;
+      height: 20px;
+  }
+  `;
+  
+  const DecorativeContainer = styled.div`
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
+  const LittleDecorative = styled.img.attrs(props => ({
+      src: '/images/little.png',
+      href:'little decorastive',
+    }))`
+    margin-bottom: 100%;
+     width: 30px;
+    height: 30px;
+  `;
+  
+  const Decorative = styled.img.attrs(props => ({
+      src: '/images/decorative.png',
+      href:'decorstive',
+    }))`
+    width: 100px;
+    height: 100px;
+  `;
+ 
 export {
-	PodiumWrapper,
-	PodiumContainer,
-	NameComponent,
-	CompleteColumn,
-	Maincolumn,
-	FirstPlace,
-	SecondPlace,
-	ThirdPlace,
-	FirstPlaceIcon,
-	PlusIcon,
-	Decorative,
-	LittleDecorative,
-	ImagePodium,
-	DecorativeContainer,
+    Wrapper,
+    PodiumWrapper,
+    PodiumContainer,
+    NameComponent,
+    CompleteColumn,
+    Maincolumn,
+    FirstPlace,
+    SecondPlace,
+    ThirdPlace,
+    FirstPlaceIcon,
+    PlusIcon,
+    Decorative,
+    LittleDecorative,
+    ImagePodium,
+    DecorativeContainer,
 };

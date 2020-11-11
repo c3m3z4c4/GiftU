@@ -2,9 +2,7 @@ import { useReducer, createContext } from "react";
 import { record } from "./reducers/record";
 
 const initialState = {
-  state: { 
-    record: {} 
-},
+  state: {},
 };
 
 const Context = createContext({});

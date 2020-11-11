@@ -1,7 +1,10 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useContext } from "react";
+import { Context } from '../../context/index';
 import { gql, useQuery } from "@apollo/client";
 import { useRouter } from "next/router";
+import Loading from '../../components/Loading';
 import Link from "next/link";
+import ErrorWrapper from '../../components/Errorcomponent/index';
 // import Slider from "../../components/Slider";
 
 import {
@@ -37,13 +40,13 @@ import {
 } from "./styles";
 
 const PODIUM_QUERY = gql`
-	query GetPodium($id: ID!) {
-		podium(id: $id) {
-			podium
-		}
-	}
+query GetHistory($id:ID!){
+  history(id:$id){
+    podium,
+    receiver_name
+  }
+}
 `;
-const variables = { id: 223 };
 
 const Modal = ({ show, closeModal }) => {
 	return show ? (
@@ -75,20 +78,25 @@ const Modal = ({ show, closeModal }) => {
 };
 
 const DetailsContainer = () => {
+	const { state: { record } } = useContext(Context);
+	
 	const [modal, useModal] = useState(true);
-	const { loading, error, data, fetchMore, networkStatus } = useQuery(
+	const { loading, error, data } = useQuery(
 		PODIUM_QUERY,
 		{
-			variables: variables,
+			variables: { id: record },
 			notifyOnNetworkStatusChange: true,
 		}
 	);
-	if (error) {
-		console.log("3312 3312 tenemos un 3312");
+	if (error) return <ErrorWrapper>NO HAY DETALLES POR EL MOMENTO </ErrorWrapper>;
+      if (loading) return <Loading />
+	const { products } = data.history.podium;
+	let podiumProducts = [];
+	try {
+	  podiumProducts = JSON.parse(products);
+	} catch(error) {
+	  console.log('se murio por que no hay productos')
 	}
-	if (loading) return <div>Loading</div>;
-	const { products } = data.podium.podium;
-	const podiumProducts = JSON.parse(products);
 
 	const openModal = (e) => {
 		e.preventDefault();
@@ -104,11 +112,12 @@ const DetailsContainer = () => {
 		query: { giftId },
 	} = useRouter();
 	const giftIndex = giftId - 1;
+
 	return (
 		<Fragment>
 			<DetailsWrapper>
 				{products === undefined ? (
-					<p>NO HAY DETALLES POR EL MOMENTO </p>
+					<ErrorWrapper>NO HAY DETALLES POR EL MOMENTO </ErrorWrapper>
 				) : (
 					podiumProducts[giftIndex].map((gift) => (
 						<>
@@ -164,4 +173,4 @@ const DetailsContainer = () => {
 	);
 };
 
-export { DetailsContainer, PODIUM_QUERY, variables };
+export { DetailsContainer };

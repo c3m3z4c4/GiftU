@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useContext } from "react";
-import { useRouter } from "next/router";
-import { gql, useMutation } from "@apollo/client";
+import { gql, useMutation } from '@apollo/client';
+import {useRouter} from 'next/router';
 import Menu from "../Menu";
 import { Context } from "../../context/index";
 import { SelectOccasionComponent } from "./selectOccasion";
@@ -35,13 +35,16 @@ const SEND_INFORMATION = gql`
 		}
 	}
 `;
-
-let variables = { id: 223 };
+let variables;
 
 const SearchRight = () => {
-	const { state, dispatch } = useContext(Context);
-	const [sendInrmation, { data }] = useMutation(SEND_INFORMATION);
-	// const { id_gift_history } = data.social_network;
+	const router = useRouter();
+
+	const { dispatch } = useContext(Context);
+	const [
+		sendInrmation,
+		{ loading }
+	] = useMutation(SEND_INFORMATION);
 
 	const [form, useForm] = useState({
 		name: "",
@@ -62,14 +65,9 @@ const SearchRight = () => {
 		url_social_network: form.link,
 		id_occasion: Number(form.occasion),
 	};
-	const router = useRouter();
-	const [query, setQuery] = useState("");
-
-	const handleParam = (setValue) => (e) => setValue(e.target.value);
 
 	const handleSubmit = async (event) => {
 		event.preventDefault();
-		console.log("hello");
 		try {
 			const mutationId = await sendInrmation({
 				variables,
@@ -85,23 +83,28 @@ const SearchRight = () => {
 						},
 					});
 				},
-			});
-			dispatch({
-				type: "RECORD_CASE",
-				payload: mutationId,
-			});
+				})
 
-			console.log("DENTRO DE TRY:", mutationId);
+			const { id_gift_history } = mutationId.data.social_network;
+
+			await dispatch({
+				type: "RECORD_CASE",
+				payload: id_gift_history,
+				})
+			
 			router.push({
-				pathname: action,
-				query: { q: query },
-			});
+				pathname: '/podium',
+			}) 
+			
 		} catch (error) {
 			console.log("SUPER ERROR :(");
 		}
-	};
+	};	
+
+
+
 	return (
-		<Fragment>
+		<>
 			<WrapperRight>
 				<WrappperMenu>
 					<Menu />
@@ -143,7 +146,7 @@ const SearchRight = () => {
 					</WrapperButtom>
 				</WrapperForm>
 			</WrapperRight>
-		</Fragment>
+		</>
 	);
 };
 
