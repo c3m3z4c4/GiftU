@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 const WrapperView = styled.div`
 	display: flex;
 	width: 100vw;
@@ -8,11 +9,13 @@ const WrapperView = styled.div`
 	align-items: center;
 	position: absolute;
 	top: 0;
+	left: 0;
+	z-index: 99999999;
 `;
 
 const WrapperModal = styled.div`
 	min-width: 40vw;
-	min-height: 320px;
+	min-height: 400px;
 	box-shadow: 2px 10px 15px 0px rgba(0, 0, 0, 0.17);
 	background: white;
 	border-radius: 30px;
@@ -43,6 +46,8 @@ const WrapperInfo = styled.div `
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	height: 300px;
+    justify-content: space-between;
 `;
 
 const TextQuestion = styled.p `
@@ -64,6 +69,23 @@ const TextComent = styled.p `
 	font-size: 18px;
 	@media (max-width: 768px) {
 		font-size: 14px;
+	}
+`;
+
+const GoHome = styled.p `
+	font-family: "Quicksand", sans-serif;
+	color: #fbcf39;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    letter-spacing: 1px;
+	text-transform: uppercase;
+	&:hover {
+		text-decoration: underline;
+		color: #87d3b8;
+	}
+	@media (max-width: 768px) {
+		font-size: 16px;
 	}
 `;
 
@@ -273,6 +295,7 @@ const DetailItemTitle = styled.p `
 	font-style: normal;
 	font-weight: 500;
 	font-size: 16px;
+	letter-spacing: 1px;
 	color: #726666;
 	width: calc(100% / 2);
 	text-align: center;
@@ -367,45 +390,7 @@ const Stars = styled.div `
     margin: 0px 40px;
 
 `
-const ListContainer = styled.div`
-	width: 80%;
-	max-height: 100px;
-	height: 100%;
-	overflow: scroll;
-	border-radius: 10px;
-`
-const Lista = styled.ul`
-  counter-reset: index;  
-  padding: 0;
-  width: 100%;
-  
-  display: flex;
-  flex-direction: column;
-  align-items: wrap;
-  justify-content:center;
-`
 
-const ElementoLista = styled.li`
-  counter-increment: index; 
- 
-  align-items: center;
-  padding: 12px 0;
-  box-sizing: border-box;
-  &::before{
-	content: counters(index, ".", decimal-leading-zero);
-	font-size: 1rem;
-	text-align: right;
-	font-weight: bold;
-	min-width: 50px;
-	padding-right: 12px;
-	font-variant-numeric: tabular-nums;
-
-	background-image: linear-gradient(to bottom, aquamarine, orangered);
-	background-attachment: fixed;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-  }
-`
 
 export {
     DetailsWrapper,
@@ -435,7 +420,5 @@ export {
     TextWrite,
     CloseIcon,
 	CommentContainer,
-	Lista,
-	ElementoLista,
-	ListContainer,
+	GoHome,
 };

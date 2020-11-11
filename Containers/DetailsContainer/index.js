@@ -34,6 +34,7 @@ import {
 	CloseIcon,
 	Star,
 	Stars,
+	GoHome,
 } from "./styles";
 
 const PODIUM_QUERY = gql`
@@ -59,7 +60,7 @@ const Modal = ({ show, closeModal,url }) => {
 						<TextQuestion>¿Qué opinas de la recomendación?</TextQuestion>
 						<TextComent>Deja tu comentario:</TextComent>
 						<TextWrite></TextWrite>
-						<Link href={url}>
+						<Link href={url} target="_blank">
 							<DetailButton>Quiero comprarlo</DetailButton>
 						</Link>
 					</WrapperInfo>
@@ -108,7 +109,7 @@ const DetailsContainer = () => {
 	} = useRouter();
 	const giftIndex = giftId - 1;
 
-	console.log>('COSOOOOOOSSS',podiumProducts);
+	console.log('COSOOOOOOSSS',podiumProducts);
 	return (
 		<Fragment>
 			<DetailsWrapper>
@@ -152,17 +153,17 @@ const DetailsContainer = () => {
 										</DetailItemTitle>
 										<DetailItemContent>New implementations</DetailItemContent>
 									</DetailItem>
-									<Link href="/">
-										<p>¡Intenta de nuevo!</p>
-									</Link>
 								</DetailsInformation>
+								<Link href="/">
+										<GoHome>¡Intenta de nuevo!</GoHome>
+									</Link>
 								<DetailButton onClick={openModal}>
 									¡Compralo!
 								</DetailButton>
+							<Modal url={gift.url} show={!modal} closeModal={closenModal} />	
 							</InformationContainer>
 							<Slider />
 						</RightDetails>
-						<Modal url={gift.url} show={!modal} closeModal={closenModal} />	
 						</>
 					))
 				)}

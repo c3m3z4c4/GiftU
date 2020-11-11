@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import { gql, useQuery } from '@apollo/client';
+import {useRouter} from 'next/router';
 import { Context } from '../../context/index';
 import TitleComponent from "../../components/Title/index";
 import Loading from '../../components/Loading';
 import ErrorWrapper from '../../components/ErrorComponent/index';
-import Link from "next/link";
+import { LinkButton } from '../../components/Main/styles';
 import {
     PodiumWrapper,
     PodiumContainer,
@@ -33,7 +34,7 @@ query GetHistory($id:ID!){
 
 
 const PodiumComponent = () => {
-    const { state: { record } } = useContext(Context);
+    const { state: { record }, dispatch } = useContext(Context);
 
     const { loading, error, data} = useQuery(
             PODIUM_QUERY,
@@ -47,12 +48,26 @@ const PodiumComponent = () => {
       const { products } = data.history.podium
 
       let podiumProducts = [];
+
       try {
         podiumProducts = JSON.parse(products);
       } catch(error) {
         console.log('se murio por que no hay productos :(')
       }
-      const { receiver_name } = data.history;     
+
+      const { receiver_name } = data.history;
+      
+      const router = useRouter();
+      
+      const goDetails = async (number) => {
+        await dispatch({
+            type: "PODIUM_CASE",
+            payload: podiumProducts,
+        });
+        router.push({
+            pathname: `/gifts/${number}`,
+        }) 
+      }
 
     return (
         <Wrapper>
@@ -76,9 +91,9 @@ const PodiumComponent = () => {
                                     <ImagePodium src={product.img} />
                                         <NameComponent>
                                             {product.name}
-                                        <Link href="/gifts/3">
-                                                <PlusIcon />
-                                            </Link>
+                                        <LinkButton onClick={() => goDetails(3)}>
+                                            <PlusIcon />
+                                        </LinkButton>
                                         </NameComponent>
                                 </>
                             ))
@@ -92,9 +107,9 @@ const PodiumComponent = () => {
                                 <ImagePodium src={product.img} />
                                     <NameComponent>
                                         {product.name}
-                                        <Link href="/gifts/1">
+                                        <LinkButton onClick={() => goDetails(1)}>
                                             <PlusIcon />
-                                        </Link>
+                                        </LinkButton>
                                     </NameComponent>
                                     </>
                             ))
@@ -110,9 +125,9 @@ const PodiumComponent = () => {
                                                 <ImagePodium src={product.img} />
                                                 <NameComponent>
                                                     {product.name}
-                                                    <Link href="/gifts/2">
+                                                    <LinkButton onClick={() => goDetails(2)}>
                                                         <PlusIcon />
-                                                    </Link>
+                                                    </LinkButton>
                                                 </NameComponent>
                                         </>
                                         ))
