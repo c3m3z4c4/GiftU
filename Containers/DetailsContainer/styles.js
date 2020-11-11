@@ -376,8 +376,8 @@ const Star = styled.div `
 		}
 	}
 	@media Screen and (max-width: 768px) {
-		height: 45px;
-		width: 45px;
+		height: 15px;
+		width: 15px;
 	}
 `
 

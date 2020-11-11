@@ -4,7 +4,7 @@ import { gql, useQuery } from "@apollo/client";
 import { useRouter } from "next/router";
 import Loading from '../../components/Loading';
 import Link from "next/link";
-import ErrorWrapper from '../../components/Errorcomponent/index';
+import ErrorWrapper from '../../components/ErrorComponent/index';
 import Slider from "../../components/Slider";
 
 import {
