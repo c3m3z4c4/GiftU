@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useContext } from "react";
-import { useRouter } from 'next/router';
-import { gql, useMutation } from '@apollo/client'
+import { gql, useMutation } from '@apollo/client';
+import {useRouter} from 'next/router';
 import Menu from "../Menu";
 import { Context } from "../../context/index";
 import { SelectOccasionComponent } from './selectOccasion';
@@ -15,7 +15,6 @@ import {
 	WrapperButtom,
 	BaseButton,
 	Span,
-	SelectOccasion,
 	Textform,
 } from "./styles";
 
@@ -36,14 +35,16 @@ const SEND_INFORMATION = gql`
 	}
 	}
 `;
-
-
 let variables;
 
-const SearchRight = ({ action = '/podium' }) => {
-	const { state, dispatch } = useContext(Context);
-	const [sendInrmation, { data }] = useMutation(SEND_INFORMATION);
-	// const { id_gift_history } = data.social_network;
+const SearchRight = () => {
+	const router = useRouter();
+
+	const { dispatch } = useContext(Context);
+	const [
+		sendInrmation,
+		{ loading }
+	] = useMutation(SEND_INFORMATION);
 
 	const [form, useForm] = useState({
 		name: '',
@@ -64,13 +65,9 @@ const SearchRight = ({ action = '/podium' }) => {
 		url_social_network: form.link,
 		id_occasion: Number(form.occasion),
 	};
-	const router = useRouter()
-    const [query, setQuery] = useState('')
-
-    const handleParam = setValue => e => setValue(e.target.value)
 
 	const handleSubmit = async (event) => {
-		event.preventDefault()
+		event.preventDefault();
 		try {
 			const mutationId = await sendInrmation({
 			variables,	  
@@ -87,22 +84,23 @@ const SearchRight = ({ action = '/podium' }) => {
 				})
 			},
 			})
+
+			const { id_gift_history } = mutationId.data.social_network;
+
 			await dispatch({
 				type: "RECORD_CASE",
-				payload: mutationId,
+				payload: id_gift_history,
 				})
 			
-			console.log('DENTRO DE TRY:', mutationId);
 			router.push({
-				pathname: action,
-				query: {q: query},
+				pathname: '/podium',
 			  })
 		} catch (error) {
 			console.log('SUPER ERROR :(');
 		}
 	  }
 	return (
-		<Fragment>
+		<>
 			<WrapperRight>
 				<WrappperMenu>
 					<Menu />
@@ -115,7 +113,7 @@ const SearchRight = ({ action = '/podium' }) => {
 					</Textform>
 					<InputRS value={form.name} placeholder="nombre" name="name" type="text" onChange={updateField} />
 					<Textform>
-						P&aacute;sanos tu <Span>Facebook:</Span>
+						P&aacute;sanos su <Span>Facebook:</Span>
 					</Textform>
 					<WrapperLabel>
 						<LabelRS src={imgFB} />
@@ -123,7 +121,7 @@ const SearchRight = ({ action = '/podium' }) => {
 					</WrapperLabel>
 
 					<Textform>
-						¿Cuál es<Span>la</Span> ocasión?
+						¿Cuál es <Span>la</Span> ocasión?
 					</Textform>
 					<SelectOccasionComponent onChange={updateField} />
 					<WrapperButtom>
@@ -133,7 +131,7 @@ const SearchRight = ({ action = '/podium' }) => {
 					</WrapperButtom>
 				</WrapperForm>
 			</WrapperRight>
-		</Fragment>
+		</>
 	);
 };
 

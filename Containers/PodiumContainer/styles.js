@@ -1,6 +1,14 @@
 
 import styled from 'styled-components'
 
+const Wrapper = styled.div`
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+`;
+
 const PodiumWrapper = styled.div`
 font-family: 'Quicksand', sans-serif;
 width:100%;
@@ -15,11 +23,7 @@ align-items: flex-end;
 justify-content: space-bewteen;
 @media (max-width: 768px) {
   width: 100%;
-
-}
-@media (max-width: 425px) {
-  width: 100%;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 `
 
@@ -31,16 +35,9 @@ const CompleteColumn = styled.div`
   align-items: center;
   justify-content: center;
   @media (max-width: 768px) {
-    width: calc(100%/3 - 20px);
-    margin: 0 20px;
-  }
-  @media (max-width: 425px) {
-    width: calc(100%*0.85 - 5px);
-    margin: 0 5px;
-      flex-direction: column;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
+    width: 100%;
+    margin: 20 5px;
+    
   }
 `;
 
@@ -193,6 +190,7 @@ const ImagePodium = styled.img`
   `;
  
 export {
+    Wrapper,
     PodiumWrapper,
     PodiumContainer,
     NameComponent,

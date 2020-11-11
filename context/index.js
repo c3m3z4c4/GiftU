@@ -2,9 +2,7 @@ import { useReducer, createContext } from "react";
 import { record } from "./reducers/record";
 
 const initialState = {
-  state: { 
-    record: {} 
-},
+  state: {},
 };
 
 const Context = createContext({});
@@ -22,22 +20,3 @@ const Provider = ({ children }) => {
 };
 
 export { Context, Provider };
-
-// import React, { createContext, useState } from "react";
-
-// export const UserContext = createContext();
-
-// export const UserProvider = ({ children }) => {
-//   const [name, setName] = useState("William");
-//   const [location, setLocation] = useState("Mars");
-
-//   return (
-//     <UserContext.Provider
-//       value={{
-//         record,
-//       }}
-//     >
-//       {children}
-//     </UserContext.Provider>
-//   );
-// };

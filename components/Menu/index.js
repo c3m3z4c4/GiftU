@@ -18,8 +18,6 @@ import {
 
 
 export default class Nav extends React.Component {
-		
-
 	handleLogin() {
 		auth.login();
 	}
@@ -33,13 +31,13 @@ export default class Nav extends React.Component {
 			<Fragment>
 				<Wrapper>
 					<WrapperImageMenu>
-						<Text>MENU</Text>
+						<Text>MENÚ</Text>
 						<LogoImage src={Imagepng} />
 					</WrapperImageMenu>
 					<ListItems>
 						<Item>
-							<MenuButton onClick={()=>this.handleLogin()}>
-										Iniciar <Span>Sesión</Span>
+							<MenuButton onClick={() => this.handleLogin()}>
+								Iniciar <Span>Sesión</Span>
 							</MenuButton>
 						</Item>
 						<Item>
@@ -50,8 +48,8 @@ export default class Nav extends React.Component {
 							</Link>
 						</Item>
 						<Item>
-							<MenuButton onClick={()=>this.handleLogout()}>
-										Cerrar <Span>Sesión</Span>
+							<MenuButton onClick={() => this.handleLogout()}>
+								Cerrar <Span>Sesión</Span>
 							</MenuButton>
 						</Item>
 					</ListItems>
