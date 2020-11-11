@@ -33,11 +33,6 @@
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/gifts/[giftId].js"
-    ],
-    "/search": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/search.js"
     ]
   },
   "ampFirstPages": []
