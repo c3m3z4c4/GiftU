@@ -127,6 +127,7 @@ const DetailsContainer = () => {
 									<DecorativeImage src="/images/decataveDetails.png" />
 								</MainImageContainer>
 							</LeftDetails>
+							
 							<RightDetails>
 								<InformationContainer>
 									<TitleDetails>{gift.name}</TitleDetails>

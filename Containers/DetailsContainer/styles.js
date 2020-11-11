@@ -107,11 +107,10 @@ const LeftDetails = styled.div `
 	background: rgba(160, 221, 199, 0.25);
 	@media (max-width: 768px) {
 		width: 100%;
-		height:50%;
+		height: 40vh;
+		padding: 50px;
 	}
 	@media (max-width: 425px) {
-/* 		align-items: center;
-    justify-content: center; */
 		width: 100%;
 		height:35vh;
 	}
@@ -127,7 +126,8 @@ const RightDetails = styled(LeftDetails)`
 	justify-content: center;
 	@media screen and (max-width: 768px) {
 		width: 100%;
-		height: 50%;
+		height: 60vh;
+		padding: 0;
 	}
 
 	@media screen and (max-width: 425px){
@@ -138,9 +138,14 @@ const RightDetails = styled(LeftDetails)`
 
 const MainImageContainer = styled.div `
 	width: 480px;
-	height: 460px;
+	height: 400px;
 	position: relative;
 	border-radius: 10px;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.09);
+	display: flex;
+	align-items: center;
+	background: transparent;
+	position: relative;
 	@media (max-width: 768px) {
 		margin: 0 auto;
 		width: 320px;
@@ -153,7 +158,7 @@ const MainImageContainer = styled.div `
 	}
 	@media (max-width: 425px) {
 		width: 200px;
-		height: 20%;
+		height: auto;
 		padding: 20px 0;
 	}
 
@@ -162,27 +167,25 @@ const MainImageContainer = styled.div `
 const MainImage = styled.img `
 	width: 100%;
 	height: auto;
-	object-fit: fill;
+	object-fit: contain;
 `;
 
 const DecorativeImage = styled.img `
-	width: 156.85px;
-	height: 152.24px;
+	width: 100px;
+	height: auto;
 	position: absolute;
-	bottom: 20%;
-	right: 0;
+	bottom: -35px;
+	right: -45px;
 	@media (max-width: 768px) {
 		width: 106.85px;
 		height: 102.24px;
-		bottom: 0px;
-    	right: -4px;
 	}
 	@media (max-width: 425px) {
-		bottom: -41px;
-    	right: -10px;
 		width: 62.85px;
-		height: 52.24px;
-		}
+		height: auto;
+		bottom: -15px;
+		right: -25px;
+	}
 	
 `;
 
