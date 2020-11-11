@@ -62,11 +62,6 @@ const Modal = ({ show, closeModal }) => {
 						<TextQuestion>¿Qué opinas de la recomendación?</TextQuestion>
 						<TextComent>Deja tu comentario:</TextComent>
 						<TextWrite></TextWrite>
-						<Stars>
-							<Star></Star>
-							<Star></Star>
-							<Star></Star>
-						</Stars>
 						<Link href="/">
 							<DetailButton>Quiero comprarlo</DetailButton>
 						</Link>
@@ -127,26 +122,21 @@ const DetailsContainer = () => {
 									<DecorativeImage src="/images/decataveDetails.png" />
 								</MainImageContainer>
 							</LeftDetails>
-							
+
 							<RightDetails>
 								<InformationContainer>
 									<TitleDetails>{gift.name}</TitleDetails>
 									<LineImage src="/images/lines.png" />
 
 									<DetailsInformation>
-										<DetailItem>
+										{/* <DetailItem>
 											<DetailItemTitle>
 												PRE<ColorLetter blue>C</ColorLetter>IO
 											</DetailItemTitle>
 											<DetailItemContent>{gift.price}</DetailItemContent>
-										</DetailItem>
+										</DetailItem> */}
 									</DetailsInformation>
-									<Stars>
-                    <Star />
-                    <Star />
-                    <Star />
-                    <Star />
-                  </Stars>
+
 									<DetailButton onClick={openModal}>
 										Compralo Fácil y rápido
 									</DetailButton>

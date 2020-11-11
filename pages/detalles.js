@@ -51,9 +51,6 @@ const Modal = ({ show, closeModal }) => {
 
 						<TextComent>Deja tu comentario:</TextComent>
 						<TextWrite></TextWrite>
-						<Stars>
-
-						</Stars>
 						<Link href="/">
 							<DetailButton>Quiero comprarlo</DetailButton>
 						</Link>
@@ -99,14 +96,12 @@ const DetallesFake = () => {
 											<DetailItemContent>$999.99</DetailItemContent>
 										</DetailItem>
 									</DetailsInformation>
-					
-                  <Stars>
+                  {/* <Stars>
                     <Star />
                     <Star />
                     <Star />
                     <Star />
-                  </Stars>
-
+                  </Stars> */
 									<DetailButton onClick={openModal}>
 										Compralo Fácil y rápido
 									</DetailButton>

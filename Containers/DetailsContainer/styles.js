@@ -192,7 +192,7 @@ const DecorativeImage = styled.img `
 const InformationContainer = styled.div `
     width: 90%;
     height: 85%;
-	background: rgba(255, 171, 7, 0);
+	background: rgba(255, 171, 7, 0.1);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -221,27 +221,17 @@ const CommentContainer = styled.div `
 	}
 `;
 const TitleDetails = styled.p `
-	display:flex;
-	height: 16vh;
-	max-width:33vw;
-	width:100%;
 	font-family: Quicksand;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 2em;
 	text-transform: uppercase;
 	color: #87d3b8;
 	text-align: center;
 	@media Screen and (max-width: 768px) {
-		height: 40%;
-		max-width: 540px;
-		width: 100%;
-		font-size: 1.5em;
+		
 	}
 	@media Screen and (max-width: 425px) {
-		height: 20%;
-		max-width: 425px;
-		width: 100%;
+		
 	}
 `;
 
@@ -315,7 +305,7 @@ const DetailButton = styled.button `
 	max-width: 280px;
 	max-height: 80px;
 	font-weight: 500;
-	font-size: 20px;
+	font-size: 14px;
 	line-height: 19px;
 	display: flex;
 	align-items: center;
