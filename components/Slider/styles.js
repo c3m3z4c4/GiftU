@@ -6,7 +6,9 @@ const Wrapper = styled.section`
 	position: relative;
 	display: flex;
 	align-items: center;
-	margin-top: 14vh;
+	justify-content: center;
+	margin-top: 30px;
+    padding: 0;
 	@media (max-width: 425px) {
 		margin-top: 0;
 		flex-direction: column;

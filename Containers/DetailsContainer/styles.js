@@ -111,10 +111,8 @@ const LeftDetails = styled.div `
 		padding: 50px;
 	}
 	@media (max-width: 425px) {
-		width: 100%;
-		height:35vh;
-	}
-	    
+		padding: 0;
+	}	    
 `;
 const RightDetails = styled(LeftDetails)`
 	background: #ffffff;
@@ -126,13 +124,8 @@ const RightDetails = styled(LeftDetails)`
 	justify-content: center;
 	@media screen and (max-width: 768px) {
 		width: 100%;
-		height: 60vh;
+	    height: 100%;
 		padding: 0;
-	}
-
-	@media screen and (max-width: 425px){
-		height: 60vh;
-		width:100%;
 	}	
 `;
 
@@ -146,6 +139,8 @@ const MainImageContainer = styled.div `
 	align-items: center;
 	background: transparent;
 	position: relative;
+	margin-bottom: 40px;
+}
 	@media (max-width: 768px) {
 		margin: 0 auto;
 		width: 320px;
@@ -155,6 +150,8 @@ const MainImageContainer = styled.div `
 		border-radius: 10px;
 		align-items: center;
 		justify-content: center;
+		margin-bottom: 0px;
+	}
 	}
 	@media (max-width: 425px) {
 		width: 200px;
@@ -190,8 +187,8 @@ const DecorativeImage = styled.img `
 `;
 
 const InformationContainer = styled.div `
-    width: 90%;
-    height: 85%;
+	height: auto;
+	padding: 16px;
 	background: rgba(255, 171, 7, 0.1);
 	display: flex;
 	flex-direction: column;
@@ -199,7 +196,8 @@ const InformationContainer = styled.div `
 	align-items: center;
 	@media (max-width: 768px) {
 		width: 100%;
-		height: 30%;
+		padding: 0px;
+		height:100%;
 	}
 	@media (max-width: 425px) {
 		width: 100%;
@@ -223,29 +221,28 @@ const CommentContainer = styled.div `
 const TitleDetails = styled.p `
 	font-family: Quicksand;
 	font-style: normal;
-	font-weight: bold;
 	text-transform: uppercase;
 	color: #87d3b8;
 	text-align: center;
-	@media Screen and (max-width: 768px) {
-		
-	}
-	@media Screen and (max-width: 425px) {
-		
-	}
+	margin: 0;
+	height: auto;
+	max-width: 80%;
+	margin: 8px;
+	font-size: 18px;
+	font-weight: bold;
 `;
 
 const LineImage = styled.img `
-	width: 69.02px;
-	height: 17.59px;
+	width: 100%
+	height: auto;
 `;
 const DetailsInformation = styled.div `
 	display: flex;
-	
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	height:20%;
+	height: auto;
+	margin: 20px;
 	justify-content: center;
 	@media Screen and (max-width: 768px){
 		width: 100%;
@@ -258,15 +255,15 @@ const DetailItem = styled.div `
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: calc(100% - 200px);
+	width: calc(100% - 60px);
 	@media Screen and (max-width: 768px) {
-		width: 25%;
+		width: 100%;
+		min-height: 50px;
+		height: auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
-	
-	@media Screen and (max-width: 425px) {
-	    	font-size: 1em;
-			width: 60%;
-		}
 	`;
 
 
@@ -274,28 +271,29 @@ const DetailItemTitle = styled.p `
 	font-family: Quicksand;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 1.5em;
+	font-size: 16px;
 	color: #726666;
 	width: calc(100% / 2);
-	font-weight: 900;
 	text-align: center;
 	@media Screen and (max-width: 425px) {
-    font-size: 1.6em;
 		font-weight: 300;
 		margin:0;
+		width: 100%;
+		font-size: 12px;
 		}
 `;
 const DetailItemContent = styled.p `
 	font-family: Quicksand;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 1.5em;
+	font-size: 14px;
 	color: #726666;
 	width: calc(100% / 2);
 	text-align: center;
 	@media Screen and (max-width: 425px) {
-    font-size: 1.8em;
 		margin:0;
+		width: 100%;
+		font-size: 10px;
 		}
 `;
 const DetailButton = styled.button `
@@ -328,16 +326,9 @@ const DetailButton = styled.button `
 		}
 	}
 	@media Screen and (max-width: 768px) {
-		width: 60%;
-		height: 20%;
-		font-size: 1.4em;
-		padding: 6px;	
-	}
-	@media Screen and (max-width: 425px) {
-    width: 80%;
-    height: 20%;
-    font-size: 1.4em;
-	padding: 10px;	
+		margin-bottom: 10px;
+		padding: 12px;
+		font-size: 12px;	
 	}
 `;
 
@@ -349,8 +340,8 @@ const Star = styled.div `
   background: #ffab07;
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   display: inline-block;
-  height: 50px;
-  width: 50px;
+  height: 20px;
+  width: 20px;
 	transition: transform 0.2s ease-in-out;
   &:hover{
 		background: gold;
@@ -361,26 +352,18 @@ const Star = styled.div `
 		}
 	}
 	@media Screen and (max-width: 768px) {
-		height: 40px;
-		width: 40px;
+		height: 45px;
+		width: 45px;
 	}
 `
 
 const Stars = styled.div `
   	display: flex;
-	width: calc(100% - 100px);
-	margin: 0px 50px;
 	flex-direction:row;
 	justify-content: space-around;
 	align-items: center;
-	@media Screen and (max-width: 768px){
-		width: calc(100% - 390px);
-    	margin: 10px 50px;
-	}
-	@media Screen and (max-width: 425px){
-		width: calc(100% - 50px);
-   	 margin: 10px 50px;
-	}
+	width: calc(100% - 80px);
+    margin: 0px 40px;
 
 `
 const ListContainer = styled.div`
