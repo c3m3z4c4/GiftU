@@ -27,6 +27,7 @@
     "/podium": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
+      "static/chunks/pages/gifts/[giftId].js"
       "static/chunks/pages/podium.js"
     ],
     "/search": [

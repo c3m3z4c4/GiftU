@@ -7,7 +7,7 @@ const Wrapper = styled.section`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	margin-top: 30px;
+	margin-top: 50px;
     padding: 0;
 	@media (max-width: 425px) {
 		margin-top: 0;

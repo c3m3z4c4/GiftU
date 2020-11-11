@@ -1,18 +1,21 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
+import { Context } from '../../context/index';
+import Link from "next/link";
 
 import {
 	Wrapper,
 	Text,
 	WrapperCarousel,
-	CarouselItem,
-	imgItem1,
-	imgItem2,
-	imgItem3,
 	Item,
+	CarouselItem,
 	Span,
 } from "./styles";
 
+
+
 const Slider = () => {
+	const { state: { podium } } = useContext(Context);
+
 	return (
 		<Fragment>
 			<Wrapper>
@@ -21,21 +24,19 @@ const Slider = () => {
 					POD<Span primary>I</Span>UM
 				</Text>
 				<WrapperCarousel>
-					<CarouselItem>
-						<Item src={imgItem1} />
-					</CarouselItem>
-					<CarouselItem>
-						<Item src={imgItem2} />
-					</CarouselItem>
-					<CarouselItem>
-						<Item src={imgItem3} />
-					</CarouselItem>
-					<CarouselItem>
-						<Item src={imgItem2} />
-					</CarouselItem>
-					<CarouselItem>
-						<Item src={imgItem3} />
-					</CarouselItem>
+					{
+						podium.map(product => (
+						<CarouselItem>
+							{
+								product.map(item => (
+									<Link href="/podium">
+										<Item src={item.img} />
+									</Link> 
+								))
+							}
+						</CarouselItem>
+						))
+					}
 				</WrapperCarousel>
 			</Wrapper>
 		</Fragment>
