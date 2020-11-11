@@ -29,6 +29,11 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
+    "/gifts/[giftId]": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/gifts/[giftId].js"
+    ],
     "/search": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",

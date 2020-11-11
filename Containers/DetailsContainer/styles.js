@@ -107,15 +107,12 @@ const LeftDetails = styled.div `
 	background: rgba(160, 221, 199, 0.25);
 	@media (max-width: 768px) {
 		width: 100%;
-		height:50%;
+		height: 40vh;
+		padding: 50px;
 	}
 	@media (max-width: 425px) {
-/* 		align-items: center;
-    justify-content: center; */
-		width: 100%;
-		height:35vh;
-	}
-	    
+		padding: 0;
+	}	    
 `;
 const RightDetails = styled(LeftDetails)`
 	background: #ffffff;
@@ -127,20 +124,23 @@ const RightDetails = styled(LeftDetails)`
 	justify-content: center;
 	@media screen and (max-width: 768px) {
 		width: 100%;
-		height: 50%;
-	}
-
-	@media screen and (max-width: 425px){
-		height: 60vh;
-		width:100%;
+	    height: 100%;
+		padding: 0;
 	}	
 `;
 
 const MainImageContainer = styled.div `
 	width: 480px;
-	height: 460px;
+	height: 400px;
 	position: relative;
 	border-radius: 10px;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.09);
+	display: flex;
+	align-items: center;
+	background: transparent;
+	position: relative;
+	margin-bottom: 40px;
+}
 	@media (max-width: 768px) {
 		margin: 0 auto;
 		width: 320px;
@@ -150,10 +150,12 @@ const MainImageContainer = styled.div `
 		border-radius: 10px;
 		align-items: center;
 		justify-content: center;
+		margin-bottom: 0px;
+	}
 	}
 	@media (max-width: 425px) {
 		width: 200px;
-		height: 20%;
+		height: auto;
 		padding: 20px 0;
 	}
 
@@ -161,42 +163,42 @@ const MainImageContainer = styled.div `
 `;
 const MainImage = styled.img `
 	width: 100%;
-	height: auto;
-	object-fit: fill;
+	height:100%;
+	object-fit: contain;
 `;
 
 const DecorativeImage = styled.img `
-	width: 156.85px;
-	height: 152.24px;
+	width: 100px;
+	height: auto;
 	position: absolute;
-	bottom: 20%;
-	right: 0;
+	bottom: -35px;
+	right: -45px;
 	@media (max-width: 768px) {
 		width: 106.85px;
 		height: 102.24px;
-		bottom: 0px;
-    	right: -4px;
 	}
 	@media (max-width: 425px) {
-		bottom: -41px;
-    	right: -10px;
 		width: 62.85px;
-		height: 52.24px;
-		}
+		height: auto;
+		bottom: -15px;
+		right: -25px;
+	}
 	
 `;
 
 const InformationContainer = styled.div `
-    width: 90%;
-    height: 85%;
-	background: rgba(255, 171, 7, 0);
+	height: auto;
+	width: 80%;
+	padding: 16px;
+	background: rgba(255, 171, 7, 0.1);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 	@media (max-width: 768px) {
 		width: 100%;
-		height: 30%;
+		padding: 0px;
+		height:100%;
 	}
 	@media (max-width: 425px) {
 		width: 100%;
@@ -218,41 +220,30 @@ const CommentContainer = styled.div `
 	}
 `;
 const TitleDetails = styled.p `
-	display:flex;
-	height: 16vh;
-	max-width:33vw;
-	width:100%;
 	font-family: Quicksand;
 	font-style: normal;
-	font-weight: bold;
-	font-size: 2em;
 	text-transform: uppercase;
 	color: #87d3b8;
 	text-align: center;
-	@media Screen and (max-width: 768px) {
-		height: 40%;
-		max-width: 540px;
-		width: 100%;
-		font-size: 1.5em;
-	}
-	@media Screen and (max-width: 425px) {
-		height: 20%;
-		max-width: 425px;
-		width: 100%;
-	}
+	margin: 0;
+	height: auto;
+	max-width: 80%;
+	margin: 8px;
+	font-size: 18px;
+	font-weight: bold;
 `;
 
 const LineImage = styled.img `
-	width: 69.02px;
-	height: 17.59px;
+	width: 100%
+	height: auto;
 `;
 const DetailsInformation = styled.div `
 	display: flex;
-	
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
-	height:20%;
+	height: auto;
+	margin: 20px;
 	justify-content: center;
 	@media Screen and (max-width: 768px){
 		width: 100%;
@@ -265,15 +256,15 @@ const DetailItem = styled.div `
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: calc(100% - 200px);
+	width: calc(100% - 60px);
 	@media Screen and (max-width: 768px) {
-		width: 25%;
+		width: 100%;
+		min-height: 50px;
+		height: auto;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
 	}
-	
-	@media Screen and (max-width: 425px) {
-	    	font-size: 1em;
-			width: 60%;
-		}
 	`;
 
 
@@ -281,28 +272,29 @@ const DetailItemTitle = styled.p `
 	font-family: Quicksand;
 	font-style: normal;
 	font-weight: 500;
-	font-size: 1.5em;
+	font-size: 16px;
 	color: #726666;
 	width: calc(100% / 2);
-	font-weight: 900;
 	text-align: center;
 	@media Screen and (max-width: 425px) {
-    font-size: 1.6em;
 		font-weight: 300;
 		margin:0;
+		width: 100%;
+		font-size: 12px;
 		}
 `;
 const DetailItemContent = styled.p `
 	font-family: Quicksand;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 1.5em;
+	font-size: 14px;
 	color: #726666;
 	width: calc(100% / 2);
 	text-align: center;
 	@media Screen and (max-width: 425px) {
-    font-size: 1.8em;
 		margin:0;
+		width: 100%;
+		font-size: 10px;
 		}
 `;
 const DetailButton = styled.button `
@@ -312,7 +304,7 @@ const DetailButton = styled.button `
 	max-width: 280px;
 	max-height: 80px;
 	font-weight: 500;
-	font-size: 20px;
+	font-size: 14px;
 	line-height: 19px;
 	display: flex;
 	align-items: center;
@@ -335,16 +327,9 @@ const DetailButton = styled.button `
 		}
 	}
 	@media Screen and (max-width: 768px) {
-		width: 60%;
-		height: 20%;
-		font-size: 1.4em;
-		padding: 6px;	
-	}
-	@media Screen and (max-width: 425px) {
-    width: 80%;
-    height: 20%;
-    font-size: 1.4em;
-	padding: 10px;	
+		margin-bottom: 10px;
+		padding: 12px;
+		font-size: 12px;	
 	}
 `;
 
@@ -356,8 +341,8 @@ const Star = styled.div `
   background: #ffab07;
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   display: inline-block;
-  height: 50px;
-  width: 50px;
+  height: 20px;
+  width: 20px;
 	transition: transform 0.2s ease-in-out;
   &:hover{
 		background: gold;
@@ -368,26 +353,18 @@ const Star = styled.div `
 		}
 	}
 	@media Screen and (max-width: 768px) {
-		height: 40px;
-		width: 40px;
+		height: 45px;
+		width: 45px;
 	}
 `
 
 const Stars = styled.div `
   	display: flex;
-	width: calc(100% - 100px);
-	margin: 0px 50px;
 	flex-direction:row;
 	justify-content: space-around;
 	align-items: center;
-	@media Screen and (max-width: 768px){
-		width: calc(100% - 390px);
-    	margin: 10px 50px;
-	}
-	@media Screen and (max-width: 425px){
-		width: calc(100% - 50px);
-   	 margin: 10px 50px;
-	}
+	width: calc(100% - 80px);
+    margin: 0px 40px;
 
 `
 const ListContainer = styled.div`
