@@ -230,7 +230,7 @@ const TitleDetails = styled.p `
 `;
 
 const LineImage = styled.img `
-	width: 100%;
+	width: 100%
 	height: auto;
 `;
 const DetailsInformation = styled.div `
