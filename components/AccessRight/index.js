@@ -23,10 +23,6 @@ const AccessRight = () => {
 		<Fragment>
 			<WrapperRight>
 				<LogoImage src={imgLogo} />
-<<<<<<< HEAD
-				{/* tabs */}
-=======
->>>>>>> 485446ded1474b7812c1b63020d640651b60bd84
 				<WrapperSign>
 					<TabButton onClick={activeTab} tabDisabled={tabDisabled}>
 						Iniciar Sesión
