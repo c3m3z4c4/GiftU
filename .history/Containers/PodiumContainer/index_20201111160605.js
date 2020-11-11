@@ -3,7 +3,7 @@ import { gql, useQuery } from '@apollo/client';
 import { Context } from '../../context/index';
 import TitleComponent from "../../components/Title/index";
 import Loading from '../../components/Loading';
-import ErrorWrapper from '../../components/Errorcomponent/index';
+import ErrorWrapper from '../../components/ErrorComponent/index';
 import Link from "next/link";
 import {
     PodiumWrapper,
