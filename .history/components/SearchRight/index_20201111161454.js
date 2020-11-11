@@ -54,7 +54,7 @@ const SearchRight = () => {
 		occasion: 0,
 	});
 
-	const updateField = (event) => {
+	const updateField = (e) => {
 		useForm({
 			...form,
 			[event.target.name]: event.target.value,
