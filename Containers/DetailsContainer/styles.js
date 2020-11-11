@@ -356,8 +356,8 @@ const Star = styled.div `
   background: #ffab07;
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   display: inline-block;
-  height: 80px;
-  width: 80px;
+  height: 50px;
+  width: 50px;
 	transition: transform 0.2s ease-in-out;
   &:hover{
 		background: gold;
@@ -368,8 +368,8 @@ const Star = styled.div `
 		}
 	}
 	@media Screen and (max-width: 768px) {
-		height: 50px;
-		width: 50px;
+		height: 40px;
+		width: 40px;
 	}
 `
 

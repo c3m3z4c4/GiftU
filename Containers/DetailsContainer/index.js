@@ -29,6 +29,11 @@ import {
 	TextComent,
 	TextWrite,
 	CloseIcon,
+	Star,
+	Stars,
+	Lista,
+	ElementoLista,
+	ListContainer,
 } from "./styles";
 
 const PODIUM_QUERY = gql`
@@ -54,6 +59,11 @@ const Modal = ({ show, closeModal }) => {
 						<TextQuestion>¿Qué opinas de la recomendación?</TextQuestion>
 						<TextComent>Deja tu comentario:</TextComent>
 						<TextWrite></TextWrite>
+						<Stars>
+							<Star></Star>
+							<Star></Star>
+							<Star></Star>
+						</Stars>
 						<Link href="/">
 							<DetailButton>Quiero comprarlo</DetailButton>
 						</Link>
@@ -121,7 +131,12 @@ const DetailsContainer = () => {
 											<DetailItemContent>{gift.price}</DetailItemContent>
 										</DetailItem>
 									</DetailsInformation>
-
+									                  									<Stars>
+                    <Star />
+                    <Star />
+                    <Star />
+                    <Star />
+                  </Stars>
 									<DetailButton onClick={openModal}>
 										Compralo Fácil y rápido
 									</DetailButton>
@@ -132,6 +147,18 @@ const DetailsContainer = () => {
 					))
 				)}
 			</DetailsWrapper>
+			<div>
+				<ListContainer>
+					<TextComent>Algunos comentarios del producto.</TextComent>
+				<Lista>
+					<ElementoLista>Excelente producto.. Llego a tiempo.</ElementoLista>
+					<ElementoLista>Siguen teniendo en existencia?</ElementoLista>
+					<ElementoLista>Me ha llegado muy rapido y sin contratiempos.</ElementoLista>
+					<ElementoLista>Quiero pedir otro par de articulos mas!</ElementoLista>
+					<ElementoLista>Excelente experiencia de compra, asi tambien el vendedor estuvo al pendiente todo el tiempo.</ElementoLista>
+				</Lista>
+			</ListContainer>
+			</div>
 			<Modal show={!modal} closeModal={closenModal} />
 		</Fragment>
 	);
