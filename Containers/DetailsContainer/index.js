@@ -131,7 +131,7 @@ const DetailsContainer = () => {
 											<DetailItemContent>{gift.price}</DetailItemContent>
 										</DetailItem>
 									</DetailsInformation>
-									                  									<Stars>
+									<Stars>
                     <Star />
                     <Star />
                     <Star />

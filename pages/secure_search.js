@@ -7,9 +7,8 @@ import SearchLeft from "../components/SearchLeft";
 import {
 	SearchRight,
 	// SEND_INFORMATION,
-    // variables,
+	// variables,
 } from "../components/SearchRight";
-
 
 const Wrapper = styled.div`
 	width: 100%;
@@ -18,7 +17,7 @@ const Wrapper = styled.div`
 		flex-wrap: wrap;
 	}
 `;
-export default class SearchSecure extends Component{
+export default class SearchSecure extends Component {
 	componentDidMount() {
 		var user_data = localStorage.getItem("user_details");
 		var isLoggedIn = localStorage.getItem("isLoggedIn");
@@ -31,14 +30,13 @@ export default class SearchSecure extends Component{
 		auth.logout();
 	}
 	render() {
-	return (
-		<Fragment>
-			<Wrapper>
-				<SearchLeft />
-			 	<SearchRight />
-			</Wrapper>
-		</Fragment>
+		return (
+			<Fragment>
+				<Wrapper>
+					<SearchLeft />
+					<SearchRight />
+				</Wrapper>
+			</Fragment>
 		);
 	}
-};
-
+}

@@ -4,7 +4,7 @@ const Wrapper = styled.section`
 	margin-right: 30px;
 	@media (max-width: 425px) {
 		display: none;
-	   }
+	}
 `;
 
 const WrapperImageMenu = styled.div`
@@ -33,12 +33,12 @@ const Span = styled.span`
 const ListItems = styled.ul`
 	display: none;
 	list-style: none;
-	padding: 0px;
+	padding: 10px;
 	position: absolute;
-	width: 100px;
+	width: auto;
 	text-align: right;
 	margin: 0px 0px 0px -50px;
-	background-color: #9e9595;
+	background-color: #2a2220;
 	min-width: 130px;
 	${Wrapper}:hover & {
 		display: block;
@@ -46,14 +46,15 @@ const ListItems = styled.ul`
 `;
 
 const Item = styled.li`
-	margin: 10px;
+	margin: 5px;
 `;
 
 const Anchor = styled.a`
 	color: #ffab07;
+	font-size: 20px;
 	text-decoration: none;
 	font-family: Quicksand;
-	cursor:pointer;
+	cursor: pointer;
 	${Item}:hover & {
 		color: white;
 	}
@@ -62,18 +63,17 @@ const Anchor = styled.a`
 const MenuButton = styled.button`
 	background: transparent;
 	box-shadow: none;
-	font-size: 15px;
+	font-size: 20px;
 	border: 0;
-	outline:none;
+	outline: none;
 	color: #ffab07;
 	text-decoration: none;
 	font-family: Quicksand;
-	cursor:pointer;
+	cursor: pointer;
 	${Item}:hover & {
 		color: white;
 	}
-`
-
+`;
 
 export {
 	Wrapper,
@@ -84,5 +84,5 @@ export {
 	ListItems,
 	Item,
 	Anchor,
-	MenuButton
+	MenuButton,
 };

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-const WrapperView = styled.div `
+const WrapperView = styled.div`
 	display: flex;
 	width: 100vw;
 	background: rgba(196, 196, 196, 0.6);
@@ -10,10 +10,10 @@ const WrapperView = styled.div `
 	top: 0;
 `;
 
-const WrapperModal = styled.div `
+const WrapperModal = styled.div`
 	min-width: 40vw;
 	min-height: 320px;
-	box-shadow: 2px 10px 15px 0px rgba(0,0,0,0.17);
+	box-shadow: 2px 10px 15px 0px rgba(0, 0, 0, 0.17);
 	background: white;
 	border-radius: 30px;
 	@media (max-width: 768px) {

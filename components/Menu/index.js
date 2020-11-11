@@ -41,14 +41,12 @@ export default class Nav extends React.Component {
 						</Item>
 						<Item>
 							<Link href="/about">
-								<Anchor>
-									Nosot<Span>ros</Span>
-								</Anchor>
+								<Anchor>Nosotros</Anchor>
 							</Link>
 						</Item>
 						<Item>
 							<MenuButton onClick={() => this.handleLogout()}>
-								Cerrar <Span>Sesión</Span>
+								Finalizar <Span>Sesión</Span>
 							</MenuButton>
 						</Item>
 					</ListItems>

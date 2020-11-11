@@ -27,7 +27,7 @@ const WrapperCarousel = styled.div`
 	padding-bottom: 10px;
 	overflow: scroll;
 	@media (max-width: 425px) {
-		width: 100%
+		width: 100%;
 	}
 `;
 
@@ -41,7 +41,7 @@ const CarouselItem = styled.div`
 	cursor: pointer;
 	box-shadow: 3px 5px 5px 1px rgba(0, 0, 0, 0.17);
 	@media (max-width: 425px) {
-		width: 50%
+		width: 50%;
 	}
 `;
 
@@ -52,7 +52,7 @@ const Item = styled.img`
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
-    background: white;
+	background: white;
 `;
 
 const Span = styled.span`

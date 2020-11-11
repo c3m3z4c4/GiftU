@@ -1,8 +1,4 @@
-import React from 'react'
-import { Button } from './styles'
+import React from "react";
+import { Button } from "./styles";
 
-
-
-export const BaseButton = props => <Button>{props.title}</Button>
-
-
+export const BaseButton = (props) => <Button>{props.title}</Button>;
