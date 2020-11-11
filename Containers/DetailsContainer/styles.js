@@ -163,7 +163,7 @@ const MainImageContainer = styled.div `
 `;
 const MainImage = styled.img `
 	width: 100%;
-	height: auto;
+	height:100%;
 	object-fit: contain;
 `;
 
@@ -188,6 +188,7 @@ const DecorativeImage = styled.img `
 
 const InformationContainer = styled.div `
 	height: auto;
+	width: 80%;
 	padding: 16px;
 	background: rgba(255, 171, 7, 0.1);
 	display: flex;

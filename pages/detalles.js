@@ -75,9 +75,8 @@ const DetallesFake = () => {
 	};
 
 	return (
-		<Fragment>
+<Fragment>
       <DetailsWrapper>
-        
 		<LeftDetails>
 			<MainImageContainer>
 				<MainImage src="/images/fotoFrancisco.jpg" />
@@ -122,7 +121,7 @@ const DetallesFake = () => {
 			<Slider />
 		</RightDetails>
 
-		
+
 		</DetailsWrapper>
 			<Modal show={!modal} closeModal={closenModal} />
 		</Fragment>
