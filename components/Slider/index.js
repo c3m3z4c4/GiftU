@@ -18,7 +18,7 @@ const Slider = () => {
 			<Wrapper>
 				<Text>
 					SUGE<Span>R</Span>ENCIAS <br />
-					SIMILA<Span primary>R</Span>ES
+					POD<Span primary>I</Span>UM
 				</Text>
 				<WrapperCarousel>
 					<CarouselItem>

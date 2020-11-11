@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Loading from '../../components/Loading';
 import Link from "next/link";
 import ErrorWrapper from '../../components/Errorcomponent/index';
-// import Slider from "../../components/Slider";
+import Slider from "../../components/Slider";
 
 import {
 	DetailsWrapper,
@@ -34,9 +34,6 @@ import {
 	CloseIcon,
 	Star,
 	Stars,
-	Lista,
-	ElementoLista,
-	ListContainer,
 } from "./styles";
 
 const PODIUM_QUERY = gql`
@@ -48,7 +45,7 @@ query GetHistory($id:ID!){
 }
 `;
 
-const Modal = ({ show, closeModal }) => {
+const Modal = ({ show, closeModal,url }) => {
 	return show ? (
 		<Fragment>
 			<WrapperView>
@@ -62,12 +59,7 @@ const Modal = ({ show, closeModal }) => {
 						<TextQuestion>¿Qué opinas de la recomendación?</TextQuestion>
 						<TextComent>Deja tu comentario:</TextComent>
 						<TextWrite></TextWrite>
-						<Stars>
-							<Star></Star>
-							<Star></Star>
-							<Star></Star>
-						</Stars>
-						<Link href="/">
+						<Link href={url}>
 							<DetailButton>Quiero comprarlo</DetailButton>
 						</Link>
 					</WrapperInfo>
@@ -88,10 +80,13 @@ const DetailsContainer = () => {
 			notifyOnNetworkStatusChange: true,
 		}
 	);
+
 	if (error) return <ErrorWrapper>NO HAY DETALLES POR EL MOMENTO </ErrorWrapper>;
-      if (loading) return <Loading />
+    if (loading) return <Loading />
+
 	const { products } = data.history.podium;
 	let podiumProducts = [];
+
 	try {
 	  podiumProducts = JSON.parse(products);
 	} catch(error) {
@@ -113,6 +108,7 @@ const DetailsContainer = () => {
 	} = useRouter();
 	const giftIndex = giftId - 1;
 
+	console.log>('COSOOOOOOSSS',podiumProducts);
 	return (
 		<Fragment>
 			<DetailsWrapper>
@@ -121,54 +117,56 @@ const DetailsContainer = () => {
 				) : (
 					podiumProducts[giftIndex].map((gift) => (
 						<>
-							<LeftDetails>
-								<MainImageContainer>
-									<MainImage src={gift.img} />
-									<DecorativeImage src="/images/decataveDetails.png" />
-								</MainImageContainer>
-							</LeftDetails>
-							<RightDetails>
-								<InformationContainer>
-									<TitleDetails>{gift.name}</TitleDetails>
-									<LineImage src="/images/lines.png" />
-
-									<DetailsInformation>
-										<DetailItem>
-											<DetailItemTitle>
-												PRE<ColorLetter blue>C</ColorLetter>IO
-											</DetailItemTitle>
-											<DetailItemContent>{gift.price}</DetailItemContent>
-										</DetailItem>
-									</DetailsInformation>
-									<Stars>
-                    <Star />
-                    <Star />
-                    <Star />
-                    <Star />
-                  </Stars>
-									<DetailButton onClick={openModal}>
-										Compralo Fácil y rápido
-									</DetailButton>
-								</InformationContainer>
-								{/* <Slider /> */}
-							</RightDetails>
+						<LeftDetails>
+							<MainImageContainer>
+								<MainImage src={gift.img} />
+								<DecorativeImage src="/images/decataveDetails.png" />
+							</MainImageContainer>
+						</LeftDetails>
+						<RightDetails>
+							<InformationContainer>
+								<TitleDetails>{gift.name}</TitleDetails>
+								<LineImage src="/images/lines.png" />
+								<DetailsInformation>
+									<DetailItem>
+										<DetailItemTitle>
+											PRE<ColorLetter blue>C</ColorLetter>IO
+										</DetailItemTitle>
+										<DetailItemContent>
+											{gift.price}
+										</DetailItemContent>
+									</DetailItem>
+									<DetailItem>
+										<DetailItemTitle>
+											RAT<ColorLetter orange>I</ColorLetter>NG
+										</DetailItemTitle>
+										<DetailItemContent>
+											<Stars>
+												{Array.from(Array(5),(e,i) => <Star />)}
+											</Stars>
+										</DetailItemContent>
+									</DetailItem>
+									<DetailItem>
+										<DetailItemTitle>
+											<ColorLetter blue>+</ColorLetter> INFOR<ColorLetter>M</ColorLetter>ACIÓN
+										</DetailItemTitle>
+										<DetailItemContent>New implementations</DetailItemContent>
+									</DetailItem>
+									<Link href="/">
+										<p>¡Intenta de nuevo!</p>
+									</Link>
+								</DetailsInformation>
+								<DetailButton onClick={openModal}>
+									¡Compralo!
+								</DetailButton>
+							</InformationContainer>
+							<Slider />
+						</RightDetails>
+						<Modal url={gift.url} show={!modal} closeModal={closenModal} />	
 						</>
 					))
 				)}
 			</DetailsWrapper>
-			<div>
-				<ListContainer>
-					<TextComent>Algunos comentarios del producto.</TextComent>
-				<Lista>
-					<ElementoLista>Excelente producto.. Llego a tiempo.</ElementoLista>
-					<ElementoLista>Siguen teniendo en existencia?</ElementoLista>
-					<ElementoLista>Me ha llegado muy rapido y sin contratiempos.</ElementoLista>
-					<ElementoLista>Quiero pedir otro par de articulos mas!</ElementoLista>
-					<ElementoLista>Excelente experiencia de compra, asi tambien el vendedor estuvo al pendiente todo el tiempo.</ElementoLista>
-				</Lista>
-			</ListContainer>
-			</div>
-			<Modal show={!modal} closeModal={closenModal} />
 		</Fragment>
 	);
 };

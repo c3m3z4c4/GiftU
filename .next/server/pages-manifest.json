@@ -1,7 +1,8 @@
 {
-  "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
-  "/_error": "pages/_error.js",
-  "/search": "pages/search.js",
-  "/podium": "pages/podium.js"
+    "/_app": "pages/_app.js",
+    "/_document": "pages/_document.js",
+    "/_error": "pages/_error.js",
+    "/gifts/[giftId]": "pages/gifts/[giftId].js",
+    "/search": "pages/search.js",
+    "/": "pages/index.js"
 }
