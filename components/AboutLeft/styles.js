@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Wrapper = styled.div`
+const Wrapper = styled.div `
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -13,13 +13,13 @@ const Wrapper = styled.div`
 	
 `;
 
-const WrapperLink = styled.div`
-	width: 100%;
+const WrapperLink = styled.div `
+	width: 2%;
 	z-index: 30;
 
 `;
 
-const WrapperLeft = styled.div`
+const WrapperLeft = styled.div `
 	width: 50%;
 	@media (max-width: 768px) {
 		width: 100%;
@@ -28,7 +28,7 @@ const WrapperLeft = styled.div`
 	}
 `;
 
-const ImageAbout = styled.img`
+const ImageAbout = styled.img `
 	width: 200px;
 	height: 200px;
 	border-radius: 50%;
@@ -44,7 +44,7 @@ const ImageAbout = styled.img`
 	}
 `;
 
-const WrapperDetails = styled.div`
+const WrapperDetails = styled.div `
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -53,7 +53,7 @@ const WrapperDetails = styled.div`
 	height: 200px;
 `;
 
-const TitleDetails = styled.h2`
+const TitleDetails = styled.h2 `
 	margin-bottom: 0;
 	text-align: center;
 	color: black;
@@ -65,7 +65,7 @@ const TitleDetails = styled.h2`
 	}
 `;
 
-const TitleRole = styled.h2`
+const TitleRole = styled.h2 `
 	margin-top: 0;
 	text-align: center;
 	color: black;
@@ -77,7 +77,7 @@ const TitleRole = styled.h2`
 	}
 `;
 
-const GitHub = styled.a`
+const GitHub = styled.a `
 	font-size: 20px;
 	color: black;
 	text-decoration: none;
@@ -92,7 +92,7 @@ const GitHub = styled.a`
 	}
 `;
 
-const LinkedIn = styled.a`
+const LinkedIn = styled.a `
 	font-size: 20px;
 	color: black;
 	text-decoration: none;
@@ -107,13 +107,13 @@ const LinkedIn = styled.a`
 `;
 
 export {
-	Wrapper,
-	WrapperLink,
-	WrapperLeft,
-	ImageAbout,
-	WrapperDetails,
-	TitleDetails,
-	TitleRole,
-	GitHub,
-	LinkedIn,
+    Wrapper,
+    WrapperLink,
+    WrapperLeft,
+    ImageAbout,
+    WrapperDetails,
+    TitleDetails,
+    TitleRole,
+    GitHub,
+    LinkedIn,
 };
