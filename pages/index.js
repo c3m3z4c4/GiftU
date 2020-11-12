@@ -3,6 +3,8 @@ import { HomeWrapper } from "../components/Main/styles";
 import Header from "../components/Header";
 import Main from "../components/Main";
 import Footer from "../components/Footer";
+import CustomChatbot from "../components/chatbot/CustomChatbot"
+
 
 const image = "images/footer.png";
 
@@ -11,12 +13,14 @@ const App = () => {
 		<HomeWrapper>
 			<Header />
 			<Main />
+			<CustomChatbot />
 			<Footer
 				text="¡NOSOTROS TE AYUDAMOS!"
 				loginText="Inicia sesión"
 				footerImage={image}
-				altImage="Demo"
-			/>
+				altImage="Demo">
+			</Footer>
+			
 		</HomeWrapper>
 	);
 };
