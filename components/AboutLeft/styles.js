@@ -16,7 +16,9 @@ const Wrapper = styled.div `
 const WrapperLink = styled.div `
 	width: 2%;
 	z-index: 30;
-
+	@media(max-width: 425px){
+		width: 100%;
+	}
 `;
 
 const WrapperLeft = styled.div `
