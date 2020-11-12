@@ -26,7 +26,6 @@ const LogoName = styled.img`
 	&:hover {
 		transform: scale(1.4);
 		opacity: 1;
-		//box-shadow: 2px 2px 5px #ffab07;
 	}
 	&:active {
 		transform: scale(0.8);
@@ -46,7 +45,7 @@ const MainText = styled.h1`
 	text-align: center;
 	color: black;
 	font-size: 40px;
-	font-family: "Quicksand";
+	font-family: Quicksand;
 	@media (max-width: 425px) {
 		font-size: 20px;
 	}

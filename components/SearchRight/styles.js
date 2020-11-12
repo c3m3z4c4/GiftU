@@ -26,9 +26,9 @@ const WrapperForm = styled.form`
 	align-items: center;
 `;
 const Textform = styled.p`
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	font-size: 18px;
-	font-family: "Quicksand";
+	font-family: Quicksand;
 	text-align: center;
 	@media Screen and (max-width: 600px) {
 		font-size: 26px;
@@ -46,7 +46,7 @@ const WrapperGender = styled.div`
 const TextGender = styled.p`
 	text-align: center;
 	font-size: 23px;
-	font-family: "Quicksand";
+	font-family: Quicksand;
 	@media Screen and (max-width: 600px) {
 		font-size: 60px;
 	}
@@ -69,7 +69,7 @@ const WrapperOccacion = styled.div`
 const TextOccacion = styled.p`
 	text-align: center;
 	font-size: 23px;
-	font-family: "Quicksand";
+	font-family: Quicksand;
 	align-items: center;
 `;
 
@@ -78,7 +78,7 @@ const SelectOccasion = styled.select`
 	background: transparent;
 	border: none;
 	border-bottom: 2px solid rgba(135, 211, 184, 0.6);
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	font-size: 14px;
 	line-height: 17px;
 	color: #ffab07;
@@ -102,7 +102,7 @@ const TextPerfiles = styled.p`
 	justify-content: center;
 	text-align: center;
 	font-size: 23px;
-	font-family: "Quicksand";
+	font-family: Quicksand;
 	margin-right: 61px;
 	@media Screen and (max-width: 600px) {
 		font-size: 40px;
@@ -131,7 +131,7 @@ const InputRS = styled.input`
 	background: transparent;
 	border: none;
 	border-bottom: 2px solid rgba(135, 211, 184, 0.6);
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	font-size: 20px;
 	color: #ffab07;
 	margin: 10px 20px;
@@ -166,7 +166,7 @@ const BaseButton = styled.button`
 	font-size: 20px;
 	line-height: 14px;
 	letter-spacing: 0.11em;
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	color: white;
 	box-shadow: 3px 8px 5px -2px rgba(0, 0, 0, 0.07);
 	transition: transform 0.2s ease;
