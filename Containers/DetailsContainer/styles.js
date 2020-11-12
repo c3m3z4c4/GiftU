@@ -185,8 +185,8 @@ const MainImage = styled.img`
 `;
 
 const DecorativeImage = styled.img`
-	width: 50px;
-	height: 25px;
+	width: 90px;
+	height: 95px;
 	position: absolute;
 	bottom: -35px;
 	right: -45px;
@@ -250,8 +250,8 @@ const TitleDetails = styled.p`
 `;
 
 const LineImage = styled.img`
-	width: 100%;
-	height: auto;
+	width: 50px !important;
+	height: auto !important;
 `;
 const DetailsInformation = styled.div`
 	display: flex;
