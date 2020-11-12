@@ -13,6 +13,7 @@
     "apollo-link-http": "^1.5.17",
     "apollo-link-schema": "^1.2.5",
     "auth0-js": "^9.14.0",
+    "babel-plugin-styled-components": "^1.11.1",
     "graphql": "^15.4.0",
     "graphql-tag": "^2.11.0",
     "isomorphic-unfetch": "^3.1.0",
