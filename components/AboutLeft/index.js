@@ -1,11 +1,7 @@
 import React, { Fragment } from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import {
-	LogoName,
-	AncorImg,
-} from "../SearchLeft/styles";
-
+import { LogoName, AncorImg } from "../SearchLeft/styles";
 
 import {
 	Wrapper,
@@ -33,11 +29,11 @@ const AboutLeft = () => {
 	return (
 		<Fragment>
 			<WrapperLink>
-					<Link href="/">
-							<AncorImg>
-								<LogoName src={name} />
-							</AncorImg>
-					</Link>
+				<Link href="/">
+					<AncorImg>
+						<LogoName src={name} />
+					</AncorImg>
+				</Link>
 			</WrapperLink>
 			<WrapperLeft>
 				<Wrapper>
@@ -50,7 +46,10 @@ const AboutLeft = () => {
 						<GitHub href="https://github.com/sueherrera30" target="_blank">
 							Mis repositorios
 						</GitHub>
-						<LinkedIn href="https://www.linkedin.com/in/sue-herrera-443441146/" target="_blank">
+						<LinkedIn
+							href="https://www.linkedin.com/in/sue-herrera-443441146/"
+							target="_blank"
+						>
 							Más sobre mi
 						</LinkedIn>
 					</WrapperDetails>
@@ -62,8 +61,13 @@ const AboutLeft = () => {
 							Francisco Garc<Span>i</Span>a
 						</TitleDetails>
 						<TitleRole>Data Scientist</TitleRole>
-						<GitHub href="https://github.com/pmsorion" target="_blank">Mis repositorios</GitHub>
-						<LinkedIn href="http://linkedin.com/in/francisco-garcia-983304122" target="_blank">
+						<GitHub href="https://github.com/pmsorion" target="_blank">
+							Mis repositorios
+						</GitHub>
+						<LinkedIn
+							href="http://linkedin.com/in/francisco-garcia-983304122"
+							target="_blank"
+						>
 							Más sobre mi
 						</LinkedIn>
 					</WrapperDetails>
@@ -78,7 +82,10 @@ const AboutLeft = () => {
 						<GitHub href="https://github.com/cesarsalasmx" target="_blank">
 							Mis repositorios
 						</GitHub>
-						<LinkedIn href="https://www.linkedin.com/in/cesarsalasmx/" target="_blank">
+						<LinkedIn
+							href="https://www.linkedin.com/in/cesarsalasmx/"
+							target="_blank"
+						>
 							Más sobre mi
 						</LinkedIn>
 					</WrapperDetails>

@@ -18,7 +18,7 @@ const nameLogo = "../images/giftu.png";
 
 const AncorImage = styled.a`
 	cursor: pointer;
-`
+`;
 
 const WrapperTextFooter = styled.div`
 	display: flex;
@@ -27,7 +27,7 @@ const WrapperTextFooter = styled.div`
 	text-align: center;
 	height: 100%;
 	justify-content: center;
-    position: relative;
+	position: relative;
 `;
 
 const MainText = styled.h1`
@@ -42,7 +42,7 @@ const BaseFooter = styled.img`
 	height: auto;
 	width: 33vw;
 	position: absolute;
-    bottom: 0;
+	bottom: 0;
 `;
 
 const imgFooter = "../images/footerSign.png";

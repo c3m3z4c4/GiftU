@@ -10,7 +10,7 @@ import {
 	ColorLine,
 	Span,
 	LinkButton,
-	LinkLineButton
+	LinkLineButton,
 } from "./styles";
 
 import Auth from "../../lib/Auth";
@@ -55,7 +55,6 @@ export default class Main extends React.Component {
 							<LinkLineButton onClick={() => this.handleLogin()}>
 								<ColorLine />
 							</LinkLineButton>
-							
 						</Wrappergift>
 					</WrapperGifts>
 				</Wrapper>

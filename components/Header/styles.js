@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Wrapper = styled.section `
+const Wrapper = styled.section`
 	z-index: 5;
 	display: flex;
 	justify-content: space-between;
@@ -11,7 +11,7 @@ const Wrapper = styled.section `
 	}
 `;
 
-const LogoName = styled.img `
+const LogoName = styled.img`
 	padding: 10px;
 	height: 37px;
 	width: auto;
@@ -20,9 +20,9 @@ const LogoName = styled.img `
 		transform: scale(1.2);
 		opacity: 1;
 	}
-	&:active{
+	&:active {
 		transform: scale(0.8);
-		}
+	}
 `;
 
 export { Wrapper, LogoName };

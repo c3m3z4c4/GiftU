@@ -68,7 +68,7 @@ const BtnCompra = styled.button`
 	height: 34.58px;
 	background: #87d3b8;
 	border: none;
-	outline:none;
+	outline: none;
 	box-sizing: border-box;
 	border-radius: 12px;
 	transform: matrix(1, 0, 0, 1, 0, 0);

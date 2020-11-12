@@ -1,6 +1,5 @@
 // import styled from 'styled-components';
 
-
 // export const TitleText = styled.span `
 //   line-height: 30px;
 //   letter-spacing: 0.14em;
@@ -65,11 +64,11 @@
 //     .label-image__mail {
 //     transform: rotate(25deg);
 //     } */
-  
+
 // `
 
 // export const InputField = styled.input `
-  
+
 //     width: 258px;
 //     background: transparent;
 //     border: none;
@@ -79,9 +78,9 @@
 //     line-height: 17px;
 //     color: #FFAB07;
 //     padding: 10px 0;
-    
+
 //     &:focus, textarea:focus, select:focus{
 //     outline: none;
 //     }
-  
+
 //   `

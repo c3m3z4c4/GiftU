@@ -87,10 +87,10 @@ const LinkedIn = styled.a`
 	cursor: pointer;
 	transition: transform 0.2s ease-in-out;
 	&:hover {
-		color: #87D3B8;
+		color: #87d3b8;
 		transform: scale(1.2);
 		opacity: 1;
-		}
+	}
 `;
 
 export {

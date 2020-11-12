@@ -31,8 +31,13 @@ const AboutRight = () => {
 							César M<Span>e</Span>za
 						</TitleDetails>
 						<TitleRole>Fullstack Developer</TitleRole>
-						<GitHub href="https://github.com/c3m3z4" target="_blank">Mis repositorios</GitHub>
-						<LinkedIn href="https://www.linkedin.com/in/cesarmeza80/" target="_blank">
+						<GitHub href="https://github.com/c3m3z4" target="_blank">
+							Mis repositorios
+						</GitHub>
+						<LinkedIn
+							href="https://www.linkedin.com/in/cesarmeza80/"
+							target="_blank"
+						>
 							Más sobre mi
 						</LinkedIn>
 					</WrapperDetails>
@@ -47,7 +52,10 @@ const AboutRight = () => {
 						<GitHub href="https://github.com/jorgearguellles" target="_blank">
 							Mis repositorios
 						</GitHub>
-						<LinkedIn href="https://www.linkedin.com/in/jorge-argüelles-a8303056/" target="_blank">
+						<LinkedIn
+							href="https://www.linkedin.com/in/jorge-argüelles-a8303056/"
+							target="_blank"
+						>
 							Más sobre mi
 						</LinkedIn>
 					</WrapperDetails>
@@ -62,7 +70,10 @@ const AboutRight = () => {
 						<GitHub href="https://github.com/rafastaria" target="_blank">
 							Mis repositorios
 						</GitHub>
-						<LinkedIn href="https://www.linkedin.com/in/rafaellagunas/" target="_blank">
+						<LinkedIn
+							href="https://www.linkedin.com/in/rafaellagunas/"
+							target="_blank"
+						>
 							Más sobre mi
 						</LinkedIn>
 					</WrapperDetails>

@@ -7,8 +7,6 @@ const Wrapper = styled.div`
 	margin: 20px;
 `;
 
-
-
 const WrapperLink = styled.div`
 	width: 0;
 	z-index: 30;
@@ -97,12 +95,11 @@ const LinkedIn = styled.a`
 	font-family: Quicksand;
 	cursor: pointer;
 	transition: transform 0.2s ease-in-out;
-		&:hover {
-		color: #87D3B8;
+	&:hover {
+		color: #87d3b8;
 		transform: scale(1.2);
 		opacity: 1;
-
-		}
+	}
 `;
 
 export {

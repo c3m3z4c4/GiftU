@@ -8,7 +8,7 @@ const Wrapper = styled.section`
 	align-items: center;
 	justify-content: center;
 	margin-top: 50px;
-    padding: 0;
+	padding: 0;
 	@media (max-width: 425px) {
 		margin-top: 0;
 		flex-direction: column;

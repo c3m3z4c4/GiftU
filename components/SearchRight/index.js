@@ -1,9 +1,9 @@
-import React, {  useState, useContext } from "react";
-import { gql, useMutation } from '@apollo/client';
-import ErrorWrapper from '../ErrorWrapper/index';
-import {useRouter} from 'next/router';
+import React, { useState, useContext } from "react";
+import { gql, useMutation } from "@apollo/client";
+import ErrorWrapper from "../ErrorWrapper/index";
+import { useRouter } from "next/router";
 import Menu from "../Menu";
-import Loading from '../../components/Loading/index';
+import Loading from "../../components/Loading/index";
 import { Context } from "../../context/index";
 import { SelectOccasionComponent } from "./selectOccasion";
 import {
@@ -85,72 +85,71 @@ const SearchRight = () => {
 						},
 					});
 				},
-				})
+			});
 			const { id_gift_history } = mutationId.data.social_network;
 
 			await dispatch({
 				type: "RECORD_CASE",
 				payload: id_gift_history,
-				})
-			
+			});
+
 			router.push({
-				pathname: '/podium',
-			}) 	
+				pathname: "/podium",
+			});
 		} catch (error) {
 			console.log("SUPER ERROR :(");
 		}
-	};	
+	};
 
 	return (
 		<>
 			<WrapperRight>
-				{mutationLoading ? <Loading/> : null }
-				{
-					mutationError
-					? <ErrorWrapper>Upps,
-					 intenta de nuevo   :( </ErrorWrapper>
-					: <>
-					<WrappperMenu>
-						<Menu />
-					</WrappperMenu>
-					<WrapperForm onSubmit={handleSubmit}>
-						<Textform>
-							¿Cómo se <Span primary>llama </Span>esa persona{" "}
-							<Span>especial</Span> ?
-						</Textform>
-						<InputRS
-							value={form.name}
-							placeholder="nombre"
-							name="name"
-							type="text"
-							onChange={updateField}
-						/>
-						<Textform>
-							P&aacute;sanos su <Span>Facebook:</Span>
-						</Textform>
-						<WrapperLabel>
-							<LabelRS src={imgFB} />
+				{mutationLoading ? <Loading /> : null}
+				{mutationError ? (
+					<ErrorWrapper>Upps, intenta de nuevo :( </ErrorWrapper>
+				) : (
+					<>
+						<WrappperMenu>
+							<Menu />
+						</WrappperMenu>
+						<WrapperForm onSubmit={handleSubmit}>
+							<Textform>
+								¿Cómo se <Span primary>llama </Span>esa persona{" "}
+								<Span>especial</Span> ?
+							</Textform>
 							<InputRS
-								value={form.link}
-								placeholder="link"
-								name="link"
+								value={form.name}
+								placeholder="nombre"
+								name="name"
 								type="text"
 								onChange={updateField}
 							/>
-						</WrapperLabel>
+							<Textform>
+								P&aacute;sanos su <Span>Facebook:</Span>
+							</Textform>
+							<WrapperLabel>
+								<LabelRS src={imgFB} />
+								<InputRS
+									value={form.link}
+									placeholder="link"
+									name="link"
+									type="text"
+									onChange={updateField}
+								/>
+							</WrapperLabel>
 
-						<Textform>
-							¿Cuál es <Span>la</Span> ocasión?
-						</Textform>
-						<SelectOccasionComponent onChange={updateField} />
-						<WrapperButtom>
-							<BaseButton type="submit">
-								EN<Span primary>V</Span>IAR
-							</BaseButton>
-						</WrapperButtom>
-					</WrapperForm>
-			</>
-			}
+							<Textform>
+								¿Cuál es <Span>la</Span> ocasión?
+							</Textform>
+							<SelectOccasionComponent onChange={updateField} />
+							<WrapperButtom>
+								<BaseButton type="submit">
+									EN<Span primary>V</Span>IAR
+								</BaseButton>
+							</WrapperButtom>
+						</WrapperForm>
+					</>
+				)}
 			</WrapperRight>
 		</>
 	);

@@ -24,6 +24,7 @@ const Title = styled.span`
 
 const Name = styled(Title)`
 	color: #66ba9c;
+	margin: 0px 10px;
 `;
 
 const TitleWrapper = styled.div`

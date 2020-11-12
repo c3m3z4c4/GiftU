@@ -190,7 +190,7 @@ const BaseButton = styled.button`
 		height: 8vh;
 		font-size: 40px;
 		transition: transform 0.15s ease;
-		Span:hover {
+		span:hover {
 			color: ${(props) => "#87d3b8"};
 		}
 	}

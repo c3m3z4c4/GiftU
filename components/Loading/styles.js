@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { keyframes } from "styled-components";
 
-
 const Wrapper = styled.section`
 	display: flex;
 	flex-direction: column;

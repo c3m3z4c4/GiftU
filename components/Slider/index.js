@@ -1,5 +1,5 @@
 import React, { Fragment, useContext } from "react";
-import { Context } from '../../context/index';
+import { Context } from "../../context/index";
 import Link from "next/link";
 
 import {
@@ -11,10 +11,10 @@ import {
 	Span,
 } from "./styles";
 
-
-
 const Slider = () => {
-	const { state: { podium } } = useContext(Context);
+	const {
+		state: { podium },
+	} = useContext(Context);
 
 	return (
 		<Fragment>
@@ -24,19 +24,15 @@ const Slider = () => {
 					POD<Span primary>I</Span>UM
 				</Text>
 				<WrapperCarousel>
-					{
-						podium.map(product => (
+					{podium.map((product) => (
 						<CarouselItem>
-							{
-								product.map(item => (
-									<Link href="/podium">
-										<Item src={item.img} />
-									</Link> 
-								))
-							}
+							{product.map((item) => (
+								<Link href="/podium">
+									<Item src={item.img} />
+								</Link>
+							))}
 						</CarouselItem>
-						))
-					}
+					))}
 				</WrapperCarousel>
 			</Wrapper>
 		</Fragment>
