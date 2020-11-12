@@ -186,8 +186,8 @@ const MainImage = styled.img `
 `;
 
 const DecorativeImage = styled.img `
-	width: 100px;
-	height: auto;
+	width: 50px;
+	height: 25px;
 	position: absolute;
 	bottom: -35px;
 	right: -45px;
@@ -384,10 +384,7 @@ const Stars = styled.div `
 	align-items: center;
 	width: calc(100% - 80px);
     margin: 0px 40px;
-
 `
-
-
 export {
     DetailsWrapper,
     LeftDetails,
@@ -416,5 +413,5 @@ export {
     TextWrite,
     CloseIcon,
 	CommentContainer,
-	GoHome,
+	GoHome
 };

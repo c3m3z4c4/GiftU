@@ -1,6 +1,6 @@
 import React, {  useState, useContext } from "react";
 import { gql, useMutation } from '@apollo/client';
-import ErrorWrapper from '../Errorcomponent/index';
+import ErrorWrapper from '../ErrorWrapper/index';
 import {useRouter} from 'next/router';
 import Menu from "../Menu";
 import Loading from '../../components/Loading/index';
@@ -101,14 +101,13 @@ const SearchRight = () => {
 		}
 	};	
 
-
 	return (
 		<>
 			<WrapperRight>
 				{mutationLoading ? <Loading/> : null }
 				{
 					mutationError
-					? <ErrorWrapper>Upps,<br/>
+					? <ErrorWrapper>Upps,
 					 intenta de nuevo   :( </ErrorWrapper>
 					: <>
 					<WrappperMenu>

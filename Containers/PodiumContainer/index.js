@@ -4,10 +4,8 @@ import {useRouter} from 'next/router';
 import { Context } from '../../context/index';
 import TitleComponent from "../../components/Title/index";
 import Loading from '../../components/Loading';
-import ErrorWrapper from '../../components/ErrorComponent/index';
+import ErrorWrapper from '../../components/ErrorWrapper/index';
 import { LinkButton } from '../../components/Main/styles';
-import ErrorWrapper from '../../components/Errorcomponent/index';
-import Link from "next/link";
 
 import {
     PodiumWrapper,
@@ -91,8 +89,8 @@ const PodiumComponent = () => {
                             {
                             podiumProducts[2].map(product => (
                                 <>
-                                    <ImagePodium src={product.img} />
-                                        <NameComponent>
+                                    <ImagePodium src={product.img} key="" />
+                                        <NameComponent key={product.name}>
                                             {product.name}
                                         <LinkButton onClick={() => goDetails(3)}>
                                             <PlusIcon />

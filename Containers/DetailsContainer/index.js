@@ -4,7 +4,7 @@ import { gql, useQuery } from "@apollo/client";
 import { useRouter } from "next/router";
 import Loading from '../../components/Loading';
 import Link from "next/link";
-import ErrorWrapper from '../../components/ErrorComponent/index';
+import ErrorWrapper from '../../components/ErrorWrapper/index';
 import Slider from "../../components/Slider";
 
 import {
@@ -60,9 +60,12 @@ const Modal = ({ show, closeModal,url }) => {
 						<TextQuestion>¿Qué opinas de la recomendación?</TextQuestion>
 						<TextComent>Deja tu comentario:</TextComent>
 						<TextWrite></TextWrite>
-						<Link href={url} target="_blank">
-							<DetailButton>Quiero comprarlo</DetailButton>
-						</Link>
+
+							<DetailButton onClick={closeModal}>
+								<Link href={url}>
+									<a target="_blank">Quiero comprarlo</a>
+								</Link>
+							</DetailButton>
 					</WrapperInfo>
 				</WrapperModal>
 			</WrapperView>
@@ -109,7 +112,6 @@ const DetailsContainer = () => {
 	} = useRouter();
 	const giftIndex = giftId - 1;
 
-	console.log('COSOOOOOOSSS',podiumProducts);
 	return (
 		<Fragment>
 			<DetailsWrapper>

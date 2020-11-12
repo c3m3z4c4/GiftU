@@ -24,7 +24,7 @@ const SelectOccasionComponent = ({ onChange }) => {
 				{allOccasions !== undefined ? (
 					<>
 						{allOccasions.map((occasion) => (
-							<option value={occasion.id_occasion}>
+							<option key={occasion.id_occasion} value={occasion.id_occasion}>
 								{occasion.occasion_name}
 							</option>
 						))}
