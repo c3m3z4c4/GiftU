@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
-const Title = styled.span`
-	font-family: "Quicksand", sans-serif;
+const Title = styled.p`
+	font-family: Quicksand, sans-serif;
 	font-style: normal;
 	font-size: 30px;
 	line-height: 45px;

@@ -5,7 +5,7 @@ export const TitleText = styled.span`
 	letter-spacing: 0.14em;
 	font-weight: 400;
 	font-size: 24px;
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	margin: 30px 0;
 `;
 export const FormArea = styled.form`
@@ -23,7 +23,7 @@ export const inputContainer = styled.form`
 `;
 
 export const LabelComp = styled.label`
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	font-size: 14px;
 	line-height: 17px;
 	letter-spacing: 0.14em;
@@ -40,7 +40,7 @@ export const StyledText = styled.span`
 	letter-spacing: 0.14em;
 	font-weight: 400;
 	font-size: 24px;
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	margin: 30px 0;
 `;
 
@@ -50,7 +50,7 @@ export const NormalText = styled.span`
 	letter-spacing: 0.14em;
 	font-weight: 400;
 	font-size: 24px;
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	margin: 30px 0;
 
 	/*   .label-text {
@@ -71,7 +71,7 @@ export const InputField = styled.input`
 	background: transparent;
 	border: none;
 	border-bottom: 2px solid rgba(135, 211, 184, 0.6);
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	font-size: 14px;
 	line-height: 17px;
 	color: #ffab07;

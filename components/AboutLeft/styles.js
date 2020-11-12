@@ -54,7 +54,7 @@ const TitleDetails = styled.h2`
 	text-align: center;
 	color: black;
 	font-size: 30px;
-	font-family: "Quicksand";
+	font-family: Quicksand;
 	@media (max-width: 425px) {
 		font-size: 35px;
 		font-weight: 400;
@@ -66,7 +66,7 @@ const TitleRole = styled.h2`
 	text-align: center;
 	color: black;
 	font-size: 25px;
-	font-family: "Quicksand";
+	font-family: Quicksand;
 	@media (max-width: 425px) {
 		font-size: 35px;
 		font-weight: 400;

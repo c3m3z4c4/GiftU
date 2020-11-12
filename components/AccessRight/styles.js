@@ -49,7 +49,7 @@ const TabButton = styled.button`
 	font-weight: bolder;
 	background: transparent;
 	border: none;
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	font-size: 16px;
 	border-bottom: ${(props) =>
 		props.tabDisabled
@@ -113,7 +113,7 @@ const FlexInputWrapper = styled.div`
 	}
 `;
 const LabelText = styled.label`
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	color: #87d3b8;
 	margin-bottom: 1em;
 	margin-left: 1em;
@@ -136,7 +136,7 @@ const LabelInput = styled.input`
 	background: transparent;
 	border: none;
 	border-bottom: 2px solid rgba(135, 211, 184, 0.6);
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksands, sans-serif;
 	font-size: 14px;
 	line-height: 15px;
 	color: #ffab07;
@@ -152,7 +152,7 @@ const LabelInput = styled.input`
 `;
 
 const LabelTextPass = styled.label`
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	color: #87d3b8;
 	margin-bottom: 1em;
 	margin-left: 1em;
@@ -175,7 +175,7 @@ const LabelInputPass = styled.input`
 	background: transparent;
 	border: none;
 	border-bottom: 2px solid rgba(135, 211, 184, 0.6);
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	font-size: 14px;
 	line-height: 15px;
 	color: #ffab07;
@@ -204,7 +204,7 @@ const BaseButton = styled.button`
 	display: flex;
 	align-items: center;
 	letter-spacing: 0.11em;
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	display: flex;
 	justify-content: center;
 	color: white;
@@ -244,7 +244,7 @@ const FBButton = styled.a`
 	display: flex;
 	align-items: center;
 	letter-spacing: 0.11em;
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	display: flex;
 	justify-content: center;
 	color: white;
@@ -273,7 +273,7 @@ const GooButton = styled.a`
 	display: flex;
 	align-items: center;
 	letter-spacing: 0.11em;
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	display: flex;
 	justify-content: center;
 	color: #726666;

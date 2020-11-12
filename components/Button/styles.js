@@ -14,7 +14,7 @@ export const Button = styled.button`
 	display: flex;
 	align-items: center;
 	letter-spacing: 0.11em;
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	display: flex;
 	justify-content: center;
 	color: white;

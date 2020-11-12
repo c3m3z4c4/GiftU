@@ -31,7 +31,7 @@ const WrapperTextFooter = styled.div`
 `;
 
 const MainText = styled.h1`
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	font-size: 40px;
 	@media (max-width: 768px) {
 		font-size: 20px;

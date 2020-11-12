@@ -39,7 +39,7 @@ const LogoImage = styled.img`
 const Text = styled.p`
 	text-align: center;
 	font-size: 30px;
-	font-family: "Quicksand";
+	font-family: Quicksand;
 `;
 
 const Span = styled.span`

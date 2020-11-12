@@ -50,7 +50,7 @@ const WrapperInfo = styled.div`
 `;
 
 const TextQuestion = styled.p`
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	font-size: 18px;
 	@media (max-width: 768px) {
 		font-size: 14px;
@@ -64,7 +64,7 @@ const CloseIcon = styled.img`
 `;
 
 const TextComent = styled.p`
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	font-size: 18px;
 	@media (max-width: 768px) {
 		font-size: 14px;
@@ -72,7 +72,7 @@ const TextComent = styled.p`
 `;
 
 const GoHome = styled.p`
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	color: #fbcf39;
 	font-weight: 600;
 	font-size: 14px;
@@ -92,7 +92,7 @@ const TextWrite = styled.input`
 	width: 80%;
 	border: none;
 	border-bottom: 2px solid #ffab07;
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	font-size: 18px;
 	color: #ffab07;
 	padding: 10px 0;
@@ -109,7 +109,7 @@ const TextWrite = styled.input`
 `;
 
 const DetailsWrapper = styled.div`
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	width: 100%;
 	display: flex;
 	width: 100%;
@@ -395,7 +395,7 @@ const Stars = styled.div`
 `;
 export {
 	DetailsWrapper,
-	LeftDetails,
+	LeftDetails,´
 	RightDetails,
 	MainImageContainer,
 	MainImage,

@@ -60,12 +60,9 @@ const Modal = ({ show, closeModal, url }) => {
 						<TextQuestion>¿Qué opinas de la recomendación?</TextQuestion>
 						<TextComent>Deja tu comentario:</TextComent>
 						<TextWrite></TextWrite>
-
-						<DetailButton onClick={closeModal}>
-							<Link href={url}>
-								<a target="_blank">Quiero comprarlo</a>
-							</Link>
-						</DetailButton>
+						<Link href={url}>
+							<DetailButton>Quiero comprarlo</DetailButton>
+						</Link>
 					</WrapperInfo>
 				</WrapperModal>
 			</WrapperView>
