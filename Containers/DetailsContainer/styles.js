@@ -395,7 +395,7 @@ const Stars = styled.div`
 `;
 export {
 	DetailsWrapper,
-	LeftDetails,´
+	LeftDetails,
 	RightDetails,
 	MainImageContainer,
 	MainImage,
