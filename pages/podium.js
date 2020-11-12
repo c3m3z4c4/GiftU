@@ -1,8 +1,5 @@
 import React from "react";
-import {
-	PodiumComponent,
-} from "../Containers/PodiumContainer/index";
-
+import { PodiumComponent } from "../Containers/PodiumContainer/index";
 
 const PodiumPage = () => <PodiumComponent />;
 

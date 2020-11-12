@@ -1,10 +1,10 @@
 import React, { Fragment, useState, useContext } from "react";
-import { Context } from '../../context/index';
+import { Context } from "../../context/index";
 import { gql, useQuery } from "@apollo/client";
 import { useRouter } from "next/router";
-import Loading from '../../components/Loading';
+import Loading from "../../components/Loading";
 import Link from "next/link";
-import ErrorWrapper from '../../components/ErrorWrapper/index';
+import ErrorWrapper from "../../components/ErrorWrapper/index";
 import Slider from "../../components/Slider";
 
 import {
@@ -38,15 +38,15 @@ import {
 } from "./styles";
 
 const PODIUM_QUERY = gql`
-query GetHistory($id:ID!){
-  history(id:$id){
-    podium,
-    receiver_name
-  }
-}
+	query GetHistory($id: ID!) {
+		history(id: $id) {
+			podium
+			receiver_name
+		}
+	}
 `;
 
-const Modal = ({ show, closeModal,url }) => {
+const Modal = ({ show, closeModal, url }) => {
 	return show ? (
 		<Fragment>
 			<WrapperView>
@@ -61,11 +61,11 @@ const Modal = ({ show, closeModal,url }) => {
 						<TextComent>Deja tu comentario:</TextComent>
 						<TextWrite></TextWrite>
 
-							<DetailButton onClick={closeModal}>
-								<Link href={url}>
-									<a target="_blank">Quiero comprarlo</a>
-								</Link>
-							</DetailButton>
+						<DetailButton onClick={closeModal}>
+							<Link href={url}>
+								<a target="_blank">Quiero comprarlo</a>
+							</Link>
+						</DetailButton>
 					</WrapperInfo>
 				</WrapperModal>
 			</WrapperView>
@@ -74,27 +74,27 @@ const Modal = ({ show, closeModal,url }) => {
 };
 
 const DetailsContainer = () => {
-	const { state: { record } } = useContext(Context);
-	
-	const [modal, useModal] = useState(true);
-	const { loading, error, data } = useQuery(
-		PODIUM_QUERY,
-		{
-			variables: { id: record },
-			notifyOnNetworkStatusChange: true,
-		}
-	);
+	const {
+		state: { record },
+	} = useContext(Context);
 
-	if (error) return <ErrorWrapper>NO HAY DETALLES POR EL MOMENTO </ErrorWrapper>;
-    if (loading) return <Loading />
+	const [modal, useModal] = useState(true);
+	const { loading, error, data } = useQuery(PODIUM_QUERY, {
+		variables: { id: record },
+		notifyOnNetworkStatusChange: true,
+	});
+
+	if (error)
+		return <ErrorWrapper>NO HAY DETALLES POR EL MOMENTO </ErrorWrapper>;
+	if (loading) return <Loading />;
 
 	const { products } = data.history.podium;
 	let podiumProducts = [];
 
 	try {
-	  podiumProducts = JSON.parse(products);
-	} catch(error) {
-	  console.log('se murio por que no hay productos')
+		podiumProducts = JSON.parse(products);
+	} catch (error) {
+		console.log("se murio por que no hay productos");
 	}
 
 	const openModal = (e) => {
@@ -120,52 +120,55 @@ const DetailsContainer = () => {
 				) : (
 					podiumProducts[giftIndex].map((gift) => (
 						<>
-						<LeftDetails>
-							<MainImageContainer>
-								<MainImage src={gift.img} />
-								<DecorativeImage src="/images/decataveDetails.png" />
-							</MainImageContainer>
-						</LeftDetails>
-						<RightDetails>
-							<InformationContainer>
-								<TitleDetails>{gift.name}</TitleDetails>
-								<LineImage src="/images/lines.png" />
-								<DetailsInformation>
-									<DetailItem>
-										<DetailItemTitle>
-											PRE<ColorLetter blue>C</ColorLetter>IO
-										</DetailItemTitle>
-										<DetailItemContent>
-											{gift.price}
-										</DetailItemContent>
-									</DetailItem>
-									<DetailItem>
-										<DetailItemTitle>
-											RAT<ColorLetter orange>I</ColorLetter>NG
-										</DetailItemTitle>
-										<DetailItemContent>
-											<Stars>
-												{Array.from(Array(5),(e,i) => <Star />)}
-											</Stars>
-										</DetailItemContent>
-									</DetailItem>
-									<DetailItem>
-										<DetailItemTitle>
-											<ColorLetter blue>+</ColorLetter> INFOR<ColorLetter>M</ColorLetter>ACIÓN
-										</DetailItemTitle>
-										<DetailItemContent>New implementations</DetailItemContent>
-									</DetailItem>
-								</DetailsInformation>
-								<Link href="/">
+							<LeftDetails>
+								<MainImageContainer>
+									<MainImage src={gift.img} />
+									<DecorativeImage src="/images/decataveDetails.png" />
+								</MainImageContainer>
+							</LeftDetails>
+							<RightDetails>
+								<InformationContainer>
+									<TitleDetails>{gift.name}</TitleDetails>
+									<LineImage src="/images/lines.png" />
+									<DetailsInformation>
+										<DetailItem>
+											<DetailItemTitle>
+												PRE<ColorLetter blue>C</ColorLetter>IO
+											</DetailItemTitle>
+											<DetailItemContent>{gift.price}</DetailItemContent>
+										</DetailItem>
+										<DetailItem>
+											<DetailItemTitle>
+												RAT<ColorLetter orange>I</ColorLetter>NG
+											</DetailItemTitle>
+											<DetailItemContent>
+												<Stars>
+													{Array.from(Array(5), (e, i) => (
+														<Star />
+													))}
+												</Stars>
+											</DetailItemContent>
+										</DetailItem>
+										<DetailItem>
+											<DetailItemTitle>
+												<ColorLetter blue>+</ColorLetter> INFOR
+												<ColorLetter>M</ColorLetter>ACIÓN
+											</DetailItemTitle>
+											<DetailItemContent>New implementations</DetailItemContent>
+										</DetailItem>
+									</DetailsInformation>
+									<Link href="/">
 										<GoHome>¡Intenta de nuevo!</GoHome>
 									</Link>
-								<DetailButton onClick={openModal}>
-									¡Compralo!
-								</DetailButton>
-							<Modal url={gift.url} show={!modal} closeModal={closenModal} />	
-							</InformationContainer>
-							<Slider />
-						</RightDetails>
+									<DetailButton onClick={openModal}>¡Compralo!</DetailButton>
+									<Modal
+										url={gift.url}
+										show={!modal}
+										closeModal={closenModal}
+									/>
+								</InformationContainer>
+								<Slider />
+							</RightDetails>
 						</>
 					))
 				)}

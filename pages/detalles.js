@@ -34,8 +34,6 @@ import {
 	ListContainer,
 } from "../Containers/DetailsContainer/styles";
 
-
-
 const Modal = ({ show, closeModal }) => {
 	return show ? (
 		<Fragment>
@@ -75,54 +73,53 @@ const DetallesFake = () => {
 	};
 
 	return (
-<Fragment>
-      <DetailsWrapper>
-		<LeftDetails>
-			<MainImageContainer>
-				<MainImage src="/images/fotoFrancisco.jpg" />
-				<DecorativeImage src="/images/decataveDetails.png" />
-			</MainImageContainer>
-		</LeftDetails>
-		<RightDetails>
-			<InformationContainer>
-				<TitleDetails>Esta es una sopa superfantabulosa super califra</TitleDetails>
-				<LineImage src="/images/lines.png" />
-				<DetailsInformation>
-					<DetailItem>
-						<DetailItemTitle>
-							PRE<ColorLetter blue>C</ColorLetter>IO
-						</DetailItemTitle>
-						<DetailItemContent>
-							$234.00
-						</DetailItemContent>
-					</DetailItem>
-					<DetailItem>
-						<DetailItemTitle>
-							RAT<ColorLetter orange>I</ColorLetter>NG
-						</DetailItemTitle>
-						<DetailItemContent>
-							<Stars>
-								{Array.from(Array(5),(e,i) => <Star />)}
-							</Stars>
-						</DetailItemContent>
-					</DetailItem>
-					<DetailItem>
-						<DetailItemTitle>
-							<ColorLetter blue>+</ColorLetter> INFOR<ColorLetter>M</ColorLetter>ACIÓN
-						</DetailItemTitle>
-						<DetailItemContent>Lorem ipsum sit amet</DetailItemContent>
-					</DetailItem>
-					<p>¡Intenta de nuevo!</p>
-				</DetailsInformation>
-				<DetailButton onClick={openModal}>
-					¡Compralo!
-				</DetailButton>
-			</InformationContainer>
-			<Slider />
-		</RightDetails>
-
-
-		</DetailsWrapper>
+		<Fragment>
+			<DetailsWrapper>
+				<LeftDetails>
+					<MainImageContainer>
+						<MainImage src="/images/fotoFrancisco.jpg" />
+						<DecorativeImage src="/images/decataveDetails.png" />
+					</MainImageContainer>
+				</LeftDetails>
+				<RightDetails>
+					<InformationContainer>
+						<TitleDetails>
+							Esta es una sopa superfantabulosa super califra
+						</TitleDetails>
+						<LineImage src="/images/lines.png" />
+						<DetailsInformation>
+							<DetailItem>
+								<DetailItemTitle>
+									PRE<ColorLetter blue>C</ColorLetter>IO
+								</DetailItemTitle>
+								<DetailItemContent>$234.00</DetailItemContent>
+							</DetailItem>
+							<DetailItem>
+								<DetailItemTitle>
+									RAT<ColorLetter orange>I</ColorLetter>NG
+								</DetailItemTitle>
+								<DetailItemContent>
+									<Stars>
+										{Array.from(Array(5), (e, i) => (
+											<Star />
+										))}
+									</Stars>
+								</DetailItemContent>
+							</DetailItem>
+							<DetailItem>
+								<DetailItemTitle>
+									<ColorLetter blue>+</ColorLetter> INFOR
+									<ColorLetter>M</ColorLetter>ACIÓN
+								</DetailItemTitle>
+								<DetailItemContent>Lorem ipsum sit amet</DetailItemContent>
+							</DetailItem>
+							<p>¡Intenta de nuevo!</p>
+						</DetailsInformation>
+						<DetailButton onClick={openModal}>¡Compralo!</DetailButton>
+					</InformationContainer>
+					<Slider />
+				</RightDetails>
+			</DetailsWrapper>
 			<Modal show={!modal} closeModal={closenModal} />
 		</Fragment>
 	);

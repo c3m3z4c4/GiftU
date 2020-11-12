@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyle = createGlobalStyle `
+const GlobalStyle = createGlobalStyle`
   #__next {
       min-height: 100vh;
       display: grid;
@@ -14,6 +14,6 @@ const GlobalStyle = createGlobalStyle `
       font-family: 'Balsamiq Sans', cursive;
       font-size: 18px;
     } */
-`
+`;
 
 export default GlobalStyle;

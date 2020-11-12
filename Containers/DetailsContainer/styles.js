@@ -24,33 +24,32 @@ const WrapperModal = styled.div`
 	}
 `;
 
-const WrapperBtnClose = styled.div `
+const WrapperBtnClose = styled.div`
 	display: flex;
 	justify-content: flex-end;
 	min-height: 50px;
 	align-items: center;
-    padding: 5px 20px;
-
+	padding: 5px 20px;
 `;
 
-const BtnClose = styled.button `
+const BtnClose = styled.button`
 	background-color: transparent;
 	border: none;
 	height: 30px;
 	width: 30px;
 	border-radius: 50%;
-    padding: 8px;
+	padding: 8px;
 `;
 
-const WrapperInfo = styled.div `
+const WrapperInfo = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	height: 300px;
-    justify-content: space-between;
+	justify-content: space-between;
 `;
 
-const TextQuestion = styled.p `
+const TextQuestion = styled.p`
 	font-family: "Quicksand", sans-serif;
 	font-size: 18px;
 	@media (max-width: 768px) {
@@ -58,13 +57,13 @@ const TextQuestion = styled.p `
 	}
 `;
 
-const CloseIcon = styled.img `
+const CloseIcon = styled.img`
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
 `;
 
-const TextComent = styled.p `
+const TextComent = styled.p`
 	font-family: "Quicksand", sans-serif;
 	font-size: 18px;
 	@media (max-width: 768px) {
@@ -72,13 +71,13 @@ const TextComent = styled.p `
 	}
 `;
 
-const GoHome = styled.p `
+const GoHome = styled.p`
 	font-family: "Quicksand", sans-serif;
 	color: #fbcf39;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 14px;
+	cursor: pointer;
+	letter-spacing: 1px;
 	text-transform: uppercase;
 	&:hover {
 		text-decoration: underline;
@@ -89,7 +88,7 @@ const GoHome = styled.p `
 	}
 `;
 
-const TextWrite = styled.input `
+const TextWrite = styled.input`
 	width: 80%;
 	border: none;
 	border-bottom: 2px solid #ffab07;
@@ -103,13 +102,13 @@ const TextWrite = styled.input `
 	select:focus {
 		outline: none;
 	}
-	@media (max-width:425px){
+	@media (max-width: 425px) {
 		width: 80%;
-    	height: 16%;
+		height: 16%;
 	}
 `;
 
-const DetailsWrapper = styled.div `
+const DetailsWrapper = styled.div`
 	font-family: "Quicksand", sans-serif;
 	width: 100%;
 	display: flex;
@@ -120,8 +119,8 @@ const DetailsWrapper = styled.div `
 		flex-wrap: wrap;
 	}
 `;
-const LeftDetails = styled.div `
-    width: 50%;
+const LeftDetails = styled.div`
+	width: 50%;
 	display: flex;
 	height: 100vh;
 	justify-content: center;
@@ -134,24 +133,24 @@ const LeftDetails = styled.div `
 	}
 	@media (max-width: 425px) {
 		padding: 0;
-	}	    
+	}
 `;
 const RightDetails = styled(LeftDetails)`
 	background: #ffffff;
 	width: 50%;
-	height:100vh;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	@media screen and (max-width: 768px) {
 		width: 100%;
-	    height: 100%;
+		height: 100%;
 		padding: 0;
-	}	
+	}
 `;
 
-const MainImageContainer = styled.div `
+const MainImageContainer = styled.div`
 	width: 480px;
 	height: 400px;
 	position: relative;
@@ -179,13 +178,13 @@ const MainImageContainer = styled.div `
 		padding: 20px 0;
 	}
 `;
-const MainImage = styled.img `
+const MainImage = styled.img`
 	width: 100%;
-	height:100%;
+	height: 100%;
 	object-fit: contain;
 `;
 
-const DecorativeImage = styled.img `
+const DecorativeImage = styled.img`
 	width: 50px;
 	height: 25px;
 	position: absolute;
@@ -201,10 +200,9 @@ const DecorativeImage = styled.img `
 		bottom: -15px;
 		right: -25px;
 	}
-	
 `;
 
-const InformationContainer = styled.div `
+const InformationContainer = styled.div`
 	height: auto;
 	width: 80%;
 	padding: 16px;
@@ -216,7 +214,7 @@ const InformationContainer = styled.div `
 	@media (max-width: 768px) {
 		width: 100%;
 		padding: 0px;
-		height:100%;
+		height: 100%;
 	}
 	@media (max-width: 425px) {
 		width: 100%;
@@ -224,7 +222,7 @@ const InformationContainer = styled.div `
 	}
 `;
 
-const CommentContainer = styled.div `
+const CommentContainer = styled.div`
 	width: 44%;
 	height: 40%;
 	background: rgba(255, 171, 7, 0.1);
@@ -237,7 +235,7 @@ const CommentContainer = styled.div `
 		height: 40vh;
 	}
 `;
-const TitleDetails = styled.p `
+const TitleDetails = styled.p`
 	font-family: Quicksand;
 	font-style: normal;
 	text-transform: uppercase;
@@ -251,11 +249,11 @@ const TitleDetails = styled.p `
 	font-weight: bold;
 `;
 
-const LineImage = styled.img `
+const LineImage = styled.img`
 	width: 100%;
 	height: auto;
 `;
-const DetailsInformation = styled.div `
+const DetailsInformation = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -263,14 +261,14 @@ const DetailsInformation = styled.div `
 	height: auto;
 	margin: 20px;
 	justify-content: center;
-	@media Screen and (max-width: 768px){
+	@media Screen and (max-width: 768px) {
 		width: 100%;
 	}
-	@media Screen and (max-width: 425px){
+	@media Screen and (max-width: 425px) {
 		width: 100%;
 	}
 `;
-const DetailItem = styled.div `
+const DetailItem = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -283,10 +281,9 @@ const DetailItem = styled.div `
 		flex-wrap: wrap;
 		justify-content: space-between;
 	}
-	`;
+`;
 
-
-const DetailItemTitle = styled.p `
+const DetailItemTitle = styled.p`
 	font-family: Quicksand;
 	font-style: normal;
 	font-weight: 500;
@@ -297,12 +294,12 @@ const DetailItemTitle = styled.p `
 	text-align: center;
 	@media Screen and (max-width: 425px) {
 		font-weight: 300;
-		margin:0;
+		margin: 0;
 		width: 100%;
 		font-size: 12px;
-		}
+	}
 `;
-const DetailItemContent = styled.p `
+const DetailItemContent = styled.p`
 	font-family: Quicksand;
 	font-style: normal;
 	font-weight: normal;
@@ -311,15 +308,15 @@ const DetailItemContent = styled.p `
 	width: calc(100% / 2);
 	text-align: center;
 	@media Screen and (max-width: 425px) {
-		margin:0;
+		margin: 0;
 		width: 100%;
 		font-size: 10px;
-		}
+	}
 `;
-const DetailButton = styled.button `
+const DetailButton = styled.button`
 	font-family: Quicksand;
 	font-style: normal;
-	outline:none;
+	outline: none;
 	max-width: 280px;
 	max-height: 80px;
 	font-weight: 500;
@@ -342,76 +339,87 @@ const DetailButton = styled.button `
 		transform: scale(1.1);
 		opacity: 1;
 		&:active {
-		transform: scale(0.9);
+			transform: scale(0.9);
 		}
 	}
 	@media Screen and (max-width: 768px) {
 		margin-bottom: 10px;
 		padding: 12px;
-		font-size: 12px;	
+		font-size: 12px;
 	}
 `;
 
-const ColorLetter = styled.span `
+const ColorLetter = styled.span`
 	color: ${(props) => (props.blue ? "#87D3B8" : "#FFAB07")};
 `;
 
-const Star = styled.div `
-  background: #ffab07;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  display: inline-block;
-  height: 20px;
-  width: 20px;
+const Star = styled.div`
+	background: #ffab07;
+	clip-path: polygon(
+		50% 0%,
+		61% 35%,
+		98% 35%,
+		68% 57%,
+		79% 91%,
+		50% 70%,
+		21% 91%,
+		32% 57%,
+		2% 35%,
+		39% 35%
+	);
+	display: inline-block;
+	height: 20px;
+	width: 20px;
 	transition: transform 0.2s ease-in-out;
-  &:hover{
+	&:hover {
 		background: gold;
 		transform: scale(1.1);
 		opacity: 1;
 		&:active {
-		transform: scale(0.9);
+			transform: scale(0.9);
 		}
 	}
 	@media Screen and (max-width: 768px) {
 		height: 15px;
 		width: 15px;
 	}
-`
+`;
 
-const Stars = styled.div `
-  	display: flex;
-	flex-direction:row;
+const Stars = styled.div`
+	display: flex;
+	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
 	width: calc(100% - 80px);
-    margin: 0px 40px;
-`
+	margin: 0px 40px;
+`;
 export {
-    DetailsWrapper,
-    LeftDetails,
-    RightDetails,
-    MainImageContainer,
-    MainImage,
-    DecorativeImage,
-    InformationContainer,
-    ColorLetter,
-    TitleDetails,
-    LineImage,
-    DetailsInformation,
-    DetailItem,
-    DetailItemTitle,
-    DetailItemContent,
-    DetailButton,
-    WrapperView,
-    WrapperModal,
-    WrapperBtnClose,
-    BtnClose,
-    WrapperInfo,
-    TextQuestion,
-    Stars,
-    Star,
-    TextComent,
-    TextWrite,
-    CloseIcon,
+	DetailsWrapper,
+	LeftDetails,
+	RightDetails,
+	MainImageContainer,
+	MainImage,
+	DecorativeImage,
+	InformationContainer,
+	ColorLetter,
+	TitleDetails,
+	LineImage,
+	DetailsInformation,
+	DetailItem,
+	DetailItemTitle,
+	DetailItemContent,
+	DetailButton,
+	WrapperView,
+	WrapperModal,
+	WrapperBtnClose,
+	BtnClose,
+	WrapperInfo,
+	TextQuestion,
+	Stars,
+	Star,
+	TextComent,
+	TextWrite,
+	CloseIcon,
 	CommentContainer,
-	GoHome
+	GoHome,
 };
