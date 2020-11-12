@@ -6,8 +6,6 @@ import {
 	WrapperSign,
 	TabButton,
 } from "./styles";
-import SignInForm from "../SignInForm";
-import SignUpForm from "../SignUpForm";
 
 const AccessRight = () => {
 	const [tabDisabled, useTabState] = useState(false);
