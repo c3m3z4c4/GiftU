@@ -3,15 +3,22 @@ import styled from "styled-components";
 const Wrapper = styled.section`
 	margin-right: 30px;
 	@media (max-width: 425px) {
-		display: none;
+		width:100%;
+	}
+		@media (max-width: 425px){
+		display:flex;
+		align-items: center;
+		justify-content:center;
+		margin-right:0;
 	}
 `;
 
 const WrapperImageMenu = styled.div`
-	margin-right: 8px;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	cursor: pointer;
+	
 `;
 
 const LogoImage = styled.img`
@@ -42,7 +49,11 @@ const ListItems = styled.ul`
 	min-width: 130px;
 	${Wrapper}:hover & {
 		display: block;
+	};
+	@media (max-width:425px){
+		margin: 59px -42px 0px -45px;
 	}
+
 `;
 
 const Item = styled.li`

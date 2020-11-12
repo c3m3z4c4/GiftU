@@ -24,6 +24,9 @@ const WrapperForm = styled.form`
 	flex-direction: column;
 	height: 80%;
 	align-items: center;
+		@media (max-width: 425px) {
+		height: 90%;
+	}
 `;
 const Textform = styled.p`
 	font-family: Quicksand, sans-serif;
@@ -31,8 +34,8 @@ const Textform = styled.p`
 	font-family: Quicksand;
 	text-align: center;
 	@media Screen and (max-width: 600px) {
-		font-size: 26px;
-		max-width: 60vw;
+		font-size: 18px;
+		max-width: 70%;
 		width: 100%;
 	}
 `;
@@ -188,7 +191,7 @@ const BaseButton = styled.button`
 	@media Screen and (max-width: 600px) {
 		width: 50vw;
 		height: 8vh;
-		font-size: 40px;
+		font-size: 20px;
 		transition: transform 0.15s ease;
 		span:hover {
 			color: ${(props) => "#87d3b8"};

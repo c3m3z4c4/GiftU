@@ -5,22 +5,26 @@ const Wrapper = styled.div`
 	justify-content: center;
 	align-items: center;
 	margin: 20px;
+		@media (max-width: 768px) {
+		width: 100%;
+		height: 30%;
+		flex-direction: column;
+	}
+	
 `;
 
 const WrapperLink = styled.div`
-	width: 0;
+	width: 100%;
 	z-index: 30;
-	@media (max-width: 768px) {
-		width: 100%;
-		height: 30vh;
-	}
+
 `;
 
 const WrapperLeft = styled.div`
 	width: 50%;
 	@media (max-width: 768px) {
 		width: 100%;
-		height: 30vh;
+		height: 100%;
+		flex-direction:column;
 	}
 `;
 
@@ -35,8 +39,8 @@ const ImageAbout = styled.img`
 		height: 150px;
 	}
 	@media (max-width: 425px) {
-		width: 60px;
-		height: 60px;
+		width: 220px;
+		height: 220px;
 	}
 `;
 
@@ -56,7 +60,7 @@ const TitleDetails = styled.h2`
 	font-size: 30px;
 	font-family: Quicksand;
 	@media (max-width: 425px) {
-		font-size: 35px;
+		font-size: 22px;
 		font-weight: 400;
 	}
 `;
@@ -68,7 +72,7 @@ const TitleRole = styled.h2`
 	font-size: 25px;
 	font-family: Quicksand;
 	@media (max-width: 425px) {
-		font-size: 35px;
+		font-size: 22px;
 		font-weight: 400;
 	}
 `;

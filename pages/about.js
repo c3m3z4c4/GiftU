@@ -13,6 +13,11 @@ const FooterImg = styled.img`
 
 const Wrapper = styled.div`
 	display: flex;
+	@media (max-width:425px){
+		flex-direction:column;
+		align-items: center;
+    justify-content: center;
+	}
 `;
 
 const About = () => {
