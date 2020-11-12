@@ -9,7 +9,7 @@ const Wrapper = styled.div`
 `;
 
 const PodiumWrapper = styled.div`
-	font-family: "Quicksand", sans-serif;
+	font-family: Quicksand, sans-serif;
 	width: 100%;
 	display: flex;
 	justify-content: flex-end;
@@ -19,7 +19,7 @@ const PodiumContainer = styled.div`
 	width: 80%;
 	display: flex;
 	align-items: flex-end;
-	justify-content: space-bewteen;
+	justify-content: space-between;
 	@media (max-width: 768px) {
 		width: 100%;
 		flex-direction: column-reverse;
