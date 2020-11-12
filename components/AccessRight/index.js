@@ -29,7 +29,7 @@ const AccessRight = () => {
 						Registrarse
 					</TabButton>
 				</WrapperSign>
-				{formState ? <SignUpForm /> : <SignInForm />}
+				{/* {formState ? <SignUpForm /> : <SignInForm />} */}
 			</WrapperRight>
 		</Fragment>
 	);
