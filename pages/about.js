@@ -7,15 +7,15 @@ import AboutRight from "../components/AboutRight";
 const image = "images/footer.png";
 const FooterImg = styled.img`
 	height: auto;
-	width: 100vw;
+	width: 100%;
 	z-index: -2;
 `;
 
 const Wrapper = styled.div`
 	display: flex;
 	@media (max-width:425px){
-		flex-direction:column;
-		align-items: center;
+	flex-direction:column;
+	align-items: center;
     justify-content: center;
 	}
 `;

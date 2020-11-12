@@ -67,7 +67,7 @@ const AboutRight = () => {
 							Rafael Lagun<Span>a</Span>s
 						</TitleDetails>
 						<TitleRole>Master Coach</TitleRole>
-						<GitHub href="https://github.com/rafastaria" target="_blank">
+						<GitHub href="https://github.com/rafalagunas" target="_blank">
 							Mis repositorios
 						</GitHub>
 						<LinkedIn
