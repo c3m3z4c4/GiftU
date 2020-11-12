@@ -14,7 +14,7 @@ const Wrapper = styled.section`
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	font-family: "Quicksand";
+	font-family: Quicksand;
 `;
 
 const WrapperTitle = styled.div`
@@ -30,7 +30,7 @@ const Title = styled.h1`
 	text-align: center;
 	color: black;
 	font-size: 50px;
-	font-family: "Quicksand";
+	font-family: Quicksand;
 	@media (max-width: 425px) {
 		font-size: 35px;
 		font-weight: 400;
@@ -52,14 +52,14 @@ const Wrappergift = styled.div`
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	font-family: "Quicksand";
+	font-family: Quicksand;
 `;
 
 const GiftTitle = styled.a`
 	text-align: center;
 	font-size: 15px;
 	color: black;
-	font-family: "Quicksand";
+	font-family: Quicksand;
 	cursor: pointer;
 	margin: 0;
 	margin-bottom: 15px;
@@ -107,7 +107,7 @@ const LinkButton = styled.button`
 	outline: none;
 	text-align: center;
 	color: black;
-	font-family: "Quicksand";
+	font-family: Quicksand;
 	cursor: pointer;
 	margin: 0;
 	transition: transform 0.2s ease;
@@ -131,7 +131,7 @@ const LinkLineButton = styled.button`
 	outline: none;
 	text-align: center;
 	color: black;
-	font-family: "Quicksand";
+	font-family: Quicksand;
 	cursor: pointer;
 	margin: 0;
 	transition: transform 0.2s ease;

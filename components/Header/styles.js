@@ -7,7 +7,7 @@ const Wrapper = styled.section`
 	width: 100%;
 	@media (max-width: 425px) {
 		width: 100%;
-		justify-content: center !important;
+		justify-content: center;
 	}
 `;
 
