@@ -7,7 +7,7 @@ function CustomChatbot(props) {
 
   const theme = {
     background: "white",
-    fontFamily: "Arial, Helvetica, sans-serif",
+    fontFamily: "Quicksand, sans-serif",
     headerBgColor: "#ffab07",
     headerFontColor: "#fff",
     headerFontSize: "25px",
@@ -27,27 +27,27 @@ function CustomChatbot(props) {
     const steps = [
     {
       id: "Greet",
-      message: "Hello, Welcome to our shop",
+      message: "¡Saludos! Bienvenido a GiftÜ",
       trigger: "Ask Name"
     },
     {
       id: "Ask Name",
-      message: "Please type your name?",
+      message: "¿Con quien tengo el gusto?",
       trigger: "Waiting user input for name"
     },
     {
       id: "Waiting user input for name",
       user: true,
-      trigger: "Asking options to eat"
+      trigger: "Asking options to service"
     },
     {
-      id: "Asking options to eat",
-      message: "Hi {previousValue}, Glad to know you !!",
+      id: "Asking options to service",
+      message: "Hola {previousValue}, Encantado de conocerte !!",
       trigger: "Done"
     },
     {
       id: "Done",
-      message: "Have a great day !!",
+      message: "¡Que tengas un buen dia!",
       end: true
     }
     ];
