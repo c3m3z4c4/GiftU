@@ -9,6 +9,7 @@ const WrapperSeccion = styled.section`
 	display: flex;
 	@media (max-width: 768px) {
 		flex-wrap: wrap;
+		
 	}
 `;
 

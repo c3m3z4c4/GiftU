@@ -14,7 +14,9 @@ function CustomChatbot(props) {
     botBubbleColor: "#87d3b8",
     botFontColor: "#fff",
     userBubbleColor: "#fff",
-    userFontColor: "#4c4c4c"
+    userFontColor: "#4c4c4c",
+    recognitionEnable: true,
+    speechSynthesis: { enable: true, lang: 'es' }
    };
 
 
@@ -54,8 +56,8 @@ function CustomChatbot(props) {
 
 
     return(
-      <ThemeProvider theme={theme}>
-        <ChatBot steps = { steps }{...config}/>;
+      <ThemeProvider  theme={theme}>
+        <ChatBot headerTitle="GiftU" steps={steps}{...config} />;
       </ThemeProvider>
       );
 }
