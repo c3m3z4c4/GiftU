@@ -9,7 +9,7 @@ const image = "images/footer.png";
 const App = () => {
 	return (
 		<HomeWrapper>
-			<Header />
+			<Header main />
 			<Main />
 			<Footer
 				text="¡NOSOTROS TE AYUDAMOS!"

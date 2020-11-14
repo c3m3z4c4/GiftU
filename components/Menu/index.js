@@ -27,31 +27,29 @@ export default class Nav extends React.Component {
 
 	render() {
 		return (
-			<Fragment>
-				<Wrapper>
-					<WrapperImageMenu>
-						<Text>MENÚ</Text>
-						<LogoImage src={Imagepng} />
-					</WrapperImageMenu>
-					<ListItems>
-						<Item>
-							<MenuButton onClick={() => this.handleLogin()}>
-								Iniciar <Span>Sesión</Span>
-							</MenuButton>
-						</Item>
-						<Item>
-							<Link href="/about">
-								<Anchor>Nosotros</Anchor>
-							</Link>
-						</Item>
-						<Item>
-							<MenuButton onClick={() => this.handleLogout()}>
-								Finalizar <Span>Sesión</Span>
-							</MenuButton>
-						</Item>
-					</ListItems>
-				</Wrapper>
-			</Fragment>
+			<Wrapper>
+				<WrapperImageMenu>
+					<Text>MENÚ</Text>
+					<LogoImage src={Imagepng} />
+				</WrapperImageMenu>
+				<ListItems>
+					<Item>
+						<MenuButton onClick={() => this.handleLogin()}>
+							Iniciar <Span>Sesión</Span>
+						</MenuButton>
+					</Item>
+					<Item>
+						<Link href="/about">
+							<Anchor>Nosotros</Anchor>
+						</Link>
+					</Item>
+					<Item>
+						<MenuButton onClick={() => this.handleLogout()}>
+							Finalizar <Span>Sesión</Span>
+						</MenuButton>
+					</Item>
+				</ListItems>
+			</Wrapper>
 		);
 	}
 }

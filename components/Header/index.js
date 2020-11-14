@@ -5,12 +5,18 @@ import { Wrapper, LogoName } from "./styles";
 
 const name = "../images/giftu.png";
 
-const Header = () => {
+const Header = ({ main }) => {
 	return (
 		<Fragment>
 			<Wrapper>
-				<LogoName src={name} />
-				<Menu />
+				{
+					main ? null : (
+						<Wrapper>
+							<LogoName src={name} />
+							<Menu />
+						</ Wrapper>
+					)
+				}
 			</Wrapper>
 		</Fragment>
 	);
