@@ -22,14 +22,14 @@ const WrapperImageMenu = styled.div`
 `;
 
 const LogoImage = styled.img`
-	margin-right: 8px;
-	width: 60px;
+	width: 40px;
 `;
 
 const Text = styled.p`
 	font-size: 25px;
 	color: #87d3b8;
-	margin-right: 25px;
+	margin: 0;
+	margin-right: 10px;
 	font-family: Quicksand;
 `;
 
