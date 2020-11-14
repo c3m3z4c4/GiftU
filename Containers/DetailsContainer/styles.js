@@ -173,7 +173,7 @@ const MainImageContainer = styled.div`
 		margin-bottom: 0px;
 	}
 	@media (max-width: 425px) {
-		width: 200px;
+		width: 110px;
 		height: auto;
 		padding: 20px 0;
 	}

@@ -119,7 +119,8 @@ const LinkButton = styled.button`
 		transform: scale(0.8);
 	}
 	@media (max-width: 425px) {
-		margin-top: 20px;
+		margin-top: 0px;
+		padding: 0px;
 	}
 `;
 

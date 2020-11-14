@@ -18,7 +18,10 @@ const Title = styled.div`
 		font-size: 18px;
 	}
 	@media (max-width: 425px) {
-		font-size: 12px;
+		font-size: 16px;
+		line-height: 30px;
+		flex-direction: column;
+		margin-top: 10px;
 	}
 `;
 
