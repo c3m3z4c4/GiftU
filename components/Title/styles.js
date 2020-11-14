@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Title = styled.p`
+const Title = styled.div`
 	font-family: Quicksand, sans-serif;
 	font-style: normal;
 	font-size: 30px;
@@ -18,11 +18,11 @@ const Title = styled.p`
 		font-size: 18px;
 	}
 	@media (max-width: 425px) {
-		font-size: 16px;
+		font-size: 12px;
 	}
 `;
 
-const Name = styled(Title)`
+const Name = styled.span`
 	color: #66ba9c;
 	margin: 0px 10px;
 `;
