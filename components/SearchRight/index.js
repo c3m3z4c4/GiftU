@@ -3,6 +3,7 @@ import { gql, useMutation } from "@apollo/client";
 import ErrorWrapper from "../ErrorWrapper/index";
 import { useRouter } from "next/router";
 import Menu from "../Menu";
+import CustomChatbot from "../chatbot/CustomChatbot";
 import Loading from "../../components/Loading/index";
 import { Context } from "../../context/index";
 import { SelectOccasionComponent } from "./selectOccasion";
@@ -150,6 +151,7 @@ const SearchRight = () => {
 						</WrapperForm>
 					</>
 				)}
+				<CustomChatbot recognitionEnable={true}/>
 			</WrapperRight>
 		</>
 	);
