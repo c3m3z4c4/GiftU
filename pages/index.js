@@ -11,7 +11,7 @@ const image = "images/footer.png";
 const App = () => {
 	return (
 		<HomeWrapper>
-			<Header />
+			<Header main />
 			<Main />
 			<CustomChatbot recognitionEnable={true}/>
 			<Footer
