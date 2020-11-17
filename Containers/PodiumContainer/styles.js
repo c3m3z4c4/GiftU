@@ -36,9 +36,13 @@ const CompleteColumn = styled.div `
 	justify-content: center;
 	@media (max-width: 425px) {
 		width: 100%;
-		//margin: 20 5px;
 		align-self: auto;
-   		flex-direction: row-reverse;
+		flex-direction: row-reverse;
+		margin: 0;
+		min-height: 231px;
+		height: auto;
+		position: relative;
+		justify-content: flex-end;
 	}
 `;
 
@@ -63,6 +67,8 @@ const Maincolumn = styled.div `
 	}
 	@media (max-width: 425px) {
 		font-size: 20px;
+		width: 140px;
+		height: 100px;
 	}
 `;
 const NameComponent = styled.div `
@@ -92,10 +98,15 @@ const NameComponent = styled.div `
 	}
 	@media (max-width: 425px) {
 		flex-direction: row;
-		font-size: 15px;
-		min-height: 100px;
-		min-width: 50vw;
-		background: none;
+		position: absolute;
+		top: 0;
+		font-size: 12px;
+		padding: 0px;
+		background: transparent;
+		margin: 0;
+		font-weight: 300;
+		text-align: center;
+		color: #66BA9C;
 	}
 `;
 
@@ -103,18 +114,26 @@ const FirstPlace = styled(Maincolumn)
 `
 	min-height: 350px;
 	@media (max-width: 425px) {
-		height: 200px;
-		min-width: 100px;
+		min-height: 100px;
+		width: 170px;
 		justify-self: flex-end;
 	}
 `;
 const SecondPlace = styled(Maincolumn)
 `
 	min-height: 220px;
+	@media (max-width: 425px) {
+		width: 135px;
+		min-height: 100px;
+	}
 `;
 const ThirdPlace = styled(Maincolumn)
 `
 	min-height: 165px;
+	@media (max-width: 425px) {
+		width: 100px;
+		min-height: 100px;
+	}
 `;
 
 const ImagePodium = styled.img `
@@ -130,8 +149,10 @@ const ImagePodium = styled.img `
 		height: 150px;
 	}
 	@media (max-width: 425px) {
-		width: 60px;
-		height: 60px;
+		width: 90px;
+    	height: 90px;
+		left: 180px;
+		position: absolute;
 	}
 `;
 
@@ -150,8 +171,8 @@ const FirstPlaceIcon = styled.img.attrs((props) => ({
 		height: 80px;
 	}
 	@media (max-width: 425px) {
-		width: 80px;
-		height: 80px;
+		width: 40px;
+		height: 40px;
 	}
 `;
 
@@ -163,8 +184,10 @@ const PlusIcon = styled.img.attrs((props) => ({
 	width: 15px;
 	height: 15px;
 	@media (max-width: 425px) {
-		width: 20px;
-		height: 20px;
+		width: 12px;
+    	height: 12px;
+		margin-right: 10px;
+		padding: 0px;
 	}
 `;
 
