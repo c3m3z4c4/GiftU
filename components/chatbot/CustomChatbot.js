@@ -34,7 +34,7 @@ function CustomChatbot(props) {
     },
     {
       id: "Ask Name",
-      message: "¿Como te llamas??",
+      message: "¿Como te llamas?",
       trigger: "Waiting user input for name"
     },
     {
@@ -96,7 +96,7 @@ function CustomChatbot(props) {
          headerTitle="GiftY"
          steps={ steps }{...config}
          
-         />;
+         />
       </ThemeProvider>
       );
 }

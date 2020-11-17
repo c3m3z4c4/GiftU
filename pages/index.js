@@ -20,7 +20,6 @@ const App = () => {
 				footerImage={image}
 				altImage="Demo">
 			</Footer>
-			
 		</HomeWrapper>
 	);
 };
