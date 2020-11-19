@@ -43,6 +43,11 @@ let variables;
 const SearchRight = () => {
 	const router = useRouter();
 
+	let loggedUser;
+	if (typeof window !== "undefined") {
+		loggedUser = localStorage.getItem('isLoggedIn') === 'true'
+	}
+
 	const { dispatch } = useContext(Context);
 	const [
 		sendInrmation,
@@ -139,10 +144,20 @@ const SearchRight = () => {
 								/>
 							</WrapperLabel>
 
-							<Textform>
-								¿Cuál es <Span>la</Span> ocasión?
-							</Textform>
-							<SelectOccasionComponent onChange={updateField} />
+							<>
+								{
+									loggedUser 
+									? (
+										<>
+											<Textform>
+												¿Cuál es <Span>la</Span> ocasión?
+											</Textform>
+											<SelectOccasionComponent onChange={updateField} />
+										</>
+									)
+									: null
+								}
+							</>
 							<WrapperButtom>
 								<BaseButton type="submit">
 									EN<Span primary>V</Span>IAR
