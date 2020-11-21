@@ -15,8 +15,7 @@ function CustomChatbot(props) {
     botFontColor: "#fff",
     userBubbleColor: "#fff",
     userFontColor: "#4c4c4c",
-    recognitionEnable: true,
-    speechSynthesis: { enable: true, lang: 'es' }
+
    };
 
 
